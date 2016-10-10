@@ -1,0 +1,16 @@
+Project Name: CoreBoardExt
+Location: C:\Users\AndersonHan\Documents\CoreBoardExt
+Description: 
+Preferred HDL Type: VHDL
+
+#-----------------------------------------------------
+                  Device Details
+#-----------------------------------------------------
+
+Part Number    : M2S010-FG484I
+Family         : SmartFusion2
+Die            : M2S010
+Package        : 484 FBGA
+Speed          : STD
+Core Voltage   : 1.2
+Range          : IND

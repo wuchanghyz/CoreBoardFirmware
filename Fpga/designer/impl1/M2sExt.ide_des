@@ -1,0 +1,11 @@
+KEY IDE_DES_TOOL "Ide"
+KEY IDE_DES_ADB_PATH "C:\Users\AndersonHan\Desktop\BentoBox\Fpga\designer\impl1\M2sExt.adb"
+LIST SOURCE_FILES
+VALUE "C:\Users\AndersonHan\Desktop\BentoBox\Fpga\constraint\io\M2sExt.io.pdc;pdc"
+VALUE "C:\Users\AndersonHan\Desktop\BentoBox\Fpga\constraint\fp\M2sExt.fp.pdc;pdc"
+ENDLIST
+LIST OPTIONAL_FILES
+VALUE "C:\Users\AndersonHan\Desktop\BentoBox\Fpga\synthesis\M2sExt_sdc.sdc;Skipped"
+ENDLIST
+LIST VCD_FILES
+ENDLIST

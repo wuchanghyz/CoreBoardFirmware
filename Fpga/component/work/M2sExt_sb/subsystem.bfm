@@ -1,0 +1,52 @@
+#===========================================================
+# Created by Microsemi SmartDesign Tue Feb 23 00:31:57 2016
+#
+# Syntax: 
+# ------- 
+#
+# memmap    resource_name base_address;
+#
+# write     width resource_name byte_offset data;
+# read      width resource_name byte_offset;
+# readcheck width resource_name byte_offset data;
+#
+#===========================================================
+
+#-----------------------------------------------------------
+# Memory Map
+# Define name and base address of each resource.
+#-----------------------------------------------------------
+
+memmap COREI2C_0_0 0x50000000;
+memmap COREI2C_0_1 0x50001000;
+memmap COREI2C_0_2 0x50002000;
+memmap COREI2C_0_3 0x50003000;
+memmap COREI2C_0_4 0x50004000;
+memmap COREI2C_0_5 0x50005000;
+memmap COREI2C_0_6 0x50006000;
+memmap COREI2C_0_7 0x50007000;
+memmap CORESPI_0_0 0x50008000;
+memmap CORESPI_0_1 0x50009000;
+memmap CORESPI_0_2 0x5000A000;
+memmap CORESPI_0_3 0x5000B000;
+memmap CORESPI_0_4 0x5000C000;
+memmap CORESPI_0_5 0x5000D000;
+memmap CORESPI_0_6 0x5000E000;
+memmap CORESPI_0_7 0x5000F000;
+memmap CoreUARTapb_0_0 0x51000000;
+memmap CoreUARTapb_0_1 0x51001000;
+memmap CoreUARTapb_0_2 0x51002000;
+memmap CoreUARTapb_0_3 0x51003000;
+memmap CoreUARTapb_0_4 0x51004000;
+memmap CoreUARTapb_0_5 0x51005000;
+memmap CoreUARTapb_0_6 0x51006000;
+memmap CoreUARTapb_0_7 0x51007000;
+memmap corepwm_0_0 0x51008000;
+memmap corepwm_0_1 0x51009000;
+memmap corepwm_0_2 0x5100A000;
+memmap corepwm_0_3 0x5100B000;
+memmap corepwm_0_4 0x5100C000;
+memmap corepwm_0_5 0x5100D000;
+memmap corepwm_0_6 0x5100E000;
+memmap corepwm_0_7 0x5100F000;
+memmap CoreInterrupt_0 0x52000000;

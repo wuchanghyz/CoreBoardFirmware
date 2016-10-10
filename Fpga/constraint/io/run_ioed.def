@@ -1,0 +1,22 @@
+data DESIGN M2sExt
+data HPATH 'C:/Users/AndersonHan/Desktop/BentoBox/Fpga/designer/M2sExt'
+data CPATH 'C:/Users/AndersonHan/Desktop/BentoBox/Fpga/constraint/io'
+data CDIR 'C:/Users/AndersonHan/Desktop/BentoBox/Fpga/constraint'
+data ETYPE IO
+data FAM SmartFusion2
+data DIE PA4M1000_N
+data PACKAGE fg484
+data HYDRA_EXPORT_DATA 1
+data HYDRA_PRESERVE_DATA_FILES 1
+data VCCI_1.2_VOLTR COM
+data VCCI_1.5_VOLTR COM
+data VCCI_1.8_VOLTR COM
+data VCCI_2.5_VOLTR COM
+data VCCI_3.3_VOLTR COM
+data FLOW_TYPE OLD
+data AFL 'C:/Users/AndersonHan/Desktop/BentoBox/Fpga/designer/M2sExt/M2sExt.afl'
+data ADL 'C:/Users/AndersonHan/Desktop/BentoBox/Fpga/designer/M2sExt/M2sExt.adl'
+data LOC 'C:/Users/AndersonHan/Desktop/BentoBox/Fpga/designer/M2sExt/M2sExt.loc'
+data SEG 'C:/Users/AndersonHan/Desktop/BentoBox/Fpga/designer/M2sExt/M2sExt.seg'
+data GDEV_SKIP_UNASSIGN_CMP_CHECK    1 
+

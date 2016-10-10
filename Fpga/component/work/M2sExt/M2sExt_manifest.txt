@@ -1,0 +1,15 @@
+Microsemi Corporation - Microsemi Libero Software Release v11.7 (Version 11.7.0.119)
+
+Date      :  Sat Oct 08 15:07:39 2016
+Project   :  C:\Users\AndersonHan\Desktop\BentoBox\Fpga
+Component :  M2sExt
+Family    :  SmartFusion2
+
+
+HDL source files for all Synthesis and Simulation tools:
+    C:/Users/AndersonHan/Desktop/BentoBox/Fpga/component/work/M2sExt/IO_0/M2sExt_IO_0_IO.vhd
+    C:/Users/AndersonHan/Desktop/BentoBox/Fpga/component/work/M2sExt/M2sExt.vhd
+
+Stimulus files for all Simulation tools:
+    C:/Users/AndersonHan/Desktop/BentoBox/Fpga/component/work/M2sExt/subsystem.bfm
+

@@ -1,0 +1,9 @@
+.\objects\system_m2sxxx.o: RTE\Device\M2S010\system_m2sxxx.c
+.\objects\system_m2sxxx.o: .\Lib\Header\m2sxxx.h
+.\objects\system_m2sxxx.o: C:\Keil_v5\ARM\CMSIS\Include\core_cm3.h
+.\objects\system_m2sxxx.o: C:\Keil_v5\ARM\ARMCC\Bin\..\include\stdint.h
+.\objects\system_m2sxxx.o: C:\Keil_v5\ARM\CMSIS\Include\core_cmInstr.h
+.\objects\system_m2sxxx.o: C:\Keil_v5\ARM\CMSIS\Include\core_cmFunc.h
+.\objects\system_m2sxxx.o: RTE\Device\M2S010\sys_config.h
+.\objects\system_m2sxxx.o: RTE\Device\M2S010\sys_config_mss_clocks.h
+.\objects\system_m2sxxx.o: .\Lib\Header\sys_init_cfg_types.h

@@ -1,0 +1,10 @@
+.\obj\core_pwm.o: drivers/CorePWM/core_pwm.c
+.\obj\core_pwm.o: drivers/CorePWM/core_pwm.h
+.\obj\core_pwm.o: ./hal/CortexM3/Keil/cpu_types.h
+.\obj\core_pwm.o: C:\Keil_v5\ARM\ARMCC\Bin\..\include\stdint.h
+.\obj\core_pwm.o: drivers/CorePWM/corepwm_regs.h
+.\obj\core_pwm.o: ./hal/hal.h
+.\obj\core_pwm.o: ./hal/hw_reg_access.h
+.\obj\core_pwm.o: ./hal/hal_assert.h
+.\obj\core_pwm.o: ./hal/../CMSIS/mss_assert.h
+.\obj\core_pwm.o: C:\Keil_v5\ARM\ARMCC\Bin\..\include\assert.h

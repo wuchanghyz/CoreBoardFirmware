@@ -1,0 +1,27 @@
+# Microsemi Physical design constraints file
+
+# Version: v11.7 11.7.0.119
+
+# Design Name: M2sExt 
+
+# Input Netlist Format: EDIF 
+
+# Family: SmartFusion2 , Die: M2S010 , Package: 484 FBGA , Speed grade: STD 
+
+# Date generated: Mon Oct 10 14:39:23 2016 
+
+
+#
+# Local clock constraints
+#
+
+
+#
+# Region constraints
+#
+
+
+#
+# Core cell constraints
+#
+

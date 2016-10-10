@@ -1,0 +1,7 @@
+C:\Microsemi\Libero_SoC_v11.7\Synplify\bin64\syn_nfilter.exe  -link  -top  work.M2sExt  -multisrs  C:\Users\AndersonHan\Desktop\BentoBox\Fpga\synthesis\synwork\M2sExt_comp.srs  -osyn  C:\Users\AndersonHan\Desktop\BentoBox\Fpga\synthesis\synwork\M2sExt_mult.srs  -log  C:\Users\AndersonHan\Desktop\BentoBox\Fpga\synthesis\synlog\M2sExt_multi_srs_gen.srr 
+rc:0 success:1
+C:\Users\AndersonHan\Desktop\BentoBox\Fpga\synthesis\synwork\M2sExt_comp.srs|i|1475998366|571540
+C:\Users\AndersonHan\Desktop\BentoBox\Fpga\synthesis\synwork\M2sExt_mult.srs|o|1475998369|13500
+C:\Users\AndersonHan\Desktop\BentoBox\Fpga\synthesis\synlog\M2sExt_multi_srs_gen.srr|o|1475998369|482
+C:\Microsemi\Libero_SoC_v11.7\Synplify\bin\syn_nfilter.exe|i|1449192924|3007488
+C:\Microsemi\Libero_SoC_v11.7\Synplify\bin64\syn_nfilter.exe|i|1449192926|3974144

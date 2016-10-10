@@ -1,0 +1,15 @@
+C:\Microsemi\Libero_SoC_v11.7\Synplify\bin64\m_generic.exe  -prodtype  synplify_pro   -encrypt  -pro  -rundir  C:\Users\AndersonHan\Desktop\BentoBox\Fpga\synthesis   -part M2S010  -package FBGA484  -grade STD    -maxfan 10000 -clock_globalthreshold 2 -async_globalthreshold 12 -globalthreshold 5000 -low_power_ram_decomp 0 -opcond COMTC -report_path 4000 -RWCheckOnRam 0 -summaryfile C:\Users\AndersonHan\Desktop\BentoBox\Fpga\synthesis\synlog\report\M2sExt_fpga_mapper.xml  -top_level_module  work.M2sExt  -licensetype  synplifypro_actel  -flow mapping  -mp  1  -prjfile  C:\Users\AndersonHan\Desktop\BentoBox\Fpga\synthesis\scratchproject.prs  -implementation  synthesis  -multisrs  -oedif  C:\Users\AndersonHan\Desktop\BentoBox\Fpga\synthesis\M2sExt.edn   -freq 100.000   C:\Users\AndersonHan\Desktop\BentoBox\Fpga\synthesis\synwork\M2sExt_prem.srd  -sap  C:\Users\AndersonHan\Desktop\BentoBox\Fpga\synthesis\M2sExt.sap  -otap  C:\Users\AndersonHan\Desktop\BentoBox\Fpga\synthesis\M2sExt.tap  -omap  C:\Users\AndersonHan\Desktop\BentoBox\Fpga\synthesis\M2sExt.map  -devicelib  C:\Microsemi\Libero_SoC_v11.7\Synplify\lib\generic\smartfusion2.v  -sap  C:\Users\AndersonHan\Desktop\BentoBox\Fpga\synthesis\M2sExt.sap  -ologparam  C:\Users\AndersonHan\Desktop\BentoBox\Fpga\synthesis\syntmp\M2sExt.plg  -osyn  C:\Users\AndersonHan\Desktop\BentoBox\Fpga\synthesis\M2sExt.srm  -prjdir  C:\Users\AndersonHan\Desktop\BentoBox\Fpga\synthesis\  -prjname  M2sExt_syn  -log  C:\Users\AndersonHan\Desktop\BentoBox\Fpga\synthesis\synlog\M2sExt_fpga_mapper.srr 
+rc:1 success:1
+C:\Users\AndersonHan\Desktop\BentoBox\Fpga\synthesis\scratchproject.prs|o|1475910483|17033
+C:\Users\AndersonHan\Desktop\BentoBox\Fpga\synthesis\M2sExt.edn|o|1475998436|9854100
+C:\Users\AndersonHan\Desktop\BentoBox\Fpga\synthesis\synwork\M2sExt_prem.srd|i|1475998373|754409
+C:\Users\AndersonHan\Desktop\BentoBox\Fpga\synthesis\M2sExt.sap|o|1475998374|512827
+C:\Users\AndersonHan\Desktop\BentoBox\Fpga\synthesis\M2sExt.tap|o|0|0
+C:\Users\AndersonHan\Desktop\BentoBox\Fpga\synthesis\M2sExt.map|o|1475998438|28
+C:\Microsemi\Libero_SoC_v11.7\Synplify\lib\generic\smartfusion2.v|i|1449192930|16359
+C:\Users\AndersonHan\Desktop\BentoBox\Fpga\synthesis\M2sExt.sap|o|1475998374|512827
+C:\Users\AndersonHan\Desktop\BentoBox\Fpga\synthesis\syntmp\M2sExt.plg|o|1475998438|1591
+C:\Users\AndersonHan\Desktop\BentoBox\Fpga\synthesis\M2sExt.srm|o|1475998432|15273
+C:\Users\AndersonHan\Desktop\BentoBox\Fpga\synthesis\synlog\M2sExt_fpga_mapper.srr|o|1475998438|165445
+C:\Microsemi\Libero_SoC_v11.7\Synplify\bin\m_generic.exe|i|1449710344|15814144
+C:\Microsemi\Libero_SoC_v11.7\Synplify\bin64\m_generic.exe|i|1449711956|27632640

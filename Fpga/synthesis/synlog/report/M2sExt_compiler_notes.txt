@@ -1,0 +1,431 @@
+@N|Running in 64-bit mode
+@N|Running in 64-bit mode
+@N: CD720 :"C:\Microsemi\Libero_SoC_v11.7\Synplify\lib\vhd2008\std.vhd":146:18:146:21|Setting time resolution to ns
+@N:"C:\Users\AndersonHan\Desktop\BentoBox\Fpga\component\work\M2sExt\M2sExt.vhd":17:7:17:12|Top entity is set to M2sExt.
+@N: CD231 :"C:\Microsemi\Libero_SoC_v11.7\Synplify\lib\vhd2008\std1164.vhd":890:16:890:17|Using onehot encoding for type mvl9plus ('U'="1000000000")
+@N: CD630 :"C:\Users\AndersonHan\Desktop\BentoBox\Fpga\component\work\M2sExt\M2sExt.vhd":17:7:17:12|Synthesizing work.m2sext.rtl 
+@N: CD630 :"C:\Users\AndersonHan\Desktop\BentoBox\Fpga\component\work\M2sExt_sb\M2sExt_sb.vhd":37:7:37:15|Synthesizing work.m2sext_sb.rtl 
+@N: CD630 :"C:\Microsemi\Libero_SoC_v11.7\Synplify\lib\generic\smartfusion2.vhd":434:10:434:14|Synthesizing smartfusion2.bibuf.syn_black_box 
+@N: CD630 :"C:\Microsemi\Libero_SoC_v11.7\Synplify\lib\generic\smartfusion2.vhd":786:10:786:17|Synthesizing smartfusion2.sysreset.syn_black_box 
+@N: CD630 :"C:\Users\AndersonHan\Desktop\BentoBox\Fpga\component\work\M2sExt_sb_MSS\M2sExt_sb_MSS.vhd":17:7:17:19|Synthesizing work.m2sext_sb_mss.rtl 
+@N: CD630 :"C:\Microsemi\Libero_SoC_v11.7\Synplify\lib\generic\smartfusion2.vhd":403:10:403:14|Synthesizing smartfusion2.inbuf.syn_black_box 
+@N: CD630 :"C:\Microsemi\Libero_SoC_v11.7\Synplify\lib\generic\smartfusion2.vhd":423:10:423:16|Synthesizing smartfusion2.tribuff.syn_black_box 
+@N: CD630 :"C:\Users\AndersonHan\Desktop\BentoBox\Fpga\component\work\M2sExt_sb_MSS\M2sExt_sb_MSS_syn.vhd":10:7:10:13|Synthesizing work.mss_010.def_arch 
+@N: CD630 :"C:\Users\AndersonHan\Desktop\BentoBox\Fpga\component\work\M2sExt_sb\FABOSC_0\M2sExt_sb_FABOSC_0_OSC.vhd":8:7:8:28|Synthesizing work.m2sext_sb_fabosc_0_osc.def_arch 
+@N: CD630 :"C:\Microsemi\Libero_SoC_v11.7\Synplify\lib\generic\smartfusion2.vhd":562:10:562:15|Synthesizing smartfusion2.clkint.syn_black_box 
+@N: CD630 :"C:\Users\AndersonHan\Desktop\BentoBox\Fpga\component\Actel\SgCore\OSC\2.0.101\osc_comps.vhd":19:7:19:20|Synthesizing work.rcosc_25_50mhz.def_arch 
+@N: CD630 :"C:\Users\AndersonHan\Desktop\BentoBox\Fpga\component\Actel\SgCore\OSC\2.0.101\osc_comps.vhd":79:7:79:24|Synthesizing work.rcosc_25_50mhz_fab.def_arch 
+@N: CD630 :"C:\Microsemi\Libero_SoC_v11.7\Synplify\lib\generic\smartfusion2.vhd":249:10:249:12|Synthesizing smartfusion2.or3.syn_black_box 
+@N: CD630 :"C:\Users\AndersonHan\Desktop\BentoBox\Fpga\component\work\M2sExt_sb\CoreUARTapb_0_9\rtl\vhdl\core\CoreUARTapb.vhd":61:7:61:43|Synthesizing coreuartapb_lib.m2sext_sb_coreuartapb_0_9_coreuartapb.translated 
+@N: CD364 :"C:\Users\AndersonHan\Desktop\BentoBox\Fpga\component\work\M2sExt_sb\CoreUARTapb_0_9\rtl\vhdl\core\CoreUARTapb.vhd":290:12:290:22|Removed redundant assignment
+@N: CD364 :"C:\Users\AndersonHan\Desktop\BentoBox\Fpga\component\work\M2sExt_sb\CoreUARTapb_0_9\rtl\vhdl\core\CoreUARTapb.vhd":314:12:314:22|Removed redundant assignment
+@N: CD630 :"C:\Users\AndersonHan\Desktop\BentoBox\Fpga\component\work\M2sExt_sb\CoreUARTapb_0_9\rtl\vhdl\core\CoreUART.vhd":33:7:33:40|Synthesizing coreuartapb_lib.m2sext_sb_coreuartapb_0_9_coreuart.translated 
+@N: CD364 :"C:\Users\AndersonHan\Desktop\BentoBox\Fpga\component\work\M2sExt_sb\CoreUARTapb_0_9\rtl\vhdl\core\CoreUART.vhd":399:11:399:22|Removed redundant assignment
+@N: CD630 :"C:\Users\AndersonHan\Desktop\BentoBox\Fpga\component\work\M2sExt_sb\CoreUARTapb_0_9\rtl\vhdl\core\fifo_256x8_smartfusion2.vhd":35:7:35:42|Synthesizing coreuartapb_lib.m2sext_sb_coreuartapb_0_9_fifo_256x8.translated 
+@N: CD630 :"C:\Users\AndersonHan\Desktop\BentoBox\Fpga\component\work\M2sExt_sb\CoreUARTapb_0_9\rtl\vhdl\core\fifo_256x8_smartfusion2.vhd":119:7:119:45|Synthesizing coreuartapb_lib.m2sext_sb_coreuartapb_0_9_fifo_ctrl_128.translated 
+@N: CD364 :"C:\Users\AndersonHan\Desktop\BentoBox\Fpga\component\work\M2sExt_sb\CoreUARTapb_0_9\rtl\vhdl\core\fifo_256x8_smartfusion2.vhd":261:12:261:25|Removed redundant assignment
+@N: CD630 :"C:\Users\AndersonHan\Desktop\BentoBox\Fpga\component\work\M2sExt_sb\CoreUARTapb_0_9\rtl\vhdl\core\fifo_256x8_smartfusion2.vhd":284:7:284:44|Synthesizing coreuartapb_lib.m2sext_sb_coreuartapb_0_9_ram128x8_pa4.translated 
+@N: CD630 :"C:\Microsemi\Libero_SoC_v11.7\Synplify\lib\generic\smartfusion2.vhd":627:10:627:17|Synthesizing smartfusion2.ram64x18.syn_black_box 
+@N: CD630 :"C:\Microsemi\Libero_SoC_v11.7\Synplify\lib\generic\smartfusion2.vhd":342:10:342:12|Synthesizing smartfusion2.inv.syn_black_box 
+@N: CD630 :"C:\Microsemi\Libero_SoC_v11.7\Synplify\lib\generic\smartfusion2.vhd":576:10:576:12|Synthesizing smartfusion2.gnd.syn_black_box 
+@N: CD630 :"C:\Microsemi\Libero_SoC_v11.7\Synplify\lib\generic\smartfusion2.vhd":582:10:582:12|Synthesizing smartfusion2.vcc.syn_black_box 
+@N: CD630 :"C:\Users\AndersonHan\Desktop\BentoBox\Fpga\component\work\M2sExt_sb\CoreUARTapb_0_9\rtl\vhdl\core\Rx_async.vhd":33:7:33:40|Synthesizing coreuartapb_lib.m2sext_sb_coreuartapb_0_9_rx_async.translated 
+@N: CD233 :"C:\Users\AndersonHan\Desktop\BentoBox\Fpga\component\work\M2sExt_sb\CoreUARTapb_0_9\rtl\vhdl\core\Rx_async.vhd":64:24:64:25|Using sequential encoding for type receive_states
+@N: CD364 :"C:\Users\AndersonHan\Desktop\BentoBox\Fpga\component\work\M2sExt_sb\CoreUARTapb_0_9\rtl\vhdl\core\Rx_async.vhd":213:12:213:26|Removed redundant assignment
+@N: CL177 :"C:\Users\AndersonHan\Desktop\BentoBox\Fpga\component\work\M2sExt_sb\CoreUARTapb_0_9\rtl\vhdl\core\Rx_async.vhd":380:6:380:7|Sharing sequential element clear_framing_error_en_i.
+@N: CD630 :"C:\Users\AndersonHan\Desktop\BentoBox\Fpga\component\work\M2sExt_sb\CoreUARTapb_0_9\rtl\vhdl\core\Tx_async.vhd":33:7:33:40|Synthesizing coreuartapb_lib.m2sext_sb_coreuartapb_0_9_tx_async.translated 
+@N: CD364 :"C:\Users\AndersonHan\Desktop\BentoBox\Fpga\component\work\M2sExt_sb\CoreUARTapb_0_9\rtl\vhdl\core\Tx_async.vhd":286:10:286:18|Removed redundant assignment
+@N: CD630 :"C:\Users\AndersonHan\Desktop\BentoBox\Fpga\component\work\M2sExt_sb\CoreUARTapb_0_9\rtl\vhdl\core\Clock_gen.vhd":35:7:35:41|Synthesizing coreuartapb_lib.m2sext_sb_coreuartapb_0_9_clock_gen.rtl 
+@N: CD630 :"C:\Users\AndersonHan\Desktop\BentoBox\Fpga\component\work\M2sExt_sb\CoreUARTapb_0_8\rtl\vhdl\core\CoreUARTapb.vhd":61:7:61:43|Synthesizing coreuartapb_lib.m2sext_sb_coreuartapb_0_8_coreuartapb.translated 
+@N: CD364 :"C:\Users\AndersonHan\Desktop\BentoBox\Fpga\component\work\M2sExt_sb\CoreUARTapb_0_8\rtl\vhdl\core\CoreUARTapb.vhd":290:12:290:22|Removed redundant assignment
+@N: CD364 :"C:\Users\AndersonHan\Desktop\BentoBox\Fpga\component\work\M2sExt_sb\CoreUARTapb_0_8\rtl\vhdl\core\CoreUARTapb.vhd":314:12:314:22|Removed redundant assignment
+@N: CD630 :"C:\Users\AndersonHan\Desktop\BentoBox\Fpga\component\work\M2sExt_sb\CoreUARTapb_0_8\rtl\vhdl\core\CoreUART.vhd":33:7:33:40|Synthesizing coreuartapb_lib.m2sext_sb_coreuartapb_0_8_coreuart.translated 
+@N: CD364 :"C:\Users\AndersonHan\Desktop\BentoBox\Fpga\component\work\M2sExt_sb\CoreUARTapb_0_8\rtl\vhdl\core\CoreUART.vhd":399:11:399:22|Removed redundant assignment
+@N: CD630 :"C:\Users\AndersonHan\Desktop\BentoBox\Fpga\component\work\M2sExt_sb\CoreUARTapb_0_8\rtl\vhdl\core\fifo_256x8_smartfusion2.vhd":35:7:35:42|Synthesizing coreuartapb_lib.m2sext_sb_coreuartapb_0_8_fifo_256x8.translated 
+@N: CD630 :"C:\Users\AndersonHan\Desktop\BentoBox\Fpga\component\work\M2sExt_sb\CoreUARTapb_0_8\rtl\vhdl\core\fifo_256x8_smartfusion2.vhd":119:7:119:45|Synthesizing coreuartapb_lib.m2sext_sb_coreuartapb_0_8_fifo_ctrl_128.translated 
+@N: CD364 :"C:\Users\AndersonHan\Desktop\BentoBox\Fpga\component\work\M2sExt_sb\CoreUARTapb_0_8\rtl\vhdl\core\fifo_256x8_smartfusion2.vhd":261:12:261:25|Removed redundant assignment
+@N: CD630 :"C:\Users\AndersonHan\Desktop\BentoBox\Fpga\component\work\M2sExt_sb\CoreUARTapb_0_8\rtl\vhdl\core\fifo_256x8_smartfusion2.vhd":284:7:284:44|Synthesizing coreuartapb_lib.m2sext_sb_coreuartapb_0_8_ram128x8_pa4.translated 
+@N: CD630 :"C:\Users\AndersonHan\Desktop\BentoBox\Fpga\component\work\M2sExt_sb\CoreUARTapb_0_8\rtl\vhdl\core\Rx_async.vhd":33:7:33:40|Synthesizing coreuartapb_lib.m2sext_sb_coreuartapb_0_8_rx_async.translated 
+@N: CD233 :"C:\Users\AndersonHan\Desktop\BentoBox\Fpga\component\work\M2sExt_sb\CoreUARTapb_0_8\rtl\vhdl\core\Rx_async.vhd":64:24:64:25|Using sequential encoding for type receive_states
+@N: CD364 :"C:\Users\AndersonHan\Desktop\BentoBox\Fpga\component\work\M2sExt_sb\CoreUARTapb_0_8\rtl\vhdl\core\Rx_async.vhd":213:12:213:26|Removed redundant assignment
+@N: CL177 :"C:\Users\AndersonHan\Desktop\BentoBox\Fpga\component\work\M2sExt_sb\CoreUARTapb_0_8\rtl\vhdl\core\Rx_async.vhd":380:6:380:7|Sharing sequential element clear_framing_error_en_i.
+@N: CD630 :"C:\Users\AndersonHan\Desktop\BentoBox\Fpga\component\work\M2sExt_sb\CoreUARTapb_0_8\rtl\vhdl\core\Tx_async.vhd":33:7:33:40|Synthesizing coreuartapb_lib.m2sext_sb_coreuartapb_0_8_tx_async.translated 
+@N: CD364 :"C:\Users\AndersonHan\Desktop\BentoBox\Fpga\component\work\M2sExt_sb\CoreUARTapb_0_8\rtl\vhdl\core\Tx_async.vhd":286:10:286:18|Removed redundant assignment
+@N: CD630 :"C:\Users\AndersonHan\Desktop\BentoBox\Fpga\component\work\M2sExt_sb\CoreUARTapb_0_8\rtl\vhdl\core\Clock_gen.vhd":35:7:35:41|Synthesizing coreuartapb_lib.m2sext_sb_coreuartapb_0_8_clock_gen.rtl 
+@N: CD630 :"C:\Users\AndersonHan\Desktop\BentoBox\Fpga\component\work\M2sExt_sb\CoreUARTapb_0_7\rtl\vhdl\core\CoreUARTapb.vhd":61:7:61:43|Synthesizing coreuartapb_lib.m2sext_sb_coreuartapb_0_7_coreuartapb.translated 
+@N: CD364 :"C:\Users\AndersonHan\Desktop\BentoBox\Fpga\component\work\M2sExt_sb\CoreUARTapb_0_7\rtl\vhdl\core\CoreUARTapb.vhd":290:12:290:22|Removed redundant assignment
+@N: CD364 :"C:\Users\AndersonHan\Desktop\BentoBox\Fpga\component\work\M2sExt_sb\CoreUARTapb_0_7\rtl\vhdl\core\CoreUARTapb.vhd":314:12:314:22|Removed redundant assignment
+@N: CD630 :"C:\Users\AndersonHan\Desktop\BentoBox\Fpga\component\work\M2sExt_sb\CoreUARTapb_0_7\rtl\vhdl\core\CoreUART.vhd":33:7:33:40|Synthesizing coreuartapb_lib.m2sext_sb_coreuartapb_0_7_coreuart.translated 
+@N: CD364 :"C:\Users\AndersonHan\Desktop\BentoBox\Fpga\component\work\M2sExt_sb\CoreUARTapb_0_7\rtl\vhdl\core\CoreUART.vhd":399:11:399:22|Removed redundant assignment
+@N: CD630 :"C:\Users\AndersonHan\Desktop\BentoBox\Fpga\component\work\M2sExt_sb\CoreUARTapb_0_7\rtl\vhdl\core\fifo_256x8_smartfusion2.vhd":35:7:35:42|Synthesizing coreuartapb_lib.m2sext_sb_coreuartapb_0_7_fifo_256x8.translated 
+@N: CD630 :"C:\Users\AndersonHan\Desktop\BentoBox\Fpga\component\work\M2sExt_sb\CoreUARTapb_0_7\rtl\vhdl\core\fifo_256x8_smartfusion2.vhd":119:7:119:45|Synthesizing coreuartapb_lib.m2sext_sb_coreuartapb_0_7_fifo_ctrl_128.translated 
+@N: CD364 :"C:\Users\AndersonHan\Desktop\BentoBox\Fpga\component\work\M2sExt_sb\CoreUARTapb_0_7\rtl\vhdl\core\fifo_256x8_smartfusion2.vhd":261:12:261:25|Removed redundant assignment
+@N: CD630 :"C:\Users\AndersonHan\Desktop\BentoBox\Fpga\component\work\M2sExt_sb\CoreUARTapb_0_7\rtl\vhdl\core\fifo_256x8_smartfusion2.vhd":284:7:284:44|Synthesizing coreuartapb_lib.m2sext_sb_coreuartapb_0_7_ram128x8_pa4.translated 
+@N: CD630 :"C:\Users\AndersonHan\Desktop\BentoBox\Fpga\component\work\M2sExt_sb\CoreUARTapb_0_7\rtl\vhdl\core\Rx_async.vhd":33:7:33:40|Synthesizing coreuartapb_lib.m2sext_sb_coreuartapb_0_7_rx_async.translated 
+@N: CD233 :"C:\Users\AndersonHan\Desktop\BentoBox\Fpga\component\work\M2sExt_sb\CoreUARTapb_0_7\rtl\vhdl\core\Rx_async.vhd":64:24:64:25|Using sequential encoding for type receive_states
+@N: CD364 :"C:\Users\AndersonHan\Desktop\BentoBox\Fpga\component\work\M2sExt_sb\CoreUARTapb_0_7\rtl\vhdl\core\Rx_async.vhd":213:12:213:26|Removed redundant assignment
+@N: CL177 :"C:\Users\AndersonHan\Desktop\BentoBox\Fpga\component\work\M2sExt_sb\CoreUARTapb_0_7\rtl\vhdl\core\Rx_async.vhd":380:6:380:7|Sharing sequential element clear_framing_error_en_i.
+@N: CD630 :"C:\Users\AndersonHan\Desktop\BentoBox\Fpga\component\work\M2sExt_sb\CoreUARTapb_0_7\rtl\vhdl\core\Tx_async.vhd":33:7:33:40|Synthesizing coreuartapb_lib.m2sext_sb_coreuartapb_0_7_tx_async.translated 
+@N: CD364 :"C:\Users\AndersonHan\Desktop\BentoBox\Fpga\component\work\M2sExt_sb\CoreUARTapb_0_7\rtl\vhdl\core\Tx_async.vhd":286:10:286:18|Removed redundant assignment
+@N: CD630 :"C:\Users\AndersonHan\Desktop\BentoBox\Fpga\component\work\M2sExt_sb\CoreUARTapb_0_7\rtl\vhdl\core\Clock_gen.vhd":35:7:35:41|Synthesizing coreuartapb_lib.m2sext_sb_coreuartapb_0_7_clock_gen.rtl 
+@N: CD630 :"C:\Users\AndersonHan\Desktop\BentoBox\Fpga\component\work\M2sExt_sb\CoreUARTapb_0_6\rtl\vhdl\core\CoreUARTapb.vhd":61:7:61:43|Synthesizing coreuartapb_lib.m2sext_sb_coreuartapb_0_6_coreuartapb.translated 
+@N: CD364 :"C:\Users\AndersonHan\Desktop\BentoBox\Fpga\component\work\M2sExt_sb\CoreUARTapb_0_6\rtl\vhdl\core\CoreUARTapb.vhd":290:12:290:22|Removed redundant assignment
+@N: CD364 :"C:\Users\AndersonHan\Desktop\BentoBox\Fpga\component\work\M2sExt_sb\CoreUARTapb_0_6\rtl\vhdl\core\CoreUARTapb.vhd":314:12:314:22|Removed redundant assignment
+@N: CD630 :"C:\Users\AndersonHan\Desktop\BentoBox\Fpga\component\work\M2sExt_sb\CoreUARTapb_0_6\rtl\vhdl\core\CoreUART.vhd":33:7:33:40|Synthesizing coreuartapb_lib.m2sext_sb_coreuartapb_0_6_coreuart.translated 
+@N: CD364 :"C:\Users\AndersonHan\Desktop\BentoBox\Fpga\component\work\M2sExt_sb\CoreUARTapb_0_6\rtl\vhdl\core\CoreUART.vhd":399:11:399:22|Removed redundant assignment
+@N: CD630 :"C:\Users\AndersonHan\Desktop\BentoBox\Fpga\component\work\M2sExt_sb\CoreUARTapb_0_6\rtl\vhdl\core\fifo_256x8_smartfusion2.vhd":35:7:35:42|Synthesizing coreuartapb_lib.m2sext_sb_coreuartapb_0_6_fifo_256x8.translated 
+@N: CD630 :"C:\Users\AndersonHan\Desktop\BentoBox\Fpga\component\work\M2sExt_sb\CoreUARTapb_0_6\rtl\vhdl\core\fifo_256x8_smartfusion2.vhd":119:7:119:45|Synthesizing coreuartapb_lib.m2sext_sb_coreuartapb_0_6_fifo_ctrl_128.translated 
+@N: CD364 :"C:\Users\AndersonHan\Desktop\BentoBox\Fpga\component\work\M2sExt_sb\CoreUARTapb_0_6\rtl\vhdl\core\fifo_256x8_smartfusion2.vhd":261:12:261:25|Removed redundant assignment
+@N: CD630 :"C:\Users\AndersonHan\Desktop\BentoBox\Fpga\component\work\M2sExt_sb\CoreUARTapb_0_6\rtl\vhdl\core\fifo_256x8_smartfusion2.vhd":284:7:284:44|Synthesizing coreuartapb_lib.m2sext_sb_coreuartapb_0_6_ram128x8_pa4.translated 
+@N: CD630 :"C:\Users\AndersonHan\Desktop\BentoBox\Fpga\component\work\M2sExt_sb\CoreUARTapb_0_6\rtl\vhdl\core\Rx_async.vhd":33:7:33:40|Synthesizing coreuartapb_lib.m2sext_sb_coreuartapb_0_6_rx_async.translated 
+@N: CD233 :"C:\Users\AndersonHan\Desktop\BentoBox\Fpga\component\work\M2sExt_sb\CoreUARTapb_0_6\rtl\vhdl\core\Rx_async.vhd":64:24:64:25|Using sequential encoding for type receive_states
+@N: CD364 :"C:\Users\AndersonHan\Desktop\BentoBox\Fpga\component\work\M2sExt_sb\CoreUARTapb_0_6\rtl\vhdl\core\Rx_async.vhd":213:12:213:26|Removed redundant assignment
+@N: CL177 :"C:\Users\AndersonHan\Desktop\BentoBox\Fpga\component\work\M2sExt_sb\CoreUARTapb_0_6\rtl\vhdl\core\Rx_async.vhd":380:6:380:7|Sharing sequential element clear_framing_error_en_i.
+@N: CD630 :"C:\Users\AndersonHan\Desktop\BentoBox\Fpga\component\work\M2sExt_sb\CoreUARTapb_0_6\rtl\vhdl\core\Tx_async.vhd":33:7:33:40|Synthesizing coreuartapb_lib.m2sext_sb_coreuartapb_0_6_tx_async.translated 
+@N: CD364 :"C:\Users\AndersonHan\Desktop\BentoBox\Fpga\component\work\M2sExt_sb\CoreUARTapb_0_6\rtl\vhdl\core\Tx_async.vhd":286:10:286:18|Removed redundant assignment
+@N: CD630 :"C:\Users\AndersonHan\Desktop\BentoBox\Fpga\component\work\M2sExt_sb\CoreUARTapb_0_6\rtl\vhdl\core\Clock_gen.vhd":35:7:35:41|Synthesizing coreuartapb_lib.m2sext_sb_coreuartapb_0_6_clock_gen.rtl 
+@N: CD630 :"C:\Users\AndersonHan\Desktop\BentoBox\Fpga\component\work\M2sExt_sb\CoreUARTapb_0_5\rtl\vhdl\core\CoreUARTapb.vhd":61:7:61:43|Synthesizing coreuartapb_lib.m2sext_sb_coreuartapb_0_5_coreuartapb.translated 
+@N: CD364 :"C:\Users\AndersonHan\Desktop\BentoBox\Fpga\component\work\M2sExt_sb\CoreUARTapb_0_5\rtl\vhdl\core\CoreUARTapb.vhd":290:12:290:22|Removed redundant assignment
+@N: CD364 :"C:\Users\AndersonHan\Desktop\BentoBox\Fpga\component\work\M2sExt_sb\CoreUARTapb_0_5\rtl\vhdl\core\CoreUARTapb.vhd":314:12:314:22|Removed redundant assignment
+@N: CD630 :"C:\Users\AndersonHan\Desktop\BentoBox\Fpga\component\work\M2sExt_sb\CoreUARTapb_0_5\rtl\vhdl\core\CoreUART.vhd":33:7:33:40|Synthesizing coreuartapb_lib.m2sext_sb_coreuartapb_0_5_coreuart.translated 
+@N: CD364 :"C:\Users\AndersonHan\Desktop\BentoBox\Fpga\component\work\M2sExt_sb\CoreUARTapb_0_5\rtl\vhdl\core\CoreUART.vhd":399:11:399:22|Removed redundant assignment
+@N: CD630 :"C:\Users\AndersonHan\Desktop\BentoBox\Fpga\component\work\M2sExt_sb\CoreUARTapb_0_5\rtl\vhdl\core\fifo_256x8_smartfusion2.vhd":35:7:35:42|Synthesizing coreuartapb_lib.m2sext_sb_coreuartapb_0_5_fifo_256x8.translated 
+@N: CD630 :"C:\Users\AndersonHan\Desktop\BentoBox\Fpga\component\work\M2sExt_sb\CoreUARTapb_0_5\rtl\vhdl\core\fifo_256x8_smartfusion2.vhd":119:7:119:45|Synthesizing coreuartapb_lib.m2sext_sb_coreuartapb_0_5_fifo_ctrl_128.translated 
+@N: CD364 :"C:\Users\AndersonHan\Desktop\BentoBox\Fpga\component\work\M2sExt_sb\CoreUARTapb_0_5\rtl\vhdl\core\fifo_256x8_smartfusion2.vhd":261:12:261:25|Removed redundant assignment
+@N: CD630 :"C:\Users\AndersonHan\Desktop\BentoBox\Fpga\component\work\M2sExt_sb\CoreUARTapb_0_5\rtl\vhdl\core\fifo_256x8_smartfusion2.vhd":284:7:284:44|Synthesizing coreuartapb_lib.m2sext_sb_coreuartapb_0_5_ram128x8_pa4.translated 
+@N: CD630 :"C:\Users\AndersonHan\Desktop\BentoBox\Fpga\component\work\M2sExt_sb\CoreUARTapb_0_5\rtl\vhdl\core\Rx_async.vhd":33:7:33:40|Synthesizing coreuartapb_lib.m2sext_sb_coreuartapb_0_5_rx_async.translated 
+@N: CD233 :"C:\Users\AndersonHan\Desktop\BentoBox\Fpga\component\work\M2sExt_sb\CoreUARTapb_0_5\rtl\vhdl\core\Rx_async.vhd":64:24:64:25|Using sequential encoding for type receive_states
+@N: CD364 :"C:\Users\AndersonHan\Desktop\BentoBox\Fpga\component\work\M2sExt_sb\CoreUARTapb_0_5\rtl\vhdl\core\Rx_async.vhd":213:12:213:26|Removed redundant assignment
+@N: CL177 :"C:\Users\AndersonHan\Desktop\BentoBox\Fpga\component\work\M2sExt_sb\CoreUARTapb_0_5\rtl\vhdl\core\Rx_async.vhd":380:6:380:7|Sharing sequential element clear_framing_error_en_i.
+@N: CD630 :"C:\Users\AndersonHan\Desktop\BentoBox\Fpga\component\work\M2sExt_sb\CoreUARTapb_0_5\rtl\vhdl\core\Tx_async.vhd":33:7:33:40|Synthesizing coreuartapb_lib.m2sext_sb_coreuartapb_0_5_tx_async.translated 
+@N: CD364 :"C:\Users\AndersonHan\Desktop\BentoBox\Fpga\component\work\M2sExt_sb\CoreUARTapb_0_5\rtl\vhdl\core\Tx_async.vhd":286:10:286:18|Removed redundant assignment
+@N: CD630 :"C:\Users\AndersonHan\Desktop\BentoBox\Fpga\component\work\M2sExt_sb\CoreUARTapb_0_5\rtl\vhdl\core\Clock_gen.vhd":35:7:35:41|Synthesizing coreuartapb_lib.m2sext_sb_coreuartapb_0_5_clock_gen.rtl 
+@N: CD630 :"C:\Users\AndersonHan\Desktop\BentoBox\Fpga\component\work\M2sExt_sb\CoreUARTapb_0_4\rtl\vhdl\core\CoreUARTapb.vhd":61:7:61:43|Synthesizing coreuartapb_lib.m2sext_sb_coreuartapb_0_4_coreuartapb.translated 
+@N: CD364 :"C:\Users\AndersonHan\Desktop\BentoBox\Fpga\component\work\M2sExt_sb\CoreUARTapb_0_4\rtl\vhdl\core\CoreUARTapb.vhd":290:12:290:22|Removed redundant assignment
+@N: CD364 :"C:\Users\AndersonHan\Desktop\BentoBox\Fpga\component\work\M2sExt_sb\CoreUARTapb_0_4\rtl\vhdl\core\CoreUARTapb.vhd":314:12:314:22|Removed redundant assignment
+@N: CD630 :"C:\Users\AndersonHan\Desktop\BentoBox\Fpga\component\work\M2sExt_sb\CoreUARTapb_0_4\rtl\vhdl\core\CoreUART.vhd":33:7:33:40|Synthesizing coreuartapb_lib.m2sext_sb_coreuartapb_0_4_coreuart.translated 
+@N: CD364 :"C:\Users\AndersonHan\Desktop\BentoBox\Fpga\component\work\M2sExt_sb\CoreUARTapb_0_4\rtl\vhdl\core\CoreUART.vhd":399:11:399:22|Removed redundant assignment
+@N: CD630 :"C:\Users\AndersonHan\Desktop\BentoBox\Fpga\component\work\M2sExt_sb\CoreUARTapb_0_4\rtl\vhdl\core\fifo_256x8_smartfusion2.vhd":35:7:35:42|Synthesizing coreuartapb_lib.m2sext_sb_coreuartapb_0_4_fifo_256x8.translated 
+@N: CD630 :"C:\Users\AndersonHan\Desktop\BentoBox\Fpga\component\work\M2sExt_sb\CoreUARTapb_0_4\rtl\vhdl\core\fifo_256x8_smartfusion2.vhd":119:7:119:45|Synthesizing coreuartapb_lib.m2sext_sb_coreuartapb_0_4_fifo_ctrl_128.translated 
+@N: CD364 :"C:\Users\AndersonHan\Desktop\BentoBox\Fpga\component\work\M2sExt_sb\CoreUARTapb_0_4\rtl\vhdl\core\fifo_256x8_smartfusion2.vhd":261:12:261:25|Removed redundant assignment
+@N: CD630 :"C:\Users\AndersonHan\Desktop\BentoBox\Fpga\component\work\M2sExt_sb\CoreUARTapb_0_4\rtl\vhdl\core\fifo_256x8_smartfusion2.vhd":284:7:284:44|Synthesizing coreuartapb_lib.m2sext_sb_coreuartapb_0_4_ram128x8_pa4.translated 
+@N: CD630 :"C:\Users\AndersonHan\Desktop\BentoBox\Fpga\component\work\M2sExt_sb\CoreUARTapb_0_4\rtl\vhdl\core\Rx_async.vhd":33:7:33:40|Synthesizing coreuartapb_lib.m2sext_sb_coreuartapb_0_4_rx_async.translated 
+@N: CD233 :"C:\Users\AndersonHan\Desktop\BentoBox\Fpga\component\work\M2sExt_sb\CoreUARTapb_0_4\rtl\vhdl\core\Rx_async.vhd":64:24:64:25|Using sequential encoding for type receive_states
+@N: CD364 :"C:\Users\AndersonHan\Desktop\BentoBox\Fpga\component\work\M2sExt_sb\CoreUARTapb_0_4\rtl\vhdl\core\Rx_async.vhd":213:12:213:26|Removed redundant assignment
+@N: CL177 :"C:\Users\AndersonHan\Desktop\BentoBox\Fpga\component\work\M2sExt_sb\CoreUARTapb_0_4\rtl\vhdl\core\Rx_async.vhd":380:6:380:7|Sharing sequential element clear_framing_error_en_i.
+@N: CD630 :"C:\Users\AndersonHan\Desktop\BentoBox\Fpga\component\work\M2sExt_sb\CoreUARTapb_0_4\rtl\vhdl\core\Tx_async.vhd":33:7:33:40|Synthesizing coreuartapb_lib.m2sext_sb_coreuartapb_0_4_tx_async.translated 
+@N: CD364 :"C:\Users\AndersonHan\Desktop\BentoBox\Fpga\component\work\M2sExt_sb\CoreUARTapb_0_4\rtl\vhdl\core\Tx_async.vhd":286:10:286:18|Removed redundant assignment
+@N: CD630 :"C:\Users\AndersonHan\Desktop\BentoBox\Fpga\component\work\M2sExt_sb\CoreUARTapb_0_4\rtl\vhdl\core\Clock_gen.vhd":35:7:35:41|Synthesizing coreuartapb_lib.m2sext_sb_coreuartapb_0_4_clock_gen.rtl 
+@N: CD630 :"C:\Users\AndersonHan\Desktop\BentoBox\Fpga\component\work\M2sExt_sb\CoreUARTapb_0_3\rtl\vhdl\core\CoreUARTapb.vhd":61:7:61:43|Synthesizing coreuartapb_lib.m2sext_sb_coreuartapb_0_3_coreuartapb.translated 
+@N: CD364 :"C:\Users\AndersonHan\Desktop\BentoBox\Fpga\component\work\M2sExt_sb\CoreUARTapb_0_3\rtl\vhdl\core\CoreUARTapb.vhd":290:12:290:22|Removed redundant assignment
+@N: CD364 :"C:\Users\AndersonHan\Desktop\BentoBox\Fpga\component\work\M2sExt_sb\CoreUARTapb_0_3\rtl\vhdl\core\CoreUARTapb.vhd":314:12:314:22|Removed redundant assignment
+@N: CD630 :"C:\Users\AndersonHan\Desktop\BentoBox\Fpga\component\work\M2sExt_sb\CoreUARTapb_0_3\rtl\vhdl\core\CoreUART.vhd":33:7:33:40|Synthesizing coreuartapb_lib.m2sext_sb_coreuartapb_0_3_coreuart.translated 
+@N: CD364 :"C:\Users\AndersonHan\Desktop\BentoBox\Fpga\component\work\M2sExt_sb\CoreUARTapb_0_3\rtl\vhdl\core\CoreUART.vhd":399:11:399:22|Removed redundant assignment
+@N: CD630 :"C:\Users\AndersonHan\Desktop\BentoBox\Fpga\component\work\M2sExt_sb\CoreUARTapb_0_3\rtl\vhdl\core\fifo_256x8_smartfusion2.vhd":35:7:35:42|Synthesizing coreuartapb_lib.m2sext_sb_coreuartapb_0_3_fifo_256x8.translated 
+@N: CD630 :"C:\Users\AndersonHan\Desktop\BentoBox\Fpga\component\work\M2sExt_sb\CoreUARTapb_0_3\rtl\vhdl\core\fifo_256x8_smartfusion2.vhd":119:7:119:45|Synthesizing coreuartapb_lib.m2sext_sb_coreuartapb_0_3_fifo_ctrl_128.translated 
+@N: CD364 :"C:\Users\AndersonHan\Desktop\BentoBox\Fpga\component\work\M2sExt_sb\CoreUARTapb_0_3\rtl\vhdl\core\fifo_256x8_smartfusion2.vhd":261:12:261:25|Removed redundant assignment
+@N: CD630 :"C:\Users\AndersonHan\Desktop\BentoBox\Fpga\component\work\M2sExt_sb\CoreUARTapb_0_3\rtl\vhdl\core\fifo_256x8_smartfusion2.vhd":284:7:284:44|Synthesizing coreuartapb_lib.m2sext_sb_coreuartapb_0_3_ram128x8_pa4.translated 
+@N: CD630 :"C:\Users\AndersonHan\Desktop\BentoBox\Fpga\component\work\M2sExt_sb\CoreUARTapb_0_3\rtl\vhdl\core\Rx_async.vhd":33:7:33:40|Synthesizing coreuartapb_lib.m2sext_sb_coreuartapb_0_3_rx_async.translated 
+@N: CD233 :"C:\Users\AndersonHan\Desktop\BentoBox\Fpga\component\work\M2sExt_sb\CoreUARTapb_0_3\rtl\vhdl\core\Rx_async.vhd":64:24:64:25|Using sequential encoding for type receive_states
+@N: CD364 :"C:\Users\AndersonHan\Desktop\BentoBox\Fpga\component\work\M2sExt_sb\CoreUARTapb_0_3\rtl\vhdl\core\Rx_async.vhd":213:12:213:26|Removed redundant assignment
+@N: CL177 :"C:\Users\AndersonHan\Desktop\BentoBox\Fpga\component\work\M2sExt_sb\CoreUARTapb_0_3\rtl\vhdl\core\Rx_async.vhd":380:6:380:7|Sharing sequential element clear_framing_error_en_i.
+@N: CD630 :"C:\Users\AndersonHan\Desktop\BentoBox\Fpga\component\work\M2sExt_sb\CoreUARTapb_0_3\rtl\vhdl\core\Tx_async.vhd":33:7:33:40|Synthesizing coreuartapb_lib.m2sext_sb_coreuartapb_0_3_tx_async.translated 
+@N: CD364 :"C:\Users\AndersonHan\Desktop\BentoBox\Fpga\component\work\M2sExt_sb\CoreUARTapb_0_3\rtl\vhdl\core\Tx_async.vhd":286:10:286:18|Removed redundant assignment
+@N: CD630 :"C:\Users\AndersonHan\Desktop\BentoBox\Fpga\component\work\M2sExt_sb\CoreUARTapb_0_3\rtl\vhdl\core\Clock_gen.vhd":35:7:35:41|Synthesizing coreuartapb_lib.m2sext_sb_coreuartapb_0_3_clock_gen.rtl 
+@N: CD630 :"C:\Users\AndersonHan\Desktop\BentoBox\Fpga\component\work\M2sExt_sb\CoreUARTapb_0_2\rtl\vhdl\core\CoreUARTapb.vhd":61:7:61:43|Synthesizing coreuartapb_lib.m2sext_sb_coreuartapb_0_2_coreuartapb.translated 
+@N: CD364 :"C:\Users\AndersonHan\Desktop\BentoBox\Fpga\component\work\M2sExt_sb\CoreUARTapb_0_2\rtl\vhdl\core\CoreUARTapb.vhd":290:12:290:22|Removed redundant assignment
+@N: CD364 :"C:\Users\AndersonHan\Desktop\BentoBox\Fpga\component\work\M2sExt_sb\CoreUARTapb_0_2\rtl\vhdl\core\CoreUARTapb.vhd":314:12:314:22|Removed redundant assignment
+@N: CD630 :"C:\Users\AndersonHan\Desktop\BentoBox\Fpga\component\work\M2sExt_sb\CoreUARTapb_0_2\rtl\vhdl\core\CoreUART.vhd":33:7:33:40|Synthesizing coreuartapb_lib.m2sext_sb_coreuartapb_0_2_coreuart.translated 
+@N: CD364 :"C:\Users\AndersonHan\Desktop\BentoBox\Fpga\component\work\M2sExt_sb\CoreUARTapb_0_2\rtl\vhdl\core\CoreUART.vhd":399:11:399:22|Removed redundant assignment
+@N: CD630 :"C:\Users\AndersonHan\Desktop\BentoBox\Fpga\component\work\M2sExt_sb\CoreUARTapb_0_2\rtl\vhdl\core\fifo_256x8_smartfusion2.vhd":35:7:35:42|Synthesizing coreuartapb_lib.m2sext_sb_coreuartapb_0_2_fifo_256x8.translated 
+@N: CD630 :"C:\Users\AndersonHan\Desktop\BentoBox\Fpga\component\work\M2sExt_sb\CoreUARTapb_0_2\rtl\vhdl\core\fifo_256x8_smartfusion2.vhd":119:7:119:45|Synthesizing coreuartapb_lib.m2sext_sb_coreuartapb_0_2_fifo_ctrl_128.translated 
+@N: CD364 :"C:\Users\AndersonHan\Desktop\BentoBox\Fpga\component\work\M2sExt_sb\CoreUARTapb_0_2\rtl\vhdl\core\fifo_256x8_smartfusion2.vhd":261:12:261:25|Removed redundant assignment
+@N: CD630 :"C:\Users\AndersonHan\Desktop\BentoBox\Fpga\component\work\M2sExt_sb\CoreUARTapb_0_2\rtl\vhdl\core\fifo_256x8_smartfusion2.vhd":284:7:284:44|Synthesizing coreuartapb_lib.m2sext_sb_coreuartapb_0_2_ram128x8_pa4.translated 
+@N: CD630 :"C:\Users\AndersonHan\Desktop\BentoBox\Fpga\component\work\M2sExt_sb\CoreUARTapb_0_2\rtl\vhdl\core\Rx_async.vhd":33:7:33:40|Synthesizing coreuartapb_lib.m2sext_sb_coreuartapb_0_2_rx_async.translated 
+@N: CD233 :"C:\Users\AndersonHan\Desktop\BentoBox\Fpga\component\work\M2sExt_sb\CoreUARTapb_0_2\rtl\vhdl\core\Rx_async.vhd":64:24:64:25|Using sequential encoding for type receive_states
+@N: CD364 :"C:\Users\AndersonHan\Desktop\BentoBox\Fpga\component\work\M2sExt_sb\CoreUARTapb_0_2\rtl\vhdl\core\Rx_async.vhd":213:12:213:26|Removed redundant assignment
+@N: CL177 :"C:\Users\AndersonHan\Desktop\BentoBox\Fpga\component\work\M2sExt_sb\CoreUARTapb_0_2\rtl\vhdl\core\Rx_async.vhd":380:6:380:7|Sharing sequential element clear_framing_error_en_i.
+@N: CD630 :"C:\Users\AndersonHan\Desktop\BentoBox\Fpga\component\work\M2sExt_sb\CoreUARTapb_0_2\rtl\vhdl\core\Tx_async.vhd":33:7:33:40|Synthesizing coreuartapb_lib.m2sext_sb_coreuartapb_0_2_tx_async.translated 
+@N: CD364 :"C:\Users\AndersonHan\Desktop\BentoBox\Fpga\component\work\M2sExt_sb\CoreUARTapb_0_2\rtl\vhdl\core\Tx_async.vhd":286:10:286:18|Removed redundant assignment
+@N: CD630 :"C:\Users\AndersonHan\Desktop\BentoBox\Fpga\component\work\M2sExt_sb\CoreUARTapb_0_2\rtl\vhdl\core\Clock_gen.vhd":35:7:35:41|Synthesizing coreuartapb_lib.m2sext_sb_coreuartapb_0_2_clock_gen.rtl 
+@N: CD630 :"C:\Users\AndersonHan\Desktop\BentoBox\Fpga\component\work\M2sExt_sb\CoreUARTapb_0_1\rtl\vhdl\core\CoreUARTapb.vhd":61:7:61:43|Synthesizing coreuartapb_lib.m2sext_sb_coreuartapb_0_1_coreuartapb.translated 
+@N: CD364 :"C:\Users\AndersonHan\Desktop\BentoBox\Fpga\component\work\M2sExt_sb\CoreUARTapb_0_1\rtl\vhdl\core\CoreUARTapb.vhd":290:12:290:22|Removed redundant assignment
+@N: CD364 :"C:\Users\AndersonHan\Desktop\BentoBox\Fpga\component\work\M2sExt_sb\CoreUARTapb_0_1\rtl\vhdl\core\CoreUARTapb.vhd":314:12:314:22|Removed redundant assignment
+@N: CD630 :"C:\Users\AndersonHan\Desktop\BentoBox\Fpga\component\work\M2sExt_sb\CoreUARTapb_0_1\rtl\vhdl\core\CoreUART.vhd":33:7:33:40|Synthesizing coreuartapb_lib.m2sext_sb_coreuartapb_0_1_coreuart.translated 
+@N: CD364 :"C:\Users\AndersonHan\Desktop\BentoBox\Fpga\component\work\M2sExt_sb\CoreUARTapb_0_1\rtl\vhdl\core\CoreUART.vhd":399:11:399:22|Removed redundant assignment
+@N: CD630 :"C:\Users\AndersonHan\Desktop\BentoBox\Fpga\component\work\M2sExt_sb\CoreUARTapb_0_1\rtl\vhdl\core\fifo_256x8_smartfusion2.vhd":35:7:35:42|Synthesizing coreuartapb_lib.m2sext_sb_coreuartapb_0_1_fifo_256x8.translated 
+@N: CD630 :"C:\Users\AndersonHan\Desktop\BentoBox\Fpga\component\work\M2sExt_sb\CoreUARTapb_0_1\rtl\vhdl\core\fifo_256x8_smartfusion2.vhd":119:7:119:45|Synthesizing coreuartapb_lib.m2sext_sb_coreuartapb_0_1_fifo_ctrl_128.translated 
+@N: CD364 :"C:\Users\AndersonHan\Desktop\BentoBox\Fpga\component\work\M2sExt_sb\CoreUARTapb_0_1\rtl\vhdl\core\fifo_256x8_smartfusion2.vhd":261:12:261:25|Removed redundant assignment
+@N: CD630 :"C:\Users\AndersonHan\Desktop\BentoBox\Fpga\component\work\M2sExt_sb\CoreUARTapb_0_1\rtl\vhdl\core\fifo_256x8_smartfusion2.vhd":284:7:284:44|Synthesizing coreuartapb_lib.m2sext_sb_coreuartapb_0_1_ram128x8_pa4.translated 
+@N: CD630 :"C:\Users\AndersonHan\Desktop\BentoBox\Fpga\component\work\M2sExt_sb\CoreUARTapb_0_1\rtl\vhdl\core\Rx_async.vhd":33:7:33:40|Synthesizing coreuartapb_lib.m2sext_sb_coreuartapb_0_1_rx_async.translated 
+@N: CD233 :"C:\Users\AndersonHan\Desktop\BentoBox\Fpga\component\work\M2sExt_sb\CoreUARTapb_0_1\rtl\vhdl\core\Rx_async.vhd":64:24:64:25|Using sequential encoding for type receive_states
+@N: CD364 :"C:\Users\AndersonHan\Desktop\BentoBox\Fpga\component\work\M2sExt_sb\CoreUARTapb_0_1\rtl\vhdl\core\Rx_async.vhd":213:12:213:26|Removed redundant assignment
+@N: CL177 :"C:\Users\AndersonHan\Desktop\BentoBox\Fpga\component\work\M2sExt_sb\CoreUARTapb_0_1\rtl\vhdl\core\Rx_async.vhd":380:6:380:7|Sharing sequential element clear_framing_error_en_i.
+@N: CD630 :"C:\Users\AndersonHan\Desktop\BentoBox\Fpga\component\work\M2sExt_sb\CoreUARTapb_0_1\rtl\vhdl\core\Tx_async.vhd":33:7:33:40|Synthesizing coreuartapb_lib.m2sext_sb_coreuartapb_0_1_tx_async.translated 
+@N: CD364 :"C:\Users\AndersonHan\Desktop\BentoBox\Fpga\component\work\M2sExt_sb\CoreUARTapb_0_1\rtl\vhdl\core\Tx_async.vhd":286:10:286:18|Removed redundant assignment
+@N: CD630 :"C:\Users\AndersonHan\Desktop\BentoBox\Fpga\component\work\M2sExt_sb\CoreUARTapb_0_1\rtl\vhdl\core\Clock_gen.vhd":35:7:35:41|Synthesizing coreuartapb_lib.m2sext_sb_coreuartapb_0_1_clock_gen.rtl 
+@N: CD630 :"C:\Users\AndersonHan\Desktop\BentoBox\Fpga\component\work\M2sExt_sb\CoreUARTapb_0_0\rtl\vhdl\core\CoreUARTapb.vhd":61:7:61:43|Synthesizing coreuartapb_lib.m2sext_sb_coreuartapb_0_0_coreuartapb.translated 
+@N: CD364 :"C:\Users\AndersonHan\Desktop\BentoBox\Fpga\component\work\M2sExt_sb\CoreUARTapb_0_0\rtl\vhdl\core\CoreUARTapb.vhd":290:12:290:22|Removed redundant assignment
+@N: CD364 :"C:\Users\AndersonHan\Desktop\BentoBox\Fpga\component\work\M2sExt_sb\CoreUARTapb_0_0\rtl\vhdl\core\CoreUARTapb.vhd":314:12:314:22|Removed redundant assignment
+@N: CD630 :"C:\Users\AndersonHan\Desktop\BentoBox\Fpga\component\work\M2sExt_sb\CoreUARTapb_0_0\rtl\vhdl\core\CoreUART.vhd":33:7:33:40|Synthesizing coreuartapb_lib.m2sext_sb_coreuartapb_0_0_coreuart.translated 
+@N: CD364 :"C:\Users\AndersonHan\Desktop\BentoBox\Fpga\component\work\M2sExt_sb\CoreUARTapb_0_0\rtl\vhdl\core\CoreUART.vhd":399:11:399:22|Removed redundant assignment
+@N: CD630 :"C:\Users\AndersonHan\Desktop\BentoBox\Fpga\component\work\M2sExt_sb\CoreUARTapb_0_0\rtl\vhdl\core\fifo_256x8_smartfusion2.vhd":35:7:35:42|Synthesizing coreuartapb_lib.m2sext_sb_coreuartapb_0_0_fifo_256x8.translated 
+@N: CD630 :"C:\Users\AndersonHan\Desktop\BentoBox\Fpga\component\work\M2sExt_sb\CoreUARTapb_0_0\rtl\vhdl\core\fifo_256x8_smartfusion2.vhd":119:7:119:45|Synthesizing coreuartapb_lib.m2sext_sb_coreuartapb_0_0_fifo_ctrl_128.translated 
+@N: CD364 :"C:\Users\AndersonHan\Desktop\BentoBox\Fpga\component\work\M2sExt_sb\CoreUARTapb_0_0\rtl\vhdl\core\fifo_256x8_smartfusion2.vhd":261:12:261:25|Removed redundant assignment
+@N: CD630 :"C:\Users\AndersonHan\Desktop\BentoBox\Fpga\component\work\M2sExt_sb\CoreUARTapb_0_0\rtl\vhdl\core\fifo_256x8_smartfusion2.vhd":284:7:284:44|Synthesizing coreuartapb_lib.m2sext_sb_coreuartapb_0_0_ram128x8_pa4.translated 
+@N: CD630 :"C:\Users\AndersonHan\Desktop\BentoBox\Fpga\component\work\M2sExt_sb\CoreUARTapb_0_0\rtl\vhdl\core\Rx_async.vhd":33:7:33:40|Synthesizing coreuartapb_lib.m2sext_sb_coreuartapb_0_0_rx_async.translated 
+@N: CD233 :"C:\Users\AndersonHan\Desktop\BentoBox\Fpga\component\work\M2sExt_sb\CoreUARTapb_0_0\rtl\vhdl\core\Rx_async.vhd":64:24:64:25|Using sequential encoding for type receive_states
+@N: CD364 :"C:\Users\AndersonHan\Desktop\BentoBox\Fpga\component\work\M2sExt_sb\CoreUARTapb_0_0\rtl\vhdl\core\Rx_async.vhd":213:12:213:26|Removed redundant assignment
+@N: CL177 :"C:\Users\AndersonHan\Desktop\BentoBox\Fpga\component\work\M2sExt_sb\CoreUARTapb_0_0\rtl\vhdl\core\Rx_async.vhd":380:6:380:7|Sharing sequential element clear_framing_error_en_i.
+@N: CD630 :"C:\Users\AndersonHan\Desktop\BentoBox\Fpga\component\work\M2sExt_sb\CoreUARTapb_0_0\rtl\vhdl\core\Tx_async.vhd":33:7:33:40|Synthesizing coreuartapb_lib.m2sext_sb_coreuartapb_0_0_tx_async.translated 
+@N: CD364 :"C:\Users\AndersonHan\Desktop\BentoBox\Fpga\component\work\M2sExt_sb\CoreUARTapb_0_0\rtl\vhdl\core\Tx_async.vhd":286:10:286:18|Removed redundant assignment
+@N: CD630 :"C:\Users\AndersonHan\Desktop\BentoBox\Fpga\component\work\M2sExt_sb\CoreUARTapb_0_0\rtl\vhdl\core\Clock_gen.vhd":35:7:35:41|Synthesizing coreuartapb_lib.m2sext_sb_coreuartapb_0_0_clock_gen.rtl 
+@N: CD630 :"C:\Users\AndersonHan\Desktop\BentoBox\Fpga\component\Actel\DirectCore\CORESPI\3.0.156\rtl\vhdl\core\corespi.vhd":14:7:14:13|Synthesizing corespi_lib.corespi.behv 
+@N: CD630 :"C:\Users\AndersonHan\Desktop\BentoBox\Fpga\component\Actel\DirectCore\CORESPI\3.0.156\rtl\vhdl\core\corespi_sfr.vhd":18:7:18:17|Synthesizing corespi_lib.corespi_sfr.behv 
+@N: CD630 :"C:\Users\AndersonHan\Desktop\BentoBox\Fpga\component\Actel\DirectCore\CORESPI\3.0.156\rtl\vhdl\core\spi_slave.vhd":19:7:19:15|Synthesizing corespi_lib.spi_slave.behv 
+@N: CD630 :"C:\Users\AndersonHan\Desktop\BentoBox\Fpga\component\Actel\DirectCore\CORESPI\3.0.156\rtl\vhdl\core\spi_master.vhd":18:7:18:16|Synthesizing corespi_lib.spi_master.behv 
+@N: CD231 :"C:\Users\AndersonHan\Desktop\BentoBox\Fpga\component\Actel\DirectCore\CORESPI\3.0.156\rtl\vhdl\core\spi_master.vhd":51:14:51:15|Using onehot encoding for type fsm_type (idle="10000000000")
+@N: CD630 :"C:\Users\AndersonHan\Desktop\BentoBox\Fpga\component\Actel\DirectCore\CoreResetP\7.0.104\rtl\vhdl\core\coreresetp.vhd":27:7:27:16|Synthesizing work.coreresetp.rtl 
+@N: CL177 :"C:\Users\AndersonHan\Desktop\BentoBox\Fpga\component\Actel\DirectCore\CoreResetP\7.0.104\rtl\vhdl\core\coreresetp.vhd":1331:8:1331:9|Sharing sequential element M3_RESET_N_int.
+@N: CL177 :"C:\Users\AndersonHan\Desktop\BentoBox\Fpga\component\Actel\DirectCore\CoreResetP\7.0.104\rtl\vhdl\core\coreresetp.vhd":936:8:936:9|Sharing sequential element sdif2_spll_lock_q1.
+@N: CL177 :"C:\Users\AndersonHan\Desktop\BentoBox\Fpga\component\Actel\DirectCore\CoreResetP\7.0.104\rtl\vhdl\core\coreresetp.vhd":936:8:936:9|Sharing sequential element sdif1_spll_lock_q1.
+@N: CL177 :"C:\Users\AndersonHan\Desktop\BentoBox\Fpga\component\Actel\DirectCore\CoreResetP\7.0.104\rtl\vhdl\core\coreresetp.vhd":936:8:936:9|Sharing sequential element sdif0_spll_lock_q1.
+@N: CL177 :"C:\Users\AndersonHan\Desktop\BentoBox\Fpga\component\Actel\DirectCore\CoreResetP\7.0.104\rtl\vhdl\core\coreresetp.vhd":936:8:936:9|Sharing sequential element fpll_lock_q1.
+@N: CD630 :"C:\Users\AndersonHan\Desktop\BentoBox\Fpga\component\Actel\DirectCore\CoreInterrupt\1.1.101\rtl\vhdl\u\CoreInterrupt.vhd":11:7:11:19|Synthesizing work.coreinterrupt.synth 
+@N: CD630 :"C:\Users\AndersonHan\Desktop\BentoBox\Fpga\component\Actel\DirectCore\COREI2C\7.0.102\rtl\vhdl\core\corei2c.vhd":41:7:41:13|Synthesizing corei2c_lib.corei2c.rtl 
+@N: CD630 :"C:\Users\AndersonHan\Desktop\BentoBox\Fpga\component\Actel\DirectCore\COREI2C\7.0.102\rtl\vhdl\core\corei2creal.vhd":92:7:92:17|Synthesizing corei2c_lib.corei2creal.rtl 
+@N: CD231 :"C:\Users\AndersonHan\Desktop\BentoBox\Fpga\component\Actel\DirectCore\COREI2C\7.0.102\rtl\vhdl\core\corei2creal.vhd":237:17:237:18|Using onehot encoding for type fsmmod_type (fsmmod0="1000000")
+@N: CD231 :"C:\Users\AndersonHan\Desktop\BentoBox\Fpga\component\Actel\DirectCore\COREI2C\7.0.102\rtl\vhdl\core\corei2creal.vhd":229:18:229:19|Using onehot encoding for type fsmsync_type (fsmsync0="10000000")
+@N: CD231 :"C:\Users\AndersonHan\Desktop\BentoBox\Fpga\component\Actel\DirectCore\COREI2C\7.0.102\rtl\vhdl\core\corei2creal.vhd":221:17:221:18|Using onehot encoding for type fsmdet_type (fsmdet0="1000000")
+@N: CD231 :"C:\Users\AndersonHan\Desktop\BentoBox\Fpga\component\Actel\DirectCore\COREI2C\7.0.102\rtl\vhdl\core\corei2creal.vhd":207:17:207:18|Using onehot encoding for type fsmsta_type (fsmsta08="100000000000000000000000000000")
+@N: CD630 :"C:\Users\AndersonHan\Desktop\BentoBox\Fpga\component\Actel\DirectCore\CoreGPIO\3.0.120\rtl\vhdl\core\coregpio.vhd":29:7:29:14|Synthesizing coregpio_lib.coregpio.rtl 
+@N: CD364 :"C:\Users\AndersonHan\Desktop\BentoBox\Fpga\component\Actel\DirectCore\CoreGPIO\3.0.120\rtl\vhdl\core\coregpio.vhd":542:14:542:21|Removed redundant assignment
+@N: CD364 :"C:\Users\AndersonHan\Desktop\BentoBox\Fpga\component\Actel\DirectCore\CoreGPIO\3.0.120\rtl\vhdl\core\coregpio.vhd":565:14:565:21|Removed redundant assignment
+@N: CD364 :"C:\Users\AndersonHan\Desktop\BentoBox\Fpga\component\Actel\DirectCore\CoreGPIO\3.0.120\rtl\vhdl\core\coregpio.vhd":588:14:588:22|Removed redundant assignment
+@N: CD364 :"C:\Users\AndersonHan\Desktop\BentoBox\Fpga\component\Actel\DirectCore\CoreGPIO\3.0.120\rtl\vhdl\core\coregpio.vhd":626:16:626:24|Removed redundant assignment
+@N: CD364 :"C:\Users\AndersonHan\Desktop\BentoBox\Fpga\component\Actel\DirectCore\CoreGPIO\3.0.120\rtl\vhdl\core\coregpio.vhd":629:12:629:20|Removed redundant assignment
+@N: CD364 :"C:\Users\AndersonHan\Desktop\BentoBox\Fpga\component\Actel\DirectCore\CoreGPIO\3.0.120\rtl\vhdl\core\coregpio.vhd":542:14:542:21|Removed redundant assignment
+@N: CD364 :"C:\Users\AndersonHan\Desktop\BentoBox\Fpga\component\Actel\DirectCore\CoreGPIO\3.0.120\rtl\vhdl\core\coregpio.vhd":565:14:565:21|Removed redundant assignment
+@N: CD364 :"C:\Users\AndersonHan\Desktop\BentoBox\Fpga\component\Actel\DirectCore\CoreGPIO\3.0.120\rtl\vhdl\core\coregpio.vhd":588:14:588:22|Removed redundant assignment
+@N: CD364 :"C:\Users\AndersonHan\Desktop\BentoBox\Fpga\component\Actel\DirectCore\CoreGPIO\3.0.120\rtl\vhdl\core\coregpio.vhd":626:16:626:24|Removed redundant assignment
+@N: CD364 :"C:\Users\AndersonHan\Desktop\BentoBox\Fpga\component\Actel\DirectCore\CoreGPIO\3.0.120\rtl\vhdl\core\coregpio.vhd":629:12:629:20|Removed redundant assignment
+@N: CD364 :"C:\Users\AndersonHan\Desktop\BentoBox\Fpga\component\Actel\DirectCore\CoreGPIO\3.0.120\rtl\vhdl\core\coregpio.vhd":542:14:542:21|Removed redundant assignment
+@N: CD364 :"C:\Users\AndersonHan\Desktop\BentoBox\Fpga\component\Actel\DirectCore\CoreGPIO\3.0.120\rtl\vhdl\core\coregpio.vhd":565:14:565:21|Removed redundant assignment
+@N: CD364 :"C:\Users\AndersonHan\Desktop\BentoBox\Fpga\component\Actel\DirectCore\CoreGPIO\3.0.120\rtl\vhdl\core\coregpio.vhd":588:14:588:22|Removed redundant assignment
+@N: CD364 :"C:\Users\AndersonHan\Desktop\BentoBox\Fpga\component\Actel\DirectCore\CoreGPIO\3.0.120\rtl\vhdl\core\coregpio.vhd":626:16:626:24|Removed redundant assignment
+@N: CD364 :"C:\Users\AndersonHan\Desktop\BentoBox\Fpga\component\Actel\DirectCore\CoreGPIO\3.0.120\rtl\vhdl\core\coregpio.vhd":629:12:629:20|Removed redundant assignment
+@N: CD364 :"C:\Users\AndersonHan\Desktop\BentoBox\Fpga\component\Actel\DirectCore\CoreGPIO\3.0.120\rtl\vhdl\core\coregpio.vhd":542:14:542:21|Removed redundant assignment
+@N: CD364 :"C:\Users\AndersonHan\Desktop\BentoBox\Fpga\component\Actel\DirectCore\CoreGPIO\3.0.120\rtl\vhdl\core\coregpio.vhd":565:14:565:21|Removed redundant assignment
+@N: CD364 :"C:\Users\AndersonHan\Desktop\BentoBox\Fpga\component\Actel\DirectCore\CoreGPIO\3.0.120\rtl\vhdl\core\coregpio.vhd":588:14:588:22|Removed redundant assignment
+@N: CD364 :"C:\Users\AndersonHan\Desktop\BentoBox\Fpga\component\Actel\DirectCore\CoreGPIO\3.0.120\rtl\vhdl\core\coregpio.vhd":626:16:626:24|Removed redundant assignment
+@N: CD364 :"C:\Users\AndersonHan\Desktop\BentoBox\Fpga\component\Actel\DirectCore\CoreGPIO\3.0.120\rtl\vhdl\core\coregpio.vhd":629:12:629:20|Removed redundant assignment
+@N: CD364 :"C:\Users\AndersonHan\Desktop\BentoBox\Fpga\component\Actel\DirectCore\CoreGPIO\3.0.120\rtl\vhdl\core\coregpio.vhd":542:14:542:21|Removed redundant assignment
+@N: CD364 :"C:\Users\AndersonHan\Desktop\BentoBox\Fpga\component\Actel\DirectCore\CoreGPIO\3.0.120\rtl\vhdl\core\coregpio.vhd":565:14:565:21|Removed redundant assignment
+@N: CD364 :"C:\Users\AndersonHan\Desktop\BentoBox\Fpga\component\Actel\DirectCore\CoreGPIO\3.0.120\rtl\vhdl\core\coregpio.vhd":588:14:588:22|Removed redundant assignment
+@N: CD364 :"C:\Users\AndersonHan\Desktop\BentoBox\Fpga\component\Actel\DirectCore\CoreGPIO\3.0.120\rtl\vhdl\core\coregpio.vhd":626:16:626:24|Removed redundant assignment
+@N: CD364 :"C:\Users\AndersonHan\Desktop\BentoBox\Fpga\component\Actel\DirectCore\CoreGPIO\3.0.120\rtl\vhdl\core\coregpio.vhd":629:12:629:20|Removed redundant assignment
+@N: CD364 :"C:\Users\AndersonHan\Desktop\BentoBox\Fpga\component\Actel\DirectCore\CoreGPIO\3.0.120\rtl\vhdl\core\coregpio.vhd":542:14:542:21|Removed redundant assignment
+@N: CD364 :"C:\Users\AndersonHan\Desktop\BentoBox\Fpga\component\Actel\DirectCore\CoreGPIO\3.0.120\rtl\vhdl\core\coregpio.vhd":565:14:565:21|Removed redundant assignment
+@N: CD364 :"C:\Users\AndersonHan\Desktop\BentoBox\Fpga\component\Actel\DirectCore\CoreGPIO\3.0.120\rtl\vhdl\core\coregpio.vhd":588:14:588:22|Removed redundant assignment
+@N: CD364 :"C:\Users\AndersonHan\Desktop\BentoBox\Fpga\component\Actel\DirectCore\CoreGPIO\3.0.120\rtl\vhdl\core\coregpio.vhd":626:16:626:24|Removed redundant assignment
+@N: CD364 :"C:\Users\AndersonHan\Desktop\BentoBox\Fpga\component\Actel\DirectCore\CoreGPIO\3.0.120\rtl\vhdl\core\coregpio.vhd":629:12:629:20|Removed redundant assignment
+@N: CD364 :"C:\Users\AndersonHan\Desktop\BentoBox\Fpga\component\Actel\DirectCore\CoreGPIO\3.0.120\rtl\vhdl\core\coregpio.vhd":542:14:542:21|Removed redundant assignment
+@N: CD364 :"C:\Users\AndersonHan\Desktop\BentoBox\Fpga\component\Actel\DirectCore\CoreGPIO\3.0.120\rtl\vhdl\core\coregpio.vhd":565:14:565:21|Removed redundant assignment
+@N: CD364 :"C:\Users\AndersonHan\Desktop\BentoBox\Fpga\component\Actel\DirectCore\CoreGPIO\3.0.120\rtl\vhdl\core\coregpio.vhd":588:14:588:22|Removed redundant assignment
+@N: CD364 :"C:\Users\AndersonHan\Desktop\BentoBox\Fpga\component\Actel\DirectCore\CoreGPIO\3.0.120\rtl\vhdl\core\coregpio.vhd":626:16:626:24|Removed redundant assignment
+@N: CD364 :"C:\Users\AndersonHan\Desktop\BentoBox\Fpga\component\Actel\DirectCore\CoreGPIO\3.0.120\rtl\vhdl\core\coregpio.vhd":629:12:629:20|Removed redundant assignment
+@N: CD364 :"C:\Users\AndersonHan\Desktop\BentoBox\Fpga\component\Actel\DirectCore\CoreGPIO\3.0.120\rtl\vhdl\core\coregpio.vhd":542:14:542:21|Removed redundant assignment
+@N: CD364 :"C:\Users\AndersonHan\Desktop\BentoBox\Fpga\component\Actel\DirectCore\CoreGPIO\3.0.120\rtl\vhdl\core\coregpio.vhd":565:14:565:21|Removed redundant assignment
+@N: CD364 :"C:\Users\AndersonHan\Desktop\BentoBox\Fpga\component\Actel\DirectCore\CoreGPIO\3.0.120\rtl\vhdl\core\coregpio.vhd":588:14:588:22|Removed redundant assignment
+@N: CD364 :"C:\Users\AndersonHan\Desktop\BentoBox\Fpga\component\Actel\DirectCore\CoreGPIO\3.0.120\rtl\vhdl\core\coregpio.vhd":626:16:626:24|Removed redundant assignment
+@N: CD364 :"C:\Users\AndersonHan\Desktop\BentoBox\Fpga\component\Actel\DirectCore\CoreGPIO\3.0.120\rtl\vhdl\core\coregpio.vhd":629:12:629:20|Removed redundant assignment
+@N: CD364 :"C:\Users\AndersonHan\Desktop\BentoBox\Fpga\component\Actel\DirectCore\CoreGPIO\3.0.120\rtl\vhdl\core\coregpio.vhd":542:14:542:21|Removed redundant assignment
+@N: CD364 :"C:\Users\AndersonHan\Desktop\BentoBox\Fpga\component\Actel\DirectCore\CoreGPIO\3.0.120\rtl\vhdl\core\coregpio.vhd":565:14:565:21|Removed redundant assignment
+@N: CD364 :"C:\Users\AndersonHan\Desktop\BentoBox\Fpga\component\Actel\DirectCore\CoreGPIO\3.0.120\rtl\vhdl\core\coregpio.vhd":588:14:588:22|Removed redundant assignment
+@N: CD364 :"C:\Users\AndersonHan\Desktop\BentoBox\Fpga\component\Actel\DirectCore\CoreGPIO\3.0.120\rtl\vhdl\core\coregpio.vhd":626:16:626:24|Removed redundant assignment
+@N: CD364 :"C:\Users\AndersonHan\Desktop\BentoBox\Fpga\component\Actel\DirectCore\CoreGPIO\3.0.120\rtl\vhdl\core\coregpio.vhd":629:12:629:20|Removed redundant assignment
+@N: CD364 :"C:\Users\AndersonHan\Desktop\BentoBox\Fpga\component\Actel\DirectCore\CoreGPIO\3.0.120\rtl\vhdl\core\coregpio.vhd":542:14:542:21|Removed redundant assignment
+@N: CD364 :"C:\Users\AndersonHan\Desktop\BentoBox\Fpga\component\Actel\DirectCore\CoreGPIO\3.0.120\rtl\vhdl\core\coregpio.vhd":565:14:565:21|Removed redundant assignment
+@N: CD364 :"C:\Users\AndersonHan\Desktop\BentoBox\Fpga\component\Actel\DirectCore\CoreGPIO\3.0.120\rtl\vhdl\core\coregpio.vhd":588:14:588:22|Removed redundant assignment
+@N: CD364 :"C:\Users\AndersonHan\Desktop\BentoBox\Fpga\component\Actel\DirectCore\CoreGPIO\3.0.120\rtl\vhdl\core\coregpio.vhd":626:16:626:24|Removed redundant assignment
+@N: CD364 :"C:\Users\AndersonHan\Desktop\BentoBox\Fpga\component\Actel\DirectCore\CoreGPIO\3.0.120\rtl\vhdl\core\coregpio.vhd":629:12:629:20|Removed redundant assignment
+@N: CD364 :"C:\Users\AndersonHan\Desktop\BentoBox\Fpga\component\Actel\DirectCore\CoreGPIO\3.0.120\rtl\vhdl\core\coregpio.vhd":542:14:542:21|Removed redundant assignment
+@N: CD364 :"C:\Users\AndersonHan\Desktop\BentoBox\Fpga\component\Actel\DirectCore\CoreGPIO\3.0.120\rtl\vhdl\core\coregpio.vhd":565:14:565:21|Removed redundant assignment
+@N: CD364 :"C:\Users\AndersonHan\Desktop\BentoBox\Fpga\component\Actel\DirectCore\CoreGPIO\3.0.120\rtl\vhdl\core\coregpio.vhd":588:14:588:22|Removed redundant assignment
+@N: CD364 :"C:\Users\AndersonHan\Desktop\BentoBox\Fpga\component\Actel\DirectCore\CoreGPIO\3.0.120\rtl\vhdl\core\coregpio.vhd":626:16:626:24|Removed redundant assignment
+@N: CD364 :"C:\Users\AndersonHan\Desktop\BentoBox\Fpga\component\Actel\DirectCore\CoreGPIO\3.0.120\rtl\vhdl\core\coregpio.vhd":629:12:629:20|Removed redundant assignment
+@N: CD364 :"C:\Users\AndersonHan\Desktop\BentoBox\Fpga\component\Actel\DirectCore\CoreGPIO\3.0.120\rtl\vhdl\core\coregpio.vhd":542:14:542:21|Removed redundant assignment
+@N: CD364 :"C:\Users\AndersonHan\Desktop\BentoBox\Fpga\component\Actel\DirectCore\CoreGPIO\3.0.120\rtl\vhdl\core\coregpio.vhd":565:14:565:21|Removed redundant assignment
+@N: CD364 :"C:\Users\AndersonHan\Desktop\BentoBox\Fpga\component\Actel\DirectCore\CoreGPIO\3.0.120\rtl\vhdl\core\coregpio.vhd":588:14:588:22|Removed redundant assignment
+@N: CD364 :"C:\Users\AndersonHan\Desktop\BentoBox\Fpga\component\Actel\DirectCore\CoreGPIO\3.0.120\rtl\vhdl\core\coregpio.vhd":626:16:626:24|Removed redundant assignment
+@N: CD364 :"C:\Users\AndersonHan\Desktop\BentoBox\Fpga\component\Actel\DirectCore\CoreGPIO\3.0.120\rtl\vhdl\core\coregpio.vhd":629:12:629:20|Removed redundant assignment
+@N: CD364 :"C:\Users\AndersonHan\Desktop\BentoBox\Fpga\component\Actel\DirectCore\CoreGPIO\3.0.120\rtl\vhdl\core\coregpio.vhd":542:14:542:21|Removed redundant assignment
+@N: CD364 :"C:\Users\AndersonHan\Desktop\BentoBox\Fpga\component\Actel\DirectCore\CoreGPIO\3.0.120\rtl\vhdl\core\coregpio.vhd":565:14:565:21|Removed redundant assignment
+@N: CD364 :"C:\Users\AndersonHan\Desktop\BentoBox\Fpga\component\Actel\DirectCore\CoreGPIO\3.0.120\rtl\vhdl\core\coregpio.vhd":588:14:588:22|Removed redundant assignment
+@N: CD364 :"C:\Users\AndersonHan\Desktop\BentoBox\Fpga\component\Actel\DirectCore\CoreGPIO\3.0.120\rtl\vhdl\core\coregpio.vhd":626:16:626:24|Removed redundant assignment
+@N: CD364 :"C:\Users\AndersonHan\Desktop\BentoBox\Fpga\component\Actel\DirectCore\CoreGPIO\3.0.120\rtl\vhdl\core\coregpio.vhd":629:12:629:20|Removed redundant assignment
+@N: CD364 :"C:\Users\AndersonHan\Desktop\BentoBox\Fpga\component\Actel\DirectCore\CoreGPIO\3.0.120\rtl\vhdl\core\coregpio.vhd":542:14:542:21|Removed redundant assignment
+@N: CD364 :"C:\Users\AndersonHan\Desktop\BentoBox\Fpga\component\Actel\DirectCore\CoreGPIO\3.0.120\rtl\vhdl\core\coregpio.vhd":565:14:565:21|Removed redundant assignment
+@N: CD364 :"C:\Users\AndersonHan\Desktop\BentoBox\Fpga\component\Actel\DirectCore\CoreGPIO\3.0.120\rtl\vhdl\core\coregpio.vhd":588:14:588:22|Removed redundant assignment
+@N: CD364 :"C:\Users\AndersonHan\Desktop\BentoBox\Fpga\component\Actel\DirectCore\CoreGPIO\3.0.120\rtl\vhdl\core\coregpio.vhd":626:16:626:24|Removed redundant assignment
+@N: CD364 :"C:\Users\AndersonHan\Desktop\BentoBox\Fpga\component\Actel\DirectCore\CoreGPIO\3.0.120\rtl\vhdl\core\coregpio.vhd":629:12:629:20|Removed redundant assignment
+@N: CD364 :"C:\Users\AndersonHan\Desktop\BentoBox\Fpga\component\Actel\DirectCore\CoreGPIO\3.0.120\rtl\vhdl\core\coregpio.vhd":542:14:542:21|Removed redundant assignment
+@N: CD364 :"C:\Users\AndersonHan\Desktop\BentoBox\Fpga\component\Actel\DirectCore\CoreGPIO\3.0.120\rtl\vhdl\core\coregpio.vhd":565:14:565:21|Removed redundant assignment
+@N: CD364 :"C:\Users\AndersonHan\Desktop\BentoBox\Fpga\component\Actel\DirectCore\CoreGPIO\3.0.120\rtl\vhdl\core\coregpio.vhd":588:14:588:22|Removed redundant assignment
+@N: CD364 :"C:\Users\AndersonHan\Desktop\BentoBox\Fpga\component\Actel\DirectCore\CoreGPIO\3.0.120\rtl\vhdl\core\coregpio.vhd":626:16:626:24|Removed redundant assignment
+@N: CD364 :"C:\Users\AndersonHan\Desktop\BentoBox\Fpga\component\Actel\DirectCore\CoreGPIO\3.0.120\rtl\vhdl\core\coregpio.vhd":629:12:629:20|Removed redundant assignment
+@N: CD364 :"C:\Users\AndersonHan\Desktop\BentoBox\Fpga\component\Actel\DirectCore\CoreGPIO\3.0.120\rtl\vhdl\core\coregpio.vhd":542:14:542:21|Removed redundant assignment
+@N: CD364 :"C:\Users\AndersonHan\Desktop\BentoBox\Fpga\component\Actel\DirectCore\CoreGPIO\3.0.120\rtl\vhdl\core\coregpio.vhd":565:14:565:21|Removed redundant assignment
+@N: CD364 :"C:\Users\AndersonHan\Desktop\BentoBox\Fpga\component\Actel\DirectCore\CoreGPIO\3.0.120\rtl\vhdl\core\coregpio.vhd":588:14:588:22|Removed redundant assignment
+@N: CD364 :"C:\Users\AndersonHan\Desktop\BentoBox\Fpga\component\Actel\DirectCore\CoreGPIO\3.0.120\rtl\vhdl\core\coregpio.vhd":626:16:626:24|Removed redundant assignment
+@N: CD364 :"C:\Users\AndersonHan\Desktop\BentoBox\Fpga\component\Actel\DirectCore\CoreGPIO\3.0.120\rtl\vhdl\core\coregpio.vhd":629:12:629:20|Removed redundant assignment
+@N: CD364 :"C:\Users\AndersonHan\Desktop\BentoBox\Fpga\component\Actel\DirectCore\CoreGPIO\3.0.120\rtl\vhdl\core\coregpio.vhd":542:14:542:21|Removed redundant assignment
+@N: CD364 :"C:\Users\AndersonHan\Desktop\BentoBox\Fpga\component\Actel\DirectCore\CoreGPIO\3.0.120\rtl\vhdl\core\coregpio.vhd":565:14:565:21|Removed redundant assignment
+@N: CD364 :"C:\Users\AndersonHan\Desktop\BentoBox\Fpga\component\Actel\DirectCore\CoreGPIO\3.0.120\rtl\vhdl\core\coregpio.vhd":588:14:588:22|Removed redundant assignment
+@N: CD364 :"C:\Users\AndersonHan\Desktop\BentoBox\Fpga\component\Actel\DirectCore\CoreGPIO\3.0.120\rtl\vhdl\core\coregpio.vhd":626:16:626:24|Removed redundant assignment
+@N: CD364 :"C:\Users\AndersonHan\Desktop\BentoBox\Fpga\component\Actel\DirectCore\CoreGPIO\3.0.120\rtl\vhdl\core\coregpio.vhd":629:12:629:20|Removed redundant assignment
+@N: CD364 :"C:\Users\AndersonHan\Desktop\BentoBox\Fpga\component\Actel\DirectCore\CoreGPIO\3.0.120\rtl\vhdl\core\coregpio.vhd":542:14:542:21|Removed redundant assignment
+@N: CD364 :"C:\Users\AndersonHan\Desktop\BentoBox\Fpga\component\Actel\DirectCore\CoreGPIO\3.0.120\rtl\vhdl\core\coregpio.vhd":565:14:565:21|Removed redundant assignment
+@N: CD364 :"C:\Users\AndersonHan\Desktop\BentoBox\Fpga\component\Actel\DirectCore\CoreGPIO\3.0.120\rtl\vhdl\core\coregpio.vhd":588:14:588:22|Removed redundant assignment
+@N: CD364 :"C:\Users\AndersonHan\Desktop\BentoBox\Fpga\component\Actel\DirectCore\CoreGPIO\3.0.120\rtl\vhdl\core\coregpio.vhd":626:16:626:24|Removed redundant assignment
+@N: CD364 :"C:\Users\AndersonHan\Desktop\BentoBox\Fpga\component\Actel\DirectCore\CoreGPIO\3.0.120\rtl\vhdl\core\coregpio.vhd":629:12:629:20|Removed redundant assignment
+@N: CD364 :"C:\Users\AndersonHan\Desktop\BentoBox\Fpga\component\Actel\DirectCore\CoreGPIO\3.0.120\rtl\vhdl\core\coregpio.vhd":542:14:542:21|Removed redundant assignment
+@N: CD364 :"C:\Users\AndersonHan\Desktop\BentoBox\Fpga\component\Actel\DirectCore\CoreGPIO\3.0.120\rtl\vhdl\core\coregpio.vhd":565:14:565:21|Removed redundant assignment
+@N: CD364 :"C:\Users\AndersonHan\Desktop\BentoBox\Fpga\component\Actel\DirectCore\CoreGPIO\3.0.120\rtl\vhdl\core\coregpio.vhd":588:14:588:22|Removed redundant assignment
+@N: CD364 :"C:\Users\AndersonHan\Desktop\BentoBox\Fpga\component\Actel\DirectCore\CoreGPIO\3.0.120\rtl\vhdl\core\coregpio.vhd":626:16:626:24|Removed redundant assignment
+@N: CD364 :"C:\Users\AndersonHan\Desktop\BentoBox\Fpga\component\Actel\DirectCore\CoreGPIO\3.0.120\rtl\vhdl\core\coregpio.vhd":629:12:629:20|Removed redundant assignment
+@N: CD364 :"C:\Users\AndersonHan\Desktop\BentoBox\Fpga\component\Actel\DirectCore\CoreGPIO\3.0.120\rtl\vhdl\core\coregpio.vhd":542:14:542:21|Removed redundant assignment
+@N: CD364 :"C:\Users\AndersonHan\Desktop\BentoBox\Fpga\component\Actel\DirectCore\CoreGPIO\3.0.120\rtl\vhdl\core\coregpio.vhd":565:14:565:21|Removed redundant assignment
+@N: CD364 :"C:\Users\AndersonHan\Desktop\BentoBox\Fpga\component\Actel\DirectCore\CoreGPIO\3.0.120\rtl\vhdl\core\coregpio.vhd":588:14:588:22|Removed redundant assignment
+@N: CD364 :"C:\Users\AndersonHan\Desktop\BentoBox\Fpga\component\Actel\DirectCore\CoreGPIO\3.0.120\rtl\vhdl\core\coregpio.vhd":626:16:626:24|Removed redundant assignment
+@N: CD364 :"C:\Users\AndersonHan\Desktop\BentoBox\Fpga\component\Actel\DirectCore\CoreGPIO\3.0.120\rtl\vhdl\core\coregpio.vhd":629:12:629:20|Removed redundant assignment
+@N: CD364 :"C:\Users\AndersonHan\Desktop\BentoBox\Fpga\component\Actel\DirectCore\CoreGPIO\3.0.120\rtl\vhdl\core\coregpio.vhd":542:14:542:21|Removed redundant assignment
+@N: CD364 :"C:\Users\AndersonHan\Desktop\BentoBox\Fpga\component\Actel\DirectCore\CoreGPIO\3.0.120\rtl\vhdl\core\coregpio.vhd":565:14:565:21|Removed redundant assignment
+@N: CD364 :"C:\Users\AndersonHan\Desktop\BentoBox\Fpga\component\Actel\DirectCore\CoreGPIO\3.0.120\rtl\vhdl\core\coregpio.vhd":588:14:588:22|Removed redundant assignment
+@N: CD364 :"C:\Users\AndersonHan\Desktop\BentoBox\Fpga\component\Actel\DirectCore\CoreGPIO\3.0.120\rtl\vhdl\core\coregpio.vhd":626:16:626:24|Removed redundant assignment
+@N: CD364 :"C:\Users\AndersonHan\Desktop\BentoBox\Fpga\component\Actel\DirectCore\CoreGPIO\3.0.120\rtl\vhdl\core\coregpio.vhd":629:12:629:20|Removed redundant assignment
+@N: CD364 :"C:\Users\AndersonHan\Desktop\BentoBox\Fpga\component\Actel\DirectCore\CoreGPIO\3.0.120\rtl\vhdl\core\coregpio.vhd":542:14:542:21|Removed redundant assignment
+@N: CD364 :"C:\Users\AndersonHan\Desktop\BentoBox\Fpga\component\Actel\DirectCore\CoreGPIO\3.0.120\rtl\vhdl\core\coregpio.vhd":565:14:565:21|Removed redundant assignment
+@N: CD364 :"C:\Users\AndersonHan\Desktop\BentoBox\Fpga\component\Actel\DirectCore\CoreGPIO\3.0.120\rtl\vhdl\core\coregpio.vhd":588:14:588:22|Removed redundant assignment
+@N: CD364 :"C:\Users\AndersonHan\Desktop\BentoBox\Fpga\component\Actel\DirectCore\CoreGPIO\3.0.120\rtl\vhdl\core\coregpio.vhd":626:16:626:24|Removed redundant assignment
+@N: CD364 :"C:\Users\AndersonHan\Desktop\BentoBox\Fpga\component\Actel\DirectCore\CoreGPIO\3.0.120\rtl\vhdl\core\coregpio.vhd":629:12:629:20|Removed redundant assignment
+@N: CD364 :"C:\Users\AndersonHan\Desktop\BentoBox\Fpga\component\Actel\DirectCore\CoreGPIO\3.0.120\rtl\vhdl\core\coregpio.vhd":542:14:542:21|Removed redundant assignment
+@N: CD364 :"C:\Users\AndersonHan\Desktop\BentoBox\Fpga\component\Actel\DirectCore\CoreGPIO\3.0.120\rtl\vhdl\core\coregpio.vhd":565:14:565:21|Removed redundant assignment
+@N: CD364 :"C:\Users\AndersonHan\Desktop\BentoBox\Fpga\component\Actel\DirectCore\CoreGPIO\3.0.120\rtl\vhdl\core\coregpio.vhd":588:14:588:22|Removed redundant assignment
+@N: CD364 :"C:\Users\AndersonHan\Desktop\BentoBox\Fpga\component\Actel\DirectCore\CoreGPIO\3.0.120\rtl\vhdl\core\coregpio.vhd":626:16:626:24|Removed redundant assignment
+@N: CD364 :"C:\Users\AndersonHan\Desktop\BentoBox\Fpga\component\Actel\DirectCore\CoreGPIO\3.0.120\rtl\vhdl\core\coregpio.vhd":629:12:629:20|Removed redundant assignment
+@N: CD364 :"C:\Users\AndersonHan\Desktop\BentoBox\Fpga\component\Actel\DirectCore\CoreGPIO\3.0.120\rtl\vhdl\core\coregpio.vhd":542:14:542:21|Removed redundant assignment
+@N: CD364 :"C:\Users\AndersonHan\Desktop\BentoBox\Fpga\component\Actel\DirectCore\CoreGPIO\3.0.120\rtl\vhdl\core\coregpio.vhd":565:14:565:21|Removed redundant assignment
+@N: CD364 :"C:\Users\AndersonHan\Desktop\BentoBox\Fpga\component\Actel\DirectCore\CoreGPIO\3.0.120\rtl\vhdl\core\coregpio.vhd":588:14:588:22|Removed redundant assignment
+@N: CD364 :"C:\Users\AndersonHan\Desktop\BentoBox\Fpga\component\Actel\DirectCore\CoreGPIO\3.0.120\rtl\vhdl\core\coregpio.vhd":626:16:626:24|Removed redundant assignment
+@N: CD364 :"C:\Users\AndersonHan\Desktop\BentoBox\Fpga\component\Actel\DirectCore\CoreGPIO\3.0.120\rtl\vhdl\core\coregpio.vhd":629:12:629:20|Removed redundant assignment
+@N: CD364 :"C:\Users\AndersonHan\Desktop\BentoBox\Fpga\component\Actel\DirectCore\CoreGPIO\3.0.120\rtl\vhdl\core\coregpio.vhd":542:14:542:21|Removed redundant assignment
+@N: CD364 :"C:\Users\AndersonHan\Desktop\BentoBox\Fpga\component\Actel\DirectCore\CoreGPIO\3.0.120\rtl\vhdl\core\coregpio.vhd":565:14:565:21|Removed redundant assignment
+@N: CD364 :"C:\Users\AndersonHan\Desktop\BentoBox\Fpga\component\Actel\DirectCore\CoreGPIO\3.0.120\rtl\vhdl\core\coregpio.vhd":588:14:588:22|Removed redundant assignment
+@N: CD364 :"C:\Users\AndersonHan\Desktop\BentoBox\Fpga\component\Actel\DirectCore\CoreGPIO\3.0.120\rtl\vhdl\core\coregpio.vhd":626:16:626:24|Removed redundant assignment
+@N: CD364 :"C:\Users\AndersonHan\Desktop\BentoBox\Fpga\component\Actel\DirectCore\CoreGPIO\3.0.120\rtl\vhdl\core\coregpio.vhd":629:12:629:20|Removed redundant assignment
+@N: CD364 :"C:\Users\AndersonHan\Desktop\BentoBox\Fpga\component\Actel\DirectCore\CoreGPIO\3.0.120\rtl\vhdl\core\coregpio.vhd":542:14:542:21|Removed redundant assignment
+@N: CD364 :"C:\Users\AndersonHan\Desktop\BentoBox\Fpga\component\Actel\DirectCore\CoreGPIO\3.0.120\rtl\vhdl\core\coregpio.vhd":565:14:565:21|Removed redundant assignment
+@N: CD364 :"C:\Users\AndersonHan\Desktop\BentoBox\Fpga\component\Actel\DirectCore\CoreGPIO\3.0.120\rtl\vhdl\core\coregpio.vhd":588:14:588:22|Removed redundant assignment
+@N: CD364 :"C:\Users\AndersonHan\Desktop\BentoBox\Fpga\component\Actel\DirectCore\CoreGPIO\3.0.120\rtl\vhdl\core\coregpio.vhd":626:16:626:24|Removed redundant assignment
+@N: CD364 :"C:\Users\AndersonHan\Desktop\BentoBox\Fpga\component\Actel\DirectCore\CoreGPIO\3.0.120\rtl\vhdl\core\coregpio.vhd":629:12:629:20|Removed redundant assignment
+@N: CD364 :"C:\Users\AndersonHan\Desktop\BentoBox\Fpga\component\Actel\DirectCore\CoreGPIO\3.0.120\rtl\vhdl\core\coregpio.vhd":542:14:542:21|Removed redundant assignment
+@N: CD364 :"C:\Users\AndersonHan\Desktop\BentoBox\Fpga\component\Actel\DirectCore\CoreGPIO\3.0.120\rtl\vhdl\core\coregpio.vhd":565:14:565:21|Removed redundant assignment
+@N: CD364 :"C:\Users\AndersonHan\Desktop\BentoBox\Fpga\component\Actel\DirectCore\CoreGPIO\3.0.120\rtl\vhdl\core\coregpio.vhd":588:14:588:22|Removed redundant assignment
+@N: CD364 :"C:\Users\AndersonHan\Desktop\BentoBox\Fpga\component\Actel\DirectCore\CoreGPIO\3.0.120\rtl\vhdl\core\coregpio.vhd":626:16:626:24|Removed redundant assignment
+@N: CD364 :"C:\Users\AndersonHan\Desktop\BentoBox\Fpga\component\Actel\DirectCore\CoreGPIO\3.0.120\rtl\vhdl\core\coregpio.vhd":629:12:629:20|Removed redundant assignment
+@N: CD364 :"C:\Users\AndersonHan\Desktop\BentoBox\Fpga\component\Actel\DirectCore\CoreGPIO\3.0.120\rtl\vhdl\core\coregpio.vhd":542:14:542:21|Removed redundant assignment
+@N: CD364 :"C:\Users\AndersonHan\Desktop\BentoBox\Fpga\component\Actel\DirectCore\CoreGPIO\3.0.120\rtl\vhdl\core\coregpio.vhd":565:14:565:21|Removed redundant assignment
+@N: CD364 :"C:\Users\AndersonHan\Desktop\BentoBox\Fpga\component\Actel\DirectCore\CoreGPIO\3.0.120\rtl\vhdl\core\coregpio.vhd":588:14:588:22|Removed redundant assignment
+@N: CD364 :"C:\Users\AndersonHan\Desktop\BentoBox\Fpga\component\Actel\DirectCore\CoreGPIO\3.0.120\rtl\vhdl\core\coregpio.vhd":626:16:626:24|Removed redundant assignment
+@N: CD364 :"C:\Users\AndersonHan\Desktop\BentoBox\Fpga\component\Actel\DirectCore\CoreGPIO\3.0.120\rtl\vhdl\core\coregpio.vhd":629:12:629:20|Removed redundant assignment
+@N: CD364 :"C:\Users\AndersonHan\Desktop\BentoBox\Fpga\component\Actel\DirectCore\CoreGPIO\3.0.120\rtl\vhdl\core\coregpio.vhd":542:14:542:21|Removed redundant assignment
+@N: CD364 :"C:\Users\AndersonHan\Desktop\BentoBox\Fpga\component\Actel\DirectCore\CoreGPIO\3.0.120\rtl\vhdl\core\coregpio.vhd":565:14:565:21|Removed redundant assignment
+@N: CD364 :"C:\Users\AndersonHan\Desktop\BentoBox\Fpga\component\Actel\DirectCore\CoreGPIO\3.0.120\rtl\vhdl\core\coregpio.vhd":588:14:588:22|Removed redundant assignment
+@N: CD364 :"C:\Users\AndersonHan\Desktop\BentoBox\Fpga\component\Actel\DirectCore\CoreGPIO\3.0.120\rtl\vhdl\core\coregpio.vhd":626:16:626:24|Removed redundant assignment
+@N: CD364 :"C:\Users\AndersonHan\Desktop\BentoBox\Fpga\component\Actel\DirectCore\CoreGPIO\3.0.120\rtl\vhdl\core\coregpio.vhd":629:12:629:20|Removed redundant assignment
+@N: CD364 :"C:\Users\AndersonHan\Desktop\BentoBox\Fpga\component\Actel\DirectCore\CoreGPIO\3.0.120\rtl\vhdl\core\coregpio.vhd":542:14:542:21|Removed redundant assignment
+@N: CD364 :"C:\Users\AndersonHan\Desktop\BentoBox\Fpga\component\Actel\DirectCore\CoreGPIO\3.0.120\rtl\vhdl\core\coregpio.vhd":565:14:565:21|Removed redundant assignment
+@N: CD364 :"C:\Users\AndersonHan\Desktop\BentoBox\Fpga\component\Actel\DirectCore\CoreGPIO\3.0.120\rtl\vhdl\core\coregpio.vhd":588:14:588:22|Removed redundant assignment
+@N: CD364 :"C:\Users\AndersonHan\Desktop\BentoBox\Fpga\component\Actel\DirectCore\CoreGPIO\3.0.120\rtl\vhdl\core\coregpio.vhd":626:16:626:24|Removed redundant assignment
+@N: CD364 :"C:\Users\AndersonHan\Desktop\BentoBox\Fpga\component\Actel\DirectCore\CoreGPIO\3.0.120\rtl\vhdl\core\coregpio.vhd":629:12:629:20|Removed redundant assignment
+@N: CD364 :"C:\Users\AndersonHan\Desktop\BentoBox\Fpga\component\Actel\DirectCore\CoreGPIO\3.0.120\rtl\vhdl\core\coregpio.vhd":542:14:542:21|Removed redundant assignment
+@N: CD364 :"C:\Users\AndersonHan\Desktop\BentoBox\Fpga\component\Actel\DirectCore\CoreGPIO\3.0.120\rtl\vhdl\core\coregpio.vhd":565:14:565:21|Removed redundant assignment
+@N: CD364 :"C:\Users\AndersonHan\Desktop\BentoBox\Fpga\component\Actel\DirectCore\CoreGPIO\3.0.120\rtl\vhdl\core\coregpio.vhd":588:14:588:22|Removed redundant assignment
+@N: CD364 :"C:\Users\AndersonHan\Desktop\BentoBox\Fpga\component\Actel\DirectCore\CoreGPIO\3.0.120\rtl\vhdl\core\coregpio.vhd":626:16:626:24|Removed redundant assignment
+@N: CD364 :"C:\Users\AndersonHan\Desktop\BentoBox\Fpga\component\Actel\DirectCore\CoreGPIO\3.0.120\rtl\vhdl\core\coregpio.vhd":629:12:629:20|Removed redundant assignment
+@N: CD364 :"C:\Users\AndersonHan\Desktop\BentoBox\Fpga\component\Actel\DirectCore\CoreGPIO\3.0.120\rtl\vhdl\core\coregpio.vhd":542:14:542:21|Removed redundant assignment
+@N: CD364 :"C:\Users\AndersonHan\Desktop\BentoBox\Fpga\component\Actel\DirectCore\CoreGPIO\3.0.120\rtl\vhdl\core\coregpio.vhd":565:14:565:21|Removed redundant assignment
+@N: CD364 :"C:\Users\AndersonHan\Desktop\BentoBox\Fpga\component\Actel\DirectCore\CoreGPIO\3.0.120\rtl\vhdl\core\coregpio.vhd":588:14:588:22|Removed redundant assignment
+@N: CD364 :"C:\Users\AndersonHan\Desktop\BentoBox\Fpga\component\Actel\DirectCore\CoreGPIO\3.0.120\rtl\vhdl\core\coregpio.vhd":626:16:626:24|Removed redundant assignment
+@N: CD364 :"C:\Users\AndersonHan\Desktop\BentoBox\Fpga\component\Actel\DirectCore\CoreGPIO\3.0.120\rtl\vhdl\core\coregpio.vhd":629:12:629:20|Removed redundant assignment
+@N: CD630 :"C:\Users\AndersonHan\Desktop\BentoBox\Fpga\component\Actel\DirectCore\CoreAPB3\4.1.100\rtl\vhdl\core\coreapb3.vhd":34:7:34:14|Synthesizing coreapb3_lib.coreapb3.coreapb3_arch 
+@N: CD630 :"C:\Users\AndersonHan\Desktop\BentoBox\Fpga\component\Actel\DirectCore\CoreAPB3\4.1.100\rtl\vhdl\core\coreapb3_muxptob3.vhd":33:7:33:23|Synthesizing coreapb3_lib.coreapb3_muxptob3.coreapb3_muxptob3_arch 
+@N: CD630 :"C:\Users\AndersonHan\Desktop\BentoBox\Fpga\component\Actel\DirectCore\CoreAPB3\4.1.100\rtl\vhdl\core\coreapb3.vhd":34:7:34:14|Synthesizing coreapb3_lib.coreapb3.coreapb3_arch 
+@N: CD630 :"C:\Users\AndersonHan\Desktop\BentoBox\Fpga\component\Actel\DirectCore\COREAHBTOAPB3\3.1.100\rtl\vhdl\core\coreahbtoapb3.vhd":29:7:29:19|Synthesizing coreahbtoapb3_lib.coreahbtoapb3.trans 
+@N: CD630 :"C:\Users\AndersonHan\Desktop\BentoBox\Fpga\component\Actel\DirectCore\COREAHBTOAPB3\3.1.100\rtl\vhdl\core\coreahbtoapb3_apbaddrdata.vhd":29:7:29:31|Synthesizing coreahbtoapb3_lib.coreahbtoapb3_apbaddrdata.trans 
+@N: CD630 :"C:\Users\AndersonHan\Desktop\BentoBox\Fpga\component\Actel\DirectCore\COREAHBTOAPB3\3.1.100\rtl\vhdl\core\coreahbtoapb3_penablescheduler.vhd":28:7:28:36|Synthesizing coreahbtoapb3_lib.coreahbtoapb3_penablescheduler.trans 
+@N: CD630 :"C:\Users\AndersonHan\Desktop\BentoBox\Fpga\component\Actel\DirectCore\COREAHBTOAPB3\3.1.100\rtl\vhdl\core\coreahbtoapb3_ahbtoapbsm.vhd":28:7:28:30|Synthesizing coreahbtoapb3_lib.coreahbtoapb3_ahbtoapbsm.trans 
+@N: CD630 :"C:\Users\AndersonHan\Desktop\BentoBox\Fpga\component\Actel\DirectCore\CoreAHBLite\5.2.100\rtl\vhdl\core\coreahblite.vhd":27:7:27:17|Synthesizing coreahblite_lib.coreahblite.coreahblite_arch 
+@N: CD630 :"C:\Users\AndersonHan\Desktop\BentoBox\Fpga\component\Actel\DirectCore\CoreAHBLite\5.2.100\rtl\vhdl\core\coreahblite_matrix4x16.vhd":25:7:25:28|Synthesizing coreahblite_lib.coreahblite_matrix4x16.coreahblite_matrix4x16_arch 
+@N: CD630 :"C:\Users\AndersonHan\Desktop\BentoBox\Fpga\component\Actel\DirectCore\CoreAHBLite\5.2.100\rtl\vhdl\core\coreahblite_slavestage.vhd":24:7:24:28|Synthesizing coreahblite_lib.coreahblite_slavestage.trans 
+@N: CD630 :"C:\Users\AndersonHan\Desktop\BentoBox\Fpga\component\Actel\DirectCore\CoreAHBLite\5.2.100\rtl\vhdl\core\coreahblite_slavearbiter.vhd":22:7:22:30|Synthesizing coreahblite_lib.coreahblite_slavearbiter.coreahblite_slavearbiter_arch 
+@N: CD630 :"C:\Users\AndersonHan\Desktop\BentoBox\Fpga\component\Actel\DirectCore\CoreAHBLite\5.2.100\rtl\vhdl\core\coreahblite_masterstage.vhd":24:7:24:29|Synthesizing coreahblite_lib.coreahblite_masterstage.coreahblite_masterstage_arch 
+@N: CD630 :"C:\Users\AndersonHan\Desktop\BentoBox\Fpga\component\Actel\DirectCore\CoreAHBLite\5.2.100\rtl\vhdl\core\coreahblite_defaultslavesm.vhd":22:7:22:32|Synthesizing coreahblite_lib.coreahblite_defaultslavesm.coreahblite_defaultslavesm_arch 
+@N: CD630 :"C:\Users\AndersonHan\Desktop\BentoBox\Fpga\component\Actel\DirectCore\CoreAHBLite\5.2.100\rtl\vhdl\core\coreahblite_addrdec.vhd":50:7:50:25|Synthesizing coreahblite_lib.coreahblite_addrdec.coreahblite_addrdec_arch 
+@N: CL177 :"C:\Users\AndersonHan\Desktop\BentoBox\Fpga\component\Actel\DirectCore\CoreAHBLite\5.2.100\rtl\vhdl\core\coreahblite_masterstage.vhd":644:8:644:9|Sharing sequential element addrRegSMCurrentState.
+@N: CD630 :"C:\Users\AndersonHan\Desktop\BentoBox\Fpga\component\Actel\DirectCore\CoreAHBLite\5.2.100\rtl\vhdl\core\coreahblite_masterstage.vhd":24:7:24:29|Synthesizing coreahblite_lib.coreahblite_masterstage.coreahblite_masterstage_arch 
+@N: CD630 :"C:\Users\AndersonHan\Desktop\BentoBox\Fpga\component\Actel\DirectCore\CoreAHBLite\5.2.100\rtl\vhdl\core\coreahblite_addrdec.vhd":50:7:50:25|Synthesizing coreahblite_lib.coreahblite_addrdec.coreahblite_addrdec_arch 
+@N: CL177 :"C:\Users\AndersonHan\Desktop\BentoBox\Fpga\component\Actel\DirectCore\CoreAHBLite\5.2.100\rtl\vhdl\core\coreahblite_masterstage.vhd":644:8:644:9|Sharing sequential element addrRegSMCurrentState.
+@N: CD630 :"C:\Users\AndersonHan\Desktop\BentoBox\Fpga\component\work\M2sExt_sb\CCC_0\M2sExt_sb_CCC_0_FCCC.vhd":8:7:8:26|Synthesizing work.m2sext_sb_ccc_0_fccc.def_arch 
+@N: CD630 :"C:\Microsemi\Libero_SoC_v11.7\Synplify\lib\generic\smartfusion2.vhd":794:10:794:12|Synthesizing smartfusion2.ccc.syn_black_box 
+@N: CD630 :"C:\Users\AndersonHan\Desktop\BentoBox\Fpga\component\work\M2sExt\IO_0\M2sExt_IO_0_IO.vhd":8:7:8:20|Synthesizing work.m2sext_io_0_io.def_arch 
+@N: CL201 :"C:\Users\AndersonHan\Desktop\BentoBox\Fpga\component\Actel\DirectCore\CoreAHBLite\5.2.100\rtl\vhdl\core\coreahblite_slavearbiter.vhd":398:8:398:9|Trying to extract state machine for register arbRegSMCurrentState
+@N: CL201 :"C:\Users\AndersonHan\Desktop\BentoBox\Fpga\component\Actel\DirectCore\COREAHBTOAPB3\3.1.100\rtl\vhdl\core\coreahbtoapb3_ahbtoapbsm.vhd":257:6:257:7|Trying to extract state machine for register ahbToApbSMState
+@N: CL201 :"C:\Users\AndersonHan\Desktop\BentoBox\Fpga\component\Actel\DirectCore\COREAHBTOAPB3\3.1.100\rtl\vhdl\core\coreahbtoapb3_penablescheduler.vhd":130:6:130:7|Trying to extract state machine for register penableSchedulerState
+@N: CL134 :"C:\Users\AndersonHan\Desktop\BentoBox\Fpga\component\Actel\DirectCore\CoreGPIO\3.0.120\rtl\vhdl\core\coregpio.vhd":504:8:504:9|Found RAM CONFIG_reg, depth=32, width=8
+@N: CL201 :"C:\Users\AndersonHan\Desktop\BentoBox\Fpga\component\Actel\DirectCore\COREI2C\7.0.102\rtl\vhdl\core\corei2creal.vhd":2446:4:2446:5|Trying to extract state machine for register fsmmod
+@N: CL201 :"C:\Users\AndersonHan\Desktop\BentoBox\Fpga\component\Actel\DirectCore\COREI2C\7.0.102\rtl\vhdl\core\corei2creal.vhd":2224:4:2224:5|Trying to extract state machine for register fsmdet
+@N: CL201 :"C:\Users\AndersonHan\Desktop\BentoBox\Fpga\component\Actel\DirectCore\COREI2C\7.0.102\rtl\vhdl\core\corei2creal.vhd":1543:4:1543:5|Trying to extract state machine for register fsmsync
+@N: CL177 :"C:\Users\AndersonHan\Desktop\BentoBox\Fpga\component\Actel\DirectCore\CoreResetP\7.0.104\rtl\vhdl\core\coreresetp.vhd":936:8:936:9|Sharing sequential element sdif0_spll_lock_q2.
+@N: CL177 :"C:\Users\AndersonHan\Desktop\BentoBox\Fpga\component\Actel\DirectCore\CoreResetP\7.0.104\rtl\vhdl\core\coreresetp.vhd":936:8:936:9|Sharing sequential element fpll_lock_q2.
+@N: CL177 :"C:\Users\AndersonHan\Desktop\BentoBox\Fpga\component\Actel\DirectCore\CoreResetP\7.0.104\rtl\vhdl\core\coreresetp.vhd":936:8:936:9|Sharing sequential element sdif1_spll_lock_q2.
+@N: CL177 :"C:\Users\AndersonHan\Desktop\BentoBox\Fpga\component\Actel\DirectCore\CoreResetP\7.0.104\rtl\vhdl\core\coreresetp.vhd":936:8:936:9|Sharing sequential element sdif2_spll_lock_q2.
+@N: CL201 :"C:\Users\AndersonHan\Desktop\BentoBox\Fpga\component\Actel\DirectCore\CoreResetP\7.0.104\rtl\vhdl\core\coreresetp.vhd":1311:8:1311:9|Trying to extract state machine for register sdif3_state
+@N: CL201 :"C:\Users\AndersonHan\Desktop\BentoBox\Fpga\component\Actel\DirectCore\CoreResetP\7.0.104\rtl\vhdl\core\coreresetp.vhd":1252:8:1252:9|Trying to extract state machine for register sdif2_state
+@N: CL201 :"C:\Users\AndersonHan\Desktop\BentoBox\Fpga\component\Actel\DirectCore\CoreResetP\7.0.104\rtl\vhdl\core\coreresetp.vhd":1193:8:1193:9|Trying to extract state machine for register sdif1_state
+@N: CL201 :"C:\Users\AndersonHan\Desktop\BentoBox\Fpga\component\Actel\DirectCore\CoreResetP\7.0.104\rtl\vhdl\core\coreresetp.vhd":1134:8:1134:9|Trying to extract state machine for register sdif0_state
+@N: CL201 :"C:\Users\AndersonHan\Desktop\BentoBox\Fpga\component\Actel\DirectCore\CoreResetP\7.0.104\rtl\vhdl\core\coreresetp.vhd":1059:8:1059:9|Trying to extract state machine for register sm0_state
+@N: CL201 :"C:\Users\AndersonHan\Desktop\BentoBox\Fpga\component\Actel\DirectCore\CORESPI\3.0.156\rtl\vhdl\core\spi_master.vhd":158:6:158:7|Trying to extract state machine for register state
+@N: CL201 :"C:\Users\AndersonHan\Desktop\BentoBox\Fpga\component\work\M2sExt_sb\CoreUARTapb_0_0\rtl\vhdl\core\Tx_async.vhd":126:4:126:5|Trying to extract state machine for register xmit_state
+@N: CL201 :"C:\Users\AndersonHan\Desktop\BentoBox\Fpga\component\work\M2sExt_sb\CoreUARTapb_0_0\rtl\vhdl\core\Rx_async.vhd":227:6:227:7|Trying to extract state machine for register rx_state
+@N: CL201 :"C:\Users\AndersonHan\Desktop\BentoBox\Fpga\component\work\M2sExt_sb\CoreUARTapb_0_0\rtl\vhdl\core\CoreUART.vhd":337:6:337:7|Trying to extract state machine for register rx_state
+@N: CL201 :"C:\Users\AndersonHan\Desktop\BentoBox\Fpga\component\work\M2sExt_sb\CoreUARTapb_0_1\rtl\vhdl\core\Tx_async.vhd":126:4:126:5|Trying to extract state machine for register xmit_state
+@N: CL201 :"C:\Users\AndersonHan\Desktop\BentoBox\Fpga\component\work\M2sExt_sb\CoreUARTapb_0_1\rtl\vhdl\core\Rx_async.vhd":227:6:227:7|Trying to extract state machine for register rx_state
+@N: CL201 :"C:\Users\AndersonHan\Desktop\BentoBox\Fpga\component\work\M2sExt_sb\CoreUARTapb_0_1\rtl\vhdl\core\CoreUART.vhd":337:6:337:7|Trying to extract state machine for register rx_state
+@N: CL201 :"C:\Users\AndersonHan\Desktop\BentoBox\Fpga\component\work\M2sExt_sb\CoreUARTapb_0_2\rtl\vhdl\core\Tx_async.vhd":126:4:126:5|Trying to extract state machine for register xmit_state
+@N: CL201 :"C:\Users\AndersonHan\Desktop\BentoBox\Fpga\component\work\M2sExt_sb\CoreUARTapb_0_2\rtl\vhdl\core\Rx_async.vhd":227:6:227:7|Trying to extract state machine for register rx_state
+@N: CL201 :"C:\Users\AndersonHan\Desktop\BentoBox\Fpga\component\work\M2sExt_sb\CoreUARTapb_0_2\rtl\vhdl\core\CoreUART.vhd":337:6:337:7|Trying to extract state machine for register rx_state
+@N: CL201 :"C:\Users\AndersonHan\Desktop\BentoBox\Fpga\component\work\M2sExt_sb\CoreUARTapb_0_3\rtl\vhdl\core\Tx_async.vhd":126:4:126:5|Trying to extract state machine for register xmit_state
+@N: CL201 :"C:\Users\AndersonHan\Desktop\BentoBox\Fpga\component\work\M2sExt_sb\CoreUARTapb_0_3\rtl\vhdl\core\Rx_async.vhd":227:6:227:7|Trying to extract state machine for register rx_state
+@N: CL201 :"C:\Users\AndersonHan\Desktop\BentoBox\Fpga\component\work\M2sExt_sb\CoreUARTapb_0_3\rtl\vhdl\core\CoreUART.vhd":337:6:337:7|Trying to extract state machine for register rx_state
+@N: CL201 :"C:\Users\AndersonHan\Desktop\BentoBox\Fpga\component\work\M2sExt_sb\CoreUARTapb_0_4\rtl\vhdl\core\Tx_async.vhd":126:4:126:5|Trying to extract state machine for register xmit_state
+@N: CL201 :"C:\Users\AndersonHan\Desktop\BentoBox\Fpga\component\work\M2sExt_sb\CoreUARTapb_0_4\rtl\vhdl\core\Rx_async.vhd":227:6:227:7|Trying to extract state machine for register rx_state
+@N: CL201 :"C:\Users\AndersonHan\Desktop\BentoBox\Fpga\component\work\M2sExt_sb\CoreUARTapb_0_4\rtl\vhdl\core\CoreUART.vhd":337:6:337:7|Trying to extract state machine for register rx_state
+@N: CL201 :"C:\Users\AndersonHan\Desktop\BentoBox\Fpga\component\work\M2sExt_sb\CoreUARTapb_0_5\rtl\vhdl\core\Tx_async.vhd":126:4:126:5|Trying to extract state machine for register xmit_state
+@N: CL201 :"C:\Users\AndersonHan\Desktop\BentoBox\Fpga\component\work\M2sExt_sb\CoreUARTapb_0_5\rtl\vhdl\core\Rx_async.vhd":227:6:227:7|Trying to extract state machine for register rx_state
+@N: CL201 :"C:\Users\AndersonHan\Desktop\BentoBox\Fpga\component\work\M2sExt_sb\CoreUARTapb_0_5\rtl\vhdl\core\CoreUART.vhd":337:6:337:7|Trying to extract state machine for register rx_state
+@N: CL201 :"C:\Users\AndersonHan\Desktop\BentoBox\Fpga\component\work\M2sExt_sb\CoreUARTapb_0_6\rtl\vhdl\core\Tx_async.vhd":126:4:126:5|Trying to extract state machine for register xmit_state
+@N: CL201 :"C:\Users\AndersonHan\Desktop\BentoBox\Fpga\component\work\M2sExt_sb\CoreUARTapb_0_6\rtl\vhdl\core\Rx_async.vhd":227:6:227:7|Trying to extract state machine for register rx_state
+@N: CL201 :"C:\Users\AndersonHan\Desktop\BentoBox\Fpga\component\work\M2sExt_sb\CoreUARTapb_0_6\rtl\vhdl\core\CoreUART.vhd":337:6:337:7|Trying to extract state machine for register rx_state
+@N: CL201 :"C:\Users\AndersonHan\Desktop\BentoBox\Fpga\component\work\M2sExt_sb\CoreUARTapb_0_7\rtl\vhdl\core\Tx_async.vhd":126:4:126:5|Trying to extract state machine for register xmit_state
+@N: CL201 :"C:\Users\AndersonHan\Desktop\BentoBox\Fpga\component\work\M2sExt_sb\CoreUARTapb_0_7\rtl\vhdl\core\Rx_async.vhd":227:6:227:7|Trying to extract state machine for register rx_state
+@N: CL201 :"C:\Users\AndersonHan\Desktop\BentoBox\Fpga\component\work\M2sExt_sb\CoreUARTapb_0_7\rtl\vhdl\core\CoreUART.vhd":337:6:337:7|Trying to extract state machine for register rx_state
+@N: CL201 :"C:\Users\AndersonHan\Desktop\BentoBox\Fpga\component\work\M2sExt_sb\CoreUARTapb_0_8\rtl\vhdl\core\Tx_async.vhd":126:4:126:5|Trying to extract state machine for register xmit_state
+@N: CL201 :"C:\Users\AndersonHan\Desktop\BentoBox\Fpga\component\work\M2sExt_sb\CoreUARTapb_0_8\rtl\vhdl\core\Rx_async.vhd":227:6:227:7|Trying to extract state machine for register rx_state
+@N: CL201 :"C:\Users\AndersonHan\Desktop\BentoBox\Fpga\component\work\M2sExt_sb\CoreUARTapb_0_8\rtl\vhdl\core\CoreUART.vhd":337:6:337:7|Trying to extract state machine for register rx_state
+@N: CL201 :"C:\Users\AndersonHan\Desktop\BentoBox\Fpga\component\work\M2sExt_sb\CoreUARTapb_0_9\rtl\vhdl\core\Tx_async.vhd":126:4:126:5|Trying to extract state machine for register xmit_state
+@N: CL201 :"C:\Users\AndersonHan\Desktop\BentoBox\Fpga\component\work\M2sExt_sb\CoreUARTapb_0_9\rtl\vhdl\core\Rx_async.vhd":227:6:227:7|Trying to extract state machine for register rx_state
+@N: CL201 :"C:\Users\AndersonHan\Desktop\BentoBox\Fpga\component\work\M2sExt_sb\CoreUARTapb_0_9\rtl\vhdl\core\CoreUART.vhd":337:6:337:7|Trying to extract state machine for register rx_state
+@N|Running in 64-bit mode
+
