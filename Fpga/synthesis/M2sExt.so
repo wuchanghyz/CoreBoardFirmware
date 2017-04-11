@@ -1,6 +1,0 @@
-<?xml version="1.0" encoding="UTF-8" ?>
-<SynplifyOutput>
-	<result>Success</result>
-	<design>M2sExt</design>
-	<target_edif>C:\Users\AndersonHan\Desktop\BentoBox\Fpga\synthesis\M2sExt.edn</target_edif>
-</SynplifyOutput>

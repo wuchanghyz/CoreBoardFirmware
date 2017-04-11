@@ -1,9 +1,0 @@
-.\obj\sys_config.o: drivers_config/sys_config/sys_config.c
-.\obj\sys_config.o: drivers_config/sys_config/../../CMSIS/m2sxxx.h
-.\obj\sys_config.o: C:\Keil_v5\ARM\CMSIS\Include\core_cm3.h
-.\obj\sys_config.o: C:\Keil_v5\ARM\ARMCC\Bin\..\include\stdint.h
-.\obj\sys_config.o: C:\Keil_v5\ARM\CMSIS\Include\core_cmInstr.h
-.\obj\sys_config.o: C:\Keil_v5\ARM\CMSIS\Include\core_cmFunc.h
-.\obj\sys_config.o: drivers_config/sys_config/../../CMSIS/sys_init_cfg_types.h
-.\obj\sys_config.o: drivers_config/sys_config/sys_config.h
-.\obj\sys_config.o: drivers_config/sys_config/sys_config_mss_clocks.h

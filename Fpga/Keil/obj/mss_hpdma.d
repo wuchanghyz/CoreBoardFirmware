@@ -1,9 +1,0 @@
-.\obj\mss_hpdma.o: drivers/mss_hpdma/mss_hpdma.c
-.\obj\mss_hpdma.o: drivers/mss_hpdma/../../CMSIS/mss_assert.h
-.\obj\mss_hpdma.o: C:\Keil_v5\ARM\ARMCC\Bin\..\include\assert.h
-.\obj\mss_hpdma.o: drivers/mss_hpdma/mss_hpdma.h
-.\obj\mss_hpdma.o: drivers/mss_hpdma/../../CMSIS/m2sxxx.h
-.\obj\mss_hpdma.o: C:\Keil_v5\ARM\CMSIS\Include\core_cm3.h
-.\obj\mss_hpdma.o: C:\Keil_v5\ARM\ARMCC\Bin\..\include\stdint.h
-.\obj\mss_hpdma.o: C:\Keil_v5\ARM\CMSIS\Include\core_cmInstr.h
-.\obj\mss_hpdma.o: C:\Keil_v5\ARM\CMSIS\Include\core_cmFunc.h

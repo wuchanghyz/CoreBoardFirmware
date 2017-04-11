@@ -1,68 +1,0 @@
-Info: No timing constraint has been associated to the 'Place and Route' tool. 'Place and Route' will be run in non Timing Driven mode.
-***** Place and Route Configurations *****
-Timing-driven            : OFF
-Power-driven             : OFF
-High-effort              : OFF
-Repair min-delay         : ON
-Incremental              : OFF
-
-
-Running the I/O Bank and Globals Assigner.
-Info:  I/O Bank and Globals Assigner identified 86 fixed I/O macros, 0 unfixed I/O macros
-
-I/O Bank and Globals Assigner completed successfully.
-Total time spent in I/O Bank and Globals Assigner: 0 seconds
-
-Placer V4.0 - 11.7.0 
-Design: M2sExt                          Started: Sun Oct 09 15:34:47 2016
-
-Initializing Standard Placement ...
-Placing design...
-End of placement.
-Pre-Placement Runtime        : 15 seconds
-Placement Runtime            : 71 seconds
-
-Placer completed successfully.
-
-Design: M2sExt                          
-Finished: Sun Oct 09 15:36:23 2016
-Total CPU Time:     00:01:35            Total Elapsed Time: 00:01:36
-Total Memory Usage: 253.3 Mbytes
-                        o - o - o - o - o - o
-
-
-Router 
-Design: C:\Users\AndersonHan\Desktop\BentoBox\Fpga\designer\M2sExt\M2sExtStarted: Sun Oct 09 15:36:31 2016
-
-
-Router completed successfully.
-
-Design: C:\Users\AndersonHan\Desktop\BentoBox\Fpga\designer\M2sExt\M2sExt
-Finished: Sun Oct 09 15:37:07 2016
-Total CPU Time:     00:00:34            Total Elapsed Time: 00:00:36
-Total Memory Usage: 540.6 Mbytes
-                        o - o - o - o - o - o
-
-
-Router 
-Design: C:\Users\AndersonHan\Desktop\BentoBox\Fpga\designer\M2sExt\M2sExtStarted: Sun Oct 09 15:37:14 2016
-
-
-Router completed successfully.
-
-Design: C:\Users\AndersonHan\Desktop\BentoBox\Fpga\designer\M2sExt\M2sExt
-Finished: Sun Oct 09 15:37:48 2016
-Total CPU Time:     00:00:34            Total Elapsed Time: 00:00:34
-Total Memory Usage: 541.6 Mbytes
-                        o - o - o - o - o - o
-
-Resource Usage
-+---------------+------+-------+------------+
-| Type          | Used | Total | Percentage |
-+---------------+------+-------+------------+
-| 4LUT          | 8800 | 12084 | 72.82      |
-| DFF           | 5286 | 12084 | 43.74      |
-| I/O Register  | 0    | 699   | 0.00       |
-| Logic Element | 9065 | 12084 | 75.02      |
-+---------------+------+-------+------------+
-

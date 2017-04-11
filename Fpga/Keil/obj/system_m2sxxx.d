@@ -1,9 +1,0 @@
-.\obj\system_m2sxxx.o: CMSIS/system_m2sxxx.c
-.\obj\system_m2sxxx.o: CMSIS/m2sxxx.h
-.\obj\system_m2sxxx.o: C:\Keil_v5\ARM\CMSIS\Include\core_cm3.h
-.\obj\system_m2sxxx.o: C:\Keil_v5\ARM\ARMCC\Bin\..\include\stdint.h
-.\obj\system_m2sxxx.o: C:\Keil_v5\ARM\CMSIS\Include\core_cmInstr.h
-.\obj\system_m2sxxx.o: C:\Keil_v5\ARM\CMSIS\Include\core_cmFunc.h
-.\obj\system_m2sxxx.o: CMSIS/../drivers_config/sys_config/sys_config.h
-.\obj\system_m2sxxx.o: CMSIS/../drivers_config/sys_config/sys_config_mss_clocks.h
-.\obj\system_m2sxxx.o: CMSIS/sys_init_cfg_types.h

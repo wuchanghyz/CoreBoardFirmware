@@ -1,7 +1,0 @@
---cpu Cortex-M3
-".\obj\main.o"
-".\obj\M2sExt_sb_MSS_CM3_hw_platform.lib"
---library_type=microlib --strict --scatter "./CMSIS/startup_arm/smartfusion2_execute_in_place.sct"
---summary_stderr --info summarysizes --map --xref --callgraph --symbols
---info sizes --info totals --info unused --info veneers
---list ".\lst\M2sExt_sb_MSS_CM3_app.map" -o .\obj\M2sExt_sb_MSS_CM3_app.axf
