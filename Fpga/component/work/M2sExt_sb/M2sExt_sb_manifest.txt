@@ -1,0 +1,49 @@
+Microsemi Corporation - Microsemi Libero Software Release v11.7 (Version 11.7.0.119)
+
+Date      :  Tue Jan 10 22:22:13 2017
+Project   :  C:\Users\AndersonHan\Desktop\USBSimBoard\Fpga
+Component :  M2sExt_sb
+Family    :  SmartFusion2
+
+
+HDL source files for all Synthesis and Simulation tools:
+    C:/Users/AndersonHan/Desktop/USBSimBoard/Fpga/component/Actel/DirectCore/COREI2C/7.0.102/rtl/vhdl/core/corei2c.vhd
+    C:/Users/AndersonHan/Desktop/USBSimBoard/Fpga/component/Actel/DirectCore/COREI2C/7.0.102/rtl/vhdl/core/corei2creal.vhd
+    C:/Users/AndersonHan/Desktop/USBSimBoard/Fpga/component/Actel/DirectCore/CoreAPB3/4.1.100/rtl/vhdl/core/components.vhd
+    C:/Users/AndersonHan/Desktop/USBSimBoard/Fpga/component/Actel/DirectCore/CoreAPB3/4.1.100/rtl/vhdl/core/coreapb3.vhd
+    C:/Users/AndersonHan/Desktop/USBSimBoard/Fpga/component/Actel/DirectCore/CoreAPB3/4.1.100/rtl/vhdl/core/coreapb3_iaddr_reg.vhd
+    C:/Users/AndersonHan/Desktop/USBSimBoard/Fpga/component/Actel/DirectCore/CoreAPB3/4.1.100/rtl/vhdl/core/coreapb3_muxptob3.vhd
+    C:/Users/AndersonHan/Desktop/USBSimBoard/Fpga/component/Actel/DirectCore/CoreGPIO/3.0.120/rtl/vhdl/core/components.vhd
+    C:/Users/AndersonHan/Desktop/USBSimBoard/Fpga/component/Actel/DirectCore/CoreGPIO/3.0.120/rtl/vhdl/core/coregpio.vhd
+    C:/Users/AndersonHan/Desktop/USBSimBoard/Fpga/component/Actel/DirectCore/CoreGPIO/3.0.120/rtl/vhdl/core/coregpio_pkg.vhd
+    C:/Users/AndersonHan/Desktop/USBSimBoard/Fpga/component/Actel/DirectCore/CoreResetP/7.0.104/rtl/vhdl/core/coreresetp.vhd
+    C:/Users/AndersonHan/Desktop/USBSimBoard/Fpga/component/Actel/DirectCore/CoreResetP/7.0.104/rtl/vhdl/core/coreresetp_pcie_hotreset.vhd
+    C:/Users/AndersonHan/Desktop/USBSimBoard/Fpga/component/work/M2sExt_sb/CCC_0/M2sExt_sb_CCC_0_FCCC.vhd
+    C:/Users/AndersonHan/Desktop/USBSimBoard/Fpga/component/work/M2sExt_sb/FABOSC_0/M2sExt_sb_FABOSC_0_OSC.vhd
+    C:/Users/AndersonHan/Desktop/USBSimBoard/Fpga/component/work/M2sExt_sb/M2sExt_sb.vhd
+    C:/Users/AndersonHan/Desktop/USBSimBoard/Fpga/component/work/M2sExt_sb_MSS/M2sExt_sb_MSS.vhd
+
+HDL source files for Synopsys SynplifyPro Synthesis tool:
+    C:/Users/AndersonHan/Desktop/USBSimBoard/Fpga/component/Actel/SgCore/OSC/2.0.101/osc_comps.vhd
+    C:/Users/AndersonHan/Desktop/USBSimBoard/Fpga/component/work/M2sExt_sb_MSS/M2sExt_sb_MSS_syn.vhd
+
+HDL source files for Mentor Precision Synthesis tool:
+    C:/Users/AndersonHan/Desktop/USBSimBoard/Fpga/component/Actel/SgCore/OSC/2.0.101/osc_comps_pre.vhd
+    C:/Users/AndersonHan/Desktop/USBSimBoard/Fpga/component/work/M2sExt_sb_MSS/M2sExt_sb_MSS_pre.vhd
+
+Stimulus files for all Simulation tools:
+    C:/Users/AndersonHan/Desktop/USBSimBoard/Fpga/component/Actel/SmartFusion2MSS/MSS/1.1.400/peripheral_init.bfm
+    C:/Users/AndersonHan/Desktop/USBSimBoard/Fpga/component/work/M2sExt_sb/subsystem.bfm
+    C:/Users/AndersonHan/Desktop/USBSimBoard/Fpga/component/work/M2sExt_sb_MSS/CM3_compile_bfm.tcl
+    C:/Users/AndersonHan/Desktop/USBSimBoard/Fpga/component/work/M2sExt_sb_MSS/test.bfm
+    C:/Users/AndersonHan/Desktop/USBSimBoard/Fpga/component/work/M2sExt_sb_MSS/user.bfm
+
+Firmware files for all Software IDE tools:
+    C:/Users/AndersonHan/Desktop/USBSimBoard/Fpga/component/work/M2sExt_sb_MSS/sys_config_mss_clocks.h
+
+Configuration files to be used for Programming:
+    C:/Users/AndersonHan/Desktop/USBSimBoard/Fpga/component/work/M2sExt_sb_MSS/ENVM.cfg
+
+Configuration files to be used for all Simulation tools:
+    C:/Users/AndersonHan/Desktop/USBSimBoard/Fpga/component/work/M2sExt_sb_MSS/ENVM.cfg
+

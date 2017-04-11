@@ -1,0 +1,10 @@
+.\obj\mss_comblk.o: drivers/mss_sys_services/mss_comblk.c
+.\obj\mss_comblk.o: drivers/mss_sys_services/mss_comblk.h
+.\obj\mss_comblk.o: drivers/mss_sys_services/../../CMSIS/m2sxxx.h
+.\obj\mss_comblk.o: C:\Keil_v5\ARM\CMSIS\Include\core_cm3.h
+.\obj\mss_comblk.o: C:\Keil_v5\ARM\ARMCC\Bin\..\include\stdint.h
+.\obj\mss_comblk.o: C:\Keil_v5\ARM\CMSIS\Include\core_cmInstr.h
+.\obj\mss_comblk.o: C:\Keil_v5\ARM\CMSIS\Include\core_cmFunc.h
+.\obj\mss_comblk.o: drivers/mss_sys_services/mss_comblk_page_handler.h
+.\obj\mss_comblk.o: drivers/mss_sys_services/../../CMSIS/mss_assert.h
+.\obj\mss_comblk.o: C:\Keil_v5\ARM\ARMCC\Bin\..\include\assert.h

@@ -1,0 +1,89 @@
+# Microsemi Physical design constraints file
+
+# Version: v11.7 11.7.0.119
+
+# Design Name: M2sExt 
+
+# Input Netlist Format: EDIF 
+
+# Family: SmartFusion2 , Die: M2S010 , Package: 484 FBGA , Speed grade: STD 
+
+# Date generated: Mon Mar 20 23:40:03 2017 
+
+
+#
+# IO banks setting
+#
+
+set_iobank Bank1 -vcci 3.30 -fixed no
+set_iobank Bank2 -vcci 3.30 -fixed no
+set_iobank Bank4 -vcci 3.30 -fixed no
+set_iobank Bank6 -vcci 1.80 -fixed no
+set_iobank Bank7 -vcci 3.30 -fixed no
+
+#
+# Local clock constraints
+#
+
+
+#
+# Region constraints
+#
+
+
+#
+# I/O constraints
+#
+
+set_io COREI2C_0_0_SCL_IO -DIRECTION INOUT -pinname D5 -fixed yes
+set_io COREI2C_0_0_SDA_IO -DIRECTION INOUT -pinname C4 -fixed yes
+set_io COREI2C_0_1_SCL_IO -DIRECTION INOUT -pinname Y14 -fixed yes
+set_io COREI2C_0_1_SDA_IO -DIRECTION INOUT -pinname AB13 -fixed yes
+set_io COREI2C_0_2_SCL_IO -DIRECTION INOUT -pinname U14 -fixed yes
+set_io COREI2C_0_2_SDA_IO -DIRECTION INOUT -pinname W17 -fixed yes
+set_io COREI2C_0_3_SCL_IO -DIRECTION INOUT -pinname N22 -fixed yes
+set_io COREI2C_0_3_SDA_IO -DIRECTION INOUT -pinname M21 -fixed yes
+set_io COREI2C_0_4_SCL_IO -DIRECTION INOUT -pinname M22 -fixed yes
+set_io COREI2C_0_4_SDA_IO -DIRECTION INOUT -pinname U19 -fixed yes
+set_io COREI2C_0_5_SCL_IO -DIRECTION INOUT -pinname G17 -fixed yes
+set_io COREI2C_0_5_SDA_IO -DIRECTION INOUT -pinname G16 -fixed yes
+set_io COREI2C_0_6_SCL_IO -DIRECTION INOUT -pinname P22 -fixed yes
+set_io COREI2C_0_6_SDA_IO -DIRECTION INOUT -pinname R22 -fixed yes
+set_io DEVRST_N -DIRECTION INPUT -pinname R15
+set_io GPIO_IN\[4\] -DIRECTION INPUT -pinname D4 -fixed yes
+set_io GPIO_IN\[5\] -DIRECTION INPUT -pinname F5 -fixed yes
+set_io GPIO_IN\[6\] -DIRECTION INPUT -pinname W16 -fixed yes
+set_io GPIO_IN\[7\] -DIRECTION INPUT -pinname Y15 -fixed yes
+set_io GPIO_IN\[8\] -DIRECTION INPUT -iostd LVCMOS18 -pinname K5 -fixed yes
+set_io GPIO_IN\[9\] -DIRECTION INPUT -iostd LVCMOS18 -pinname L5 -fixed yes
+set_io GPIO_IN\[10\] -DIRECTION INPUT -iostd LVCMOS18 -pinname K4 -fixed yes
+set_io GPIO_IN\[11\] -DIRECTION INPUT -iostd LVCMOS18 -pinname L4 -fixed yes
+set_io GPIO_IN\[12\] -DIRECTION INPUT -iostd LVCMOS18 -pinname M6 -fixed yes
+set_io GPIO_IN\[13\] -DIRECTION INPUT -iostd LVCMOS18 -pinname L3 -fixed yes
+set_io GPIO_IN\[14\] -DIRECTION INPUT -iostd LVCMOS18 -pinname L2 -fixed yes
+set_io GPIO_IN\[15\] -DIRECTION INPUT -iostd LVCMOS18 -pinname M3 -fixed yes
+set_io GPIO_IN\[16\] -DIRECTION INPUT -iostd LVCMOS18 -pinname M2 -fixed yes
+set_io GPIO_IN\[17\] -DIRECTION INPUT -iostd LVCMOS18 -pinname M1 -fixed yes
+set_io GPIO_IN\[18\] -DIRECTION INPUT -iostd LVCMOS18 -pinname M5 -fixed yes
+set_io GPIO_IN\[19\] -DIRECTION INPUT -iostd LVCMOS18 -pinname N1 -fixed yes
+set_io GPIO_OUT\[1\] -DIRECTION OUTPUT -pinname F6 -fixed yes
+set_io GPIO_OUT\[2\] -DIRECTION OUTPUT -pinname G7 -fixed yes
+set_io PAD_IN\[0\] -DIRECTION INPUT -pinname K1 -fixed yes
+set_io USB_RST -DIRECTION OUTPUT -pinname R16 -fixed yes
+set_io USB_ULPI_DATA\[0\] -DIRECTION INOUT -pinname V22 -fixed yes
+set_io USB_ULPI_DATA\[1\] -DIRECTION INOUT -pinname V21 -fixed yes
+set_io USB_ULPI_DATA\[2\] -DIRECTION INOUT -pinname U22 -fixed yes
+set_io USB_ULPI_DATA\[3\] -DIRECTION INOUT -pinname U21 -fixed yes
+set_io USB_ULPI_DATA\[4\] -DIRECTION INOUT -pinname T20 -fixed yes
+set_io USB_ULPI_DATA\[5\] -DIRECTION INOUT -pinname T21 -fixed yes
+set_io USB_ULPI_DATA\[6\] -DIRECTION INOUT -pinname P17 -fixed yes
+set_io USB_ULPI_DATA\[7\] -DIRECTION INOUT -pinname V19 -fixed yes
+set_io USB_ULPI_DIR -DIRECTION INPUT -pinname R18 -fixed yes
+set_io USB_ULPI_NXT -DIRECTION INPUT -pinname T19 -fixed yes
+set_io USB_ULPI_STP -DIRECTION OUTPUT -pinname T18 -fixed yes
+set_io USB_ULPI_XCLK -DIRECTION INPUT -pinname R17 -fixed yes
+
+#
+# Core cell constraints
+#
+

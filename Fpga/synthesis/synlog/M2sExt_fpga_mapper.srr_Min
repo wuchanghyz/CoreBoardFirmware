@@ -1,0 +1,183 @@
+
+
+@S |##### START OF TIMING REPORT #####[
+# Timing Report written on Tue Jan 10 22:42:29 2017
+#
+
+
+Top view:               M2sExt
+Requested Frequency:    100.0 MHz
+Wire load mode:         top
+Paths requested:        5
+Constraint File(s):    
+@N: MT320 |Timing report estimates place and route data. Please look at the place and route timing report for final timing.
+
+@N: MT322 |Clock constraints cover only FF-to-FF paths associated with the clock.
+
+
+
+Performance Summary 
+*******************
+
+
+Worst slack in design: 0.362
+
+                                                Requested     Estimated     Requested     Estimated                Clock        Clock              
+Starting Clock                                  Frequency     Frequency     Period        Period        Slack      Type         Group              
+---------------------------------------------------------------------------------------------------------------------------------------------------
+M2sExt_sb_CCC_0_FCCC|GL0_net_inferred_clock     100.0 MHz     83.2 MHz      10.000        12.016        -2.016     inferred     Inferred_clkgroup_0
+System                                          100.0 MHz     111.0 MHz     10.000        9.010         0.990      system       system_clkgroup    
+===================================================================================================================================================
+
+
+
+Clock Relationships
+*******************
+
+Clocks                                                                                    |    rise  to  rise   |    fall  to  fall   |    rise  to  fall   |    fall  to  rise 
+--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+Starting                                     Ending                                       |  constraint  slack  |  constraint  slack  |  constraint  slack  |  constraint  slack
+--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+System                                       M2sExt_sb_CCC_0_FCCC|GL0_net_inferred_clock  |  0.000       0.990  |  No paths    -      |  No paths    -      |  No paths    -    
+M2sExt_sb_CCC_0_FCCC|GL0_net_inferred_clock  M2sExt_sb_CCC_0_FCCC|GL0_net_inferred_clock  |  0.000       0.362  |  No paths    -      |  No paths    -      |  No paths    -    
+================================================================================================================================================================================
+ Note: 'No paths' indicates there are no paths in the design for that pair of clock edges.
+       'Diff grp' indicates that paths exist but the starting clock and ending clock are in different clock groups.
+
+
+
+Interface Information 
+*********************
+
+No IO constraint found
+
+
+
+====================================
+Detailed Report for Clock: M2sExt_sb_CCC_0_FCCC|GL0_net_inferred_clock
+====================================
+
+
+
+Starting Points with Worst Slack
+********************************
+
+                                                     Starting                                                                                     Arrival          
+Instance                                             Reference                                       Type     Pin     Net                         Time        Slack
+                                                     Clock                                                                                                         
+-------------------------------------------------------------------------------------------------------------------------------------------------------------------
+M2sExt_sb_0.CORERESETP_0.FIC_2_APB_M_PRESET_N_q1     M2sExt_sb_CCC_0_FCCC|GL0_net_inferred_clock     SLE      Q       FIC_2_APB_M_PRESET_N_q1     0.061       0.362
+M2sExt_sb_0.CORERESETP_0.POWER_ON_RESET_N_q1         M2sExt_sb_CCC_0_FCCC|GL0_net_inferred_clock     SLE      Q       POWER_ON_RESET_N_q1         0.061       0.362
+M2sExt_sb_0.CORERESETP_0.RESET_N_M2F_q1              M2sExt_sb_CCC_0_FCCC|GL0_net_inferred_clock     SLE      Q       RESET_N_M2F_q1              0.061       0.362
+M2sExt_sb_0.CoreGPIO_0_0.gpin1[4]                    M2sExt_sb_CCC_0_FCCC|GL0_net_inferred_clock     SLE      Q       gpin1[4]                    0.061       0.362
+M2sExt_sb_0.CoreGPIO_0_0.gpin1[5]                    M2sExt_sb_CCC_0_FCCC|GL0_net_inferred_clock     SLE      Q       gpin1[5]                    0.061       0.362
+M2sExt_sb_0.CoreGPIO_0_0.gpin1[6]                    M2sExt_sb_CCC_0_FCCC|GL0_net_inferred_clock     SLE      Q       gpin1[6]                    0.061       0.362
+M2sExt_sb_0.CoreGPIO_0_0.gpin1[7]                    M2sExt_sb_CCC_0_FCCC|GL0_net_inferred_clock     SLE      Q       gpin1[7]                    0.061       0.362
+M2sExt_sb_0.CoreGPIO_0_0.gpin1[8]                    M2sExt_sb_CCC_0_FCCC|GL0_net_inferred_clock     SLE      Q       gpin1[8]                    0.061       0.362
+M2sExt_sb_0.CoreGPIO_0_0.gpin1[9]                    M2sExt_sb_CCC_0_FCCC|GL0_net_inferred_clock     SLE      Q       gpin1[9]                    0.061       0.362
+M2sExt_sb_0.CoreGPIO_0_0.gpin1[10]                   M2sExt_sb_CCC_0_FCCC|GL0_net_inferred_clock     SLE      Q       gpin1[10]                   0.061       0.362
+===================================================================================================================================================================
+
+
+Ending Points with Worst Slack
+******************************
+
+                                                           Starting                                                                                     Required          
+Instance                                                   Reference                                       Type     Pin     Net                         Time         Slack
+                                                           Clock                                                                                                          
+--------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+M2sExt_sb_0.CORERESETP_0.FIC_2_APB_M_PRESET_N_clk_base     M2sExt_sb_CCC_0_FCCC|GL0_net_inferred_clock     SLE      D       FIC_2_APB_M_PRESET_N_q1     0.179        0.362
+M2sExt_sb_0.CORERESETP_0.POWER_ON_RESET_N_clk_base         M2sExt_sb_CCC_0_FCCC|GL0_net_inferred_clock     SLE      D       POWER_ON_RESET_N_q1         0.179        0.362
+M2sExt_sb_0.CORERESETP_0.RESET_N_M2F_clk_base              M2sExt_sb_CCC_0_FCCC|GL0_net_inferred_clock     SLE      D       RESET_N_M2F_q1              0.179        0.362
+M2sExt_sb_0.CoreGPIO_0_0.gpin2[4]                          M2sExt_sb_CCC_0_FCCC|GL0_net_inferred_clock     SLE      D       gpin1[4]                    0.179        0.362
+M2sExt_sb_0.CoreGPIO_0_0.gpin2[5]                          M2sExt_sb_CCC_0_FCCC|GL0_net_inferred_clock     SLE      D       gpin1[5]                    0.179        0.362
+M2sExt_sb_0.CoreGPIO_0_0.gpin2[6]                          M2sExt_sb_CCC_0_FCCC|GL0_net_inferred_clock     SLE      D       gpin1[6]                    0.179        0.362
+M2sExt_sb_0.CoreGPIO_0_0.gpin2[7]                          M2sExt_sb_CCC_0_FCCC|GL0_net_inferred_clock     SLE      D       gpin1[7]                    0.179        0.362
+M2sExt_sb_0.CoreGPIO_0_0.gpin2[8]                          M2sExt_sb_CCC_0_FCCC|GL0_net_inferred_clock     SLE      D       gpin1[8]                    0.179        0.362
+M2sExt_sb_0.CoreGPIO_0_0.gpin2[9]                          M2sExt_sb_CCC_0_FCCC|GL0_net_inferred_clock     SLE      D       gpin1[9]                    0.179        0.362
+M2sExt_sb_0.CoreGPIO_0_0.gpin2[10]                         M2sExt_sb_CCC_0_FCCC|GL0_net_inferred_clock     SLE      D       gpin1[10]                   0.179        0.362
+==========================================================================================================================================================================
+
+
+
+Worst Path Information
+***********************
+
+
+Path information for path number 1: 
+    Propagation time:                        0.541
+    + Clock delay at starting point:         0.000 (ideal)
+    - Requested Period:                      0.000
+    - Hold time:                             0.179
+    - Clock delay at ending point:           0.000 (ideal)
+    = Slack (critical) :                     0.362
+
+    Number of logic level(s):                0
+    Starting point:                          M2sExt_sb_0.CORERESETP_0.FIC_2_APB_M_PRESET_N_q1 / Q
+    Ending point:                            M2sExt_sb_0.CORERESETP_0.FIC_2_APB_M_PRESET_N_clk_base / D
+    The start point is clocked by            M2sExt_sb_CCC_0_FCCC|GL0_net_inferred_clock [rising] on pin CLK
+    The end   point is clocked by            M2sExt_sb_CCC_0_FCCC|GL0_net_inferred_clock [rising] on pin CLK
+
+Instance / Net                                                      Pin      Pin               Arrival     No. of    
+Name                                                       Type     Name     Dir     Delay     Time        Fan Out(s)
+---------------------------------------------------------------------------------------------------------------------
+M2sExt_sb_0.CORERESETP_0.FIC_2_APB_M_PRESET_N_q1           SLE      Q        Out     0.061     0.061       -         
+FIC_2_APB_M_PRESET_N_q1                                    Net      -        -       0.480     -           1         
+M2sExt_sb_0.CORERESETP_0.FIC_2_APB_M_PRESET_N_clk_base     SLE      D        In      -         0.541       -         
+=====================================================================================================================
+
+
+
+
+====================================
+Detailed Report for Clock: System
+====================================
+
+
+
+Starting Points with Worst Slack
+********************************
+
+                               Starting                                     Arrival          
+Instance                       Reference     Type     Pin     Net           Time        Slack
+                               Clock                                                         
+---------------------------------------------------------------------------------------------
+M2sExt_sb_0.CCC_0.CCC_INST     System        CCC      GL0     GL0_net_i     0.000       0.990
+=============================================================================================
+
+
+
+Worst Path Information
+***********************
+
+
+Path information for path number 1: 
+    Propagation time:                        1.169
+    + Clock delay at starting point:         0.000 (ideal)
+-0.000
+    - Requested Period:                      0.000
+    - Hold time:                             0.179
+    - Clock delay at ending point:           0.000 (ideal)
+    = Slack (non-critical) :                 0.990
+
+    Number of logic level(s):                1
+    Starting point:                          M2sExt_sb_0.CCC_0.CCC_INST / GL0
+    Ending point:                            M2sExt_sb_0.COREI2C_0_0.bclk_ff0 / D
+    The start point is clocked by            System [rising]
+    The end   point is clocked by            M2sExt_sb_CCC_0_FCCC|GL0_net_inferred_clock [rising] on pin CLK
+
+Instance / Net                                  Pin      Pin               Arrival     No. of    
+Name                                 Type       Name     Dir     Delay     Time        Fan Out(s)
+-------------------------------------------------------------------------------------------------
+M2sExt_sb_0.CCC_0.CCC_INST           CCC        GL0      Out     0.000     0.000       -         
+GL0_net_i                            Net        -        -       0.782     -           1         
+M2sExt_sb_0.CCC_0.GL0_INST           CLKINT     A        In      -         0.782       -         
+M2sExt_sb_0.CCC_0.GL0_INST           CLKINT     Y        Out     0.387     1.169       -         
+FAB_CCC_GL0                          Net        -        -       0.000     -           1216      
+M2sExt_sb_0.COREI2C_0_0.bclk_ff0     SLE        D        In      -         1.169       -         
+=================================================================================================
+
+
+
+##### END OF TIMING REPORT #####]
+

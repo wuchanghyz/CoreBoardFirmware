@@ -1,0 +1,27 @@
+
+===============================================================================.
+
+Info: Global design data: 
+      Total globals:                       2 
+      Globals that cannot be demoted:      1 
+      Globals considered for demotion:     1 
+
+
+Info: List of globals that cannot be demoted: 
+    CLK    ASYN   DATA   Instance Name 
+    ---    ----   ----   ------------- 
+    1215   0      1      'M2sExt_sb_0/CCC_0/GL0_INST' 
+
+Info: List of globals considered for demotion: 
+    CLK    ASYN   DATA   Instance Name 
+    ---    ----   ----   ------------- 
+    0      1204   0      'M2sExt_sb_0/CORERESETP_0/MSS_HPMS_READY_int_RNILPQ3' 
+
+Info: Demotion information: 
+Info: CMPG4-302: Added 0 row global instances.
+Info: CMPG4-303: Deleted 0 global instances.
+
+===============================================================================.
+
+INFO: Reading User PDC file C:/Users/AndersonHan/Desktop/USBSimBoard/Fpga/constraint/io/M2sExt.io.pdc. 0 error(s) and 0 warning(s)
+INFO: Reading User PDC file C:/Users/AndersonHan/Desktop/USBSimBoard/Fpga/constraint/fp/M2sExt.fp.pdc. 0 error(s) and 0 warning(s)

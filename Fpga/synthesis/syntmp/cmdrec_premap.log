@@ -1,0 +1,14 @@
+C:\Microsemi\Libero_SoC_v11.7\Synplify\bin64\m_generic.exe  -mp  1  -prjfile  C:\Users\AndersonHan\Desktop\USBSimBoard\Fpga\synthesis\scratchproject.prs  -implementation  synthesis  -prodtype  synplify_pro   -encrypt  -pro  -rundir  C:\Users\AndersonHan\Desktop\USBSimBoard\Fpga\synthesis   -part M2S010  -package FBGA484  -grade STD    -maxfan 10000 -clock_globalthreshold 2 -async_globalthreshold 12 -globalthreshold 5000 -low_power_ram_decomp 0 -opcond COMTC -report_path 4000 -RWCheckOnRam 0 -summaryfile C:\Users\AndersonHan\Desktop\USBSimBoard\Fpga\synthesis\synlog\report\M2sExt_premap.xml  -top_level_module  work.M2sExt  -oedif  C:\Users\AndersonHan\Desktop\USBSimBoard\Fpga\synthesis\M2sExt.edn  -conchk_prepass  C:\Users\AndersonHan\Desktop\USBSimBoard\Fpga\synthesis\M2sExt_cck_prepass.rpt   -freq 100.000   C:\Users\AndersonHan\Desktop\USBSimBoard\Fpga\synthesis\synwork\M2sExt_mult.srs  -flow prepass  -gcc_prepass  -osrd  C:\Users\AndersonHan\Desktop\USBSimBoard\Fpga\synthesis\synwork\M2sExt_prem.srd  -qsap  C:\Users\AndersonHan\Desktop\USBSimBoard\Fpga\synthesis\M2sExt.sap  -devicelib  C:\Microsemi\Libero_SoC_v11.7\Synplify\lib\generic\smartfusion2.v  -ologparam  C:\Users\AndersonHan\Desktop\USBSimBoard\Fpga\synthesis\syntmp\M2sExt.plg  -osyn  C:\Users\AndersonHan\Desktop\USBSimBoard\Fpga\synthesis\synwork\M2sExt_prem.srd  -prjdir  C:\Users\AndersonHan\Desktop\USBSimBoard\Fpga\synthesis\  -prjname  M2sExt_syn  -log  C:\Users\AndersonHan\Desktop\USBSimBoard\Fpga\synthesis\synlog\M2sExt_premap.srr 
+rc:1 success:1
+C:\Users\AndersonHan\Desktop\USBSimBoard\Fpga\synthesis\scratchproject.prs|o|1484058554|4330
+C:\Users\AndersonHan\Desktop\USBSimBoard\Fpga\synthesis\M2sExt.edn|o|1484058578|2880587
+C:\Users\AndersonHan\Desktop\USBSimBoard\Fpga\synthesis\M2sExt_cck_prepass.rpt|o|0|0
+C:\Users\AndersonHan\Desktop\USBSimBoard\Fpga\synthesis\synwork\M2sExt_mult.srs|i|1484059330|7015
+C:\Users\AndersonHan\Desktop\USBSimBoard\Fpga\synthesis\synwork\M2sExt_prem.srd|o|1484059331|224474
+C:\Users\AndersonHan\Desktop\USBSimBoard\Fpga\synthesis\M2sExt.sap|o|1484059331|177036
+C:\Microsemi\Libero_SoC_v11.7\Synplify\lib\generic\smartfusion2.v|i|1449192930|16359
+C:\Users\AndersonHan\Desktop\USBSimBoard\Fpga\synthesis\syntmp\M2sExt.plg|o|1484059330|0
+C:\Users\AndersonHan\Desktop\USBSimBoard\Fpga\synthesis\synwork\M2sExt_prem.srd|o|1484059331|224474
+C:\Users\AndersonHan\Desktop\USBSimBoard\Fpga\synthesis\synlog\M2sExt_premap.srr|o|1484059331|27302
+C:\Microsemi\Libero_SoC_v11.7\Synplify\bin\m_generic.exe|i|1449710344|15814144
+C:\Microsemi\Libero_SoC_v11.7\Synplify\bin64\m_generic.exe|i|1449711956|27632640

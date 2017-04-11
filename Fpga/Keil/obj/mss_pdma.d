@@ -1,0 +1,9 @@
+.\obj\mss_pdma.o: drivers/mss_pdma/mss_pdma.c
+.\obj\mss_pdma.o: drivers/mss_pdma/mss_pdma.h
+.\obj\mss_pdma.o: drivers/mss_pdma/../../CMSIS/m2sxxx.h
+.\obj\mss_pdma.o: C:\Keil_v5\ARM\CMSIS\Include\core_cm3.h
+.\obj\mss_pdma.o: C:\Keil_v5\ARM\ARMCC\Bin\..\include\stdint.h
+.\obj\mss_pdma.o: C:\Keil_v5\ARM\CMSIS\Include\core_cmInstr.h
+.\obj\mss_pdma.o: C:\Keil_v5\ARM\CMSIS\Include\core_cmFunc.h
+.\obj\mss_pdma.o: drivers/mss_pdma/../../CMSIS/mss_assert.h
+.\obj\mss_pdma.o: C:\Keil_v5\ARM\ARMCC\Bin\..\include\assert.h

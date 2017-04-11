@@ -1,0 +1,13 @@
+.\obj\i2c_interrupt.o: drivers/CoreI2C/i2c_interrupt.c
+.\obj\i2c_interrupt.o: ./hal/hal.h
+.\obj\i2c_interrupt.o: ./hal/CortexM3/Keil/cpu_types.h
+.\obj\i2c_interrupt.o: C:\Keil_v5\ARM\ARMCC\Bin\..\include\stdint.h
+.\obj\i2c_interrupt.o: ./hal/hw_reg_access.h
+.\obj\i2c_interrupt.o: ./hal/hal_assert.h
+.\obj\i2c_interrupt.o: ./hal/../CMSIS/mss_assert.h
+.\obj\i2c_interrupt.o: C:\Keil_v5\ARM\ARMCC\Bin\..\include\assert.h
+.\obj\i2c_interrupt.o: drivers/CoreI2C/core_i2c.h
+.\obj\i2c_interrupt.o: ./CMSIS/../CMSIS/m2sxxx.h
+.\obj\i2c_interrupt.o: C:\Keil_v5\ARM\CMSIS\Include\core_cm3.h
+.\obj\i2c_interrupt.o: C:\Keil_v5\ARM\CMSIS\Include\core_cmInstr.h
+.\obj\i2c_interrupt.o: C:\Keil_v5\ARM\CMSIS\Include\core_cmFunc.h

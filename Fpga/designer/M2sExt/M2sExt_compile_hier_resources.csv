@@ -1,0 +1,25 @@
+Detailed Resource Usage
+Module Name,Fabric 4LUT,Fabric DFF,Interface 4LUT,Interface DFF,Single-Ended I/O,uSRAM 1K,PLLs and CCCs,Chip Globals,MSS,HS USB,PDMA
+M2sExt_sb_0/COREI2C_0_3/G0a.0.ui2c/Primitives,357,113,0,0,0,0,0,0,0,0,0
+M2sExt_sb_0/COREI2C_0_2/G0a.0.ui2c/Primitives,356,113,0,0,0,0,0,0,0,0,0
+M2sExt_sb_0/COREI2C_0_6/G0a.0.ui2c/Primitives,358,113,0,0,0,0,0,0,0,0,0
+M2sExt_sb_0/COREI2C_0_1/G0a.0.ui2c/Primitives,357,113,0,0,0,0,0,0,0,0,0
+M2sExt_sb_0/CoreGPIO_0_0/Primitives,500,355,36,36,0,1,0,0,0,0,0
+M2sExt_sb_0/COREI2C_0_5/G0a.0.ui2c/Primitives,354,113,0,0,0,0,0,0,0,0,0
+M2sExt_sb_0/COREI2C_0_0/G0a.0.ui2c/Primitives,362,113,0,0,0,0,0,0,0,0,0
+M2sExt_sb_0/COREI2C_0_4/G0a.0.ui2c/Primitives,354,113,0,0,0,0,0,0,0,0,0
+M2sExt_sb_0/CoreAPB3_0/Primitives,88,0,0,0,0,0,0,0,0,0,0
+M2sExt_sb_0/COREI2C_0_0/Primitives,2,10,0,0,0,0,0,0,0,0,0
+M2sExt_sb_0/COREI2C_0_6/Primitives,0,8,0,0,0,0,0,0,0,0,0
+M2sExt_sb_0/COREI2C_0_2/Primitives,0,8,0,0,0,0,0,0,0,0,0
+Primitives/Primitives,0,0,0,0,19,0,0,0,0,0,0
+M2sExt_sb_0/COREI2C_0_1/Primitives,0,8,0,0,0,0,0,0,0,0,0
+M2sExt_sb_0/COREI2C_0_5/Primitives,0,8,0,0,0,0,0,0,0,0,0
+M2sExt_sb_0/M2sExt_sb_MSS_0/Primitives,13,0,0,0,12,0,0,0,1,1,1
+M2sExt_sb_0/COREI2C_0_3/Primitives,0,8,0,0,0,0,0,0,0,0,0
+M2sExt_sb_0/CORERESETP_0/Primitives,2,9,0,0,0,0,0,1,0,0,0
+M2sExt_sb_0/CoreAPB3_0/u_mux_p_to_b3/Primitives,24,0,0,0,0,0,0,0,0,0,0
+M2sExt_sb_0/COREI2C_0_4/Primitives,0,8,0,0,0,0,0,0,0,0,0
+M2sExt_sb_0/Primitives,0,0,0,0,14,0,0,0,0,0,0
+M2sExt_sb_0/CCC_0/Primitives,0,0,0,0,0,0,1,1,0,0,0
+IO_0/Primitives,0,0,0,0,1,0,0,0,0,0,0

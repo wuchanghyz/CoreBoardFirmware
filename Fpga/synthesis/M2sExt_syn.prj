@@ -1,0 +1,83 @@
+#--  Synopsys, Inc.
+#--  Version J-2015.03M-SP1-2
+#--  Project file C:\Users\AndersonHan\Desktop\USBSimBoard\Fpga\synthesis\M2sExt_syn.prj
+
+#project files
+add_file -vhdl -lib work "C:/Users/AndersonHan/Desktop/USBSimBoard/Fpga/component/work/M2sExt/IO_0/M2sExt_IO_0_IO.vhd"
+add_file -vhdl -lib work "C:/Users/AndersonHan/Desktop/USBSimBoard/Fpga/component/Actel/DirectCore/CoreResetP/7.0.104/rtl/vhdl/core/coreresetp_pcie_hotreset.vhd"
+add_file -vhdl -lib work "C:/Users/AndersonHan/Desktop/USBSimBoard/Fpga/component/Actel/DirectCore/CoreResetP/7.0.104/rtl/vhdl/core/coreresetp.vhd"
+add_file -vhdl -lib work "C:/Users/AndersonHan/Desktop/USBSimBoard/Fpga/component/work/M2sExt_sb/CCC_0/M2sExt_sb_CCC_0_FCCC.vhd"
+add_file -vhdl -lib work "C:/Users/AndersonHan/Desktop/USBSimBoard/Fpga/component/Actel/SgCore/OSC/2.0.101/osc_comps.vhd"
+add_file -vhdl -lib work "C:/Users/AndersonHan/Desktop/USBSimBoard/Fpga/component/work/M2sExt_sb/FABOSC_0/M2sExt_sb_FABOSC_0_OSC.vhd"
+add_file -vhdl -lib work "C:/Users/AndersonHan/Desktop/USBSimBoard/Fpga/component/work/M2sExt_sb_MSS/M2sExt_sb_MSS_syn.vhd"
+add_file -vhdl -lib work "C:/Users/AndersonHan/Desktop/USBSimBoard/Fpga/component/work/M2sExt_sb_MSS/M2sExt_sb_MSS.vhd"
+add_file -vhdl -lib COREAPB3_LIB "C:/Users/AndersonHan/Desktop/USBSimBoard/Fpga/component/Actel/DirectCore/CoreAPB3/4.1.100/rtl/vhdl/core/coreapb3_muxptob3.vhd"
+add_file -vhdl -lib COREAPB3_LIB "C:/Users/AndersonHan/Desktop/USBSimBoard/Fpga/component/Actel/DirectCore/CoreAPB3/4.1.100/rtl/vhdl/core/coreapb3_iaddr_reg.vhd"
+add_file -vhdl -lib COREAPB3_LIB "C:/Users/AndersonHan/Desktop/USBSimBoard/Fpga/component/Actel/DirectCore/CoreAPB3/4.1.100/rtl/vhdl/core/coreapb3.vhd"
+add_file -vhdl -lib COREGPIO_LIB "C:/Users/AndersonHan/Desktop/USBSimBoard/Fpga/component/Actel/DirectCore/CoreGPIO/3.0.120/rtl/vhdl/core/coregpio_pkg.vhd"
+add_file -vhdl -lib COREGPIO_LIB "C:/Users/AndersonHan/Desktop/USBSimBoard/Fpga/component/Actel/DirectCore/CoreGPIO/3.0.120/rtl/vhdl/core/coregpio.vhd"
+add_file -vhdl -lib COREI2C_LIB "C:/Users/AndersonHan/Desktop/USBSimBoard/Fpga/component/Actel/DirectCore/COREI2C/7.0.102/rtl/vhdl/core/corei2creal.vhd"
+add_file -vhdl -lib COREI2C_LIB "C:/Users/AndersonHan/Desktop/USBSimBoard/Fpga/component/Actel/DirectCore/COREI2C/7.0.102/rtl/vhdl/core/corei2c.vhd"
+add_file -vhdl -lib COREAPB3_LIB "C:/Users/AndersonHan/Desktop/USBSimBoard/Fpga/component/Actel/DirectCore/CoreAPB3/4.1.100/rtl/vhdl/core/components.vhd"
+add_file -vhdl -lib COREGPIO_LIB "C:/Users/AndersonHan/Desktop/USBSimBoard/Fpga/component/Actel/DirectCore/CoreGPIO/3.0.120/rtl/vhdl/core/components.vhd"
+add_file -vhdl -lib work "C:/Users/AndersonHan/Desktop/USBSimBoard/Fpga/component/work/M2sExt_sb/M2sExt_sb.vhd"
+add_file -vhdl -lib work "C:/Users/AndersonHan/Desktop/USBSimBoard/Fpga/component/work/M2sExt/M2sExt.vhd"
+
+
+
+#implementation: "synthesis"
+impl -add synthesis -type fpga
+
+#device options
+set_option -technology SmartFusion2
+set_option -part M2S010
+set_option -package FBGA484
+set_option -speed_grade STD
+set_option -part_companion ""
+
+#compilation/mapping options
+set_option -use_fsm_explorer 0
+set_option -top_module "work.M2sExt"
+
+# mapper_options
+set_option -frequency 100.000
+set_option -write_verilog 0
+set_option -write_vhdl 0
+set_option -srs_instrumentation 1
+
+# actel_options
+set_option -rw_check_on_ram 0
+
+# Microsemi G4
+set_option -run_prop_extract 1
+set_option -maxfan 10000
+set_option -clock_globalthreshold 2
+set_option -async_globalthreshold 12
+set_option -globalthreshold 5000
+set_option -low_power_ram_decomp 0
+set_option -disable_io_insertion 0
+set_option -opcond COMTC
+set_option -retiming 0
+set_option -report_path 4000
+set_option -update_models_cp 0
+set_option -preserve_registers 0
+
+# sequential_optimization_options
+set_option -symbolic_fsm_compiler 1
+
+# Compiler Options
+set_option -compiler_compatible 0
+set_option -resource_sharing 1
+
+# Compiler Options
+set_option -auto_infer_blackbox 0
+
+# Compiler Options
+set_option -vhdl2008 1
+
+#automatic place and route (vendor) options
+set_option -write_apr_constraint 1
+
+#set result format/file last
+project -result_file "./M2sExt.edn"
+impl -active "synthesis"

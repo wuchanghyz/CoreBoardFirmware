@@ -1,0 +1,32 @@
+Microsemi Corporation - Microsemi Libero Software Release v11.7 (Version 11.7.0.119)
+
+Date      :  Tue Jan 10 22:22:00 2017
+Project   :  C:\Users\AndersonHan\Desktop\USBSimBoard\Fpga
+Component :  M2sExt_sb_MSS
+Family    :  SmartFusion2
+
+
+HDL source files for all Synthesis and Simulation tools:
+    C:/Users/AndersonHan/Desktop/USBSimBoard/Fpga/component/work/M2sExt_sb_MSS/M2sExt_sb_MSS.vhd
+
+HDL source files for Synopsys SynplifyPro Synthesis tool:
+    C:/Users/AndersonHan/Desktop/USBSimBoard/Fpga/component/work/M2sExt_sb_MSS/M2sExt_sb_MSS_syn.vhd
+
+HDL source files for Mentor Precision Synthesis tool:
+    C:/Users/AndersonHan/Desktop/USBSimBoard/Fpga/component/work/M2sExt_sb_MSS/M2sExt_sb_MSS_pre.vhd
+
+Stimulus files for all Simulation tools:
+    C:/Users/AndersonHan/Desktop/USBSimBoard/Fpga/component/Actel/SmartFusion2MSS/MSS/1.1.400/peripheral_init.bfm
+    C:/Users/AndersonHan/Desktop/USBSimBoard/Fpga/component/work/M2sExt_sb_MSS/CM3_compile_bfm.tcl
+    C:/Users/AndersonHan/Desktop/USBSimBoard/Fpga/component/work/M2sExt_sb_MSS/test.bfm
+    C:/Users/AndersonHan/Desktop/USBSimBoard/Fpga/component/work/M2sExt_sb_MSS/user.bfm
+
+Firmware files for all Software IDE tools:
+    C:/Users/AndersonHan/Desktop/USBSimBoard/Fpga/component/work/M2sExt_sb_MSS/sys_config_mss_clocks.h
+
+Configuration files to be used for Programming:
+    C:/Users/AndersonHan/Desktop/USBSimBoard/Fpga/component/work/M2sExt_sb_MSS/ENVM.cfg
+
+Configuration files to be used for all Simulation tools:
+    C:/Users/AndersonHan/Desktop/USBSimBoard/Fpga/component/work/M2sExt_sb_MSS/ENVM.cfg
+

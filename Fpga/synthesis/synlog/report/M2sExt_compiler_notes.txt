@@ -1,0 +1,212 @@
+@N|Running in 64-bit mode
+@N|Running in 64-bit mode
+@N: CD720 :"C:\Microsemi\Libero_SoC_v11.7\Synplify\lib\vhd2008\std.vhd":146:18:146:21|Setting time resolution to ns
+@N:"C:\Users\AndersonHan\Desktop\USBSimBoard\Fpga\component\work\M2sExt\M2sExt.vhd":17:7:17:12|Top entity is set to M2sExt.
+@N: CD231 :"C:\Microsemi\Libero_SoC_v11.7\Synplify\lib\vhd2008\std1164.vhd":890:16:890:17|Using onehot encoding for type mvl9plus ('U'="1000000000")
+@N: CD630 :"C:\Users\AndersonHan\Desktop\USBSimBoard\Fpga\component\work\M2sExt\M2sExt.vhd":17:7:17:12|Synthesizing work.m2sext.rtl 
+@N: CD630 :"C:\Users\AndersonHan\Desktop\USBSimBoard\Fpga\component\work\M2sExt_sb\M2sExt_sb.vhd":25:7:25:15|Synthesizing work.m2sext_sb.rtl 
+@N: CD630 :"C:\Microsemi\Libero_SoC_v11.7\Synplify\lib\generic\smartfusion2.vhd":434:10:434:14|Synthesizing smartfusion2.bibuf.syn_black_box 
+@N: CD630 :"C:\Microsemi\Libero_SoC_v11.7\Synplify\lib\generic\smartfusion2.vhd":786:10:786:17|Synthesizing smartfusion2.sysreset.syn_black_box 
+@N: CD630 :"C:\Users\AndersonHan\Desktop\USBSimBoard\Fpga\component\work\M2sExt_sb_MSS\M2sExt_sb_MSS.vhd":17:7:17:19|Synthesizing work.m2sext_sb_mss.rtl 
+@N: CD630 :"C:\Microsemi\Libero_SoC_v11.7\Synplify\lib\generic\smartfusion2.vhd":403:10:403:14|Synthesizing smartfusion2.inbuf.syn_black_box 
+@N: CD630 :"C:\Microsemi\Libero_SoC_v11.7\Synplify\lib\generic\smartfusion2.vhd":423:10:423:16|Synthesizing smartfusion2.tribuff.syn_black_box 
+@N: CD630 :"C:\Users\AndersonHan\Desktop\USBSimBoard\Fpga\component\work\M2sExt_sb_MSS\M2sExt_sb_MSS_syn.vhd":10:7:10:13|Synthesizing work.mss_010.def_arch 
+@N: CD630 :"C:\Users\AndersonHan\Desktop\USBSimBoard\Fpga\component\work\M2sExt_sb\FABOSC_0\M2sExt_sb_FABOSC_0_OSC.vhd":8:7:8:28|Synthesizing work.m2sext_sb_fabosc_0_osc.def_arch 
+@N: CD630 :"C:\Microsemi\Libero_SoC_v11.7\Synplify\lib\generic\smartfusion2.vhd":562:10:562:15|Synthesizing smartfusion2.clkint.syn_black_box 
+@N: CD630 :"C:\Users\AndersonHan\Desktop\USBSimBoard\Fpga\component\Actel\SgCore\OSC\2.0.101\osc_comps.vhd":19:7:19:20|Synthesizing work.rcosc_25_50mhz.def_arch 
+@N: CD630 :"C:\Users\AndersonHan\Desktop\USBSimBoard\Fpga\component\Actel\SgCore\OSC\2.0.101\osc_comps.vhd":79:7:79:24|Synthesizing work.rcosc_25_50mhz_fab.def_arch 
+@N: CD630 :"C:\Users\AndersonHan\Desktop\USBSimBoard\Fpga\component\Actel\DirectCore\CoreResetP\7.0.104\rtl\vhdl\core\coreresetp.vhd":27:7:27:16|Synthesizing work.coreresetp.rtl 
+@N: CL177 :"C:\Users\AndersonHan\Desktop\USBSimBoard\Fpga\component\Actel\DirectCore\CoreResetP\7.0.104\rtl\vhdl\core\coreresetp.vhd":1331:8:1331:9|Sharing sequential element M3_RESET_N_int.
+@N: CL177 :"C:\Users\AndersonHan\Desktop\USBSimBoard\Fpga\component\Actel\DirectCore\CoreResetP\7.0.104\rtl\vhdl\core\coreresetp.vhd":936:8:936:9|Sharing sequential element sdif2_spll_lock_q1.
+@N: CL177 :"C:\Users\AndersonHan\Desktop\USBSimBoard\Fpga\component\Actel\DirectCore\CoreResetP\7.0.104\rtl\vhdl\core\coreresetp.vhd":936:8:936:9|Sharing sequential element sdif1_spll_lock_q1.
+@N: CL177 :"C:\Users\AndersonHan\Desktop\USBSimBoard\Fpga\component\Actel\DirectCore\CoreResetP\7.0.104\rtl\vhdl\core\coreresetp.vhd":936:8:936:9|Sharing sequential element sdif0_spll_lock_q1.
+@N: CL177 :"C:\Users\AndersonHan\Desktop\USBSimBoard\Fpga\component\Actel\DirectCore\CoreResetP\7.0.104\rtl\vhdl\core\coreresetp.vhd":936:8:936:9|Sharing sequential element fpll_lock_q1.
+@N: CD630 :"C:\Users\AndersonHan\Desktop\USBSimBoard\Fpga\component\Actel\DirectCore\COREI2C\7.0.102\rtl\vhdl\core\corei2c.vhd":41:7:41:13|Synthesizing corei2c_lib.corei2c.rtl 
+@N: CD630 :"C:\Users\AndersonHan\Desktop\USBSimBoard\Fpga\component\Actel\DirectCore\COREI2C\7.0.102\rtl\vhdl\core\corei2creal.vhd":92:7:92:17|Synthesizing corei2c_lib.corei2creal.rtl 
+@N: CD231 :"C:\Users\AndersonHan\Desktop\USBSimBoard\Fpga\component\Actel\DirectCore\COREI2C\7.0.102\rtl\vhdl\core\corei2creal.vhd":237:17:237:18|Using onehot encoding for type fsmmod_type (fsmmod0="1000000")
+@N: CD231 :"C:\Users\AndersonHan\Desktop\USBSimBoard\Fpga\component\Actel\DirectCore\COREI2C\7.0.102\rtl\vhdl\core\corei2creal.vhd":229:18:229:19|Using onehot encoding for type fsmsync_type (fsmsync0="10000000")
+@N: CD231 :"C:\Users\AndersonHan\Desktop\USBSimBoard\Fpga\component\Actel\DirectCore\COREI2C\7.0.102\rtl\vhdl\core\corei2creal.vhd":221:17:221:18|Using onehot encoding for type fsmdet_type (fsmdet0="1000000")
+@N: CD231 :"C:\Users\AndersonHan\Desktop\USBSimBoard\Fpga\component\Actel\DirectCore\COREI2C\7.0.102\rtl\vhdl\core\corei2creal.vhd":207:17:207:18|Using onehot encoding for type fsmsta_type (fsmsta08="100000000000000000000000000000")
+@N: CD630 :"C:\Users\AndersonHan\Desktop\USBSimBoard\Fpga\component\Actel\DirectCore\CoreGPIO\3.0.120\rtl\vhdl\core\coregpio.vhd":29:7:29:14|Synthesizing coregpio_lib.coregpio.rtl 
+@N: CD364 :"C:\Users\AndersonHan\Desktop\USBSimBoard\Fpga\component\Actel\DirectCore\CoreGPIO\3.0.120\rtl\vhdl\core\coregpio.vhd":542:14:542:21|Removed redundant assignment
+@N: CD364 :"C:\Users\AndersonHan\Desktop\USBSimBoard\Fpga\component\Actel\DirectCore\CoreGPIO\3.0.120\rtl\vhdl\core\coregpio.vhd":565:14:565:21|Removed redundant assignment
+@N: CD364 :"C:\Users\AndersonHan\Desktop\USBSimBoard\Fpga\component\Actel\DirectCore\CoreGPIO\3.0.120\rtl\vhdl\core\coregpio.vhd":588:14:588:22|Removed redundant assignment
+@N: CD364 :"C:\Users\AndersonHan\Desktop\USBSimBoard\Fpga\component\Actel\DirectCore\CoreGPIO\3.0.120\rtl\vhdl\core\coregpio.vhd":626:16:626:24|Removed redundant assignment
+@N: CD364 :"C:\Users\AndersonHan\Desktop\USBSimBoard\Fpga\component\Actel\DirectCore\CoreGPIO\3.0.120\rtl\vhdl\core\coregpio.vhd":629:12:629:20|Removed redundant assignment
+@N: CD364 :"C:\Users\AndersonHan\Desktop\USBSimBoard\Fpga\component\Actel\DirectCore\CoreGPIO\3.0.120\rtl\vhdl\core\coregpio.vhd":542:14:542:21|Removed redundant assignment
+@N: CD364 :"C:\Users\AndersonHan\Desktop\USBSimBoard\Fpga\component\Actel\DirectCore\CoreGPIO\3.0.120\rtl\vhdl\core\coregpio.vhd":565:14:565:21|Removed redundant assignment
+@N: CD364 :"C:\Users\AndersonHan\Desktop\USBSimBoard\Fpga\component\Actel\DirectCore\CoreGPIO\3.0.120\rtl\vhdl\core\coregpio.vhd":588:14:588:22|Removed redundant assignment
+@N: CD364 :"C:\Users\AndersonHan\Desktop\USBSimBoard\Fpga\component\Actel\DirectCore\CoreGPIO\3.0.120\rtl\vhdl\core\coregpio.vhd":626:16:626:24|Removed redundant assignment
+@N: CD364 :"C:\Users\AndersonHan\Desktop\USBSimBoard\Fpga\component\Actel\DirectCore\CoreGPIO\3.0.120\rtl\vhdl\core\coregpio.vhd":629:12:629:20|Removed redundant assignment
+@N: CD364 :"C:\Users\AndersonHan\Desktop\USBSimBoard\Fpga\component\Actel\DirectCore\CoreGPIO\3.0.120\rtl\vhdl\core\coregpio.vhd":542:14:542:21|Removed redundant assignment
+@N: CD364 :"C:\Users\AndersonHan\Desktop\USBSimBoard\Fpga\component\Actel\DirectCore\CoreGPIO\3.0.120\rtl\vhdl\core\coregpio.vhd":565:14:565:21|Removed redundant assignment
+@N: CD364 :"C:\Users\AndersonHan\Desktop\USBSimBoard\Fpga\component\Actel\DirectCore\CoreGPIO\3.0.120\rtl\vhdl\core\coregpio.vhd":588:14:588:22|Removed redundant assignment
+@N: CD364 :"C:\Users\AndersonHan\Desktop\USBSimBoard\Fpga\component\Actel\DirectCore\CoreGPIO\3.0.120\rtl\vhdl\core\coregpio.vhd":626:16:626:24|Removed redundant assignment
+@N: CD364 :"C:\Users\AndersonHan\Desktop\USBSimBoard\Fpga\component\Actel\DirectCore\CoreGPIO\3.0.120\rtl\vhdl\core\coregpio.vhd":629:12:629:20|Removed redundant assignment
+@N: CD364 :"C:\Users\AndersonHan\Desktop\USBSimBoard\Fpga\component\Actel\DirectCore\CoreGPIO\3.0.120\rtl\vhdl\core\coregpio.vhd":542:14:542:21|Removed redundant assignment
+@N: CD364 :"C:\Users\AndersonHan\Desktop\USBSimBoard\Fpga\component\Actel\DirectCore\CoreGPIO\3.0.120\rtl\vhdl\core\coregpio.vhd":565:14:565:21|Removed redundant assignment
+@N: CD364 :"C:\Users\AndersonHan\Desktop\USBSimBoard\Fpga\component\Actel\DirectCore\CoreGPIO\3.0.120\rtl\vhdl\core\coregpio.vhd":588:14:588:22|Removed redundant assignment
+@N: CD364 :"C:\Users\AndersonHan\Desktop\USBSimBoard\Fpga\component\Actel\DirectCore\CoreGPIO\3.0.120\rtl\vhdl\core\coregpio.vhd":626:16:626:24|Removed redundant assignment
+@N: CD364 :"C:\Users\AndersonHan\Desktop\USBSimBoard\Fpga\component\Actel\DirectCore\CoreGPIO\3.0.120\rtl\vhdl\core\coregpio.vhd":629:12:629:20|Removed redundant assignment
+@N: CD364 :"C:\Users\AndersonHan\Desktop\USBSimBoard\Fpga\component\Actel\DirectCore\CoreGPIO\3.0.120\rtl\vhdl\core\coregpio.vhd":542:14:542:21|Removed redundant assignment
+@N: CD364 :"C:\Users\AndersonHan\Desktop\USBSimBoard\Fpga\component\Actel\DirectCore\CoreGPIO\3.0.120\rtl\vhdl\core\coregpio.vhd":565:14:565:21|Removed redundant assignment
+@N: CD364 :"C:\Users\AndersonHan\Desktop\USBSimBoard\Fpga\component\Actel\DirectCore\CoreGPIO\3.0.120\rtl\vhdl\core\coregpio.vhd":588:14:588:22|Removed redundant assignment
+@N: CD364 :"C:\Users\AndersonHan\Desktop\USBSimBoard\Fpga\component\Actel\DirectCore\CoreGPIO\3.0.120\rtl\vhdl\core\coregpio.vhd":626:16:626:24|Removed redundant assignment
+@N: CD364 :"C:\Users\AndersonHan\Desktop\USBSimBoard\Fpga\component\Actel\DirectCore\CoreGPIO\3.0.120\rtl\vhdl\core\coregpio.vhd":629:12:629:20|Removed redundant assignment
+@N: CD364 :"C:\Users\AndersonHan\Desktop\USBSimBoard\Fpga\component\Actel\DirectCore\CoreGPIO\3.0.120\rtl\vhdl\core\coregpio.vhd":542:14:542:21|Removed redundant assignment
+@N: CD364 :"C:\Users\AndersonHan\Desktop\USBSimBoard\Fpga\component\Actel\DirectCore\CoreGPIO\3.0.120\rtl\vhdl\core\coregpio.vhd":565:14:565:21|Removed redundant assignment
+@N: CD364 :"C:\Users\AndersonHan\Desktop\USBSimBoard\Fpga\component\Actel\DirectCore\CoreGPIO\3.0.120\rtl\vhdl\core\coregpio.vhd":588:14:588:22|Removed redundant assignment
+@N: CD364 :"C:\Users\AndersonHan\Desktop\USBSimBoard\Fpga\component\Actel\DirectCore\CoreGPIO\3.0.120\rtl\vhdl\core\coregpio.vhd":626:16:626:24|Removed redundant assignment
+@N: CD364 :"C:\Users\AndersonHan\Desktop\USBSimBoard\Fpga\component\Actel\DirectCore\CoreGPIO\3.0.120\rtl\vhdl\core\coregpio.vhd":629:12:629:20|Removed redundant assignment
+@N: CD364 :"C:\Users\AndersonHan\Desktop\USBSimBoard\Fpga\component\Actel\DirectCore\CoreGPIO\3.0.120\rtl\vhdl\core\coregpio.vhd":542:14:542:21|Removed redundant assignment
+@N: CD364 :"C:\Users\AndersonHan\Desktop\USBSimBoard\Fpga\component\Actel\DirectCore\CoreGPIO\3.0.120\rtl\vhdl\core\coregpio.vhd":565:14:565:21|Removed redundant assignment
+@N: CD364 :"C:\Users\AndersonHan\Desktop\USBSimBoard\Fpga\component\Actel\DirectCore\CoreGPIO\3.0.120\rtl\vhdl\core\coregpio.vhd":588:14:588:22|Removed redundant assignment
+@N: CD364 :"C:\Users\AndersonHan\Desktop\USBSimBoard\Fpga\component\Actel\DirectCore\CoreGPIO\3.0.120\rtl\vhdl\core\coregpio.vhd":626:16:626:24|Removed redundant assignment
+@N: CD364 :"C:\Users\AndersonHan\Desktop\USBSimBoard\Fpga\component\Actel\DirectCore\CoreGPIO\3.0.120\rtl\vhdl\core\coregpio.vhd":629:12:629:20|Removed redundant assignment
+@N: CD364 :"C:\Users\AndersonHan\Desktop\USBSimBoard\Fpga\component\Actel\DirectCore\CoreGPIO\3.0.120\rtl\vhdl\core\coregpio.vhd":542:14:542:21|Removed redundant assignment
+@N: CD364 :"C:\Users\AndersonHan\Desktop\USBSimBoard\Fpga\component\Actel\DirectCore\CoreGPIO\3.0.120\rtl\vhdl\core\coregpio.vhd":565:14:565:21|Removed redundant assignment
+@N: CD364 :"C:\Users\AndersonHan\Desktop\USBSimBoard\Fpga\component\Actel\DirectCore\CoreGPIO\3.0.120\rtl\vhdl\core\coregpio.vhd":588:14:588:22|Removed redundant assignment
+@N: CD364 :"C:\Users\AndersonHan\Desktop\USBSimBoard\Fpga\component\Actel\DirectCore\CoreGPIO\3.0.120\rtl\vhdl\core\coregpio.vhd":626:16:626:24|Removed redundant assignment
+@N: CD364 :"C:\Users\AndersonHan\Desktop\USBSimBoard\Fpga\component\Actel\DirectCore\CoreGPIO\3.0.120\rtl\vhdl\core\coregpio.vhd":629:12:629:20|Removed redundant assignment
+@N: CD364 :"C:\Users\AndersonHan\Desktop\USBSimBoard\Fpga\component\Actel\DirectCore\CoreGPIO\3.0.120\rtl\vhdl\core\coregpio.vhd":542:14:542:21|Removed redundant assignment
+@N: CD364 :"C:\Users\AndersonHan\Desktop\USBSimBoard\Fpga\component\Actel\DirectCore\CoreGPIO\3.0.120\rtl\vhdl\core\coregpio.vhd":565:14:565:21|Removed redundant assignment
+@N: CD364 :"C:\Users\AndersonHan\Desktop\USBSimBoard\Fpga\component\Actel\DirectCore\CoreGPIO\3.0.120\rtl\vhdl\core\coregpio.vhd":588:14:588:22|Removed redundant assignment
+@N: CD364 :"C:\Users\AndersonHan\Desktop\USBSimBoard\Fpga\component\Actel\DirectCore\CoreGPIO\3.0.120\rtl\vhdl\core\coregpio.vhd":626:16:626:24|Removed redundant assignment
+@N: CD364 :"C:\Users\AndersonHan\Desktop\USBSimBoard\Fpga\component\Actel\DirectCore\CoreGPIO\3.0.120\rtl\vhdl\core\coregpio.vhd":629:12:629:20|Removed redundant assignment
+@N: CD364 :"C:\Users\AndersonHan\Desktop\USBSimBoard\Fpga\component\Actel\DirectCore\CoreGPIO\3.0.120\rtl\vhdl\core\coregpio.vhd":542:14:542:21|Removed redundant assignment
+@N: CD364 :"C:\Users\AndersonHan\Desktop\USBSimBoard\Fpga\component\Actel\DirectCore\CoreGPIO\3.0.120\rtl\vhdl\core\coregpio.vhd":565:14:565:21|Removed redundant assignment
+@N: CD364 :"C:\Users\AndersonHan\Desktop\USBSimBoard\Fpga\component\Actel\DirectCore\CoreGPIO\3.0.120\rtl\vhdl\core\coregpio.vhd":588:14:588:22|Removed redundant assignment
+@N: CD364 :"C:\Users\AndersonHan\Desktop\USBSimBoard\Fpga\component\Actel\DirectCore\CoreGPIO\3.0.120\rtl\vhdl\core\coregpio.vhd":626:16:626:24|Removed redundant assignment
+@N: CD364 :"C:\Users\AndersonHan\Desktop\USBSimBoard\Fpga\component\Actel\DirectCore\CoreGPIO\3.0.120\rtl\vhdl\core\coregpio.vhd":629:12:629:20|Removed redundant assignment
+@N: CD364 :"C:\Users\AndersonHan\Desktop\USBSimBoard\Fpga\component\Actel\DirectCore\CoreGPIO\3.0.120\rtl\vhdl\core\coregpio.vhd":542:14:542:21|Removed redundant assignment
+@N: CD364 :"C:\Users\AndersonHan\Desktop\USBSimBoard\Fpga\component\Actel\DirectCore\CoreGPIO\3.0.120\rtl\vhdl\core\coregpio.vhd":565:14:565:21|Removed redundant assignment
+@N: CD364 :"C:\Users\AndersonHan\Desktop\USBSimBoard\Fpga\component\Actel\DirectCore\CoreGPIO\3.0.120\rtl\vhdl\core\coregpio.vhd":588:14:588:22|Removed redundant assignment
+@N: CD364 :"C:\Users\AndersonHan\Desktop\USBSimBoard\Fpga\component\Actel\DirectCore\CoreGPIO\3.0.120\rtl\vhdl\core\coregpio.vhd":626:16:626:24|Removed redundant assignment
+@N: CD364 :"C:\Users\AndersonHan\Desktop\USBSimBoard\Fpga\component\Actel\DirectCore\CoreGPIO\3.0.120\rtl\vhdl\core\coregpio.vhd":629:12:629:20|Removed redundant assignment
+@N: CD364 :"C:\Users\AndersonHan\Desktop\USBSimBoard\Fpga\component\Actel\DirectCore\CoreGPIO\3.0.120\rtl\vhdl\core\coregpio.vhd":542:14:542:21|Removed redundant assignment
+@N: CD364 :"C:\Users\AndersonHan\Desktop\USBSimBoard\Fpga\component\Actel\DirectCore\CoreGPIO\3.0.120\rtl\vhdl\core\coregpio.vhd":565:14:565:21|Removed redundant assignment
+@N: CD364 :"C:\Users\AndersonHan\Desktop\USBSimBoard\Fpga\component\Actel\DirectCore\CoreGPIO\3.0.120\rtl\vhdl\core\coregpio.vhd":588:14:588:22|Removed redundant assignment
+@N: CD364 :"C:\Users\AndersonHan\Desktop\USBSimBoard\Fpga\component\Actel\DirectCore\CoreGPIO\3.0.120\rtl\vhdl\core\coregpio.vhd":626:16:626:24|Removed redundant assignment
+@N: CD364 :"C:\Users\AndersonHan\Desktop\USBSimBoard\Fpga\component\Actel\DirectCore\CoreGPIO\3.0.120\rtl\vhdl\core\coregpio.vhd":629:12:629:20|Removed redundant assignment
+@N: CD364 :"C:\Users\AndersonHan\Desktop\USBSimBoard\Fpga\component\Actel\DirectCore\CoreGPIO\3.0.120\rtl\vhdl\core\coregpio.vhd":542:14:542:21|Removed redundant assignment
+@N: CD364 :"C:\Users\AndersonHan\Desktop\USBSimBoard\Fpga\component\Actel\DirectCore\CoreGPIO\3.0.120\rtl\vhdl\core\coregpio.vhd":565:14:565:21|Removed redundant assignment
+@N: CD364 :"C:\Users\AndersonHan\Desktop\USBSimBoard\Fpga\component\Actel\DirectCore\CoreGPIO\3.0.120\rtl\vhdl\core\coregpio.vhd":588:14:588:22|Removed redundant assignment
+@N: CD364 :"C:\Users\AndersonHan\Desktop\USBSimBoard\Fpga\component\Actel\DirectCore\CoreGPIO\3.0.120\rtl\vhdl\core\coregpio.vhd":626:16:626:24|Removed redundant assignment
+@N: CD364 :"C:\Users\AndersonHan\Desktop\USBSimBoard\Fpga\component\Actel\DirectCore\CoreGPIO\3.0.120\rtl\vhdl\core\coregpio.vhd":629:12:629:20|Removed redundant assignment
+@N: CD364 :"C:\Users\AndersonHan\Desktop\USBSimBoard\Fpga\component\Actel\DirectCore\CoreGPIO\3.0.120\rtl\vhdl\core\coregpio.vhd":542:14:542:21|Removed redundant assignment
+@N: CD364 :"C:\Users\AndersonHan\Desktop\USBSimBoard\Fpga\component\Actel\DirectCore\CoreGPIO\3.0.120\rtl\vhdl\core\coregpio.vhd":565:14:565:21|Removed redundant assignment
+@N: CD364 :"C:\Users\AndersonHan\Desktop\USBSimBoard\Fpga\component\Actel\DirectCore\CoreGPIO\3.0.120\rtl\vhdl\core\coregpio.vhd":588:14:588:22|Removed redundant assignment
+@N: CD364 :"C:\Users\AndersonHan\Desktop\USBSimBoard\Fpga\component\Actel\DirectCore\CoreGPIO\3.0.120\rtl\vhdl\core\coregpio.vhd":626:16:626:24|Removed redundant assignment
+@N: CD364 :"C:\Users\AndersonHan\Desktop\USBSimBoard\Fpga\component\Actel\DirectCore\CoreGPIO\3.0.120\rtl\vhdl\core\coregpio.vhd":629:12:629:20|Removed redundant assignment
+@N: CD364 :"C:\Users\AndersonHan\Desktop\USBSimBoard\Fpga\component\Actel\DirectCore\CoreGPIO\3.0.120\rtl\vhdl\core\coregpio.vhd":542:14:542:21|Removed redundant assignment
+@N: CD364 :"C:\Users\AndersonHan\Desktop\USBSimBoard\Fpga\component\Actel\DirectCore\CoreGPIO\3.0.120\rtl\vhdl\core\coregpio.vhd":565:14:565:21|Removed redundant assignment
+@N: CD364 :"C:\Users\AndersonHan\Desktop\USBSimBoard\Fpga\component\Actel\DirectCore\CoreGPIO\3.0.120\rtl\vhdl\core\coregpio.vhd":588:14:588:22|Removed redundant assignment
+@N: CD364 :"C:\Users\AndersonHan\Desktop\USBSimBoard\Fpga\component\Actel\DirectCore\CoreGPIO\3.0.120\rtl\vhdl\core\coregpio.vhd":626:16:626:24|Removed redundant assignment
+@N: CD364 :"C:\Users\AndersonHan\Desktop\USBSimBoard\Fpga\component\Actel\DirectCore\CoreGPIO\3.0.120\rtl\vhdl\core\coregpio.vhd":629:12:629:20|Removed redundant assignment
+@N: CD364 :"C:\Users\AndersonHan\Desktop\USBSimBoard\Fpga\component\Actel\DirectCore\CoreGPIO\3.0.120\rtl\vhdl\core\coregpio.vhd":542:14:542:21|Removed redundant assignment
+@N: CD364 :"C:\Users\AndersonHan\Desktop\USBSimBoard\Fpga\component\Actel\DirectCore\CoreGPIO\3.0.120\rtl\vhdl\core\coregpio.vhd":565:14:565:21|Removed redundant assignment
+@N: CD364 :"C:\Users\AndersonHan\Desktop\USBSimBoard\Fpga\component\Actel\DirectCore\CoreGPIO\3.0.120\rtl\vhdl\core\coregpio.vhd":588:14:588:22|Removed redundant assignment
+@N: CD364 :"C:\Users\AndersonHan\Desktop\USBSimBoard\Fpga\component\Actel\DirectCore\CoreGPIO\3.0.120\rtl\vhdl\core\coregpio.vhd":626:16:626:24|Removed redundant assignment
+@N: CD364 :"C:\Users\AndersonHan\Desktop\USBSimBoard\Fpga\component\Actel\DirectCore\CoreGPIO\3.0.120\rtl\vhdl\core\coregpio.vhd":629:12:629:20|Removed redundant assignment
+@N: CD364 :"C:\Users\AndersonHan\Desktop\USBSimBoard\Fpga\component\Actel\DirectCore\CoreGPIO\3.0.120\rtl\vhdl\core\coregpio.vhd":542:14:542:21|Removed redundant assignment
+@N: CD364 :"C:\Users\AndersonHan\Desktop\USBSimBoard\Fpga\component\Actel\DirectCore\CoreGPIO\3.0.120\rtl\vhdl\core\coregpio.vhd":565:14:565:21|Removed redundant assignment
+@N: CD364 :"C:\Users\AndersonHan\Desktop\USBSimBoard\Fpga\component\Actel\DirectCore\CoreGPIO\3.0.120\rtl\vhdl\core\coregpio.vhd":588:14:588:22|Removed redundant assignment
+@N: CD364 :"C:\Users\AndersonHan\Desktop\USBSimBoard\Fpga\component\Actel\DirectCore\CoreGPIO\3.0.120\rtl\vhdl\core\coregpio.vhd":626:16:626:24|Removed redundant assignment
+@N: CD364 :"C:\Users\AndersonHan\Desktop\USBSimBoard\Fpga\component\Actel\DirectCore\CoreGPIO\3.0.120\rtl\vhdl\core\coregpio.vhd":629:12:629:20|Removed redundant assignment
+@N: CD364 :"C:\Users\AndersonHan\Desktop\USBSimBoard\Fpga\component\Actel\DirectCore\CoreGPIO\3.0.120\rtl\vhdl\core\coregpio.vhd":542:14:542:21|Removed redundant assignment
+@N: CD364 :"C:\Users\AndersonHan\Desktop\USBSimBoard\Fpga\component\Actel\DirectCore\CoreGPIO\3.0.120\rtl\vhdl\core\coregpio.vhd":565:14:565:21|Removed redundant assignment
+@N: CD364 :"C:\Users\AndersonHan\Desktop\USBSimBoard\Fpga\component\Actel\DirectCore\CoreGPIO\3.0.120\rtl\vhdl\core\coregpio.vhd":588:14:588:22|Removed redundant assignment
+@N: CD364 :"C:\Users\AndersonHan\Desktop\USBSimBoard\Fpga\component\Actel\DirectCore\CoreGPIO\3.0.120\rtl\vhdl\core\coregpio.vhd":626:16:626:24|Removed redundant assignment
+@N: CD364 :"C:\Users\AndersonHan\Desktop\USBSimBoard\Fpga\component\Actel\DirectCore\CoreGPIO\3.0.120\rtl\vhdl\core\coregpio.vhd":629:12:629:20|Removed redundant assignment
+@N: CD364 :"C:\Users\AndersonHan\Desktop\USBSimBoard\Fpga\component\Actel\DirectCore\CoreGPIO\3.0.120\rtl\vhdl\core\coregpio.vhd":542:14:542:21|Removed redundant assignment
+@N: CD364 :"C:\Users\AndersonHan\Desktop\USBSimBoard\Fpga\component\Actel\DirectCore\CoreGPIO\3.0.120\rtl\vhdl\core\coregpio.vhd":565:14:565:21|Removed redundant assignment
+@N: CD364 :"C:\Users\AndersonHan\Desktop\USBSimBoard\Fpga\component\Actel\DirectCore\CoreGPIO\3.0.120\rtl\vhdl\core\coregpio.vhd":588:14:588:22|Removed redundant assignment
+@N: CD364 :"C:\Users\AndersonHan\Desktop\USBSimBoard\Fpga\component\Actel\DirectCore\CoreGPIO\3.0.120\rtl\vhdl\core\coregpio.vhd":626:16:626:24|Removed redundant assignment
+@N: CD364 :"C:\Users\AndersonHan\Desktop\USBSimBoard\Fpga\component\Actel\DirectCore\CoreGPIO\3.0.120\rtl\vhdl\core\coregpio.vhd":629:12:629:20|Removed redundant assignment
+@N: CD364 :"C:\Users\AndersonHan\Desktop\USBSimBoard\Fpga\component\Actel\DirectCore\CoreGPIO\3.0.120\rtl\vhdl\core\coregpio.vhd":542:14:542:21|Removed redundant assignment
+@N: CD364 :"C:\Users\AndersonHan\Desktop\USBSimBoard\Fpga\component\Actel\DirectCore\CoreGPIO\3.0.120\rtl\vhdl\core\coregpio.vhd":565:14:565:21|Removed redundant assignment
+@N: CD364 :"C:\Users\AndersonHan\Desktop\USBSimBoard\Fpga\component\Actel\DirectCore\CoreGPIO\3.0.120\rtl\vhdl\core\coregpio.vhd":588:14:588:22|Removed redundant assignment
+@N: CD364 :"C:\Users\AndersonHan\Desktop\USBSimBoard\Fpga\component\Actel\DirectCore\CoreGPIO\3.0.120\rtl\vhdl\core\coregpio.vhd":626:16:626:24|Removed redundant assignment
+@N: CD364 :"C:\Users\AndersonHan\Desktop\USBSimBoard\Fpga\component\Actel\DirectCore\CoreGPIO\3.0.120\rtl\vhdl\core\coregpio.vhd":629:12:629:20|Removed redundant assignment
+@N: CD364 :"C:\Users\AndersonHan\Desktop\USBSimBoard\Fpga\component\Actel\DirectCore\CoreGPIO\3.0.120\rtl\vhdl\core\coregpio.vhd":542:14:542:21|Removed redundant assignment
+@N: CD364 :"C:\Users\AndersonHan\Desktop\USBSimBoard\Fpga\component\Actel\DirectCore\CoreGPIO\3.0.120\rtl\vhdl\core\coregpio.vhd":565:14:565:21|Removed redundant assignment
+@N: CD364 :"C:\Users\AndersonHan\Desktop\USBSimBoard\Fpga\component\Actel\DirectCore\CoreGPIO\3.0.120\rtl\vhdl\core\coregpio.vhd":588:14:588:22|Removed redundant assignment
+@N: CD364 :"C:\Users\AndersonHan\Desktop\USBSimBoard\Fpga\component\Actel\DirectCore\CoreGPIO\3.0.120\rtl\vhdl\core\coregpio.vhd":626:16:626:24|Removed redundant assignment
+@N: CD364 :"C:\Users\AndersonHan\Desktop\USBSimBoard\Fpga\component\Actel\DirectCore\CoreGPIO\3.0.120\rtl\vhdl\core\coregpio.vhd":629:12:629:20|Removed redundant assignment
+@N: CD364 :"C:\Users\AndersonHan\Desktop\USBSimBoard\Fpga\component\Actel\DirectCore\CoreGPIO\3.0.120\rtl\vhdl\core\coregpio.vhd":542:14:542:21|Removed redundant assignment
+@N: CD364 :"C:\Users\AndersonHan\Desktop\USBSimBoard\Fpga\component\Actel\DirectCore\CoreGPIO\3.0.120\rtl\vhdl\core\coregpio.vhd":565:14:565:21|Removed redundant assignment
+@N: CD364 :"C:\Users\AndersonHan\Desktop\USBSimBoard\Fpga\component\Actel\DirectCore\CoreGPIO\3.0.120\rtl\vhdl\core\coregpio.vhd":588:14:588:22|Removed redundant assignment
+@N: CD364 :"C:\Users\AndersonHan\Desktop\USBSimBoard\Fpga\component\Actel\DirectCore\CoreGPIO\3.0.120\rtl\vhdl\core\coregpio.vhd":626:16:626:24|Removed redundant assignment
+@N: CD364 :"C:\Users\AndersonHan\Desktop\USBSimBoard\Fpga\component\Actel\DirectCore\CoreGPIO\3.0.120\rtl\vhdl\core\coregpio.vhd":629:12:629:20|Removed redundant assignment
+@N: CD364 :"C:\Users\AndersonHan\Desktop\USBSimBoard\Fpga\component\Actel\DirectCore\CoreGPIO\3.0.120\rtl\vhdl\core\coregpio.vhd":542:14:542:21|Removed redundant assignment
+@N: CD364 :"C:\Users\AndersonHan\Desktop\USBSimBoard\Fpga\component\Actel\DirectCore\CoreGPIO\3.0.120\rtl\vhdl\core\coregpio.vhd":565:14:565:21|Removed redundant assignment
+@N: CD364 :"C:\Users\AndersonHan\Desktop\USBSimBoard\Fpga\component\Actel\DirectCore\CoreGPIO\3.0.120\rtl\vhdl\core\coregpio.vhd":588:14:588:22|Removed redundant assignment
+@N: CD364 :"C:\Users\AndersonHan\Desktop\USBSimBoard\Fpga\component\Actel\DirectCore\CoreGPIO\3.0.120\rtl\vhdl\core\coregpio.vhd":626:16:626:24|Removed redundant assignment
+@N: CD364 :"C:\Users\AndersonHan\Desktop\USBSimBoard\Fpga\component\Actel\DirectCore\CoreGPIO\3.0.120\rtl\vhdl\core\coregpio.vhd":629:12:629:20|Removed redundant assignment
+@N: CD364 :"C:\Users\AndersonHan\Desktop\USBSimBoard\Fpga\component\Actel\DirectCore\CoreGPIO\3.0.120\rtl\vhdl\core\coregpio.vhd":542:14:542:21|Removed redundant assignment
+@N: CD364 :"C:\Users\AndersonHan\Desktop\USBSimBoard\Fpga\component\Actel\DirectCore\CoreGPIO\3.0.120\rtl\vhdl\core\coregpio.vhd":565:14:565:21|Removed redundant assignment
+@N: CD364 :"C:\Users\AndersonHan\Desktop\USBSimBoard\Fpga\component\Actel\DirectCore\CoreGPIO\3.0.120\rtl\vhdl\core\coregpio.vhd":588:14:588:22|Removed redundant assignment
+@N: CD364 :"C:\Users\AndersonHan\Desktop\USBSimBoard\Fpga\component\Actel\DirectCore\CoreGPIO\3.0.120\rtl\vhdl\core\coregpio.vhd":626:16:626:24|Removed redundant assignment
+@N: CD364 :"C:\Users\AndersonHan\Desktop\USBSimBoard\Fpga\component\Actel\DirectCore\CoreGPIO\3.0.120\rtl\vhdl\core\coregpio.vhd":629:12:629:20|Removed redundant assignment
+@N: CD364 :"C:\Users\AndersonHan\Desktop\USBSimBoard\Fpga\component\Actel\DirectCore\CoreGPIO\3.0.120\rtl\vhdl\core\coregpio.vhd":542:14:542:21|Removed redundant assignment
+@N: CD364 :"C:\Users\AndersonHan\Desktop\USBSimBoard\Fpga\component\Actel\DirectCore\CoreGPIO\3.0.120\rtl\vhdl\core\coregpio.vhd":565:14:565:21|Removed redundant assignment
+@N: CD364 :"C:\Users\AndersonHan\Desktop\USBSimBoard\Fpga\component\Actel\DirectCore\CoreGPIO\3.0.120\rtl\vhdl\core\coregpio.vhd":588:14:588:22|Removed redundant assignment
+@N: CD364 :"C:\Users\AndersonHan\Desktop\USBSimBoard\Fpga\component\Actel\DirectCore\CoreGPIO\3.0.120\rtl\vhdl\core\coregpio.vhd":626:16:626:24|Removed redundant assignment
+@N: CD364 :"C:\Users\AndersonHan\Desktop\USBSimBoard\Fpga\component\Actel\DirectCore\CoreGPIO\3.0.120\rtl\vhdl\core\coregpio.vhd":629:12:629:20|Removed redundant assignment
+@N: CD364 :"C:\Users\AndersonHan\Desktop\USBSimBoard\Fpga\component\Actel\DirectCore\CoreGPIO\3.0.120\rtl\vhdl\core\coregpio.vhd":542:14:542:21|Removed redundant assignment
+@N: CD364 :"C:\Users\AndersonHan\Desktop\USBSimBoard\Fpga\component\Actel\DirectCore\CoreGPIO\3.0.120\rtl\vhdl\core\coregpio.vhd":565:14:565:21|Removed redundant assignment
+@N: CD364 :"C:\Users\AndersonHan\Desktop\USBSimBoard\Fpga\component\Actel\DirectCore\CoreGPIO\3.0.120\rtl\vhdl\core\coregpio.vhd":588:14:588:22|Removed redundant assignment
+@N: CD364 :"C:\Users\AndersonHan\Desktop\USBSimBoard\Fpga\component\Actel\DirectCore\CoreGPIO\3.0.120\rtl\vhdl\core\coregpio.vhd":626:16:626:24|Removed redundant assignment
+@N: CD364 :"C:\Users\AndersonHan\Desktop\USBSimBoard\Fpga\component\Actel\DirectCore\CoreGPIO\3.0.120\rtl\vhdl\core\coregpio.vhd":629:12:629:20|Removed redundant assignment
+@N: CD364 :"C:\Users\AndersonHan\Desktop\USBSimBoard\Fpga\component\Actel\DirectCore\CoreGPIO\3.0.120\rtl\vhdl\core\coregpio.vhd":542:14:542:21|Removed redundant assignment
+@N: CD364 :"C:\Users\AndersonHan\Desktop\USBSimBoard\Fpga\component\Actel\DirectCore\CoreGPIO\3.0.120\rtl\vhdl\core\coregpio.vhd":565:14:565:21|Removed redundant assignment
+@N: CD364 :"C:\Users\AndersonHan\Desktop\USBSimBoard\Fpga\component\Actel\DirectCore\CoreGPIO\3.0.120\rtl\vhdl\core\coregpio.vhd":588:14:588:22|Removed redundant assignment
+@N: CD364 :"C:\Users\AndersonHan\Desktop\USBSimBoard\Fpga\component\Actel\DirectCore\CoreGPIO\3.0.120\rtl\vhdl\core\coregpio.vhd":626:16:626:24|Removed redundant assignment
+@N: CD364 :"C:\Users\AndersonHan\Desktop\USBSimBoard\Fpga\component\Actel\DirectCore\CoreGPIO\3.0.120\rtl\vhdl\core\coregpio.vhd":629:12:629:20|Removed redundant assignment
+@N: CD364 :"C:\Users\AndersonHan\Desktop\USBSimBoard\Fpga\component\Actel\DirectCore\CoreGPIO\3.0.120\rtl\vhdl\core\coregpio.vhd":542:14:542:21|Removed redundant assignment
+@N: CD364 :"C:\Users\AndersonHan\Desktop\USBSimBoard\Fpga\component\Actel\DirectCore\CoreGPIO\3.0.120\rtl\vhdl\core\coregpio.vhd":565:14:565:21|Removed redundant assignment
+@N: CD364 :"C:\Users\AndersonHan\Desktop\USBSimBoard\Fpga\component\Actel\DirectCore\CoreGPIO\3.0.120\rtl\vhdl\core\coregpio.vhd":588:14:588:22|Removed redundant assignment
+@N: CD364 :"C:\Users\AndersonHan\Desktop\USBSimBoard\Fpga\component\Actel\DirectCore\CoreGPIO\3.0.120\rtl\vhdl\core\coregpio.vhd":626:16:626:24|Removed redundant assignment
+@N: CD364 :"C:\Users\AndersonHan\Desktop\USBSimBoard\Fpga\component\Actel\DirectCore\CoreGPIO\3.0.120\rtl\vhdl\core\coregpio.vhd":629:12:629:20|Removed redundant assignment
+@N: CD364 :"C:\Users\AndersonHan\Desktop\USBSimBoard\Fpga\component\Actel\DirectCore\CoreGPIO\3.0.120\rtl\vhdl\core\coregpio.vhd":542:14:542:21|Removed redundant assignment
+@N: CD364 :"C:\Users\AndersonHan\Desktop\USBSimBoard\Fpga\component\Actel\DirectCore\CoreGPIO\3.0.120\rtl\vhdl\core\coregpio.vhd":565:14:565:21|Removed redundant assignment
+@N: CD364 :"C:\Users\AndersonHan\Desktop\USBSimBoard\Fpga\component\Actel\DirectCore\CoreGPIO\3.0.120\rtl\vhdl\core\coregpio.vhd":588:14:588:22|Removed redundant assignment
+@N: CD364 :"C:\Users\AndersonHan\Desktop\USBSimBoard\Fpga\component\Actel\DirectCore\CoreGPIO\3.0.120\rtl\vhdl\core\coregpio.vhd":626:16:626:24|Removed redundant assignment
+@N: CD364 :"C:\Users\AndersonHan\Desktop\USBSimBoard\Fpga\component\Actel\DirectCore\CoreGPIO\3.0.120\rtl\vhdl\core\coregpio.vhd":629:12:629:20|Removed redundant assignment
+@N: CD364 :"C:\Users\AndersonHan\Desktop\USBSimBoard\Fpga\component\Actel\DirectCore\CoreGPIO\3.0.120\rtl\vhdl\core\coregpio.vhd":542:14:542:21|Removed redundant assignment
+@N: CD364 :"C:\Users\AndersonHan\Desktop\USBSimBoard\Fpga\component\Actel\DirectCore\CoreGPIO\3.0.120\rtl\vhdl\core\coregpio.vhd":565:14:565:21|Removed redundant assignment
+@N: CD364 :"C:\Users\AndersonHan\Desktop\USBSimBoard\Fpga\component\Actel\DirectCore\CoreGPIO\3.0.120\rtl\vhdl\core\coregpio.vhd":588:14:588:22|Removed redundant assignment
+@N: CD364 :"C:\Users\AndersonHan\Desktop\USBSimBoard\Fpga\component\Actel\DirectCore\CoreGPIO\3.0.120\rtl\vhdl\core\coregpio.vhd":626:16:626:24|Removed redundant assignment
+@N: CD364 :"C:\Users\AndersonHan\Desktop\USBSimBoard\Fpga\component\Actel\DirectCore\CoreGPIO\3.0.120\rtl\vhdl\core\coregpio.vhd":629:12:629:20|Removed redundant assignment
+@N: CD364 :"C:\Users\AndersonHan\Desktop\USBSimBoard\Fpga\component\Actel\DirectCore\CoreGPIO\3.0.120\rtl\vhdl\core\coregpio.vhd":542:14:542:21|Removed redundant assignment
+@N: CD364 :"C:\Users\AndersonHan\Desktop\USBSimBoard\Fpga\component\Actel\DirectCore\CoreGPIO\3.0.120\rtl\vhdl\core\coregpio.vhd":565:14:565:21|Removed redundant assignment
+@N: CD364 :"C:\Users\AndersonHan\Desktop\USBSimBoard\Fpga\component\Actel\DirectCore\CoreGPIO\3.0.120\rtl\vhdl\core\coregpio.vhd":588:14:588:22|Removed redundant assignment
+@N: CD364 :"C:\Users\AndersonHan\Desktop\USBSimBoard\Fpga\component\Actel\DirectCore\CoreGPIO\3.0.120\rtl\vhdl\core\coregpio.vhd":626:16:626:24|Removed redundant assignment
+@N: CD364 :"C:\Users\AndersonHan\Desktop\USBSimBoard\Fpga\component\Actel\DirectCore\CoreGPIO\3.0.120\rtl\vhdl\core\coregpio.vhd":629:12:629:20|Removed redundant assignment
+@N: CD364 :"C:\Users\AndersonHan\Desktop\USBSimBoard\Fpga\component\Actel\DirectCore\CoreGPIO\3.0.120\rtl\vhdl\core\coregpio.vhd":542:14:542:21|Removed redundant assignment
+@N: CD364 :"C:\Users\AndersonHan\Desktop\USBSimBoard\Fpga\component\Actel\DirectCore\CoreGPIO\3.0.120\rtl\vhdl\core\coregpio.vhd":565:14:565:21|Removed redundant assignment
+@N: CD364 :"C:\Users\AndersonHan\Desktop\USBSimBoard\Fpga\component\Actel\DirectCore\CoreGPIO\3.0.120\rtl\vhdl\core\coregpio.vhd":588:14:588:22|Removed redundant assignment
+@N: CD364 :"C:\Users\AndersonHan\Desktop\USBSimBoard\Fpga\component\Actel\DirectCore\CoreGPIO\3.0.120\rtl\vhdl\core\coregpio.vhd":626:16:626:24|Removed redundant assignment
+@N: CD364 :"C:\Users\AndersonHan\Desktop\USBSimBoard\Fpga\component\Actel\DirectCore\CoreGPIO\3.0.120\rtl\vhdl\core\coregpio.vhd":629:12:629:20|Removed redundant assignment
+@N: CD630 :"C:\Users\AndersonHan\Desktop\USBSimBoard\Fpga\component\Actel\DirectCore\CoreAPB3\4.1.100\rtl\vhdl\core\coreapb3.vhd":34:7:34:14|Synthesizing coreapb3_lib.coreapb3.coreapb3_arch 
+@N: CD630 :"C:\Users\AndersonHan\Desktop\USBSimBoard\Fpga\component\Actel\DirectCore\CoreAPB3\4.1.100\rtl\vhdl\core\coreapb3_muxptob3.vhd":33:7:33:23|Synthesizing coreapb3_lib.coreapb3_muxptob3.coreapb3_muxptob3_arch 
+@N: CD630 :"C:\Users\AndersonHan\Desktop\USBSimBoard\Fpga\component\work\M2sExt_sb\CCC_0\M2sExt_sb_CCC_0_FCCC.vhd":8:7:8:26|Synthesizing work.m2sext_sb_ccc_0_fccc.def_arch 
+@N: CD630 :"C:\Microsemi\Libero_SoC_v11.7\Synplify\lib\generic\smartfusion2.vhd":794:10:794:12|Synthesizing smartfusion2.ccc.syn_black_box 
+@N: CD630 :"C:\Microsemi\Libero_SoC_v11.7\Synplify\lib\generic\smartfusion2.vhd":576:10:576:12|Synthesizing smartfusion2.gnd.syn_black_box 
+@N: CD630 :"C:\Microsemi\Libero_SoC_v11.7\Synplify\lib\generic\smartfusion2.vhd":582:10:582:12|Synthesizing smartfusion2.vcc.syn_black_box 
+@N: CD630 :"C:\Users\AndersonHan\Desktop\USBSimBoard\Fpga\component\work\M2sExt\IO_0\M2sExt_IO_0_IO.vhd":8:7:8:20|Synthesizing work.m2sext_io_0_io.def_arch 
+@N: CL134 :"C:\Users\AndersonHan\Desktop\USBSimBoard\Fpga\component\Actel\DirectCore\CoreGPIO\3.0.120\rtl\vhdl\core\coregpio.vhd":504:8:504:9|Found RAM CONFIG_reg, depth=32, width=8
+@N: CL201 :"C:\Users\AndersonHan\Desktop\USBSimBoard\Fpga\component\Actel\DirectCore\COREI2C\7.0.102\rtl\vhdl\core\corei2creal.vhd":2446:4:2446:5|Trying to extract state machine for register fsmmod
+@N: CL201 :"C:\Users\AndersonHan\Desktop\USBSimBoard\Fpga\component\Actel\DirectCore\COREI2C\7.0.102\rtl\vhdl\core\corei2creal.vhd":2224:4:2224:5|Trying to extract state machine for register fsmdet
+@N: CL201 :"C:\Users\AndersonHan\Desktop\USBSimBoard\Fpga\component\Actel\DirectCore\COREI2C\7.0.102\rtl\vhdl\core\corei2creal.vhd":1543:4:1543:5|Trying to extract state machine for register fsmsync
+@N: CL177 :"C:\Users\AndersonHan\Desktop\USBSimBoard\Fpga\component\Actel\DirectCore\CoreResetP\7.0.104\rtl\vhdl\core\coreresetp.vhd":936:8:936:9|Sharing sequential element sdif0_spll_lock_q2.
+@N: CL177 :"C:\Users\AndersonHan\Desktop\USBSimBoard\Fpga\component\Actel\DirectCore\CoreResetP\7.0.104\rtl\vhdl\core\coreresetp.vhd":936:8:936:9|Sharing sequential element fpll_lock_q2.
+@N: CL177 :"C:\Users\AndersonHan\Desktop\USBSimBoard\Fpga\component\Actel\DirectCore\CoreResetP\7.0.104\rtl\vhdl\core\coreresetp.vhd":936:8:936:9|Sharing sequential element sdif1_spll_lock_q2.
+@N: CL177 :"C:\Users\AndersonHan\Desktop\USBSimBoard\Fpga\component\Actel\DirectCore\CoreResetP\7.0.104\rtl\vhdl\core\coreresetp.vhd":936:8:936:9|Sharing sequential element sdif2_spll_lock_q2.
+@N: CL201 :"C:\Users\AndersonHan\Desktop\USBSimBoard\Fpga\component\Actel\DirectCore\CoreResetP\7.0.104\rtl\vhdl\core\coreresetp.vhd":1311:8:1311:9|Trying to extract state machine for register sdif3_state
+@N: CL201 :"C:\Users\AndersonHan\Desktop\USBSimBoard\Fpga\component\Actel\DirectCore\CoreResetP\7.0.104\rtl\vhdl\core\coreresetp.vhd":1252:8:1252:9|Trying to extract state machine for register sdif2_state
+@N: CL201 :"C:\Users\AndersonHan\Desktop\USBSimBoard\Fpga\component\Actel\DirectCore\CoreResetP\7.0.104\rtl\vhdl\core\coreresetp.vhd":1193:8:1193:9|Trying to extract state machine for register sdif1_state
+@N: CL201 :"C:\Users\AndersonHan\Desktop\USBSimBoard\Fpga\component\Actel\DirectCore\CoreResetP\7.0.104\rtl\vhdl\core\coreresetp.vhd":1134:8:1134:9|Trying to extract state machine for register sdif0_state
+@N: CL201 :"C:\Users\AndersonHan\Desktop\USBSimBoard\Fpga\component\Actel\DirectCore\CoreResetP\7.0.104\rtl\vhdl\core\coreresetp.vhd":1059:8:1059:9|Trying to extract state machine for register sm0_state
+@N|Running in 64-bit mode
+

@@ -1,0 +1,9 @@
+.\objects\sys_config.o: RTE\Device\M2S010\sys_config.c
+.\objects\sys_config.o: C:\Keil_v5\ARM\PACK\Microsemi\M2Sxxx\1.0.61\CMSIS\startup_arm\../../CMSIS/m2sxxx.h
+.\objects\sys_config.o: C:\Keil_v5\ARM\CMSIS\Include\core_cm3.h
+.\objects\sys_config.o: C:\Keil_v5\ARM\ARMCC\Bin\..\include\stdint.h
+.\objects\sys_config.o: C:\Keil_v5\ARM\CMSIS\Include\core_cmInstr.h
+.\objects\sys_config.o: C:\Keil_v5\ARM\CMSIS\Include\core_cmFunc.h
+.\objects\sys_config.o: C:\Keil_v5\ARM\PACK\Microsemi\M2Sxxx\1.0.61\CMSIS\startup_arm\../../CMSIS/sys_init_cfg_types.h
+.\objects\sys_config.o: RTE\Device\M2S010\sys_config.h
+.\objects\sys_config.o: RTE\Device\M2S010\sys_config_mss_clocks.h

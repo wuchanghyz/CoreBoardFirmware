@@ -1,0 +1,10 @@
+.\obj\core_gpio.o: drivers/CoreGPIO/core_gpio.c
+.\obj\core_gpio.o: drivers/CoreGPIO/core_gpio.h
+.\obj\core_gpio.o: C:\Keil_v5\ARM\ARMCC\Bin\..\include\stdint.h
+.\obj\core_gpio.o: ./hal/CortexM3/Keil/cpu_types.h
+.\obj\core_gpio.o: drivers/CoreGPIO/../../hal/hal.h
+.\obj\core_gpio.o: drivers/CoreGPIO/../../hal/hw_reg_access.h
+.\obj\core_gpio.o: drivers/CoreGPIO/../../hal/hal_assert.h
+.\obj\core_gpio.o: drivers/CoreGPIO/../../hal/../CMSIS/mss_assert.h
+.\obj\core_gpio.o: C:\Keil_v5\ARM\ARMCC\Bin\..\include\assert.h
+.\obj\core_gpio.o: drivers/CoreGPIO/coregpio_regs.h

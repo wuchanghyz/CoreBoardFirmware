@@ -1,0 +1,41 @@
+Resource Usage Report for M2sExt 
+
+Mapping to part: m2s010fbga484std
+Cell usage:
+CCC             1 use
+CLKINT          2 uses
+MSS_010         1 use
+SYSRESET        1 use
+CFG1           28 uses
+CFG2           492 uses
+CFG3           735 uses
+CFG4           1872 uses
+
+
+Sequential Cells: 
+SLE            1213 uses
+
+DSP Blocks:    0
+
+I/O ports: 47
+I/O primitives: 46
+BIBUF          22 uses
+INBUF          20 uses
+OUTBUF         3 uses
+TRIBUFF        1 use
+
+
+Global Clock Buffers: 2
+
+
+Total LUTs:    3127
+
+Extra resources required for RAM and MACC interface logic during P&R:
+
+RAM64x18 Interface Logic : SLEs = 36; LUTs = 36;
+RAM1K18  Interface Logic : SLEs = 0; LUTs = 0;
+MACC     Interface Logic : SLEs = 0; LUTs = 0;
+
+Total number of SLEs after P&R:  1213 + 36 + 0 + 0 = 1249;
+Total number of LUTs after P&R:  3127 + 36 + 0 + 0 = 3163;
+

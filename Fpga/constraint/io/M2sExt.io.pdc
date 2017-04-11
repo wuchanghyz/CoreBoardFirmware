@@ -1,0 +1,252 @@
+# Microsemi I/O Physical Design Constraints file
+# Auto Generated User I/O Constraints file
+
+# Version: v11.7 11.7.0.119
+# Family: SmartFusion2 , Die: M2S010 , Package: 484 FBGA
+# Date generated: Mon Mar 20 23:40:03 2017 
+
+
+# 
+# User Locked I/O Bank Settings
+# 
+
+
+# 
+# Unlocked I/O Bank Settings
+# The I/O Bank Settings can be locked by directly editing this file
+# or by making changes in the I/O Attribute Editor
+# 
+
+
+# 
+# User Locked I/O settings
+# 
+
+set_io COREI2C_0_0_SCL_IO  \
+    -pinname D5            \
+    -fixed yes             \
+    -DIRECTION INOUT
+
+
+set_io COREI2C_0_0_SDA_IO  \
+    -pinname C4            \
+    -fixed yes             \
+    -DIRECTION INOUT
+
+
+set_io COREI2C_0_1_SCL_IO  \
+    -pinname Y14           \
+    -fixed yes             \
+    -DIRECTION INOUT
+
+
+set_io COREI2C_0_1_SDA_IO  \
+    -pinname AB13          \
+    -fixed yes             \
+    -DIRECTION INOUT
+
+
+set_io COREI2C_0_2_SCL_IO  \
+    -pinname U14           \
+    -fixed yes             \
+    -DIRECTION INOUT
+
+
+set_io COREI2C_0_2_SDA_IO  \
+    -pinname W17           \
+    -fixed yes             \
+    -DIRECTION INOUT
+
+
+set_io COREI2C_0_3_SCL_IO  \
+    -pinname N22           \
+    -fixed yes             \
+    -DIRECTION INOUT
+
+
+set_io COREI2C_0_3_SDA_IO  \
+    -pinname M21           \
+    -fixed yes             \
+    -DIRECTION INOUT
+
+
+set_io COREI2C_0_4_SCL_IO  \
+    -pinname M22           \
+    -fixed yes             \
+    -DIRECTION INOUT
+
+
+set_io COREI2C_0_4_SDA_IO  \
+    -pinname U19           \
+    -fixed yes             \
+    -DIRECTION INOUT
+
+
+set_io COREI2C_0_5_SCL_IO  \
+    -pinname G17           \
+    -fixed yes             \
+    -DIRECTION INOUT
+
+
+set_io COREI2C_0_5_SDA_IO  \
+    -pinname G16           \
+    -fixed yes             \
+    -DIRECTION INOUT
+
+
+set_io COREI2C_0_6_SCL_IO  \
+    -pinname P22           \
+    -fixed yes             \
+    -DIRECTION INOUT
+
+
+set_io COREI2C_0_6_SDA_IO  \
+    -pinname R22           \
+    -fixed yes             \
+    -DIRECTION INOUT
+
+
+set_io {GPIO_IN[4]}   \
+    -pinname D4       \
+    -fixed yes        \
+    -DIRECTION INPUT
+
+
+set_io {GPIO_IN[5]}   \
+    -pinname F5       \
+    -fixed yes        \
+    -DIRECTION INPUT
+
+
+set_io {GPIO_IN[6]}   \
+    -pinname W16      \
+    -fixed yes        \
+    -DIRECTION INPUT
+
+
+set_io {GPIO_IN[7]}   \
+    -pinname Y15      \
+    -fixed yes        \
+    -DIRECTION INPUT
+
+
+set_io {GPIO_IN[8]}   \
+    -pinname K5       \
+    -fixed yes        \
+    -iostd LVCMOS18   \
+    -DIRECTION INPUT
+
+
+set_io {GPIO_IN[9]}   \
+    -pinname L5       \
+    -fixed yes        \
+    -iostd LVCMOS18   \
+    -DIRECTION INPUT
+
+
+set_io {GPIO_IN[10]}  \
+    -pinname K4       \
+    -fixed yes        \
+    -iostd LVCMOS18   \
+    -DIRECTION INPUT
+
+
+set_io {GPIO_IN[11]}  \
+    -pinname L4       \
+    -fixed yes        \
+    -iostd LVCMOS18   \
+    -DIRECTION INPUT
+
+
+set_io {GPIO_IN[12]}  \
+    -pinname M6       \
+    -fixed yes        \
+    -iostd LVCMOS18   \
+    -DIRECTION INPUT
+
+
+set_io {GPIO_IN[13]}  \
+    -pinname L3       \
+    -fixed yes        \
+    -iostd LVCMOS18   \
+    -DIRECTION INPUT
+
+
+set_io {GPIO_IN[14]}  \
+    -pinname L2       \
+    -fixed yes        \
+    -iostd LVCMOS18   \
+    -DIRECTION INPUT
+
+
+set_io {GPIO_IN[15]}  \
+    -pinname M3       \
+    -fixed yes        \
+    -iostd LVCMOS18   \
+    -DIRECTION INPUT
+
+
+set_io {GPIO_IN[16]}  \
+    -pinname M2       \
+    -fixed yes        \
+    -iostd LVCMOS18   \
+    -DIRECTION INPUT
+
+
+set_io {GPIO_IN[17]}  \
+    -pinname M1       \
+    -fixed yes        \
+    -iostd LVCMOS18   \
+    -DIRECTION INPUT
+
+
+set_io {GPIO_IN[18]}  \
+    -pinname M5       \
+    -fixed yes        \
+    -iostd LVCMOS18   \
+    -DIRECTION INPUT
+
+
+set_io {GPIO_IN[19]}  \
+    -pinname N1       \
+    -fixed yes        \
+    -iostd LVCMOS18   \
+    -DIRECTION INPUT
+
+
+set_io {GPIO_OUT[1]}   \
+    -pinname F6        \
+    -fixed yes         \
+    -DIRECTION OUTPUT
+
+
+set_io {GPIO_OUT[2]}   \
+    -pinname G7        \
+    -fixed yes         \
+    -DIRECTION OUTPUT
+
+
+set_io {PAD_IN[0]}    \
+    -pinname K1       \
+    -fixed yes        \
+    -DIRECTION INPUT
+
+
+set_io USB_RST         \
+    -pinname R16       \
+    -fixed yes         \
+    -DIRECTION OUTPUT
+
+
+
+# 
+# Dedicated Peripheral I/O Settings
+# 
+
+
+# 
+# Unlocked I/O settings
+# The I/Os in this section are unplaced or placed but are not locked
+# the other listed attributes have been applied
+# 
+

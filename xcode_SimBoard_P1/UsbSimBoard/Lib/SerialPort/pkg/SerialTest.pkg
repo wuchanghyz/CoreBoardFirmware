@@ -1,0 +1,30 @@
+
+
+$#include "CRS232.h"
+
+class CRS232 {
+public:
+    CRS232();
+    ~CRS232();
+public:
+    int CreateIPC(const char * reply, const char * publish);
+    int Open(const char * dev, const char * opt);//opt:"9600,8,n,1"
+    int Close();
+    
+    int WriteString(const char * buffer);
+    int WriteBytes(unsigned char * ucData, int len);
+    int WriteStringBytes(const char * szData);//"0xFF,0xFE,..."
+    
+    const char * ReadString();
+    const char * ReadBytes();
+    const char * ReadStringBytes();//"0xFF,0xFE,..."
+    
+    void ClearBuffer();
+    int SetDetectString(const char * det);
+    int WaitDetect(int timeout);
+    const char * WriteReadString(const char * buffer,int timeout);
+    
+    int SetRepOpt(int needReply, int timeout=3000);//set bNeedReplay,it will reply data from com
+    int SetPubOpt(int needPub);
+    int WritePassControlBit(int stationid,char * szCmd);
+};

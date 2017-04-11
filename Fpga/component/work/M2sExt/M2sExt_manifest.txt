@@ -1,0 +1,15 @@
+Microsemi Corporation - Microsemi Libero Software Release v11.7 (Version 11.7.0.119)
+
+Date      :  Tue Jan 10 22:41:17 2017
+Project   :  C:\Users\AndersonHan\Desktop\USBSimBoard\Fpga
+Component :  M2sExt
+Family    :  SmartFusion2
+
+
+HDL source files for all Synthesis and Simulation tools:
+    C:/Users/AndersonHan/Desktop/USBSimBoard/Fpga/component/work/M2sExt/IO_0/M2sExt_IO_0_IO.vhd
+    C:/Users/AndersonHan/Desktop/USBSimBoard/Fpga/component/work/M2sExt/M2sExt.vhd
+
+Stimulus files for all Simulation tools:
+    C:/Users/AndersonHan/Desktop/USBSimBoard/Fpga/component/work/M2sExt/subsystem.bfm
+
