@@ -22,7 +22,8 @@
 
 #import "Config.h"
 
-#define READ_TIME_OUT 1000  //1 second
+#define READ_TIME_OUT   1000  //1 second
+#define RETRY_TIME      3
 
 class CRS232 : public CPubliser, CReplier, CSerialPort
 {

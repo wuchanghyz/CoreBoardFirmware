@@ -231,7 +231,8 @@ void * CSerialPort::ReadDataInBackGround(void * arg)
                     if(n==-1)
                     {
                         std::cout<<"[IO CTRL],get FIONREAD failed,with return:"<<errno<<std::endl;
-                        continue;
+                        //continue;
+                        break;
                     }
                     if(bytes <= 0)
                         break;
