@@ -2,7 +2,7 @@
 //  CRS232.h
 //  RS232
 //
-//  Created by IvanGan on 16/4/9.
+//  Created by andersons on 16/4/9.
 //  Copyright © 2016年 IvanGan. All rights reserved.
 //
 
