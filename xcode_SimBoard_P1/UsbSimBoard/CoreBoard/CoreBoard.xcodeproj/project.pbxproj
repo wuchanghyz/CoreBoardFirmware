@@ -1,0 +1,735 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		426739B81D2F79FC005BDA6B /* libZMQX.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 426739A01D2F79AD005BDA6B /* libZMQX.a */; };
+		426739C51D2F7A94005BDA6B /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 426739C41D2F7A94005BDA6B /* Foundation.framework */; };
+		426739C91D2F7B6A005BDA6B /* Cocoa.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 426739C81D2F7B69005BDA6B /* Cocoa.framework */; };
+		42AAD1981D2F86F80083E141 /* libZMQX.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 426739A01D2F79AD005BDA6B /* libZMQX.a */; };
+		42AAD1991D2F890A0083E141 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 426739C41D2F7A94005BDA6B /* Foundation.framework */; };
+		42AAD19A1D2F890F0083E141 /* Cocoa.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 426739C81D2F7B69005BDA6B /* Cocoa.framework */; };
+		42AAD1A81D2F8AC40083E141 /* Config.h in Sources */ = {isa = PBXBuildFile; fileRef = 426739CB1D2F7C9C005BDA6B /* Config.h */; };
+		42AAD1A91D2F8AC40083E141 /* CRS232.mm in Sources */ = {isa = PBXBuildFile; fileRef = 426739B31D2F79E2005BDA6B /* CRS232.mm */; };
+		42AAD1AA1D2F8AC40083E141 /* SerialPort.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 426739B41D2F79E2005BDA6B /* SerialPort.cpp */; };
+		42AAD1AB1D2F8AC40083E141 /* Publisher.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 426739A71D2F79C6005BDA6B /* Publisher.cpp */; };
+		42AAD1AC1D2F8AC40083E141 /* Replier.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 426739A91D2F79C6005BDA6B /* Replier.cpp */; };
+		42AAD1AD1D2F8AC40083E141 /* Requester.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 426739AB1D2F79C6005BDA6B /* Requester.cpp */; };
+		42AAD1B11D2F8B600083E141 /* Cat9555.mm in Sources */ = {isa = PBXBuildFile; fileRef = 42AAD16E1D2F84F70083E141 /* Cat9555.mm */; };
+		7142CFFC1E24A67300BAF0AA /* IA863_SimBoard-lua.mm in Sources */ = {isa = PBXBuildFile; fileRef = 7142CFFB1E24A67300BAF0AA /* IA863_SimBoard-lua.mm */; };
+		717216181E2B5CBE00F63959 /* STDP4020.mm in Sources */ = {isa = PBXBuildFile; fileRef = 71D18D8A1E23594F0064D67E /* STDP4020.mm */; };
+		717F8DE31E25FA0300AC091C /* RE_MUX.mm in Sources */ = {isa = PBXBuildFile; fileRef = 717F8DDC1E25E41700AC091C /* RE_MUX.mm */; };
+		7182D2EA1E6226150008E87C /* main.mm in Sources */ = {isa = PBXBuildFile; fileRef = 426739841D2F797B005BDA6B /* main.mm */; };
+		7182D2F01E62267B0008E87C /* PD_Controller.mm in Sources */ = {isa = PBXBuildFile; fileRef = 71F6D7BE1E590C84009CC2DA /* PD_Controller.mm */; };
+		71C73B231E62235B00969B7F /* liblua.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 426739911D2F7993005BDA6B /* liblua.a */; };
+		71C73B241E62235B00969B7F /* libtolua++.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 426739981D2F79A6005BDA6B /* libtolua++.a */; };
+		71C73B281E62237B00969B7F /* RE_MUX.mm in Sources */ = {isa = PBXBuildFile; fileRef = 717F8DDC1E25E41700AC091C /* RE_MUX.mm */; };
+		71C73B291E62237B00969B7F /* PD_Controller.mm in Sources */ = {isa = PBXBuildFile; fileRef = 71F6D7BE1E590C84009CC2DA /* PD_Controller.mm */; };
+		71C73B2A1E62237B00969B7F /* Cat9555.mm in Sources */ = {isa = PBXBuildFile; fileRef = 42AAD16E1D2F84F70083E141 /* Cat9555.mm */; };
+		71C73B2B1E62237B00969B7F /* STDP4020.mm in Sources */ = {isa = PBXBuildFile; fileRef = 71D18D8A1E23594F0064D67E /* STDP4020.mm */; };
+		71C73B2C1E62237B00969B7F /* CRS232.mm in Sources */ = {isa = PBXBuildFile; fileRef = 426739B31D2F79E2005BDA6B /* CRS232.mm */; };
+		71C73B2D1E62237B00969B7F /* SerialPort.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 426739B41D2F79E2005BDA6B /* SerialPort.cpp */; };
+		71C73B2E1E62237B00969B7F /* Publisher.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 426739A71D2F79C6005BDA6B /* Publisher.cpp */; };
+		71C73B2F1E62237B00969B7F /* Replier.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 426739A91D2F79C6005BDA6B /* Replier.cpp */; };
+		71C73B301E62237B00969B7F /* Requester.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 426739AB1D2F79C6005BDA6B /* Requester.cpp */; };
+		71C73B311E62237B00969B7F /* IA863_SimBoard-lua.mm in Sources */ = {isa = PBXBuildFile; fileRef = 7142CFFB1E24A67300BAF0AA /* IA863_SimBoard-lua.mm */; };
+		71C73B321E62237B00969B7F /* IA863_SimBoardInterface.mm in Sources */ = {isa = PBXBuildFile; fileRef = 71D18D5A1E22544A0064D67E /* IA863_SimBoardInterface.mm */; };
+		71C73B331E62237B00969B7F /* IA863_SimBoard.mm in Sources */ = {isa = PBXBuildFile; fileRef = 71D18D461E22528E0064D67E /* IA863_SimBoard.mm */; };
+		71D18D451E22528E0064D67E /* IA863_SimBoard.h in Headers */ = {isa = PBXBuildFile; fileRef = 71D18D441E22528E0064D67E /* IA863_SimBoard.h */; };
+		71D18D471E22528E0064D67E /* IA863_SimBoard.mm in Sources */ = {isa = PBXBuildFile; fileRef = 71D18D461E22528E0064D67E /* IA863_SimBoard.mm */; };
+		71D18D4B1E2252E80064D67E /* Cat9555.mm in Sources */ = {isa = PBXBuildFile; fileRef = 42AAD16E1D2F84F70083E141 /* Cat9555.mm */; };
+		71D18D4C1E2253030064D67E /* CRS232.mm in Sources */ = {isa = PBXBuildFile; fileRef = 426739B31D2F79E2005BDA6B /* CRS232.mm */; };
+		71D18D4D1E2253030064D67E /* SerialPort.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 426739B41D2F79E2005BDA6B /* SerialPort.cpp */; };
+		71D18D4E1E2253030064D67E /* Publisher.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 426739A71D2F79C6005BDA6B /* Publisher.cpp */; };
+		71D18D4F1E2253030064D67E /* Replier.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 426739A91D2F79C6005BDA6B /* Replier.cpp */; };
+		71D18D501E2253030064D67E /* Requester.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 426739AB1D2F79C6005BDA6B /* Requester.cpp */; };
+		71D18D511E22530C0064D67E /* liblua.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 426739911D2F7993005BDA6B /* liblua.a */; };
+		71D18D521E22530C0064D67E /* libtolua++.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 426739981D2F79A6005BDA6B /* libtolua++.a */; };
+		71D18D531E22530C0064D67E /* libZMQX.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 426739A01D2F79AD005BDA6B /* libZMQX.a */; };
+		71D18D5C1E22544A0064D67E /* IA863_SimBoardInterface.mm in Sources */ = {isa = PBXBuildFile; fileRef = 71D18D5A1E22544A0064D67E /* IA863_SimBoardInterface.mm */; };
+		71D18D5D1E22544A0064D67E /* IA863_SimBoardInterface.h in Headers */ = {isa = PBXBuildFile; fileRef = 71D18D5B1E22544A0064D67E /* IA863_SimBoardInterface.h */; };
+		71D18D781E2335450064D67E /* IA863_SimBoard.pkg in Sources */ = {isa = PBXBuildFile; fileRef = 71D18D591E22544A0064D67E /* IA863_SimBoard.pkg */; };
+		71D18D7F1E2338770064D67E /* Config.h in Sources */ = {isa = PBXBuildFile; fileRef = 426739CB1D2F7C9C005BDA6B /* Config.h */; };
+		71D18D821E2338770064D67E /* get_hash.h in Sources */ = {isa = PBXBuildFile; fileRef = 426739A61D2F79C6005BDA6B /* get_hash.h */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		426739901D2F7993005BDA6B /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 4267398C1D2F7993005BDA6B /* lua.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = 50AEED4919050BE20035D775;
+			remoteInfo = lua;
+		};
+		426739971D2F79A6005BDA6B /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 426739921D2F79A6005BDA6B /* tolua++.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = 50AEEE23190514210035D775;
+			remoteInfo = "tolua++";
+		};
+		4267399F1D2F79AD005BDA6B /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 426739991D2F79AD005BDA6B /* ZMQX.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = ECB12D601B4EBF1B00404CDE;
+			remoteInfo = ZMQX;
+		};
+		426739A11D2F79AD005BDA6B /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 426739991D2F79AD005BDA6B /* ZMQX.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = EC17B14F1B71B4B100319416;
+			remoteInfo = req;
+		};
+		426739A31D2F79AD005BDA6B /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 426739991D2F79AD005BDA6B /* ZMQX.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = EC17B16D1B71B77C00319416;
+			remoteInfo = rep;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXCopyFilesBuildPhase section */
+		4267397F1D2F797B005BDA6B /* CopyFiles */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = /usr/share/man/man1/;
+			dstSubfolderSpec = 0;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 1;
+		};
+		42AAD17B1D2F85A10083E141 /* CopyFiles */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = /usr/share/man/man1/;
+			dstSubfolderSpec = 0;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 1;
+		};
+/* End PBXCopyFilesBuildPhase section */
+
+/* Begin PBXFileReference section */
+		426739811D2F797B005BDA6B /* CoreBoard */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.executable"; includeInIndex = 0; path = CoreBoard; sourceTree = BUILT_PRODUCTS_DIR; };
+		426739841D2F797B005BDA6B /* main.mm */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.objcpp; path = main.mm; sourceTree = "<group>"; };
+		4267398C1D2F7993005BDA6B /* lua.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = lua.xcodeproj; path = ../Lib/Lua/lua.xcodeproj; sourceTree = "<group>"; };
+		426739921D2F79A6005BDA6B /* tolua++.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = "tolua++.xcodeproj"; path = "../Lib/ToLua/tolua++.xcodeproj"; sourceTree = "<group>"; };
+		426739991D2F79AD005BDA6B /* ZMQX.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = ZMQX.xcodeproj; path = ../Lib/ZMQX/ZMQX.xcodeproj; sourceTree = "<group>"; };
+		426739A61D2F79C6005BDA6B /* get_hash.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = get_hash.h; path = ../Lib/zmq/get_hash.h; sourceTree = "<group>"; };
+		426739A71D2F79C6005BDA6B /* Publisher.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = Publisher.cpp; path = ../Lib/zmq/Publisher.cpp; sourceTree = "<group>"; };
+		426739A81D2F79C6005BDA6B /* Publisher.hpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.h; name = Publisher.hpp; path = ../Lib/zmq/Publisher.hpp; sourceTree = "<group>"; };
+		426739A91D2F79C6005BDA6B /* Replier.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = Replier.cpp; path = ../Lib/zmq/Replier.cpp; sourceTree = "<group>"; };
+		426739AA1D2F79C6005BDA6B /* Replier.hpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.h; name = Replier.hpp; path = ../Lib/zmq/Replier.hpp; sourceTree = "<group>"; };
+		426739AB1D2F79C6005BDA6B /* Requester.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = Requester.cpp; path = ../Lib/zmq/Requester.cpp; sourceTree = "<group>"; };
+		426739AC1D2F79C6005BDA6B /* Requester.hpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.h; name = Requester.hpp; path = ../Lib/zmq/Requester.hpp; sourceTree = "<group>"; };
+		426739AD1D2F79C6005BDA6B /* zmq.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = zmq.h; path = ../Lib/zmq/zmq.h; sourceTree = "<group>"; };
+		426739B21D2F79E2005BDA6B /* CRS232.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = CRS232.h; path = ../Lib/SerialPort/CRS232.h; sourceTree = "<group>"; };
+		426739B31D2F79E2005BDA6B /* CRS232.mm */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.objcpp; name = CRS232.mm; path = ../Lib/SerialPort/CRS232.mm; sourceTree = "<group>"; };
+		426739B41D2F79E2005BDA6B /* SerialPort.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = SerialPort.cpp; path = ../Lib/SerialPort/SerialPort.cpp; sourceTree = "<group>"; };
+		426739B51D2F79E2005BDA6B /* SerialPort.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = SerialPort.h; path = ../Lib/SerialPort/SerialPort.h; sourceTree = "<group>"; };
+		426739C41D2F7A94005BDA6B /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
+		426739C81D2F7B69005BDA6B /* Cocoa.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Cocoa.framework; path = System/Library/Frameworks/Cocoa.framework; sourceTree = SDKROOT; };
+		426739CB1D2F7C9C005BDA6B /* Config.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = Config.h; path = ../Lib/Module/Config.h; sourceTree = "<group>"; };
+		42AAD16D1D2F84F70083E141 /* Cat9555.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = Cat9555.h; path = ../Lib/Module/Cat9555.h; sourceTree = "<group>"; };
+		42AAD16E1D2F84F70083E141 /* Cat9555.mm */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.objcpp; name = Cat9555.mm; path = ../Lib/Module/Cat9555.mm; sourceTree = "<group>"; };
+		42AAD17D1D2F85A10083E141 /* PwrDbgBrd */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.executable"; includeInIndex = 0; path = PwrDbgBrd; sourceTree = BUILT_PRODUCTS_DIR; };
+		7142CFFB1E24A67300BAF0AA /* IA863_SimBoard-lua.mm */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.objcpp; name = "IA863_SimBoard-lua.mm"; path = "pkg/IA863_SimBoard-lua.mm"; sourceTree = "<group>"; };
+		717F8DDB1E25E41700AC091C /* RE_MUX.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RE_MUX.h; sourceTree = "<group>"; };
+		717F8DDC1E25E41700AC091C /* RE_MUX.mm */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.objcpp; path = RE_MUX.mm; sourceTree = "<group>"; };
+		71D18D421E22528E0064D67E /* libIA863_SimBoard.dylib */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.dylib"; includeInIndex = 0; path = libIA863_SimBoard.dylib; sourceTree = BUILT_PRODUCTS_DIR; };
+		71D18D441E22528E0064D67E /* IA863_SimBoard.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = IA863_SimBoard.h; sourceTree = "<group>"; };
+		71D18D461E22528E0064D67E /* IA863_SimBoard.mm */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.objcpp; path = IA863_SimBoard.mm; sourceTree = "<group>"; };
+		71D18D581E22544A0064D67E /* IA863_SimBoard.sh */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.script.sh; name = IA863_SimBoard.sh; path = pkg/IA863_SimBoard.sh; sourceTree = "<group>"; };
+		71D18D591E22544A0064D67E /* IA863_SimBoard.pkg */ = {isa = PBXFileReference; explicitFileType = sourcecode.c.h; fileEncoding = 4; name = IA863_SimBoard.pkg; path = pkg/IA863_SimBoard.pkg; sourceTree = "<group>"; };
+		71D18D5A1E22544A0064D67E /* IA863_SimBoardInterface.mm */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.objcpp; name = IA863_SimBoardInterface.mm; path = pkg/IA863_SimBoardInterface.mm; sourceTree = "<group>"; };
+		71D18D5B1E22544A0064D67E /* IA863_SimBoardInterface.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = IA863_SimBoardInterface.h; path = pkg/IA863_SimBoardInterface.h; sourceTree = "<group>"; };
+		71D18D891E23594F0064D67E /* STDP4020.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = STDP4020.h; sourceTree = "<group>"; };
+		71D18D8A1E23594F0064D67E /* STDP4020.mm */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.objcpp; path = STDP4020.mm; sourceTree = "<group>"; };
+		71F6D7BE1E590C84009CC2DA /* PD_Controller.mm */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.objcpp; name = PD_Controller.mm; path = ../Lib/Module/PD_Controller.mm; sourceTree = "<group>"; };
+		71F6D7C51E590CA0009CC2DA /* PD_Controller.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = PD_Controller.h; path = ../Lib/Module/PD_Controller.h; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		4267397E1D2F797B005BDA6B /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				71C73B231E62235B00969B7F /* liblua.a in Frameworks */,
+				71C73B241E62235B00969B7F /* libtolua++.a in Frameworks */,
+				426739C91D2F7B6A005BDA6B /* Cocoa.framework in Frameworks */,
+				426739C51D2F7A94005BDA6B /* Foundation.framework in Frameworks */,
+				426739B81D2F79FC005BDA6B /* libZMQX.a in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		42AAD17A1D2F85A10083E141 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				42AAD19A1D2F890F0083E141 /* Cocoa.framework in Frameworks */,
+				42AAD1991D2F890A0083E141 /* Foundation.framework in Frameworks */,
+				42AAD1981D2F86F80083E141 /* libZMQX.a in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		71D18D3F1E22528E0064D67E /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				71D18D511E22530C0064D67E /* liblua.a in Frameworks */,
+				71D18D521E22530C0064D67E /* libtolua++.a in Frameworks */,
+				71D18D531E22530C0064D67E /* libZMQX.a in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		426739781D2F797B005BDA6B = {
+			isa = PBXGroup;
+			children = (
+				4267398B1D2F7987005BDA6B /* Lib */,
+				426739831D2F797B005BDA6B /* CoreBoard */,
+				71D18D431E22528E0064D67E /* IA863_SimBoard */,
+				426739821D2F797B005BDA6B /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		426739821D2F797B005BDA6B /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				426739811D2F797B005BDA6B /* CoreBoard */,
+				42AAD17D1D2F85A10083E141 /* PwrDbgBrd */,
+				71D18D421E22528E0064D67E /* libIA863_SimBoard.dylib */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		426739831D2F797B005BDA6B /* CoreBoard */ = {
+			isa = PBXGroup;
+			children = (
+				426739841D2F797B005BDA6B /* main.mm */,
+			);
+			path = CoreBoard;
+			sourceTree = "<group>";
+		};
+		4267398B1D2F7987005BDA6B /* Lib */ = {
+			isa = PBXGroup;
+			children = (
+				71F6D7C61E592E8D009CC2DA /* Modules */,
+				426739C81D2F7B69005BDA6B /* Cocoa.framework */,
+				426739C41D2F7A94005BDA6B /* Foundation.framework */,
+				426739CA1D2F7C8B005BDA6B /* ICs */,
+				426739B11D2F79CF005BDA6B /* Serial */,
+				426739A51D2F79BB005BDA6B /* zmq */,
+				426739991D2F79AD005BDA6B /* ZMQX.xcodeproj */,
+				426739921D2F79A6005BDA6B /* tolua++.xcodeproj */,
+				4267398C1D2F7993005BDA6B /* lua.xcodeproj */,
+			);
+			name = Lib;
+			sourceTree = "<group>";
+		};
+		4267398D1D2F7993005BDA6B /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				426739911D2F7993005BDA6B /* liblua.a */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		426739931D2F79A6005BDA6B /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				426739981D2F79A6005BDA6B /* libtolua++.a */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		4267399A1D2F79AD005BDA6B /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				426739A01D2F79AD005BDA6B /* libZMQX.a */,
+				426739A21D2F79AD005BDA6B /* req */,
+				426739A41D2F79AD005BDA6B /* rep */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		426739A51D2F79BB005BDA6B /* zmq */ = {
+			isa = PBXGroup;
+			children = (
+				426739A61D2F79C6005BDA6B /* get_hash.h */,
+				426739A71D2F79C6005BDA6B /* Publisher.cpp */,
+				426739A81D2F79C6005BDA6B /* Publisher.hpp */,
+				426739A91D2F79C6005BDA6B /* Replier.cpp */,
+				426739AA1D2F79C6005BDA6B /* Replier.hpp */,
+				426739AB1D2F79C6005BDA6B /* Requester.cpp */,
+				426739AC1D2F79C6005BDA6B /* Requester.hpp */,
+				426739AD1D2F79C6005BDA6B /* zmq.h */,
+			);
+			name = zmq;
+			sourceTree = "<group>";
+		};
+		426739B11D2F79CF005BDA6B /* Serial */ = {
+			isa = PBXGroup;
+			children = (
+				426739B21D2F79E2005BDA6B /* CRS232.h */,
+				426739B31D2F79E2005BDA6B /* CRS232.mm */,
+				426739B41D2F79E2005BDA6B /* SerialPort.cpp */,
+				426739B51D2F79E2005BDA6B /* SerialPort.h */,
+			);
+			name = Serial;
+			sourceTree = "<group>";
+		};
+		426739CA1D2F7C8B005BDA6B /* ICs */ = {
+			isa = PBXGroup;
+			children = (
+				717F8DDB1E25E41700AC091C /* RE_MUX.h */,
+				717F8DDC1E25E41700AC091C /* RE_MUX.mm */,
+				71F6D7BE1E590C84009CC2DA /* PD_Controller.mm */,
+				71F6D7C51E590CA0009CC2DA /* PD_Controller.h */,
+				42AAD16D1D2F84F70083E141 /* Cat9555.h */,
+				42AAD16E1D2F84F70083E141 /* Cat9555.mm */,
+				71D18D891E23594F0064D67E /* STDP4020.h */,
+				71D18D8A1E23594F0064D67E /* STDP4020.mm */,
+				426739CB1D2F7C9C005BDA6B /* Config.h */,
+			);
+			name = ICs;
+			sourceTree = "<group>";
+		};
+		71D18D431E22528E0064D67E /* IA863_SimBoard */ = {
+			isa = PBXGroup;
+			children = (
+				71D18D541E2253150064D67E /* pkg */,
+				71D18D441E22528E0064D67E /* IA863_SimBoard.h */,
+				71D18D461E22528E0064D67E /* IA863_SimBoard.mm */,
+			);
+			path = IA863_SimBoard;
+			sourceTree = "<group>";
+		};
+		71D18D541E2253150064D67E /* pkg */ = {
+			isa = PBXGroup;
+			children = (
+				7142CFFB1E24A67300BAF0AA /* IA863_SimBoard-lua.mm */,
+				71D18D581E22544A0064D67E /* IA863_SimBoard.sh */,
+				71D18D591E22544A0064D67E /* IA863_SimBoard.pkg */,
+				71D18D5A1E22544A0064D67E /* IA863_SimBoardInterface.mm */,
+				71D18D5B1E22544A0064D67E /* IA863_SimBoardInterface.h */,
+			);
+			name = pkg;
+			sourceTree = "<group>";
+		};
+		71F6D7C61E592E8D009CC2DA /* Modules */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			name = Modules;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXHeadersBuildPhase section */
+		71D18D401E22528E0064D67E /* Headers */ = {
+			isa = PBXHeadersBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				71D18D451E22528E0064D67E /* IA863_SimBoard.h in Headers */,
+				71D18D5D1E22544A0064D67E /* IA863_SimBoardInterface.h in Headers */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXHeadersBuildPhase section */
+
+/* Begin PBXNativeTarget section */
+		426739801D2F797B005BDA6B /* CoreBoard */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 426739881D2F797B005BDA6B /* Build configuration list for PBXNativeTarget "CoreBoard" */;
+			buildPhases = (
+				4267397D1D2F797B005BDA6B /* Sources */,
+				4267397E1D2F797B005BDA6B /* Frameworks */,
+				4267397F1D2F797B005BDA6B /* CopyFiles */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = CoreBoard;
+			productName = CoreBoard;
+			productReference = 426739811D2F797B005BDA6B /* CoreBoard */;
+			productType = "com.apple.product-type.tool";
+		};
+		42AAD17C1D2F85A10083E141 /* PwrDbgBrd */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 42AAD1811D2F85A10083E141 /* Build configuration list for PBXNativeTarget "PwrDbgBrd" */;
+			buildPhases = (
+				42AAD1791D2F85A10083E141 /* Sources */,
+				42AAD17A1D2F85A10083E141 /* Frameworks */,
+				42AAD17B1D2F85A10083E141 /* CopyFiles */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = PwrDbgBrd;
+			productName = PwrDbgBrd;
+			productReference = 42AAD17D1D2F85A10083E141 /* PwrDbgBrd */;
+			productType = "com.apple.product-type.tool";
+		};
+		71D18D411E22528E0064D67E /* IA863_SimBoard */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 71D18D481E22528E0064D67E /* Build configuration list for PBXNativeTarget "IA863_SimBoard" */;
+			buildPhases = (
+				71D18D3E1E22528E0064D67E /* Sources */,
+				71D18D3F1E22528E0064D67E /* Frameworks */,
+				71D18D401E22528E0064D67E /* Headers */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = IA863_SimBoard;
+			productName = IA863_SimBoard;
+			productReference = 71D18D421E22528E0064D67E /* libIA863_SimBoard.dylib */;
+			productType = "com.apple.product-type.library.dynamic";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		426739791D2F797B005BDA6B /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastUpgradeCheck = 0730;
+				ORGANIZATIONNAME = AndersonHan;
+				TargetAttributes = {
+					426739801D2F797B005BDA6B = {
+						CreatedOnToolsVersion = 7.3.1;
+					};
+					42AAD17C1D2F85A10083E141 = {
+						CreatedOnToolsVersion = 7.3.1;
+					};
+					71D18D411E22528E0064D67E = {
+						CreatedOnToolsVersion = 8.1;
+						ProvisioningStyle = Automatic;
+					};
+				};
+			};
+			buildConfigurationList = 4267397C1D2F797B005BDA6B /* Build configuration list for PBXProject "CoreBoard" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+			);
+			mainGroup = 426739781D2F797B005BDA6B;
+			productRefGroup = 426739821D2F797B005BDA6B /* Products */;
+			projectDirPath = "";
+			projectReferences = (
+				{
+					ProductGroup = 4267398D1D2F7993005BDA6B /* Products */;
+					ProjectRef = 4267398C1D2F7993005BDA6B /* lua.xcodeproj */;
+				},
+				{
+					ProductGroup = 426739931D2F79A6005BDA6B /* Products */;
+					ProjectRef = 426739921D2F79A6005BDA6B /* tolua++.xcodeproj */;
+				},
+				{
+					ProductGroup = 4267399A1D2F79AD005BDA6B /* Products */;
+					ProjectRef = 426739991D2F79AD005BDA6B /* ZMQX.xcodeproj */;
+				},
+			);
+			projectRoot = "";
+			targets = (
+				426739801D2F797B005BDA6B /* CoreBoard */,
+				42AAD17C1D2F85A10083E141 /* PwrDbgBrd */,
+				71D18D411E22528E0064D67E /* IA863_SimBoard */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXReferenceProxy section */
+		426739911D2F7993005BDA6B /* liblua.a */ = {
+			isa = PBXReferenceProxy;
+			fileType = archive.ar;
+			path = liblua.a;
+			remoteRef = 426739901D2F7993005BDA6B /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+		426739981D2F79A6005BDA6B /* libtolua++.a */ = {
+			isa = PBXReferenceProxy;
+			fileType = archive.ar;
+			path = "libtolua++.a";
+			remoteRef = 426739971D2F79A6005BDA6B /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+		426739A01D2F79AD005BDA6B /* libZMQX.a */ = {
+			isa = PBXReferenceProxy;
+			fileType = archive.ar;
+			path = libZMQX.a;
+			remoteRef = 4267399F1D2F79AD005BDA6B /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+		426739A21D2F79AD005BDA6B /* req */ = {
+			isa = PBXReferenceProxy;
+			fileType = "compiled.mach-o.executable";
+			path = req;
+			remoteRef = 426739A11D2F79AD005BDA6B /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+		426739A41D2F79AD005BDA6B /* rep */ = {
+			isa = PBXReferenceProxy;
+			fileType = "compiled.mach-o.executable";
+			path = rep;
+			remoteRef = 426739A31D2F79AD005BDA6B /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+/* End PBXReferenceProxy section */
+
+/* Begin PBXSourcesBuildPhase section */
+		4267397D1D2F797B005BDA6B /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				7182D2EA1E6226150008E87C /* main.mm in Sources */,
+				71C73B281E62237B00969B7F /* RE_MUX.mm in Sources */,
+				71C73B291E62237B00969B7F /* PD_Controller.mm in Sources */,
+				71C73B2A1E62237B00969B7F /* Cat9555.mm in Sources */,
+				71C73B2B1E62237B00969B7F /* STDP4020.mm in Sources */,
+				71C73B2C1E62237B00969B7F /* CRS232.mm in Sources */,
+				71C73B2D1E62237B00969B7F /* SerialPort.cpp in Sources */,
+				71C73B2E1E62237B00969B7F /* Publisher.cpp in Sources */,
+				71C73B2F1E62237B00969B7F /* Replier.cpp in Sources */,
+				71C73B301E62237B00969B7F /* Requester.cpp in Sources */,
+				71C73B311E62237B00969B7F /* IA863_SimBoard-lua.mm in Sources */,
+				71C73B321E62237B00969B7F /* IA863_SimBoardInterface.mm in Sources */,
+				71C73B331E62237B00969B7F /* IA863_SimBoard.mm in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		42AAD1791D2F85A10083E141 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				42AAD1B11D2F8B600083E141 /* Cat9555.mm in Sources */,
+				42AAD1A81D2F8AC40083E141 /* Config.h in Sources */,
+				42AAD1A91D2F8AC40083E141 /* CRS232.mm in Sources */,
+				42AAD1AA1D2F8AC40083E141 /* SerialPort.cpp in Sources */,
+				42AAD1AB1D2F8AC40083E141 /* Publisher.cpp in Sources */,
+				42AAD1AC1D2F8AC40083E141 /* Replier.cpp in Sources */,
+				42AAD1AD1D2F8AC40083E141 /* Requester.cpp in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		71D18D3E1E22528E0064D67E /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				7182D2F01E62267B0008E87C /* PD_Controller.mm in Sources */,
+				717216181E2B5CBE00F63959 /* STDP4020.mm in Sources */,
+				717F8DE31E25FA0300AC091C /* RE_MUX.mm in Sources */,
+				71D18D7F1E2338770064D67E /* Config.h in Sources */,
+				71D18D821E2338770064D67E /* get_hash.h in Sources */,
+				71D18D781E2335450064D67E /* IA863_SimBoard.pkg in Sources */,
+				71D18D4C1E2253030064D67E /* CRS232.mm in Sources */,
+				71D18D4D1E2253030064D67E /* SerialPort.cpp in Sources */,
+				71D18D4E1E2253030064D67E /* Publisher.cpp in Sources */,
+				7142CFFC1E24A67300BAF0AA /* IA863_SimBoard-lua.mm in Sources */,
+				71D18D4F1E2253030064D67E /* Replier.cpp in Sources */,
+				71D18D501E2253030064D67E /* Requester.cpp in Sources */,
+				71D18D4B1E2252E80064D67E /* Cat9555.mm in Sources */,
+				71D18D5C1E22544A0064D67E /* IA863_SimBoardInterface.mm in Sources */,
+				71D18D471E22528E0064D67E /* IA863_SimBoard.mm in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin XCBuildConfiguration section */
+		426739861D2F797B005BDA6B /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = NO;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGN_IDENTITY = "-";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				MACOSX_DEPLOYMENT_TARGET = 10.11;
+				MTL_ENABLE_DEBUG_INFO = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = macosx;
+			};
+			name = Debug;
+		};
+		426739871D2F797B005BDA6B /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = NO;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGN_IDENTITY = "-";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				MACOSX_DEPLOYMENT_TARGET = 10.11;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				SDKROOT = macosx;
+			};
+			name = Release;
+		};
+		426739891D2F797B005BDA6B /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Debug;
+		};
+		4267398A1D2F797B005BDA6B /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Release;
+		};
+		42AAD1821D2F85A10083E141 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CLANG_ENABLE_OBJC_ARC = NO;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Debug;
+		};
+		42AAD1831D2F85A10083E141 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CLANG_ENABLE_OBJC_ARC = NO;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Release;
+		};
+		71D18D491E22528E0064D67E /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CLANG_ENABLE_OBJC_ARC = NO;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_SUSPICIOUS_MOVES = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				EXECUTABLE_PREFIX = lib;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Debug;
+		};
+		71D18D4A1E22528E0064D67E /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CLANG_ENABLE_OBJC_ARC = NO;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_SUSPICIOUS_MOVES = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				EXECUTABLE_PREFIX = lib;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		4267397C1D2F797B005BDA6B /* Build configuration list for PBXProject "CoreBoard" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				426739861D2F797B005BDA6B /* Debug */,
+				426739871D2F797B005BDA6B /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		426739881D2F797B005BDA6B /* Build configuration list for PBXNativeTarget "CoreBoard" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				426739891D2F797B005BDA6B /* Debug */,
+				4267398A1D2F797B005BDA6B /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		42AAD1811D2F85A10083E141 /* Build configuration list for PBXNativeTarget "PwrDbgBrd" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				42AAD1821D2F85A10083E141 /* Debug */,
+				42AAD1831D2F85A10083E141 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		71D18D481E22528E0064D67E /* Build configuration list for PBXNativeTarget "IA863_SimBoard" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				71D18D491E22528E0064D67E /* Debug */,
+				71D18D4A1E22528E0064D67E /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 426739791D2F797B005BDA6B /* Project object */;
+}

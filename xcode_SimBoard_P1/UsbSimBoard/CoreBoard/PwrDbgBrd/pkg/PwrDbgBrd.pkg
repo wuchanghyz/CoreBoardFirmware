@@ -1,0 +1,19 @@
+
+
+$#include "PwrDbgBrd.h"
+
+
+class cPwrDbgBrd
+{
+    
+public:
+    char * SystemInit(void);
+    char * PowerOn(void);
+    char * PowerOff(void);
+    char * ItemSet(unsigned char Items);
+    char * CurrentSet(float InputDataMv);
+    float ReadVoltage(unsigned char Channel);
+    char * ReadPowerEeprom(unsigned char Address, unsigned char Len);
+    char * WritePowerEeprom(unsigned char Address, char * pData);
+    char * SetPowerOutputVoltage(unsigned char Channel, float SetData);
+};
