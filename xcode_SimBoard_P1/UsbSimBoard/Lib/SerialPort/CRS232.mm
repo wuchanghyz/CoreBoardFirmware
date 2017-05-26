@@ -2,8 +2,9 @@
 //  CRS232.cpp
 //  RS232
 //
-//  Created by IvanGan on 16/4/9.
+//  Created by anderon on 16/4/9.
 //  Copyright © 2016年 IvanGan. All rights reserved.
+//
 //
 
 #include "CRS232.h"
