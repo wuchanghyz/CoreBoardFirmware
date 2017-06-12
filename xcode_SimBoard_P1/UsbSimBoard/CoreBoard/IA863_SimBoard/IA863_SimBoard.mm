@@ -957,12 +957,14 @@ const char * cIA863_SimBoard::USBC_Items(unsigned char Channel, const char * Ite
         [LogInfo appendString:@"2.0\r\n"];
         if(Statue == 0)
         {
+            usleep(100000);
             buffer = (char *)TypeCUsb2Switch(Channel, 0);
             if(StrCmp(buffer,gStringOK,4) == 0)
             {
                 [LogInfo appendFormat:@"TypeCUsb2Switch(%d,0) Error.\r\n",Channel];
                 return buffer;
             }
+            usleep(100000);
             buffer = (char *)CCLogicSwitch(Channel, 0);
             if(StrCmp(buffer,gStringOK,4) == 0)
             {
@@ -972,12 +974,14 @@ const char * cIA863_SimBoard::USBC_Items(unsigned char Channel, const char * Ite
         }
         else if(Statue == 1)
         {
+            usleep(100000);
             buffer = (char *)TypeCUsb2Switch(Channel, 0);
             if(StrCmp(buffer,gStringOK,4) == 0)
             {
                 [LogInfo appendFormat:@"TypeCUsb2Switch(%d,0) Error.\r\n",Channel];
                 return buffer;
             }
+            usleep(100000);
             buffer = (char *)CCLogicSwitch(Channel, Statue);
             if(StrCmp(buffer,gStringOK,4) == 0)
             {
@@ -988,12 +992,14 @@ const char * cIA863_SimBoard::USBC_Items(unsigned char Channel, const char * Ite
         }
         else if(Statue == 2)
         {
+            usleep(100000);
             buffer = (char *)TypeCUsb2Switch(Channel, 1);
             if(StrCmp(buffer,gStringOK,4) == 0)
             {
                 [LogInfo appendFormat:@"TypeCUsb2Switch(%d,1) Error.\r\n",Channel];
                 return buffer;
             }
+            usleep(100000);
             buffer = (char *)CCLogicSwitch(Channel, Statue);
             if(StrCmp(buffer,gStringOK,4) == 0)
             {
@@ -1011,18 +1017,21 @@ const char * cIA863_SimBoard::USBC_Items(unsigned char Channel, const char * Ite
         }
         else
         {
+            usleep(100000);
             buffer = (char *)DP_Init(Channel);
             if(StrCmp(buffer,gStringOK,4) == 0)
             {
                 [LogInfo appendFormat:@"DP_Init(%d) Error.\r\n",Channel];
                 return buffer;
             }
+            usleep(100000);
             buffer = (char *)DP_SBU_Switch(Channel,1);
             if(StrCmp(buffer,gStringOK,4) == 0)
             {
                 [LogInfo appendFormat:@"DP_SBU_Switch(%d,1) Error.\r\n",Channel];
                 return buffer;
             }
+            usleep(100000);
             buffer = (char *)CCLogicSwitch(Channel,1);
             if(StrCmp(buffer,gStringOK,4) == 0)
             {
@@ -1039,7 +1048,7 @@ const char * cIA863_SimBoard::USBC_Items(unsigned char Channel, const char * Ite
             sleep(2);
             buffer = (char *)DP_Status(Channel);
             [LogInfo appendFormat:@"%s",buffer];
-            
+            usleep(100000);
             buffer = (char *)DP_SendHpd(Channel);
             if(StrCmp(buffer,gStringOK,4) == 0)
             {
@@ -1057,8 +1066,8 @@ const char * cIA863_SimBoard::USBC_Items(unsigned char Channel, const char * Ite
         [LogInfo appendString:@"ELOAD\r\n"];
         for(i=1;i<5;i++)
         {
+            usleep(100000);
             CCLogicSwitch(i, 1);
-            
             if(StrCmp(buffer,gStringOK,4) == 0)
             {
                 [LogInfo appendFormat:@"TypeC_EloadSwitch(%d,1) Error.\r\n",Channel];
@@ -1076,6 +1085,7 @@ const char * cIA863_SimBoard::USBC_Items(unsigned char Channel, const char * Ite
         }
         else
         {
+            usleep(100000);
             buffer = (char *)TypeC_EloadSwitch(Channel, 0);
             if(StrCmp(buffer,gStringOK,4) == 0)
             {
@@ -1089,6 +1099,7 @@ const char * cIA863_SimBoard::USBC_Items(unsigned char Channel, const char * Ite
                 [LogInfo appendFormat:@"TypeCUsb2Switch(%d,%d-1) Error.\r\n",Channel,Statue];
                 return buffer;
             }
+            usleep(100000);
             buffer = (char *)TypeC_ChargeSwitch(Channel,1);
             if(StrCmp(buffer,gStringOK,4) == 0)
             {
@@ -1106,14 +1117,14 @@ const char * cIA863_SimBoard::USBC_Items(unsigned char Channel, const char * Ite
             buffer = (char *)PD_IoControl(1,"02","GPsh");
             if(StrCmp(buffer,gStringOK,4) == 0)
             {
-                [LogInfo appendFormat:@"TypeC_EloadSwitch(%d,1) Error.\r\n",Channel];
+                [LogInfo appendFormat:@"PD_IoControl(1,\"02\",\"GPsh\") Error.\r\n",Channel];
                 return buffer;
             }
             usleep(100000);
             buffer = (char *)PD_IoControl(1,"08","GPsh");
             if(StrCmp(buffer,gStringOK,4) == 0)
             {
-                [LogInfo appendFormat:@"TypeCUsb2Switch(%d,%d-1) Error.\r\n",Channel,Statue];
+                [LogInfo appendFormat:@"PD_IoControl(1,\"02\",\"GPsh\") Error.\r\n",Channel,Statue];
                 return buffer;
             }
         }
