@@ -1097,6 +1097,31 @@ const char * cIA863_SimBoard::USBC_Items(unsigned char Channel, const char * Ite
             }
         }
     }
+    else if(strncmp(Items, "POTASSIUM", 9)==0)
+    {
+        [LogInfo appendString:@"POTASSIUM\r\n"];
+        if(Statue ==1)
+        {
+            usleep(100000);
+            buffer = (char *)PD_IoControl(1,"02","GPsh");
+            if(StrCmp(buffer,gStringOK,4) == 0)
+            {
+                [LogInfo appendFormat:@"TypeC_EloadSwitch(%d,1) Error.\r\n",Channel];
+                return buffer;
+            }
+            usleep(100000);
+            buffer = (char *)PD_IoControl(1,"08","GPsh");
+            if(StrCmp(buffer,gStringOK,4) == 0)
+            {
+                [LogInfo appendFormat:@"TypeCUsb2Switch(%d,%d-1) Error.\r\n",Channel,Statue];
+                return buffer;
+            }
+        }
+        else
+        {
+        }
+        
+    }
     else
     {
         [LogInfo appendString:@"Items Error.\r\n"];
@@ -1108,7 +1133,7 @@ const char * cIA863_SimBoard::USBC_Items(unsigned char Channel, const char * Ite
 }
 const char * cIA863_SimBoard::Help(void)
 {
-    [VerInfo appendString:@"Version: For J137 P1B V0.3\r\n\r\n"];
+    [VerInfo appendString:@"Version: For J137 P1B V0.5\r\n\r\n"];
     
     [VerInfo appendString:@"const char * BoardInit(void)  --Init Type A and Type C Module.\r\n"];
     [VerInfo appendString:@"const char * ResetAll(void) --Reset All Type A and Type C Moldule.\r\n"];
@@ -1153,6 +1178,10 @@ const char * cIA863_SimBoard::Help(void)
     [VerInfo appendString:@"            Status:  0 - Charger Path Switch Off\r\n" ];
     [VerInfo appendString:@"                     1 - Charger Path Switch On With Top USB2.0\r\n" ];
     [VerInfo appendString:@"                     2 - Charger Path Switch On with Bottom USB2.0\r\n" ];
+    [VerInfo appendString:@"    Items: \"POTASSIUM\": -- Enable Changer Path Switch\r\n"];
+    [VerInfo appendString:@"            Channel: Reserved\r\n"];
+    [VerInfo appendString:@"            Status:  0 - Charger Path Switch Off\r\n" ];
+    [VerInfo appendString:@"                     1 - Charger Path Switch On With Top USB2.0\r\n" ];
     return [VerInfo UTF8String];
 
 }
