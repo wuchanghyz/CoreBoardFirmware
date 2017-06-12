@@ -1156,3 +1156,26 @@ const char * cIA863_SimBoard::Help(void)
     return [VerInfo UTF8String];
 
 }
+
+const char * cIA863_SimBoard::PD_IoControl(unsigned char Channel,char * Number, char *Statue)
+{
+    return PD_Controller[Channel-1].SendCommend(Statue,Number);
+    
+}
+const char * cIA863_SimBoard::Cat9555_IoControl(unsigned char Channel,uint16_t IoData)
+{
+    return IoExpander[Channel-1].Setoutput(IoData);
+}
+
+const char * cIA863_SimBoard::I2cWrite(unsigned char I2cNum, unsigned char DeviceAdd, char *pData, unsigned char Len)
+{
+    NSString * str = [NSString stringWithFormat:@"%s", pData];
+    //return CoreBoard.I2cWrite((I2cChannel_t)I2cNum, DeviceAdd, str, Len);
+    return pData;
+}
+const char * cIA863_SimBoard::I2cRead(unsigned char I2cNum, unsigned char DeviceAdd, char *pSendData, unsigned char SendLen, unsigned char RevLen)
+{
+    NSString * str = [NSString stringWithFormat:@"%s", pSendData];
+    return CoreBoard.I2cRead((I2cChannel_t)I2cNum, DeviceAdd, str, SendLen, RevLen);
+    return pSendData;
+}

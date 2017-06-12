@@ -20,10 +20,10 @@
 		42AAD1AC1D2F8AC40083E141 /* Replier.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 426739A91D2F79C6005BDA6B /* Replier.cpp */; };
 		42AAD1AD1D2F8AC40083E141 /* Requester.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 426739AB1D2F79C6005BDA6B /* Requester.cpp */; };
 		42AAD1B11D2F8B600083E141 /* Cat9555.mm in Sources */ = {isa = PBXBuildFile; fileRef = 42AAD16E1D2F84F70083E141 /* Cat9555.mm */; };
+		713E58371EEF1D990001692F /* main.mm in Sources */ = {isa = PBXBuildFile; fileRef = 713E58361EEF1D990001692F /* main.mm */; };
 		7142CFFC1E24A67300BAF0AA /* IA863_SimBoard-lua.mm in Sources */ = {isa = PBXBuildFile; fileRef = 7142CFFB1E24A67300BAF0AA /* IA863_SimBoard-lua.mm */; };
 		717216181E2B5CBE00F63959 /* STDP4020.mm in Sources */ = {isa = PBXBuildFile; fileRef = 71D18D8A1E23594F0064D67E /* STDP4020.mm */; };
 		717F8DE31E25FA0300AC091C /* RE_MUX.mm in Sources */ = {isa = PBXBuildFile; fileRef = 717F8DDC1E25E41700AC091C /* RE_MUX.mm */; };
-		7182D2EA1E6226150008E87C /* main.mm in Sources */ = {isa = PBXBuildFile; fileRef = 426739841D2F797B005BDA6B /* main.mm */; };
 		7182D2F01E62267B0008E87C /* PD_Controller.mm in Sources */ = {isa = PBXBuildFile; fileRef = 71F6D7BE1E590C84009CC2DA /* PD_Controller.mm */; };
 		71C73B231E62235B00969B7F /* liblua.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 426739911D2F7993005BDA6B /* liblua.a */; };
 		71C73B241E62235B00969B7F /* libtolua++.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 426739981D2F79A6005BDA6B /* libtolua++.a */; };
@@ -118,7 +118,6 @@
 
 /* Begin PBXFileReference section */
 		426739811D2F797B005BDA6B /* CoreBoard */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.executable"; includeInIndex = 0; path = CoreBoard; sourceTree = BUILT_PRODUCTS_DIR; };
-		426739841D2F797B005BDA6B /* main.mm */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.objcpp; path = main.mm; sourceTree = "<group>"; };
 		4267398C1D2F7993005BDA6B /* lua.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = lua.xcodeproj; path = ../Lib/Lua/lua.xcodeproj; sourceTree = "<group>"; };
 		426739921D2F79A6005BDA6B /* tolua++.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = "tolua++.xcodeproj"; path = "../Lib/ToLua/tolua++.xcodeproj"; sourceTree = "<group>"; };
 		426739991D2F79AD005BDA6B /* ZMQX.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = ZMQX.xcodeproj; path = ../Lib/ZMQX/ZMQX.xcodeproj; sourceTree = "<group>"; };
@@ -140,6 +139,7 @@
 		42AAD16D1D2F84F70083E141 /* Cat9555.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = Cat9555.h; path = ../Lib/Module/Cat9555.h; sourceTree = "<group>"; };
 		42AAD16E1D2F84F70083E141 /* Cat9555.mm */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.objcpp; name = Cat9555.mm; path = ../Lib/Module/Cat9555.mm; sourceTree = "<group>"; };
 		42AAD17D1D2F85A10083E141 /* PwrDbgBrd */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.executable"; includeInIndex = 0; path = PwrDbgBrd; sourceTree = BUILT_PRODUCTS_DIR; };
+		713E58361EEF1D990001692F /* main.mm */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.objcpp; name = main.mm; path = CoreBoards/main.mm; sourceTree = SOURCE_ROOT; };
 		7142CFFB1E24A67300BAF0AA /* IA863_SimBoard-lua.mm */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.objcpp; name = "IA863_SimBoard-lua.mm"; path = "pkg/IA863_SimBoard-lua.mm"; sourceTree = "<group>"; };
 		717F8DDB1E25E41700AC091C /* RE_MUX.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RE_MUX.h; sourceTree = "<group>"; };
 		717F8DDC1E25E41700AC091C /* RE_MUX.mm */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.objcpp; path = RE_MUX.mm; sourceTree = "<group>"; };
@@ -215,7 +215,7 @@
 		426739831D2F797B005BDA6B /* CoreBoard */ = {
 			isa = PBXGroup;
 			children = (
-				426739841D2F797B005BDA6B /* main.mm */,
+				713E58361EEF1D990001692F /* main.mm */,
 			);
 			path = CoreBoard;
 			sourceTree = "<group>";
@@ -496,7 +496,6 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				7182D2EA1E6226150008E87C /* main.mm in Sources */,
 				71C73B281E62237B00969B7F /* RE_MUX.mm in Sources */,
 				71C73B291E62237B00969B7F /* PD_Controller.mm in Sources */,
 				71C73B2A1E62237B00969B7F /* Cat9555.mm in Sources */,
@@ -506,6 +505,7 @@
 				71C73B2E1E62237B00969B7F /* Publisher.cpp in Sources */,
 				71C73B2F1E62237B00969B7F /* Replier.cpp in Sources */,
 				71C73B301E62237B00969B7F /* Requester.cpp in Sources */,
+				713E58371EEF1D990001692F /* main.mm in Sources */,
 				71C73B311E62237B00969B7F /* IA863_SimBoard-lua.mm in Sources */,
 				71C73B321E62237B00969B7F /* IA863_SimBoardInterface.mm in Sources */,
 				71C73B331E62237B00969B7F /* IA863_SimBoard.mm in Sources */,
