@@ -731,7 +731,7 @@ const char * cIA863_SimBoard::ResetAll(void)
             return buffers;
         }
     }
-
+    /*
     for(i=0;i<3;i++)
     {
         data2="00";
@@ -813,7 +813,7 @@ const char * cIA863_SimBoard::ResetAll(void)
             return buffers;
         }
     }
-   
+    */
     [LogInfo appendString:@"ResetAll() Done.\r\n"];
     return buffers;
 

@@ -68,7 +68,7 @@ int main(int argc, const char * argv[]) {
     }
     buffer = (char *)IA863_SimBoard.Help();
     printf(buffer);
-    buffer = (char *)IA863_SimBoard.USBA_Items(1,"SD",1);
+    buffer = (char *)IA863_SimBoard.USBA_Items(1,"2.0",1);
 
     buffer = (char *)IA863_SimBoard.USBA_Items(1,"SD",3);
    // buffer = (char *)IA863_SimBoard.USBA_Items(1,"SD",0x03);
