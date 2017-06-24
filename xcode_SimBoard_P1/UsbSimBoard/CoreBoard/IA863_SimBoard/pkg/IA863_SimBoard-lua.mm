@@ -1,6 +1,6 @@
 /*
 ** Lua binding: IA863_SimBoard
-** Generated automatically by tolua++-1.0.92 on Mon Jun 12 12:13:47 2017.
+** Generated automatically by tolua++-1.0.92 on Fri Jun 23 11:28:24 2017.
 */
 
 #ifndef __cplusplus
@@ -31,7 +31,6 @@ static int tolua_collect_cIA863_SimBoard (lua_State* tolua_S)
 static void tolua_reg_types (lua_State* tolua_S)
 {
  tolua_usertype(tolua_S,"cIA863_SimBoard");
- tolua_usertype(tolua_S,"uint16_t");
 }
 
 /* method: new of class  cIA863_SimBoard */
@@ -403,7 +402,7 @@ static int tolua_IA863_SimBoard_cIA863_SimBoard_Cat9555_IoControl00(lua_State* t
  if (
      !tolua_isusertype(tolua_S,1,"cIA863_SimBoard",0,&tolua_err) ||
      !tolua_isnumber(tolua_S,2,0,&tolua_err) ||
-     (tolua_isvaluenil(tolua_S,3,&tolua_err) || !tolua_isusertype(tolua_S,3,"uint16_t",0,&tolua_err)) ||
+     !tolua_isnumber(tolua_S,3,0,&tolua_err) ||
      !tolua_isnoobj(tolua_S,4,&tolua_err)
  )
   goto tolua_lerror;
@@ -412,7 +411,7 @@ static int tolua_IA863_SimBoard_cIA863_SimBoard_Cat9555_IoControl00(lua_State* t
  {
   cIA863_SimBoard* self = (cIA863_SimBoard*)  tolua_tousertype(tolua_S,1,0);
   unsigned char Channel = ((unsigned char)  tolua_tonumber(tolua_S,2,0));
-  uint16_t IoData = *((uint16_t*)  tolua_tousertype(tolua_S,3,0));
+  unsigned int IoData = ((unsigned int)  tolua_tonumber(tolua_S,3,0));
 #ifndef TOLUA_RELEASE
   if (!self) tolua_error(tolua_S,"invalid 'self' in function 'Cat9555_IoControl'", NULL);
 #endif

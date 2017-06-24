@@ -29,7 +29,7 @@ public:
     const char * ClearLogInfo(void);
     const char * Help(void);
     const char * PD_IoControl(unsigned char Channel,char * Number, char *Statue);
-    const char * Cat9555_IoControl(unsigned char Channel,uint16_t IoData);
+    const char * Cat9555_IoControl(unsigned char Channel,unsigned int IoData);
     const char * I2cWrite(unsigned char I2cNum, unsigned char DeviceAdd, char *pData, unsigned char Len);
     const char * I2cRead(unsigned char I2cNum, unsigned char DeviceAdd, char *pSendData, unsigned char SendLen, unsigned char RevLen);
 

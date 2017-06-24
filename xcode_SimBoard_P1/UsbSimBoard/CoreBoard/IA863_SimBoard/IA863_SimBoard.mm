@@ -1202,7 +1202,7 @@ const char * cIA863_SimBoard::PD_IoControl(unsigned char Channel,char * Number, 
     return PD_Controller[Channel-1].SendCommend(Statue,Number);
     
 }
-const char * cIA863_SimBoard::Cat9555_IoControl(unsigned char Channel,uint16_t IoData)
+const char * cIA863_SimBoard::Cat9555_IoControl(unsigned char Channel,unsigned int IoData)
 {
     return IoExpander[Channel-1].Setoutput(IoData);
 }
