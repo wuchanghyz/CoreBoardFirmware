@@ -712,8 +712,6 @@ const char * cIA863_SimBoard::BoardInit(void)
 const char * cIA863_SimBoard::ResetAll(void)
 {
     uint8_t i;
-    char *data1="GPsl";
-    char *data2="00";
     char * buffers="Error";
     for(i=0;i<2;i++)
     {
@@ -732,77 +730,69 @@ const char * cIA863_SimBoard::ResetAll(void)
         }
     }
 
-    for(i=0;i<3;i++)
+    for(i=0;i<4;i++)
     {
-        data2="00";
-        buffers=PD_Controller[i].SendCommend(data1,data2);
+        //sbu en
+        buffers=PD_Controller[i].SendCommend("GPsh","0F");
         if(StrCmp(buffers,gStringOK,4) == 0)
         {
-            [LogInfo appendFormat:@"CH:%d SendCommend(%s,%s) Error.\r\n",i+1,data1,data2];
+            [LogInfo appendFormat:@"CH:%d SendCommend(\"GPsh\",\"0F\") Error.\r\n",i+1];
             return buffers;
         }
         usleep(100000);
-        data2="01";
-        buffers=PD_Controller[i].SendCommend(data1,data2);
+        //cc flip
+        buffers=PD_Controller[i].SendCommend("GPsl","00");
         if(StrCmp(buffers,gStringOK,4) == 0)
         {
-            [LogInfo appendFormat:@"CH:%d SendCommend(%s,%s) Error.\r\n",i+1,data1,data2];
+            [LogInfo appendFormat:@"CH:%d SendCommend(\"GPsl\",\"00\") Error.\r\n",i+1];
             return buffers;
         }
         usleep(100000);
-        data2="02";
-        buffers=PD_Controller[i].SendCommend(data1,data2);
+        //usb2.0 flip
+        buffers=PD_Controller[i].SendCommend("GPsl","10");
         if(StrCmp(buffers,gStringOK,4) == 0)
         {
-            [LogInfo appendFormat:@"CH:%d SendCommend(%s,%s) Error.\r\n",i+1,data1,data2];
+            [LogInfo appendFormat:@"CH:%d SendCommend(\"GPsl\",\"10\") Error.\r\n",i+1];
             return buffers;
         }
         usleep(100000);
-        data2="03";
-        buffers=PD_Controller[i].SendCommend(data1,data2);
+        //usb2.0 device select
+        buffers=PD_Controller[i].SendCommend("GPsl","08");
         if(StrCmp(buffers,gStringOK,4) == 0)
         {
-            [LogInfo appendFormat:@"CH:%d SendCommend(%s,%s) Error.\r\n",i+1,data1,data2];
+            [LogInfo appendFormat:@"CH:%d SendCommend(\"GPsl\",\"08\") Error.\r\n",i+1];
             return buffers;
         }
         usleep(100000);
-        data2="06";
-        buffers=PD_Controller[i].SendCommend(data1,data2);
+        //usb2.0 en
+        buffers=PD_Controller[i].SendCommend("GPsh","02");
         if(StrCmp(buffers,gStringOK,4) == 0)
         {
-            [LogInfo appendFormat:@"CH:%d SendCommend(%s,%s) Error.\r\n",i+1,data1,data2];
+            [LogInfo appendFormat:@"CH:%d SendCommend(\"GPsh\",\"02\") Error.\r\n",i+1];
             return buffers;
         }
         usleep(100000);
-        data2="07";
-        buffers=PD_Controller[i].SendCommend(data1,data2);
+        //vbus to pd controller en
+        buffers=PD_Controller[i].SendCommend("GPsl","0E");
         if(StrCmp(buffers,gStringOK,4) == 0)
         {
-            [LogInfo appendFormat:@"CH:%d SendCommend(%s,%s) Error.\r\n",i+1,data1,data2];
+            [LogInfo appendFormat:@"CH:%d SendCommend(\"GPsl\",\"0E\") Error.\r\n",i+1];
             return buffers;
         }
         usleep(100000);
-        data2="08";
-        buffers=PD_Controller[i].SendCommend(data1,data2);
+        //vbus to charge en
+        buffers=PD_Controller[i].SendCommend("GPsl","03");
         if(StrCmp(buffers,gStringOK,4) == 0)
         {
-            [LogInfo appendFormat:@"CH:%d SendCommend(%s,%s) Error.\r\n",i+1,data1,data2];
+            [LogInfo appendFormat:@"CH:%d SendCommend(\"GPsl\",\"03\") Error.\r\n",i+1];
             return buffers;
         }
         usleep(100000);
-        data2="0E";
-        buffers=PD_Controller[i].SendCommend(data1,data2);
+        //cc en
+        buffers=PD_Controller[i].SendCommend("GPsh","06");
         if(StrCmp(buffers,gStringOK,4) == 0)
         {
-            [LogInfo appendFormat:@"CH:%d SendCommend(%s,%s) Error.\r\n",i+1,data1,data2];
-            return buffers;
-        }
-        usleep(100000);
-        data2="0F";
-        buffers=PD_Controller[i].SendCommend(data1,data2);
-        if(StrCmp(buffers,gStringOK,4) == 0)
-        {
-            [LogInfo appendFormat:@"CH:%d SendCommend(%s,%s) Error.\r\n",i+1,data1,data2];
+            [LogInfo appendFormat:@"CH:%d SendCommend(\"GPsh\",\"06\") Error.\r\n",i+1];
             return buffers;
         }
         usleep(100000);
@@ -935,77 +925,87 @@ const char * cIA863_SimBoard::USBA_Items(unsigned char Channel, const char * Ite
 
 const char * cIA863_SimBoard::USBC_Items(unsigned char Channel, const char * Items, unsigned char Statue) //--Channel=1,2,3,4 --Item=2.0,DP,ELOAD --Statue=0,1,2
 {
-    char * buffer;
+    char * buffers;
     char i;
-    buffer = (char *)ResetAll();
-    if(StrCmp(buffer,gStringOK,4) == 0)
+    buffers = (char *)ResetAll();
+    if(StrCmp(buffers,gStringOK,4) == 0)
     {
         [LogInfo appendString:@"ResetAll() Error.\r\n"];
-        return buffer;
+        return buffers;
     }
         
     sleep(5);
-    buffer = (char *)TypeC_EloadSwitch(Channel, 1);
-    if(StrCmp(buffer,gStringOK,4) == 0)
-    {
-        [LogInfo appendFormat:@"TypeC_EloadSwitch(%d,1) Error.\r\n",Channel];
-        return buffer;
-    }
-    usleep(100000);
     if(strncmp(Items, "2.0", 3)==0)
     {
         [LogInfo appendString:@"2.0\r\n"];
         if(Statue == 0)
         {
-            usleep(100000);
-            buffer = (char *)TypeCUsb2Switch(Channel, 0);
-            if(StrCmp(buffer,gStringOK,4) == 0)
-            {
-                [LogInfo appendFormat:@"TypeCUsb2Switch(%d,0) Error.\r\n",Channel];
-                return buffer;
-            }
-            usleep(100000);
-            buffer = (char *)CCLogicSwitch(Channel, 0);
-            if(StrCmp(buffer,gStringOK,4) == 0)
-            {
-                [LogInfo appendFormat:@"CCLogicSwitch(%d,0) Error.\r\n",Channel];
-                return buffer;
-            }
         }
-        else if(Statue == 1)
+        else
         {
-            usleep(100000);
-            buffer = (char *)TypeCUsb2Switch(Channel, 0);
-            if(StrCmp(buffer,gStringOK,4) == 0)
+            if(Statue == 1)
             {
-                [LogInfo appendFormat:@"TypeCUsb2Switch(%d,0) Error.\r\n",Channel];
-                return buffer;
+                
+                //cc flip
+                buffers=PD_Controller[i].SendCommend("GPsl","00");
+                if(StrCmp(buffers,gStringOK,4) == 0)
+                {
+                    [LogInfo appendFormat:@"CH:%d SendCommend(\"GPsl\",\"00\") Error.\r\n",i+1];
+                    return buffers;
+                }
+                usleep(100000);
+                //usb2.0 flip
+                buffers=PD_Controller[i].SendCommend("GPsl","10");
+                if(StrCmp(buffers,gStringOK,4) == 0)
+                {
+                    [LogInfo appendFormat:@"CH:%d SendCommend(\"GPsl\",\"10\") Error.\r\n",i+1];
+                    return buffers;
+                }
+                
+            }
+            else if(Statue == 2)
+            {
+                //cc flip
+                buffers=PD_Controller[i].SendCommend("GPsh","00");
+                if(StrCmp(buffers,gStringOK,4) == 0)
+                {
+                    [LogInfo appendFormat:@"CH:%d SendCommend(\"GPsl\",\"00\") Error.\r\n",i+1];
+                    return buffers;
+                }
+                usleep(100000);
+                //usb2.0 flip
+                buffers=PD_Controller[i].SendCommend("GPsh","10");
+                if(StrCmp(buffers,gStringOK,4) == 0)
+                {
+                    [LogInfo appendFormat:@"CH:%d SendCommend(\"GPsl\",\"10\") Error.\r\n",i+1];
+                    return buffers;
+                }
             }
             usleep(100000);
-            buffer = (char *)CCLogicSwitch(Channel, Statue);
-            if(StrCmp(buffer,gStringOK,4) == 0)
+            //usb2.0 en
+            buffers=PD_Controller[i].SendCommend("GPsl","02");
+            if(StrCmp(buffers,gStringOK,4) == 0)
             {
-                [LogInfo appendFormat:@"CCLogicSwitch(%d,%d) Error.\r\n",Channel,Statue];
-                return buffer;
+                [LogInfo appendFormat:@"CH:%d SendCommend(\"GPsh\",\"02\") Error.\r\n",i+1];
+                return buffers;
+            }
+            usleep(100000);
+            //vbus to pd controller en
+            buffers=PD_Controller[i].SendCommend("GPsh","0E");
+            if(StrCmp(buffers,gStringOK,4) == 0)
+            {
+                [LogInfo appendFormat:@"CH:%d SendCommend(\"GPsl\",\"0E\") Error.\r\n",i+1];
+                return buffers;
+            }
+            usleep(100000);
+            //cc en
+            buffers=PD_Controller[i].SendCommend("GPsl","06");
+            if(StrCmp(buffers,gStringOK,4) == 0)
+            {
+                [LogInfo appendFormat:@"CH:%d SendCommend(\"GPsh\",\"06\") Error.\r\n",i+1];
+                return buffers;
             }
 
-        }
-        else if(Statue == 2)
-        {
-            usleep(100000);
-            buffer = (char *)TypeCUsb2Switch(Channel, 1);
-            if(StrCmp(buffer,gStringOK,4) == 0)
-            {
-                [LogInfo appendFormat:@"TypeCUsb2Switch(%d,1) Error.\r\n",Channel];
-                return buffer;
-            }
-            usleep(100000);
-            buffer = (char *)CCLogicSwitch(Channel, Statue);
-            if(StrCmp(buffer,gStringOK,4) == 0)
-            {
-                [LogInfo appendFormat:@"CCLogicSwitch(%d,%d) Error.\r\n",Channel,Statue];
-                return buffer;
-            }
         }
     }
     else if(strncmp(Items, "DP", 2)==0)
@@ -1018,42 +1018,42 @@ const char * cIA863_SimBoard::USBC_Items(unsigned char Channel, const char * Ite
         else
         {
             usleep(100000);
-            buffer = (char *)DP_Init(Channel);
-            if(StrCmp(buffer,gStringOK,4) == 0)
+            buffers = (char *)DP_Init(Channel);
+            if(StrCmp(buffers,gStringOK,4) == 0)
             {
                 [LogInfo appendFormat:@"DP_Init(%d) Error.\r\n",Channel];
-                return buffer;
+                return buffers;
             }
             usleep(100000);
-            buffer = (char *)DP_SBU_Switch(Channel,1);
-            if(StrCmp(buffer,gStringOK,4) == 0)
+            buffers = (char *)DP_SBU_Switch(Channel,1);
+            if(StrCmp(buffers,gStringOK,4) == 0)
             {
                 [LogInfo appendFormat:@"DP_SBU_Switch(%d,1) Error.\r\n",Channel];
-                return buffer;
+                return buffers;
             }
             usleep(100000);
-            buffer = (char *)CCLogicSwitch(Channel,1);
-            if(StrCmp(buffer,gStringOK,4) == 0)
+            buffers = (char *)CCLogicSwitch(Channel,1);
+            if(StrCmp(buffers,gStringOK,4) == 0)
             {
                 [LogInfo appendFormat:@"CCLogicSwitch(%d,1) Error.\r\n",Channel];
-                return buffer;
+                return buffers;
             }
             sleep(2);
-            buffer = (char *)DP_SendHpd(Channel);
-            if(StrCmp(buffer,gStringOK,4) == 0)
+            buffers = (char *)DP_SendHpd(Channel);
+            if(StrCmp(buffers,gStringOK,4) == 0)
             {
                 [LogInfo appendFormat:@"DP_SendHpd(%d) Error.\r\n",Channel];
-                return buffer;
+                return buffers;
             }
             sleep(2);
-            buffer = (char *)DP_Status(Channel);
-            [LogInfo appendFormat:@"%s",buffer];
+            buffers = (char *)DP_Status(Channel);
+            [LogInfo appendFormat:@"%s",buffers];
             usleep(100000);
-            buffer = (char *)DP_SendHpd(Channel);
-            if(StrCmp(buffer,gStringOK,4) == 0)
+            buffers = (char *)DP_SendHpd(Channel);
+            if(StrCmp(buffers,gStringOK,4) == 0)
             {
                 [LogInfo appendFormat:@"DP_SendHpd(%d) Error.\r\n",Channel];
-                return buffer;
+                return buffers;
             }
             sleep(2);
             
@@ -1064,16 +1064,74 @@ const char * cIA863_SimBoard::USBC_Items(unsigned char Channel, const char * Ite
     else if(strncmp(Items, "ELOAD", 5)==0)
     {
         [LogInfo appendString:@"ELOAD\r\n"];
-        for(i=1;i<5;i++)
+        if(Statue == 0)
         {
-            usleep(100000);
-            CCLogicSwitch(i, 1);
-            if(StrCmp(buffer,gStringOK,4) == 0)
+        }
+        else
+        {
+            if(Statue == 1)
             {
-                [LogInfo appendFormat:@"TypeC_EloadSwitch(%d,1) Error.\r\n",Channel];
-                return buffer;
+                
+                //cc flip
+                buffers=PD_Controller[i].SendCommend("GPsl","00");
+                if(StrCmp(buffers,gStringOK,4) == 0)
+                {
+                    [LogInfo appendFormat:@"CH:%d SendCommend(\"GPsl\",\"00\") Error.\r\n",i+1];
+                    return buffers;
+                }
+                usleep(100000);
+                //usb2.0 flip
+                buffers=PD_Controller[i].SendCommend("GPsl","10");
+                if(StrCmp(buffers,gStringOK,4) == 0)
+                {
+                    [LogInfo appendFormat:@"CH:%d SendCommend(\"GPsl\",\"10\") Error.\r\n",i+1];
+                    return buffers;
+                }
+                
             }
-        
+            else if(Statue == 2)
+            {
+                //cc flip
+                buffers=PD_Controller[i].SendCommend("GPsh","00");
+                if(StrCmp(buffers,gStringOK,4) == 0)
+                {
+                    [LogInfo appendFormat:@"CH:%d SendCommend(\"GPsl\",\"00\") Error.\r\n",i+1];
+                    return buffers;
+                }
+                usleep(100000);
+                //usb2.0 flip
+                buffers=PD_Controller[i].SendCommend("GPsh","10");
+                if(StrCmp(buffers,gStringOK,4) == 0)
+                {
+                    [LogInfo appendFormat:@"CH:%d SendCommend(\"GPsl\",\"10\") Error.\r\n",i+1];
+                    return buffers;
+                }
+            }
+            usleep(100000);
+            //usb2.0 en
+            //buffers=PD_Controller[i].SendCommend("GPsl","02");
+            //if(StrCmp(buffers,gStringOK,4) == 0)
+            //{
+            //    [LogInfo appendFormat:@"CH:%d SendCommend(\"GPsh\",\"02\") Error.\r\n",i+1];
+            //    return buffers;
+            //}
+            //usleep(100000);
+            //vbus to pd controller en
+            buffers=PD_Controller[i].SendCommend("GPsh","0E");
+            if(StrCmp(buffers,gStringOK,4) == 0)
+            {
+                [LogInfo appendFormat:@"CH:%d SendCommend(\"GPsl\",\"0E\") Error.\r\n",i+1];
+                return buffers;
+            }
+            usleep(100000);
+            //cc en
+            buffers=PD_Controller[i].SendCommend("GPsl","06");
+            if(StrCmp(buffers,gStringOK,4) == 0)
+            {
+                [LogInfo appendFormat:@"CH:%d SendCommend(\"GPsh\",\"06\") Error.\r\n",i+1];
+                return buffers;
+            }
+            
         }
         
     }
@@ -1085,53 +1143,107 @@ const char * cIA863_SimBoard::USBC_Items(unsigned char Channel, const char * Ite
         }
         else
         {
-            usleep(100000);
-            buffer = (char *)TypeC_EloadSwitch(Channel, 0);
-            if(StrCmp(buffer,gStringOK,4) == 0)
+            [LogInfo appendString:@"2.0\r\n"];
+            if(Statue == 0)
             {
-                [LogInfo appendFormat:@"TypeC_EloadSwitch(%d,1) Error.\r\n",Channel];
-                return buffer;
             }
-            usleep(100000);
-            buffer = (char *)TypeCUsb2Switch(Channel, Statue-1);
-            if(StrCmp(buffer,gStringOK,4) == 0)
+            else
             {
-                [LogInfo appendFormat:@"TypeCUsb2Switch(%d,%d-1) Error.\r\n",Channel,Statue];
-                return buffer;
-            }
-            usleep(100000);
-            buffer = (char *)TypeC_ChargeSwitch(Channel,1);
-            if(StrCmp(buffer,gStringOK,4) == 0)
-            {
-                [LogInfo appendFormat:@"TypeC_ChargeSwitch(%d,1) Error.\r\n",Channel];
-                return buffer;
+                if(Statue == 1)
+                {
+                    
+                    //usb2.0 flip
+                    buffers=PD_Controller[i].SendCommend("GPsl","10");
+                    if(StrCmp(buffers,gStringOK,4) == 0)
+                    {
+                        [LogInfo appendFormat:@"CH:%d SendCommend(\"GPsl\",\"10\") Error.\r\n",i+1];
+                        return buffers;
+                    }
+                }
+                else if(Statue == 2)
+                {
+                    //usb2.0 flip
+                    buffers=PD_Controller[i].SendCommend("GPsh","10");
+                    if(StrCmp(buffers,gStringOK,4) == 0)
+                    {
+                        [LogInfo appendFormat:@"CH:%d SendCommend(\"GPsl\",\"10\") Error.\r\n",i+1];
+                        return buffers;
+                    }
+                }
+                usleep(100000);
+                //usb2.0 device select
+                buffers=PD_Controller[i].SendCommend("GPsh","08");
+                if(StrCmp(buffers,gStringOK,4) == 0)
+                {
+                    [LogInfo appendFormat:@"CH:%d SendCommend(\"GPsl\",\"08\") Error.\r\n",i+1];
+                    return buffers;
+                }
+                
+                usleep(100000);
+                //usb2.0 en
+                buffers=PD_Controller[i].SendCommend("GPsl","02");
+                if(StrCmp(buffers,gStringOK,4) == 0)
+                {
+                    [LogInfo appendFormat:@"CH:%d SendCommend(\"GPsh\",\"02\") Error.\r\n",i+1];
+                    return buffers;
+                }
             }
         }
     }
     else if(strncmp(Items, "POTASSIUM", 9)==0)
     {
-        [LogInfo appendString:@"POTASSIUM\r\n"];
-        if(Statue ==1)
+        [LogInfo appendString:@"CHARGE\r\n"];
+        if(Statue ==0)
         {
-            usleep(100000);
-            buffer = (char *)PD_IoControl(1,"02","GPsh");
-            if(StrCmp(buffer,gStringOK,4) == 0)
-            {
-                [LogInfo appendFormat:@"PD_IoControl(1,\"02\",\"GPsh\") Error.\r\n",Channel];
-                return buffer;
-            }
-            usleep(100000);
-            buffer = (char *)PD_IoControl(1,"08","GPsh");
-            if(StrCmp(buffer,gStringOK,4) == 0)
-            {
-                [LogInfo appendFormat:@"PD_IoControl(1,\"02\",\"GPsh\") Error.\r\n",Channel,Statue];
-                return buffer;
-            }
         }
         else
         {
+            [LogInfo appendString:@"2.0\r\n"];
+            if(Statue == 0)
+            {
+            }
+            else
+            {
+                if(Statue == 1)
+                {
+                    
+                    //usb2.0 flip
+                    buffers=PD_Controller[i].SendCommend("GPsl","10");
+                    if(StrCmp(buffers,gStringOK,4) == 0)
+                    {
+                        [LogInfo appendFormat:@"CH:%d SendCommend(\"GPsl\",\"10\") Error.\r\n",i+1];
+                        return buffers;
+                    }
+                }
+                else if(Statue == 2)
+                {
+                    //usb2.0 flip
+                    buffers=PD_Controller[i].SendCommend("GPsh","10");
+                    if(StrCmp(buffers,gStringOK,4) == 0)
+                    {
+                        [LogInfo appendFormat:@"CH:%d SendCommend(\"GPsl\",\"10\") Error.\r\n",i+1];
+                        return buffers;
+                    }
+                }
+                usleep(100000);
+                //usb2.0 device select
+                buffers=PD_Controller[i].SendCommend("GPsh","08");
+                if(StrCmp(buffers,gStringOK,4) == 0)
+                {
+                    [LogInfo appendFormat:@"CH:%d SendCommend(\"GPsl\",\"08\") Error.\r\n",i+1];
+                    return buffers;
+                }
+                
+                usleep(100000);
+                //usb2.0 en
+                buffers=PD_Controller[i].SendCommend("GPsl","02");
+                if(StrCmp(buffers,gStringOK,4) == 0)
+                {
+                    [LogInfo appendFormat:@"CH:%d SendCommend(\"GPsh\",\"02\") Error.\r\n",i+1];
+                    return buffers;
+                }
+            }
         }
-        
     }
     else
     {
@@ -1144,7 +1256,7 @@ const char * cIA863_SimBoard::USBC_Items(unsigned char Channel, const char * Ite
 }
 const char * cIA863_SimBoard::Help(void)
 {
-    [VerInfo appendString:@"Version: For J137 P1B V0.5\r\n\r\n"];
+    [VerInfo appendString:@"Version: For J137 EVT V1.0\r\n\r\n"];
     
     [VerInfo appendString:@"const char * BoardInit(void)  --Init Type A and Type C Module.\r\n"];
     [VerInfo appendString:@"const char * ResetAll(void) --Reset All Type A and Type C Moldule.\r\n"];
