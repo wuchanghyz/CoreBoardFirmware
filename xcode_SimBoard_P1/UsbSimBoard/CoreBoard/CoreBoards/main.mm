@@ -59,7 +59,7 @@ int main(int argc, const char * argv[]) {
     
     
     //A-eload
-    buffer = (char *)IA863_SimBoard.BoardInit();
+    buffer = (char *)IA863_SimBoard.BoardInit("USBA");
     if(StrCmps(buffer,gStringOK,4) == 0)
     {
         buffer = (char *)IA863_SimBoard.GetLogInfo();
