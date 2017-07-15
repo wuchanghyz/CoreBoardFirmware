@@ -1,6 +1,6 @@
 /*
 ** Lua binding: IA863_SimBoard
-** Generated automatically by tolua++-1.0.92 on Sun Jul  2 00:50:08 2017.
+** Generated automatically by tolua++-1.0.92 on Fri Jul 14 14:23:56 2017.
 */
 
 #ifndef __cplusplus
@@ -115,6 +115,38 @@ static int tolua_IA863_SimBoard_cIA863_SimBoard_delete00(lua_State* tolua_S)
 #ifndef TOLUA_RELEASE
  tolua_lerror:
  tolua_error(tolua_S,"#ferror in function 'delete'.",&tolua_err);
+ return 0;
+#endif
+}
+#endif //#ifndef TOLUA_DISABLE
+
+/* method: SelfTest of class  cIA863_SimBoard */
+#ifndef TOLUA_DISABLE_tolua_IA863_SimBoard_cIA863_SimBoard_SelfTest00
+static int tolua_IA863_SimBoard_cIA863_SimBoard_SelfTest00(lua_State* tolua_S)
+{
+#ifndef TOLUA_RELEASE
+ tolua_Error tolua_err;
+ if (
+     !tolua_isusertype(tolua_S,1,"cIA863_SimBoard",0,&tolua_err) ||
+     !tolua_isnoobj(tolua_S,2,&tolua_err)
+ )
+  goto tolua_lerror;
+ else
+#endif
+ {
+  cIA863_SimBoard* self = (cIA863_SimBoard*)  tolua_tousertype(tolua_S,1,0);
+#ifndef TOLUA_RELEASE
+  if (!self) tolua_error(tolua_S,"invalid 'self' in function 'SelfTest'", NULL);
+#endif
+  {
+   const char* tolua_ret = (const char*)  self->SelfTest();
+   tolua_pushstring(tolua_S,(const char*)tolua_ret);
+  }
+ }
+ return 1;
+#ifndef TOLUA_RELEASE
+ tolua_lerror:
+ tolua_error(tolua_S,"#ferror in function 'SelfTest'.",&tolua_err);
  return 0;
 #endif
 }
@@ -533,6 +565,7 @@ TOLUA_API int tolua_IA863_SimBoard_open (lua_State* tolua_S)
    tolua_function(tolua_S,"new_local",tolua_IA863_SimBoard_cIA863_SimBoard_new00_local);
    tolua_function(tolua_S,".call",tolua_IA863_SimBoard_cIA863_SimBoard_new00_local);
    tolua_function(tolua_S,"delete",tolua_IA863_SimBoard_cIA863_SimBoard_delete00);
+   tolua_function(tolua_S,"SelfTest",tolua_IA863_SimBoard_cIA863_SimBoard_SelfTest00);
    tolua_function(tolua_S,"BoardInit",tolua_IA863_SimBoard_cIA863_SimBoard_BoardInit00);
    tolua_function(tolua_S,"USBA_Items",tolua_IA863_SimBoard_cIA863_SimBoard_USBA_Items00);
    tolua_function(tolua_S,"USBC_Items",tolua_IA863_SimBoard_cIA863_SimBoard_USBC_Items00);

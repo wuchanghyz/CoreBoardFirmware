@@ -59,7 +59,7 @@ int main(int argc, const char * argv[]) {
     
     
     //A-eload
-    buffer = (char *)IA863_SimBoard.BoardInit("USBA");
+    buffer = (char *)IA863_SimBoard.BoardInit("BOTH");
     if(StrCmps(buffer,gStringOK,4) == 0)
     {
         buffer = (char *)IA863_SimBoard.GetLogInfo();
@@ -68,7 +68,10 @@ int main(int argc, const char * argv[]) {
     }
     buffer = (char *)IA863_SimBoard.Help();
     printf(buffer);
-    buffer = (char *)IA863_SimBoard.USBA_Items(1,"SD",1);
+    buffer = (char *)IA863_SimBoard.USBC_Items(1, "2.0", 1);
+    buffer = (char *)IA863_SimBoard.USBC_Items(2, "2.0", 1);
+
+    buffer = (char *)IA863_SimBoard.USBA_Items(1,"ELOAD",1);
 
     buffer = (char *)IA863_SimBoard.USBA_Items(1,"SD",3);
    // buffer = (char *)IA863_SimBoard.USBA_Items(1,"SD",0x03);

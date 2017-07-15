@@ -708,10 +708,103 @@ const char * cIA863_SimBoard::BoardInit(char * Items)
     [LogInfo appendString:@"BoardInit() Done.\r\n"];
     return (char *)"Items Done.";
 }
+const char * cIA863_SimBoard::SelfTest(void)
+{
+    uint8_t i=0;
+    char * ReadData;
+    ReadData = CoreBoard.Open("/dev/cu.usbmodemVer11");
+    if(strcmp(ReadData,"Done.") != 0)
+    {
+        [LogInfo appendString:@"BoardInit() Error.\r\n"];
+        return ReadData;
+    }
+    CoreBoard.SetDetectString("\r\n");
+    sleep(1);
+    //CoreBoard.GpioOut(0x00000000);
+    for(i=0;i<2;i++)
+    {
+        //for usb A redriver
+        IoExpander[i].SetAddress(0x20|(i+2));
+        IoExpander[i].SetSerialPort(&CoreBoard);
+        IoExpander[i].SetI2cNumber(I2C1);
+    }
+    //ReadData = IoExpander[0].Setoutput(0x0010);
+    for(i=0;i<2;i++)
+    {
+        STDP4020[i].SetAddress(0x73-i);
+        STDP4020[i].SetI2cNumber(I2C4);
+        STDP4020[i].SetSerialPort(&CoreBoard);
+        
+        PD_Controller[i].SetAddress(0x38|i);
+        PD_Controller[i].SetI2cNumber(I2C4);
+        PD_Controller[i].SetSerialPort(&CoreBoard);
+    }
+    for(i=0;i<2;i++)
+    {
+        STDP4020[i+2].SetAddress(0x73-i);
+        STDP4020[i+2].SetI2cNumber(I2C6);
+        STDP4020[i+2].SetSerialPort(&CoreBoard);
+        
+        PD_Controller[i+2].SetAddress(0x38|i);
+        PD_Controller[i+2].SetI2cNumber(I2C6);
+        PD_Controller[i+2].SetSerialPort(&CoreBoard);
+        
+    }
+    i =0;
+    ReadData = IoExpander[0].Setoutput(0x0000);
+    if(StrCmp(ReadData,gStringOK,4) == 0)
+    {
+        i++;
+        printf("USBA cat9555 CH1 Connect fail, please check connection\r\n");
+    }
+    ReadData = IoExpander[1].Setoutput(0x0000);
+    if(StrCmp(ReadData,gStringOK,4) == 0)
+    {
+        i++;
+        printf("USBA cat9555 CH2 Connect fail, please check connection\r\n");
+    }
+    ReadData=PD_Controller[0].SendCommend("GPsh","0F");
+    if(StrCmp(ReadData,gStringOK,4) == 0)
+    {
+        i++;
+        printf("USBC CH1 Connect fail, please check connection\r\n");
+    }
+    ReadData=PD_Controller[1].SendCommend("GPsh","0F");
+    if(StrCmp(ReadData,gStringOK,4) == 0)
+    {
+        i++;
+        printf("USBC CH2 Connect fail, please check connection\r\n");
+    }
+    ReadData=PD_Controller[2].SendCommend("GPsh","0F");
+    if(StrCmp(ReadData,gStringOK,4) == 0)
+    {
+        i++;
+        printf("USBC CH3 Connect fail, please check connection\r\n");
+    }
+    ReadData=PD_Controller[3].SendCommend("GPsh","0F");
+    if(StrCmp(ReadData,gStringOK,4) == 0)
+    {
+        i++;
+        printf("USBC CH4 Connect fail, please check connection\r\n");
+    }
+    if(i == 0)
+    {
+        printf("Self Test Pass. Fail Count %d\r\n", i);
+        return "Done.";
+    }
+    
+    else
+    {
+        printf("Self Test Fail! Fail Count %d\r\n", i);
+        return "Fail";
+    }
+    
+    
+}
 const char * cIA863_SimBoard::ResetAll(char * Items)
 {
     uint8_t i;
-    char * buffers="Error";
+    char * buffers="Done";
     if((StrCmp(Items,"BOTH",4) == 4)||(StrCmp(Items,"USBA",4) == 4))
     {
         for(i=0;i<2;i++)
@@ -720,12 +813,14 @@ const char * cIA863_SimBoard::ResetAll(char * Items)
             buffers = IoExpander[i].Setoutput(0x0000);
             if(StrCmp(buffers,gStringOK,4) == 0)
             {
+                printf("USBA Connect fail, please check connection\r\n");
                 [LogInfo appendFormat:@"CH:%d Setoutput(0x0000) Error.\r\n",i];
                 return buffers;
             }
             buffers = IoExpander[i].Config(0x0000);
             if(StrCmp(buffers,gStringOK,4) == 0)
             {
+                printf("USBA Connect fail, please check connection\r\n");
                 [LogInfo appendFormat:@"CH:%d Config(0x0000) Error.\r\n",i];
                 return buffers;
             }
@@ -739,6 +834,7 @@ const char * cIA863_SimBoard::ResetAll(char * Items)
             buffers=PD_Controller[i].SendCommend("GPsh","0F");
             if(StrCmp(buffers,gStringOK,4) == 0)
             {
+                printf("USBC CH:%d Connect fail, please check connection\r\n",i+1);
                 [LogInfo appendFormat:@"CH:%d SendCommend(\"GPsh\",\"0F\") Error.\r\n",i+1];
                 return buffers;
             }
@@ -1200,7 +1296,7 @@ const char * cIA863_SimBoard::USBC_Items(unsigned char Channel, const char * Ite
     }
     else if(strncmp(Items, "POTASSIUM", 9)==0)
     {
-        [LogInfo appendString:@"CHARGE\r\n"];
+        [LogInfo appendString:@"POTASSIUM\r\n"];
         if(Statue ==0)
         {
         }
