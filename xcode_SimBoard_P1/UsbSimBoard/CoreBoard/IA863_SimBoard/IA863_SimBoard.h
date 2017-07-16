@@ -54,12 +54,13 @@ public:
     const char * TypeAEloadSwitch(unsigned char Channel);
     const char * TypeASdCardSwitch(unsigned char Statue);
 private:
-    uint16_t IO_Read(uint8_t Address);
-    const char * LogWrite(NSString *temp);
+    //uint16_t IO_Read(uint8_t Address);
+    //const char * LogWrite(NSString *temp);
 private:
     NSMutableString * VerInfo;
     NSMutableString * LogInfo;
-    NSFileHandle * fh;
+    uint16_t IoData[2];
+    //NSFileHandle * fh;
     cSerCoreBoard CoreBoard;
     cCat9555 IoExpander[2];
     cStdp4020 STDP4020[4];

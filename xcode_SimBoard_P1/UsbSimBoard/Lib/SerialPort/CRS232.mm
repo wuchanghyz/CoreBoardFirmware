@@ -21,6 +21,18 @@ NSLock * g_LockCB = [[NSLock alloc]init];
 
 CRS232::CRS232()
 {
+    NSError *error;
+    NSString *Paths = @"/vault/Intelli_log/CoreBoard.txt";
+    NSString *str3 = @"CoreBoard Debug Infomation:\r\n";
+    [str3 writeToFile:Paths atomically:YES encoding:NSUTF8StringEncoding error:nil];
+    fh=[NSFileHandle fileHandleForWritingAtPath:Paths];
+    if (error){
+        //[error localizedDescription]  会打印出主要的错误信息
+        NSLog(@"Write Fail!\r\n");
+        
+    }else{
+        NSLog(@"Wrige Success!\r\n");
+    }
     pthread_mutex_init(&m_mutex,nil);
     pthread_mutex_init(&m_lockOperate, nil);
     m_strBuffer = [[NSMutableString alloc]init];
@@ -103,6 +115,12 @@ void * CRS232::OnRequest(void * pData, long len)
     }
     pthread_mutex_unlock(&m_lockOperate);
     return nullptr;
+}
+int CRS232::LogWrite(NSString *temp)
+{
+    [fh seekToEndOfFile];
+    [fh writeData:[temp dataUsingEncoding:NSUTF8StringEncoding]];
+    return 0;
 }
 
 int CRS232::Open(const char * dev, const char * opt)//opt:"9600,8,n,1"
@@ -344,16 +362,27 @@ char * cSerCoreBoard::I2cInit(I2cChannel_t I2cNum, i2c_clock_divider_t Divede)
     {
         if(CRS232::WriteString([I2CSendBuffer[I2cNum] UTF8String]) >= 0)
         {
+            break;
+        }
+        else
+        {
+            sleep(1);
+            LogWrite(@"I2C Write Fail");
+        }
+    }
+    if(i<RETRY_TIME)
+    {
+        for(i=0;i<RETRY_TIME;i++)
+        {
             if(CRS232::WaitDetect(READ_TIME_OUT) == 0)
             {
                 return (char *)CRS232::ReadString();
             }
+            else
+            {
+                LogWrite(@"I2C WaitDetect Fail");
+            }
         }
-        else
-        {
-            
-        }
-        
     }
     return (char *)"Error Communicat with HW";
     
@@ -373,14 +402,23 @@ char * cSerCoreBoard::I2cWrite(I2cChannel_t I2cNum, uint8_t DeviceAdd, NSString 
     {
         if(CRS232::WriteString([I2CSendBuffer[I2cNum] UTF8String]) >= 0)
         {
+            break;
+        }
+        else
+        {
+            sleep(1);
+        }
+    }
+    if(i<RETRY_TIME)
+    {
+        for(i=0;i<RETRY_TIME;i++)
+        {
             if(CRS232::WaitDetect(READ_TIME_OUT) == 0)
             {
                 return (char *)CRS232::ReadString();
             }
         }
-        
-    }
-    return (char *)"Error Communicat with HW";
+    }    return (char *)"Error Communicat with HW";
 }
 char * cSerCoreBoard::I2cRead(I2cChannel_t I2cNum, uint8_t DeviceAdd, NSString *pSendData, uint8_t SendLen,
                               uint8_t RevLen)
@@ -395,17 +433,26 @@ char * cSerCoreBoard::I2cRead(I2cChannel_t I2cNum, uint8_t DeviceAdd, NSString *
     [I2CSendBuffer[I2cNum] appendFormat:@"[],I2C,%d,11 %02x %02x %02x ",(uint8_t)I2cNum, SendLen,RevLen,DeviceAdd];
     [I2CSendBuffer[I2cNum] appendString:pSendData];
     [I2CSendBuffer[I2cNum] appendString:@",\r\n"];
-    
     for(i=0;i<RETRY_TIME;i++)
     {
         if(CRS232::WriteString([I2CSendBuffer[I2cNum] UTF8String]) >= 0)
+        {
+            break;
+        }
+        else
+        {
+            sleep(1);
+        }
+    }
+    if(i<RETRY_TIME)
+    {
+        for(i=0;i<RETRY_TIME;i++)
         {
             if(CRS232::WaitDetect(READ_TIME_OUT) == 0)
             {
                 return (char *)CRS232::ReadString();
             }
         }
-        
     }
     return (char *)"Error Communicat with HW";
 }
@@ -418,17 +465,26 @@ char * cSerCoreBoard::GpioOut(uint32_t OutData)
     [GPIOSendBuffer appendFormat:@"[],GPIO,0,10 %02x %02x %02x %02x ",(uint8_t)(OutData&0XFF),
     (uint8_t)((OutData>>8)&0XFF), (uint8_t)((OutData>>16)&0XFF), (uint8_t)((OutData>>24)&0XFF)];
     [GPIOSendBuffer appendString:@",\r\n"];
-    
     for(i=0;i<RETRY_TIME;i++)
     {
         if(CRS232::WriteString([GPIOSendBuffer UTF8String]) >= 0)
+        {
+            break;
+        }
+        else
+        {
+            sleep(1);
+        }
+    }
+    if(i<RETRY_TIME)
+    {
+        for(i=0;i<RETRY_TIME;i++)
         {
             if(CRS232::WaitDetect(READ_TIME_OUT) == 0)
             {
                 return (char *)CRS232::ReadString();
             }
         }
-        
     }
     return (char *)"Error Communicat with HW";
 }
@@ -438,17 +494,26 @@ char * cSerCoreBoard::GpioInput(void)
     
     [GPIOSendBuffer setString:@""];
     [GPIOSendBuffer appendFormat:@"[],GPIO,0,11 00 ,\r\n"];
-    
     for(i=0;i<RETRY_TIME;i++)
     {
         if(CRS232::WriteString([GPIOSendBuffer UTF8String]) >= 0)
+        {
+            break;
+        }
+        else
+        {
+            sleep(1);
+        }
+    }
+    if(i<RETRY_TIME)
+    {
+        for(i=0;i<RETRY_TIME;i++)
         {
             if(CRS232::WaitDetect(READ_TIME_OUT) == 0)
             {
                 return (char *)CRS232::ReadString();
             }
         }
-        
     }
     return (char *)"Error Communicat with HW";
 }
