@@ -39,17 +39,25 @@ char * cPD_Controller::GetInput(uint8_t Address)
 char * cPD_Controller::SendCommend(char * pCmd, char * pData)
 {
     uint8_t i;
-    
+    char *ReturnData;
+    usleep(100000);
     NSString *Buffer = [NSString stringWithFormat:@"%02x %02x %@",0x09,1,[NSString stringWithUTF8String:pData]];
-    pSerialPort->I2cWrite(I2cNumber, DeviceAddress, Buffer, 3);
-
+    ReturnData = pSerialPort->I2cWrite(I2cNumber, DeviceAddress, Buffer, 3);
+    if(StrCmp(ReturnData,gStringOK,4) == 0)
+    {
+        return ReturnData;
+    }
     Buffer = [NSString stringWithFormat:@"%02x %02x",0x08,4];
     for(i=0;i<4;i++)
     {
         Buffer = [Buffer stringByAppendingFormat:@" %02x",(uint8_t)*pCmd++];
     }
-    return pSerialPort->I2cWrite(I2cNumber, DeviceAddress, Buffer, 6);
-    
+    ReturnData = pSerialPort->I2cWrite(I2cNumber, DeviceAddress, Buffer, 6);
+    if(StrCmp(ReturnData,gStringOK,4) == 0)
+    {
+        return ReturnData;
+    }
+    return (char *)"Done";
 }
 char * cPD_Controller::ReadStatue(void)
 {

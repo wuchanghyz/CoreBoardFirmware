@@ -26,6 +26,10 @@
 #define RETRY_TIME      3
 
 
+extern const char * gStringOK;
+extern NSFileHandle * fh;
+int LogWrite(NSString *temp);
+int StrCmp(char *Indata, const char *Strs, int size);
 
 class CRS232 : public CPubliser, CReplier, CSerialPort
 {
@@ -52,7 +56,6 @@ public:
     
     int SetRepOpt(int needReply, int timeout=3000);//set bNeedReplay
     int SetPubOpt(int needPub);//it will publish command which is from function writeXXX
-    int LogWrite(NSString *temp);
 //    int WritePassControlBit(int stationid,char * szCmd);
 protected:
     virtual void * OnRequest(void * pdata, long len);
@@ -61,7 +64,6 @@ protected:
 private:
     pthread_mutex_t m_mutex;
     pthread_mutex_t m_lockOperate;
-    NSFileHandle * fh;
     NSMutableString * m_strBuffer;
     NSMutableData * m_DataBuffer;
     NSMutableString * m_strDetect;

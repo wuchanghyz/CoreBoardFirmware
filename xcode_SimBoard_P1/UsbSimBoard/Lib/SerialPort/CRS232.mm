@@ -21,18 +21,7 @@ NSLock * g_LockCB = [[NSLock alloc]init];
 
 CRS232::CRS232()
 {
-    NSError *error;
-    NSString *Paths = @"/vault/Intelli_log/CoreBoard.txt";
-    NSString *str3 = @"CoreBoard Debug Infomation:\r\n";
-    [str3 writeToFile:Paths atomically:YES encoding:NSUTF8StringEncoding error:nil];
-    fh=[NSFileHandle fileHandleForWritingAtPath:Paths];
-    if (error){
-        //[error localizedDescription]  会打印出主要的错误信息
-        NSLog(@"Write Fail!\r\n");
-        
-    }else{
-        NSLog(@"Wrige Success!\r\n");
-    }
+    
     pthread_mutex_init(&m_mutex,nil);
     pthread_mutex_init(&m_lockOperate, nil);
     m_strBuffer = [[NSMutableString alloc]init];
@@ -115,12 +104,6 @@ void * CRS232::OnRequest(void * pData, long len)
     }
     pthread_mutex_unlock(&m_lockOperate);
     return nullptr;
-}
-int CRS232::LogWrite(NSString *temp)
-{
-    [fh seekToEndOfFile];
-    [fh writeData:[temp dataUsingEncoding:NSUTF8StringEncoding]];
-    return 0;
 }
 
 int CRS232::Open(const char * dev, const char * opt)//opt:"9600,8,n,1"
@@ -351,6 +334,7 @@ char *  cSerCoreBoard::Close(void)
 char * cSerCoreBoard::I2cInit(I2cChannel_t I2cNum, i2c_clock_divider_t Divede)
 {
     uint8_t i;
+    uint16_t j;
     
     if((int)I2cNum > 9 )
     {
@@ -360,19 +344,9 @@ char * cSerCoreBoard::I2cInit(I2cChannel_t I2cNum, i2c_clock_divider_t Divede)
     [I2CSendBuffer[I2cNum] appendFormat:@"[],I2C,%d,3 1 0 %d,\r\n",(uint8_t)I2cNum, (uint8_t)Divede];
     for(i=0;i<RETRY_TIME;i++)
     {
-        if(CRS232::WriteString([I2CSendBuffer[I2cNum] UTF8String]) >= 0)
-        {
-            break;
-        }
-        else
-        {
-            sleep(1);
-            LogWrite(@"I2C Write Fail");
-        }
-    }
-    if(i<RETRY_TIME)
-    {
-        for(i=0;i<RETRY_TIME;i++)
+        j = CRS232::WriteString([I2CSendBuffer[I2cNum] UTF8String]);
+        LogWrite([NSString stringWithFormat:@"[%d]",j]);
+        if(j >= 0)
         {
             if(CRS232::WaitDetect(READ_TIME_OUT) == 0)
             {
@@ -383,6 +357,11 @@ char * cSerCoreBoard::I2cInit(I2cChannel_t I2cNum, i2c_clock_divider_t Divede)
                 LogWrite(@"I2C WaitDetect Fail");
             }
         }
+        else
+        {
+            sleep(1);
+            LogWrite(@"I2C Write Fail");
+        }
     }
     return (char *)"Error Communicat with HW";
     
@@ -390,6 +369,8 @@ char * cSerCoreBoard::I2cInit(I2cChannel_t I2cNum, i2c_clock_divider_t Divede)
 char * cSerCoreBoard::I2cWrite(I2cChannel_t I2cNum, uint8_t DeviceAdd, NSString *pData, uint8_t Len)
 {
     uint8_t i;
+    uint16_t j;
+    char * buffer;
     if((int)I2cNum > 9 )
     {
         return (char *)"Error I2cNum Out Of Range.";
@@ -400,31 +381,42 @@ char * cSerCoreBoard::I2cWrite(I2cChannel_t I2cNum, uint8_t DeviceAdd, NSString 
     [I2CSendBuffer[I2cNum] appendString:@",\r\n"];
     for(i=0;i<RETRY_TIME;i++)
     {
-        if(CRS232::WriteString([I2CSendBuffer[I2cNum] UTF8String]) >= 0)
+        LogWrite([NSString stringWithFormat:@"%@\r\n", I2CSendBuffer[I2cNum]]);
+        j = CRS232::WriteString([I2CSendBuffer[I2cNum] UTF8String]);
+        LogWrite([NSString stringWithFormat:@"[%d] ",j]);
+        if(j >= 0)
         {
-            break;
+            if(CRS232::WaitDetect(READ_TIME_OUT) == 0)
+            {
+                buffer = (char *)CRS232::ReadString();
+                if(StrCmp(buffer,gStringOK,4) == 4)
+                {
+                    return buffer;
+                }
+                else
+                {
+                    LogWrite([NSString stringWithFormat:@"error is :%s\r\n", buffer]);
+                }
+            }
+            else
+            {
+                LogWrite(@"I2C WaitDetect Fail");
+            }
         }
         else
         {
             sleep(1);
+            LogWrite(@"I2C Write Fail");
         }
+
     }
-    if(i<RETRY_TIME)
-    {
-        for(i=0;i<RETRY_TIME;i++)
-        {
-            if(CRS232::WaitDetect(READ_TIME_OUT) == 0)
-            {
-                return (char *)CRS232::ReadString();
-            }
-        }
-    }    return (char *)"Error Communicat with HW";
+    return (char *)"Error Communicat with HW";
 }
 char * cSerCoreBoard::I2cRead(I2cChannel_t I2cNum, uint8_t DeviceAdd, NSString *pSendData, uint8_t SendLen,
                               uint8_t RevLen)
 {
     uint8_t i;
-    
+    uint16_t j;
     if((int)I2cNum > 9 )
     {
         return (char *)"Error I2cNum Out Of Range.";
@@ -435,23 +427,23 @@ char * cSerCoreBoard::I2cRead(I2cChannel_t I2cNum, uint8_t DeviceAdd, NSString *
     [I2CSendBuffer[I2cNum] appendString:@",\r\n"];
     for(i=0;i<RETRY_TIME;i++)
     {
-        if(CRS232::WriteString([I2CSendBuffer[I2cNum] UTF8String]) >= 0)
-        {
-            break;
-        }
-        else
-        {
-            sleep(1);
-        }
-    }
-    if(i<RETRY_TIME)
-    {
-        for(i=0;i<RETRY_TIME;i++)
+        j = CRS232::WriteString([I2CSendBuffer[I2cNum] UTF8String]);
+        LogWrite([NSString stringWithFormat:@"[%d]",j]);
+        if(j >= 0)
         {
             if(CRS232::WaitDetect(READ_TIME_OUT) == 0)
             {
                 return (char *)CRS232::ReadString();
             }
+            else
+            {
+                LogWrite(@"I2C WaitDetect Fail");
+            }
+        }
+        else
+        {
+            sleep(1);
+            LogWrite(@"I2C Write Fail");
         }
     }
     return (char *)"Error Communicat with HW";
@@ -582,3 +574,52 @@ char * cSerCoreBoard::SpiRead(SpiChannel_t SpiNum, uint8_t *pData, uint8_t CmdLe
     return (char *)CRS232::ReadBytes();
 }
 */
+
+
+
+//class data collection
+
+const char ConvTable[16]=
+{
+    '0','1','2','3','4','5','6','7','8','9','A','B','C','D','E','F'
+};
+const char * gStringOK="Done";
+NSFileHandle * fh;
+int StrCmp(char *Indata, const char *Strs, int size)
+{
+    int i;
+    int j=0;
+    while(*Indata != NULL)
+    {
+        for(i=0;i<size;i++)
+        {
+            if(*(Indata+i) == *(Strs+i))
+            {
+                j++;
+                
+            }
+            else
+            {
+                j=0;
+                break;
+            }
+            
+        }
+        if(j == size)
+        {
+            return j;
+        }
+        else
+        {
+            Indata++;
+        }
+    }
+    return 0;
+    
+}
+int LogWrite(NSString *temp)
+{
+    [fh seekToEndOfFile];
+    [fh writeData:[temp dataUsingEncoding:NSUTF8StringEncoding]];
+    return 0;
+}

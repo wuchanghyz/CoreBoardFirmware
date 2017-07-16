@@ -21,7 +21,7 @@ char * cCat9555::Config(uint16_t CfgData)
 }
 char * cCat9555::Setoutput(uint16_t InputData)
 {
-    NSString *Buffer = [NSString stringWithFormat:@"%02x %02x %02x",2,(uint8_t)InputData&0x00ff,
+    NSString *Buffer = [NSString stringWithFormat:@"%02x %02x %02x",2,(uint8_t)InputData&0xff,
                         (uint8_t)(InputData>>8)&0xff];
     return pSerialPort->I2cWrite(I2cNumber, DeviceAddress, Buffer, 3);
 }

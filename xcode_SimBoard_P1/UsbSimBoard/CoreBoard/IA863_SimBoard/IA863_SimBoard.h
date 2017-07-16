@@ -65,5 +65,4 @@ private:
     cCat9555 IoExpander[2];
     cStdp4020 STDP4020[4];
     cPD_Controller PD_Controller[4];
-    
 };

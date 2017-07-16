@@ -249,7 +249,7 @@ void * CSerialPort::ReadDataInBackGround(void * arg)
                 }
         }
         timeout.tv_sec = 0;
-        usleep(1000);
+        usleep(100);
     }
     return nullptr;
 }
