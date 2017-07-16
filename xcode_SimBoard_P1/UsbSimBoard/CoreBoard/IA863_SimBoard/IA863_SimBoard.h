@@ -55,9 +55,11 @@ public:
     const char * TypeASdCardSwitch(unsigned char Statue);
 private:
     uint16_t IO_Read(uint8_t Address);
+    const char * LogWrite(NSString *temp);
 private:
     NSMutableString * VerInfo;
     NSMutableString * LogInfo;
+    NSFileHandle * fh;
     cSerCoreBoard CoreBoard;
     cCat9555 IoExpander[2];
     cStdp4020 STDP4020[4];

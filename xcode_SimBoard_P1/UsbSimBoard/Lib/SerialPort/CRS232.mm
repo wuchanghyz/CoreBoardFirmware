@@ -349,6 +349,10 @@ char * cSerCoreBoard::I2cInit(I2cChannel_t I2cNum, i2c_clock_divider_t Divede)
                 return (char *)CRS232::ReadString();
             }
         }
+        else
+        {
+            
+        }
         
     }
     return (char *)"Error Communicat with HW";
