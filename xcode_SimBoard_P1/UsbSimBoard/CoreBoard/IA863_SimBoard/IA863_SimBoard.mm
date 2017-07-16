@@ -832,6 +832,7 @@ const char * cIA863_SimBoard::ResetAll(char * Items)
         for(i=0;i<4;i++)
         {
             //sbu en
+            usleep(100000);
             buffers=PD_Controller[i].SendCommend("GPsh","0F");
             if(StrCmp(buffers,gStringOK,4) == 0)
             {
