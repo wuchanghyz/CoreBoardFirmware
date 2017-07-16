@@ -1398,7 +1398,7 @@ const char * cIA863_SimBoard::USBC_Items(unsigned char Channel, const char * Ite
 }
 const char * cIA863_SimBoard::Help(void)
 {
-    [VerInfo appendString:@"Version: For J137 EVT V1.1\r\n\r\n"];
+    [VerInfo appendString:@"Version: For J137 EVT V1.2\r\n\r\n"];
     
     [VerInfo appendString:@"const char * BoardInit(void)  --Init Type A and Type C Module.\r\n"];
     [VerInfo appendString:@"const char * ResetAll(void) --Reset All Type A and Type C Moldule.\r\n"];
