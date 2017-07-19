@@ -1,6 +1,6 @@
 /*
 ** Lua binding: IA863_SimBoard
-** Generated automatically by tolua++-1.0.92 on Fri Jul 14 14:23:56 2017.
+** Generated automatically by tolua++-1.0.92 on Wed Jul 19 13:22:08 2017.
 */
 
 #ifndef __cplusplus
@@ -181,6 +181,72 @@ static int tolua_IA863_SimBoard_cIA863_SimBoard_BoardInit00(lua_State* tolua_S)
 #ifndef TOLUA_RELEASE
  tolua_lerror:
  tolua_error(tolua_S,"#ferror in function 'BoardInit'.",&tolua_err);
+ return 0;
+#endif
+}
+#endif //#ifndef TOLUA_DISABLE
+
+/* method: Open of class  cIA863_SimBoard */
+#ifndef TOLUA_DISABLE_tolua_IA863_SimBoard_cIA863_SimBoard_Open00
+static int tolua_IA863_SimBoard_cIA863_SimBoard_Open00(lua_State* tolua_S)
+{
+#ifndef TOLUA_RELEASE
+ tolua_Error tolua_err;
+ if (
+     !tolua_isusertype(tolua_S,1,"cIA863_SimBoard",0,&tolua_err) ||
+     !tolua_isstring(tolua_S,2,0,&tolua_err) ||
+     !tolua_isnoobj(tolua_S,3,&tolua_err)
+ )
+  goto tolua_lerror;
+ else
+#endif
+ {
+  cIA863_SimBoard* self = (cIA863_SimBoard*)  tolua_tousertype(tolua_S,1,0);
+  char* Dev = ((char*)  tolua_tostring(tolua_S,2,0));
+#ifndef TOLUA_RELEASE
+  if (!self) tolua_error(tolua_S,"invalid 'self' in function 'Open'", NULL);
+#endif
+  {
+   const char* tolua_ret = (const char*)  self->Open(Dev);
+   tolua_pushstring(tolua_S,(const char*)tolua_ret);
+  }
+ }
+ return 1;
+#ifndef TOLUA_RELEASE
+ tolua_lerror:
+ tolua_error(tolua_S,"#ferror in function 'Open'.",&tolua_err);
+ return 0;
+#endif
+}
+#endif //#ifndef TOLUA_DISABLE
+
+/* method: Close of class  cIA863_SimBoard */
+#ifndef TOLUA_DISABLE_tolua_IA863_SimBoard_cIA863_SimBoard_Close00
+static int tolua_IA863_SimBoard_cIA863_SimBoard_Close00(lua_State* tolua_S)
+{
+#ifndef TOLUA_RELEASE
+ tolua_Error tolua_err;
+ if (
+     !tolua_isusertype(tolua_S,1,"cIA863_SimBoard",0,&tolua_err) ||
+     !tolua_isnoobj(tolua_S,2,&tolua_err)
+ )
+  goto tolua_lerror;
+ else
+#endif
+ {
+  cIA863_SimBoard* self = (cIA863_SimBoard*)  tolua_tousertype(tolua_S,1,0);
+#ifndef TOLUA_RELEASE
+  if (!self) tolua_error(tolua_S,"invalid 'self' in function 'Close'", NULL);
+#endif
+  {
+   const char* tolua_ret = (const char*)  self->Close();
+   tolua_pushstring(tolua_S,(const char*)tolua_ret);
+  }
+ }
+ return 1;
+#ifndef TOLUA_RELEASE
+ tolua_lerror:
+ tolua_error(tolua_S,"#ferror in function 'Close'.",&tolua_err);
  return 0;
 #endif
 }
@@ -548,6 +614,40 @@ static int tolua_IA863_SimBoard_cIA863_SimBoard_I2cRead00(lua_State* tolua_S)
 }
 #endif //#ifndef TOLUA_DISABLE
 
+/* method: LogPathSet of class  cIA863_SimBoard */
+#ifndef TOLUA_DISABLE_tolua_IA863_SimBoard_cIA863_SimBoard_LogPathSet00
+static int tolua_IA863_SimBoard_cIA863_SimBoard_LogPathSet00(lua_State* tolua_S)
+{
+#ifndef TOLUA_RELEASE
+ tolua_Error tolua_err;
+ if (
+     !tolua_isusertype(tolua_S,1,"cIA863_SimBoard",0,&tolua_err) ||
+     !tolua_isstring(tolua_S,2,0,&tolua_err) ||
+     !tolua_isnoobj(tolua_S,3,&tolua_err)
+ )
+  goto tolua_lerror;
+ else
+#endif
+ {
+  cIA863_SimBoard* self = (cIA863_SimBoard*)  tolua_tousertype(tolua_S,1,0);
+  const char* Paths = ((const char*)  tolua_tostring(tolua_S,2,0));
+#ifndef TOLUA_RELEASE
+  if (!self) tolua_error(tolua_S,"invalid 'self' in function 'LogPathSet'", NULL);
+#endif
+  {
+   const char* tolua_ret = (const char*)  self->LogPathSet(Paths);
+   tolua_pushstring(tolua_S,(const char*)tolua_ret);
+  }
+ }
+ return 1;
+#ifndef TOLUA_RELEASE
+ tolua_lerror:
+ tolua_error(tolua_S,"#ferror in function 'LogPathSet'.",&tolua_err);
+ return 0;
+#endif
+}
+#endif //#ifndef TOLUA_DISABLE
+
 /* Open function */
 TOLUA_API int tolua_IA863_SimBoard_open (lua_State* tolua_S)
 {
@@ -567,6 +667,8 @@ TOLUA_API int tolua_IA863_SimBoard_open (lua_State* tolua_S)
    tolua_function(tolua_S,"delete",tolua_IA863_SimBoard_cIA863_SimBoard_delete00);
    tolua_function(tolua_S,"SelfTest",tolua_IA863_SimBoard_cIA863_SimBoard_SelfTest00);
    tolua_function(tolua_S,"BoardInit",tolua_IA863_SimBoard_cIA863_SimBoard_BoardInit00);
+   tolua_function(tolua_S,"Open",tolua_IA863_SimBoard_cIA863_SimBoard_Open00);
+   tolua_function(tolua_S,"Close",tolua_IA863_SimBoard_cIA863_SimBoard_Close00);
    tolua_function(tolua_S,"USBA_Items",tolua_IA863_SimBoard_cIA863_SimBoard_USBA_Items00);
    tolua_function(tolua_S,"USBC_Items",tolua_IA863_SimBoard_cIA863_SimBoard_USBC_Items00);
    tolua_function(tolua_S,"ResetAll",tolua_IA863_SimBoard_cIA863_SimBoard_ResetAll00);
@@ -577,6 +679,7 @@ TOLUA_API int tolua_IA863_SimBoard_open (lua_State* tolua_S)
    tolua_function(tolua_S,"Cat9555_IoControl",tolua_IA863_SimBoard_cIA863_SimBoard_Cat9555_IoControl00);
    tolua_function(tolua_S,"I2cWrite",tolua_IA863_SimBoard_cIA863_SimBoard_I2cWrite00);
    tolua_function(tolua_S,"I2cRead",tolua_IA863_SimBoard_cIA863_SimBoard_I2cRead00);
+   tolua_function(tolua_S,"LogPathSet",tolua_IA863_SimBoard_cIA863_SimBoard_LogPathSet00);
   tolua_endmodule(tolua_S);
  tolua_endmodule(tolua_S);
  return 1;

@@ -361,7 +361,6 @@ const char *cIA863_SimBoard::DP_Status(unsigned char Channel)
         Result = [Result stringByAppendingString:[NSString stringWithUTF8String:Temp]];
         Result = [Result stringByAppendingString:@"\r"];
     }
-    CoreBoard.PulishString([Result UTF8String]);
     Result = @"\r\n The Read Data is :\r";
     for(i=0;i<8;i++)
     {
@@ -370,7 +369,6 @@ const char *cIA863_SimBoard::DP_Status(unsigned char Channel)
         Result = [Result stringByAppendingString:[NSString stringWithUTF8String:Temp]];
         Result = [Result stringByAppendingString:@"\r"];
     }
-    CoreBoard.PulishString([Result UTF8String]);
     return [Result UTF8String];
 }
 const char * cIA863_SimBoard::DP_ReceiverWrite(unsigned char Channel,unsigned char Address, unsigned short InData)
@@ -592,18 +590,6 @@ const char * cIA863_SimBoard::TypeASdCardSwitch(unsigned char Statue)
 
 cIA863_SimBoard::cIA863_SimBoard()
 {
-    NSError *error;
-    NSString *Paths = @"/vault/Intelli_log/CoreBoard.txt";
-    NSString *str3 = @"CoreBoard Debug Infomation:\r\n";
-    [str3 writeToFile:Paths atomically:YES encoding:NSUTF8StringEncoding error:nil];
-    fh=[NSFileHandle fileHandleForWritingAtPath:Paths];
-    if (error){
-        //[error localizedDescription]  会打印出主要的错误信息
-        NSLog(@"Write Fail!\r\n");
-        
-    }else{
-        NSLog(@"Wrige Success!\r\n");
-    }
     LogInfo = [[NSMutableString alloc]init];
     VerInfo = [[NSMutableString alloc]init];
 
@@ -613,6 +599,7 @@ cIA863_SimBoard::~cIA863_SimBoard()
 {
     [LogInfo release];
     [VerInfo release];
+    //[IoData[2] release];
 }
 
 const char * cIA863_SimBoard::GetLogInfo()
@@ -630,7 +617,14 @@ const char * cIA863_SimBoard::BoardInit(char * Items)
 {
     uint8_t i;
     char * ReadData;
-    ReadData = CoreBoard.Open("/dev/cu.usbmodemVer11");
+    if(Items != NULL)
+    {
+        ReadData = CoreBoard.Open(Items);
+    }
+    else
+    {
+        ReadData = CoreBoard.Open("/dev/cu.usbmodemVer11");
+    }
     if(strcmp(ReadData,"Done.") != 0)
     {
         [LogInfo appendString:@"BoardInit() Error.\r\n"];
@@ -940,7 +934,7 @@ const char * cIA863_SimBoard::USBA_Items(unsigned char Channel, const char * Ite
     {
         return ReturnData;
     }
-    sleep(5);
+    //sleep(5);
     if(StrCmp("2.0",Items,3)==3)
     {
         [LogInfo appendString:@"2.0\r\n"];
@@ -1071,7 +1065,7 @@ const char * cIA863_SimBoard::USBC_Items(unsigned char Channel, const char * Ite
         return buffers;
     }
         
-    sleep(5);
+    //sleep(5);
     if(StrCmp("2.0",Items,3)==3)
     {
         [LogInfo appendString:@"2.0\r\n"];
@@ -1280,6 +1274,13 @@ const char * cIA863_SimBoard::USBC_Items(unsigned char Channel, const char * Ite
                 //}
                 ////usleep(100000);
                 //vbus to pd controller en
+                buffers=PD_Controller[j].SendCommend("GPsh","03");
+                if(StrCmp(buffers,gStringOK,4) == 0)
+                {
+                    [LogInfo appendFormat:@"CH:%d SendCommend(\"GPsl\",\"0E\") Error.\r\n",j+1];
+                    LogWrite([NSString stringWithFormat:@"CH:%d SendCommend(\"GPsl\",\"0E\") Error.\r\n",j+1]);
+                    return buffers;
+                }
                 buffers=PD_Controller[j].SendCommend("GPsh","0E");
                 if(StrCmp(buffers,gStringOK,4) == 0)
                 {
@@ -1493,3 +1494,36 @@ const char * cIA863_SimBoard::I2cRead(unsigned char I2cNum, unsigned char Device
     return CoreBoard.I2cRead((I2cChannel_t)I2cNum, DeviceAdd, str, SendLen, RevLen);
     return pSendData;
 }
+const char * cIA863_SimBoard::Open(char *Dev)
+{
+    return CoreBoard.Open(Dev);
+}
+const char * cIA863_SimBoard::Close(void)
+{
+    return CoreBoard.Close();
+}
+
+const char * cIA863_SimBoard::LogPathSet(const char * Paths)
+{
+    LogPath = [NSString stringWithUTF8String:Paths];
+    f = [NSFileHandle fileHandleForWritingAtPath:LogPath];
+    if (f)
+    {
+        return "The files already exist";
+    }
+    else
+    {
+        if(LogPath == NULL)
+        {
+            return "The Path is Error";
+        }
+        else
+        {
+            NSString *str3 = @"CoreBoard(A1.0) Debug Infomation(Dylib V1.4):\r\n";
+            [str3 writeToFile:LogPath atomically:YES encoding:NSUTF8StringEncoding error:nil];
+            f=[NSFileHandle fileHandleForWritingAtPath:LogPath];
+            [f closeFile];
+        }
+    }
+    return "Done";
+ }

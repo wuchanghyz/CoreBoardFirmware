@@ -1,7 +1,3 @@
-
-
-
-
 //
 //  main.m
 //  CoreBoard
@@ -49,14 +45,12 @@ int StrCmps(char *Indata, const char *Strs, int size)
     return 0;
     
 }
-
 //DP 上电时序会影响闪不闪
 int main(int argc, const char * argv[]) {
     cIA863_SimBoard IA863_SimBoard;
     char *buffer;
     char i;
     int j;
-    
     
     //A-eload
     buffer = (char *)IA863_SimBoard.BoardInit("BOTH");
@@ -68,7 +62,7 @@ int main(int argc, const char * argv[]) {
     }
     buffer = (char *)IA863_SimBoard.Help();
     printf(buffer);
-    buffer = (char *)IA863_SimBoard.USBC_Items(1, "2.0", 1);
+    buffer = (char *)IA863_SimBoard.USBC_Items(1, "ELOAD", 1);
     buffer = (char *)IA863_SimBoard.USBC_Items(2, "2.0", 1);
 
     buffer = (char *)IA863_SimBoard.USBA_Items(1,"ELOAD",1);

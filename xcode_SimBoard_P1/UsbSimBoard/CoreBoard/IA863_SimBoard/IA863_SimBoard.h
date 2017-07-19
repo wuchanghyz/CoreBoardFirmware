@@ -23,6 +23,8 @@ public:
 public:
     const char * SelfTest(void);
     const char * BoardInit(char * Items);
+    const char * Open(char *Dev);
+    const char * Close(void);
     const char * USBA_Items(unsigned char Channel, const char * Items, unsigned char Statue); //--Channel=1,2,3,4 --Item=2.0,3.0,SD,ELOAD --Statue=0,1
     const char * USBC_Items(unsigned char Channel, const char * Items, unsigned char Statue); //--Channel=1,2,3,4 --Item=2.0,DP,ELOAD --Statue=0,1,2
     const char * ResetAll(char * Items);
@@ -33,7 +35,7 @@ public:
     const char * Cat9555_IoControl(unsigned char Channel,uint16_t IoData);
     const char * I2cWrite(unsigned char I2cNum, unsigned char DeviceAdd, char *pData, unsigned char Len);
     const char * I2cRead(unsigned char I2cNum, unsigned char DeviceAdd, char *pSendData, unsigned char SendLen, unsigned char RevLen);
-
+    const char * LogPathSet(const char * Paths);
 public:
     const char * CCLogicSwitch(unsigned char Channel, unsigned char Statue); //0-top 1-bottom
     const char * TypeCUsb2Switch(unsigned char Channel, unsigned char Statue); //0-disk 1-charger

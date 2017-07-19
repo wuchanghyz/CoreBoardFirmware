@@ -27,11 +27,24 @@
 
 
 extern const char * gStringOK;
-extern NSFileHandle * fh;
+extern NSString * LogPath;
+extern NSFileHandle *f;
 int LogWrite(NSString *temp);
 int StrCmp(char *Indata, const char *Strs, int size);
+//
+//  RS232.h
+//  RS232
+//
+//  Created by IvanGan on 16/4/9.
+//  Copyright © 2016年 IvanGan. All rights reserved.
+//
+#include <stdio.h>
+#include <string.h>
+#include <pthread.h>
 
-class CRS232 : public CPubliser, CReplier, CSerialPort
+typedef int (*OnReceiveData)(void * data, size_t len, void * context);
+
+class CRS232 : CPubliser, CReplier, CSerialPort
 {
 public:
     CRS232();
@@ -48,6 +61,8 @@ public:
     const char * ReadString();
     const char * ReadBytes();
     const char * ReadStringBytes();
+    const char * ReadPowerString();             //Read data without '\0'
+    
     void ClearBuffer();
     int SetDetectString(const char * det);
     int WaitDetect(int timeout);//msec
@@ -56,27 +71,33 @@ public:
     
     int SetRepOpt(int needReply, int timeout=3000);//set bNeedReplay
     int SetPubOpt(int needPub);//it will publish command which is from function writeXXX
-//    int WritePassControlBit(int stationid,char * szCmd);
+    
 protected:
     virtual void * OnRequest(void * pdata, long len);
     virtual void * didReceiveData(void * data, long len);
-
+    
 private:
     pthread_mutex_t m_mutex;
     pthread_mutex_t m_lockOperate;
+    
     NSMutableString * m_strBuffer;
     NSMutableData * m_DataBuffer;
     NSMutableString * m_strDetect;
     NSMutableString * m_Return;
+    NSLock* m_lockBuffer;
     
     bool bNeedZmq;  //YES: will pub data from COM
-                    //this will initial in "CreatIPC".
+    //this will initial in "CreatIPC".
     
     bool bNeedReply; // YES: will reply data from data, or it will return "OK" or "Fail"
     int iTimeout;//msec
     bool bNeedPub;
     
+    bool bFilterUnreadable;
+    bool bFilterColorCode;
 };
+
+
 
 class cSerCoreBoard : public CRS232
 {

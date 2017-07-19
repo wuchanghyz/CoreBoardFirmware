@@ -21,34 +21,46 @@ NSLock * g_LockCB = [[NSLock alloc]init];
 
 CRS232::CRS232()
 {
-    
+    NSLog(@"CRS232 created");
     pthread_mutex_init(&m_mutex,nil);
     pthread_mutex_init(&m_lockOperate, nil);
     m_strBuffer = [[NSMutableString alloc]init];
     m_DataBuffer = [[NSMutableData alloc]init];
     m_strDetect = [[NSMutableString alloc]init];
     m_Return = [[NSMutableString alloc]init];
+    m_lockBuffer = [[NSLock alloc]init];
     
     bNeedZmq = false;
     bNeedReply = false;
     bNeedPub = false;
     iTimeout = 3000;
+    
+    bFilterUnreadable = true;
+    bFilterColorCode = true;
 }
 
 CRS232::~CRS232()
 {
+    Close();
+    NSLog(@"CRS232 closed");
+    std::cout<<"CRS232 close()"<<std::endl;
     pthread_mutex_destroy(&m_mutex);
     pthread_mutex_destroy(&m_lockOperate);
     [m_strDetect release];
     [m_strBuffer release];
     [m_DataBuffer release];
     [m_Return release];
+    [m_lockBuffer release];
 }
 
 int CRS232::CreateIPC(const char * reply, const char * publish)
 {
+    CPubliser::close();
+    //CReplier::close();
+    NSLog(@"closing RS232 binding");
+    
     CPubliser::bind(publish);
-    CReplier::bind(reply);
+    //CReplier::bind(reply);
     bNeedZmq = true;
     return 0;
 }
@@ -58,18 +70,32 @@ void * CRS232::didReceiveData(void * data, long len)
     if(len < 0)
         return nullptr;
     pthread_mutex_lock(&m_mutex);
-    if(bNeedZmq)
-        Pulish(data, len);
     [m_DataBuffer appendBytes:(Byte*)data length:len];
-    char * p = (char *)data;
-    for(int i=0; i<len; i++)
-    {
-        if(p[i] == '\0')
-            p[i] = '.';
+    unsigned char * p = (unsigned char *)data;
+    for (int i=0; i<len; i++) {
+        if (p[i] == '\0') {
+            p[i] = '+';
+        }
+        if (bFilterUnreadable) {
+            //if (p[i] >= 127) {
+            if (p[i] < 32 || p[i] >= 127) {   //skip unvisible character
+                if (p[i] != 10 && p[i] != 13) {
+                    p[i] = '+';
+                }
+            }
+        }
+    }
+    if(bNeedZmq){
+        //Pulish(data, len);
+        PulishString((char*)p);
     }
     NSString * str = [[NSString alloc]initWithBytes:data length:len encoding:NSUTF8StringEncoding];
     if(str)
-       [m_strBuffer appendString:str];
+    {
+        [m_lockBuffer lock];
+        [m_strBuffer appendString:str];
+        [m_lockBuffer unlock];
+    }
     [str release];
     pthread_mutex_unlock(&m_mutex);
     return nullptr;
@@ -93,14 +119,15 @@ void * CRS232::OnRequest(void * pData, long len)
     pthread_mutex_lock(&m_lockOperate);
     if(bNeedPub)
         Pulish(pData,len);
-    int err = CSerialPort::write(pData, len);
-    if(bNeedReply == NO)
-        CReplier::SendStrig((err>=0)?"OK":"Fail");
+    CSerialPort::write(pData, len);
+    if(bNeedReply == NO){
+        //CReplier::SendStrig((err>=0)?"OK":"Fail");
+    }
     else
     {
         if([m_strDetect length]>0)
             WaitDetect(iTimeout);
-        CReplier::SendStrig(ReadString());
+        //CReplier::SendStrig(ReadString());
     }
     pthread_mutex_unlock(&m_lockOperate);
     return nullptr;
@@ -138,7 +165,6 @@ int CRS232::WriteString(const char * buffer)
     NSString * str = [NSString stringWithFormat:@"%s", buffer];
     if(bNeedZmq && bNeedPub)
         Pulish((void*)[str UTF8String], [str length]);
-    [str release];
     return CSerialPort::write((void*)[str UTF8String], [str length]);
 }
 
@@ -155,7 +181,7 @@ int CRS232::WriteStringBytes(const char * szData)//"0xFF,0xFE,..."
     if(strlen(szData)<=0) return -2;
     NSArray * arr = [[NSString stringWithUTF8String:szData] componentsSeparatedByString:@","];
     if([arr count]< 1) return -3;
-    int size = [arr count];
+    int size = (int)[arr count];
     unsigned char * ucData = new unsigned char [size];
     for(int i=0; i<size; i++)
     {
@@ -172,17 +198,100 @@ int CRS232::WriteStringBytes(const char * szData)//"0xFF,0xFE,..."
 
 void CRS232::ClearBuffer()
 {
+    [m_lockBuffer lock];
     [m_strBuffer setString:@""];
+    [m_lockBuffer unlock];
 }
 
+/*
+ ============================================ANSI控制码的说明
+ [0m 关闭所有属性
+ [1m 设置高亮度
+ [4m 下划线
+ [5m 闪烁
+ [7m 反显
+ [8m 消隐
+ [30m -- [37m 设置前景色
+ [40m -- [47m 设置背景色
+ [nA 光标上移n行
+ [nB 光标下移n行
+ [nC 光标右移n行
+ [nD 光标左移n行
+ [y;xH设置光标位置
+ [2J 清屏
+ [K 清除从光标到行尾的内容
+ [s 保存光标位置
+ [u 恢复光标位置
+ [?25l 隐藏光标   //[25;01H "
+ [?25h 显示光标
+ */
 const char * CRS232::ReadString()
 {
     [NSThread sleepForTimeInterval:0.01];
     pthread_mutex_lock(&m_mutex);
     if(m_strBuffer && [m_strBuffer length]>0)
     {
-        [m_Return setString:m_strBuffer];
-        [m_strBuffer setString:@""];
+        if (bFilterColorCode) {
+            NSArray * arrColorCode = [NSArray arrayWithObjects:
+                                      @"[0m ",
+                                      @"[1m ",
+                                      @"[4m ",
+                                      @"[5m ",
+                                      @"[7m ",
+                                      @"[8m ",
+                                      @"[30m ",
+                                      @"[31m ",
+                                      @"[32m ",
+                                      @"[33m ",
+                                      @"[34m ",
+                                      @"[35m ",
+                                      @"[36m ",
+                                      @"[37m ",
+                                      @"[40m ",
+                                      @"[41m ",
+                                      @"[42m ",
+                                      @"[43m ",
+                                      @"[44m ",
+                                      @"[45m ",
+                                      @"[46m ",
+                                      @"[47m ",
+                                      @"[nA ",
+                                      @"[nB ",
+                                      @"[nC ",
+                                      @"[nD ",
+                                      @"[25;01H ",
+                                      @"[2J ",
+                                      @"[K ",
+                                      @"[s ",
+                                      @"[u ",
+                                      @"[?25l ",
+                                      @"[?25h ",
+                                      @" ............ .E.. ..... .......... ; ;. ..zl ",
+                                      @" ............ .E.. ..... .......... ; ;. ..zj ",
+                                      @" ............ .E.. ..... .......... ; ;. ..zk ",
+                                      nil];
+            NSMutableString * m_reT = [[[NSMutableString alloc]init]autorelease];
+            [m_lockBuffer lock];
+            [m_reT setString:m_strBuffer];
+            [m_strBuffer setString:@""];
+            [m_lockBuffer unlock];
+            for (NSString *line in arrColorCode) {
+                NSRange range = [m_reT rangeOfString:line];
+                if (range.location!=NSNotFound) {
+                    NSArray * Array = [m_reT componentsSeparatedByString:line];
+                    [m_reT setString:@""];
+                    for (NSString *cont in Array) {
+                        [m_reT appendString:cont];
+                    }
+                }
+            }
+            [m_Return setString:m_reT];
+        }else{
+            [m_lockBuffer lock];
+            [m_Return setString:m_strBuffer];
+            [m_strBuffer setString:@""];
+            [m_lockBuffer unlock];
+        }
     }
     else
         [m_Return setString:@""];
@@ -195,9 +304,11 @@ const char * CRS232::ReadBytes()
 {
     if([m_DataBuffer length]>0)
     {
+        [m_lockBuffer lock];
         NSData * data = [NSData dataWithData:m_DataBuffer];
         [m_DataBuffer setLength:0];
         [m_strBuffer setString:@""];
+        [m_lockBuffer unlock];
         return (const char*)[data bytes];
     }
     else
@@ -216,7 +327,7 @@ const char * CRS232::ReadStringBytes()
         {
             [m_Return appendFormat:@"0x%02X,",pByte[i]];
         }
-        [m_Return appendFormat:@"0x%02X",pByte[len -1]] ;
+        [m_Return appendFormat:@"0x%02X,",pByte[len -1]] ;
         [m_DataBuffer setLength:0];
         [m_strBuffer setString:@""];
         return [m_Return UTF8String];
@@ -225,20 +336,44 @@ const char * CRS232::ReadStringBytes()
         return NULL;
 }
 
+const char * CRS232::ReadPowerString()
+{
+    NSUInteger len = [m_DataBuffer length];
+    NSMutableData *mutdata = [[NSMutableData alloc] init] ;
+    
+    char *ptr = (char*)m_DataBuffer.bytes;
+    for (int i=0; i<len; i++)
+    {
+        if (*(ptr+i)!='\0')
+            [mutdata appendBytes:(ptr+i) length:1] ;
+    }
+    
+    NSString * strBuf = [[NSString alloc] initWithBytes:mutdata.bytes length:mutdata.length encoding:NSASCIIStringEncoding] ;
+    
+    if (!strBuf)
+    {
+        [strBuf release];
+        [mutdata release];
+        return NULL;
+    }
+    
+    NSString * str = [NSString stringWithString:strBuf];
+    [strBuf release];
+    [mutdata release];
+    
+    return [str UTF8String];
+}
 
 int CRS232::WaitDetect(int timeout)
 {
     int r = -1;
-    NSTimeInterval now;
     //    NSLog(@" * * * * * \ndylib Detect :%@ * * * * * \n",m_strStringToDetect);
     NSTimeInterval starttime = [[NSDate date]timeIntervalSince1970];
     double tm = (double)timeout/1000.0;
-    //NSLog(@"starting is : %f",starttime);
-//    NSLog(@"end time : %f",starttime+tm);
+    NSLog(@"starting to wait : %@",m_strDetect);
     while (1)
     {
-        now = [[NSDate date]timeIntervalSince1970];
-        //NSLog(@"end time : %f\r\n",now);
+        NSTimeInterval now = [[NSDate date]timeIntervalSince1970];
         if ((now-starttime)>=tm)
         {
             r = -2;
@@ -261,8 +396,8 @@ int CRS232::WaitDetect(int timeout)
         [[NSRunLoop currentRunLoop] runMode:NSDefaultRunLoopMode beforeDate:[NSDate date]];
         [NSThread sleepForTimeInterval:0.01];
     }
-    //NSLog(@"end %f\r",now);
-    //NSLog(@"%d\r",r);
+    
+    NSLog(@"waiting finished : %d",r);
     return r;  //cancel
 }
 
@@ -284,12 +419,12 @@ const char * CRS232::WriteReadString(const char * buffer,int timeout)
 
 int CRS232::Close()
 {
+    std::cout<<"RS232 publisher close()"<<std::endl;
     CPubliser::close();
-    CReplier::close();
+    //CReplier::close();
     CSerialPort::close();
     return 0;
-}
-/**********************************SerCoreBoard************************************************/
+}/**********************************SerCoreBoard************************************************/
 //Function
 
 cSerCoreBoard::cSerCoreBoard()
@@ -584,7 +719,6 @@ const char ConvTable[16]=
     '0','1','2','3','4','5','6','7','8','9','A','B','C','D','E','F'
 };
 const char * gStringOK="Done";
-NSFileHandle * fh;
 int StrCmp(char *Indata, const char *Strs, int size)
 {
     int i;
@@ -617,9 +751,42 @@ int StrCmp(char *Indata, const char *Strs, int size)
     return 0;
     
 }
+
+NSString * LogPath=@"/vault/Intelli_log/CoreBoard";
+NSFileHandle *f;
 int LogWrite(NSString *temp)
 {
-    [fh seekToEndOfFile];
-    [fh writeData:[temp dataUsingEncoding:NSUTF8StringEncoding]];
+    f = [NSFileHandle fileHandleForWritingAtPath:LogPath];
+    if (f)
+    {
+        [f seekToEndOfFile];
+        NSDateFormatter *dateFormatter = [[NSDateFormatter alloc] init];
+        [dateFormatter setDateFormat:@"yyyy/MM/dd HH:mm:ss.SSS"];
+        NSString * strTime = [dateFormatter stringFromDate:[NSDate date]];
+        NSString * strCont = [NSString stringWithFormat:@"\r\n%@ : \t %@",strTime,temp];
+        [f writeData:[strCont dataUsingEncoding:NSASCIIStringEncoding]];
+        [f closeFile];
+    }
+    else
+    {
+        if(LogPath == NULL)
+        {
+            return -1;
+        }
+        else
+        {
+            NSString *str3 = @"CoreBoard(A1.0) Debug Infomation(Dylib V1.4):\r\n";
+            [str3 writeToFile:LogPath atomically:YES encoding:NSUTF8StringEncoding error:nil];
+            f=[NSFileHandle fileHandleForWritingAtPath:LogPath];
+            [f seekToEndOfFile];
+            NSDateFormatter *dateFormatter = [[NSDateFormatter alloc] init];
+            [dateFormatter setDateFormat:@"yyyy/MM/dd HH:mm:ss.SSS"];
+            NSString * strTime = [dateFormatter stringFromDate:[NSDate date]];
+            NSString * strCont = [NSString stringWithFormat:@"\r\n%@ : \t %@",strTime,temp];
+            [f writeData:[strCont dataUsingEncoding:NSASCIIStringEncoding]];
+            [f closeFile];
+
+        }
+    }
     return 0;
 }

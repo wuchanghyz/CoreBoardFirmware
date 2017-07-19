@@ -6,6 +6,7 @@
 //  Copyright © 2016年 IvanGan. All rights reserved.
 //
 
+
 #import "SerialPort.h"
 
 #include <sys/types.h>
@@ -35,7 +36,7 @@ CSerialPort::~CSerialPort()
 
 int CSerialPort::connect(const char * dev)
 {
-    printf("CSerialPort::connect:");
+    printf("CSerialPort::connect");
     fd = open(dev, O_RDWR|O_NOCTTY|O_NDELAY);
     if (-1 == fd)
     {
@@ -44,7 +45,7 @@ int CSerialPort::connect(const char * dev)
     }
     else
     {
-        printf("open %s ..... success!\r",dev);
+        printf("open %s .....\n",dev);
     }
     
     if(fcntl(fd, F_SETFL, 0)<0)
@@ -63,7 +64,6 @@ int CSerialPort::connect(const char * dev)
     {
         printf("isatty success!\n");
     }
-    printf("fd-open=%d\n",fd);
     
     bReadDataInBackGround = true;
     pthread_create(&m_thread, nullptr, ReadDataInBackGround, this);
@@ -172,7 +172,7 @@ int CSerialPort::set_opt(unsigned long nSpeed, int nBits, char nEvent, int nStop
     if(customerspeed == true)
         ioctl(fd, IOSSIOSPEED, &nSpeed);//set customer
     
-    //printf("set done!\n");
+    printf("set done!\n");
     return 0;
 }
 
@@ -221,6 +221,7 @@ void * CSerialPort::ReadDataInBackGround(void * arg)
         switch(ret)
         {
             case -1:
+                break;
             case 0:
                 break;
             default:
@@ -231,8 +232,7 @@ void * CSerialPort::ReadDataInBackGround(void * arg)
                     if(n==-1)
                     {
                         std::cout<<"[IO CTRL],get FIONREAD failed,with return:"<<errno<<std::endl;
-                        //continue;
-                        break;
+                        continue;
                     }
                     if(bytes <= 0)
                         break;
@@ -245,11 +245,12 @@ void * CSerialPort::ReadDataInBackGround(void * arg)
                         break;
                     }
                     pThis->didReceiveData(pBuffer, recvbytes);
+                    //printf("\r\ndidReceiveData******  :%s",pBuffer);
                     delete [] pBuffer;
                 }
         }
         timeout.tv_sec = 0;
-        usleep(100);
+        usleep(1000);
     }
     return nullptr;
 }
@@ -258,10 +259,10 @@ int CSerialPort::write(void * buffer, long len)
 {
     if(fd>0)
     {
-        int ret =  ::write(fd, buffer, len);
+        ssize_t ret =  ::write(fd, buffer, len);
         if(ret < 0)
             std::cout<<"[TCPCLIENT]:Writ socket faile,with return error : "<<errno<<std::endl;
-        return ret;
+        return (int)ret;
     }
     return -1;
 }
@@ -270,7 +271,7 @@ int CSerialPort::read(void * buffer, int len)
 {
     if(fd>0)
     {
-        return ::read(fd, buffer, len);
+        return (int)::read(fd, buffer, len);
     }
     return -1;
 }
