@@ -87,6 +87,8 @@ int String2Char(char *InputData)
         String = strtok(NULL,del1);
         i++;
     }
+    String = nullptr;
+    free(String);
     return i;
 }
 /*
@@ -199,6 +201,12 @@ const char * cIA863_SimBoard::CCLogicSwitch(unsigned char Channel, unsigned char
     {
         return (char *)"Error.";
     }
+    data1 = nullptr;
+    free(data1);
+    data2 = nullptr;
+    free(data2);
+    
+
     return buffers;
 }
 
@@ -225,6 +233,11 @@ const char * cIA863_SimBoard::TypeCUsb2Switch(unsigned char Channel, unsigned ch
             return buffers;
         }
     }
+    data1 = nullptr;
+    free(data1);
+    data2 = nullptr;
+    free(data2);
+   
     return buffers;
 }
 const char * cIA863_SimBoard::TypeC_EloadSwitch(unsigned char Channel,unsigned char Statue)
@@ -240,6 +253,10 @@ const char * cIA863_SimBoard::TypeC_EloadSwitch(unsigned char Channel,unsigned c
             buffers=PD_Controller[Channel-1].SendCommend(data1,data2);
             if(StrCmp(buffers,gStringOK,4) == 0)
             {
+                data1 = nullptr;
+                free(data1);
+                data2 = nullptr;
+                free(data2);
                 return buffers;
             }
         }
@@ -248,14 +265,29 @@ const char * cIA863_SimBoard::TypeC_EloadSwitch(unsigned char Channel,unsigned c
             buffers=PD_Controller[Channel-1].SendCommend(data1,data2);
             if(StrCmp(buffers,gStringOK,4) == 0)
             {
+                data1 = nullptr;
+                free(data1);
+                data2 = nullptr;
+                free(data2);
+
                 return buffers;
             }
 
         }
+        data1 = nullptr;
+        free(data1);
+        data2 = nullptr;
+        free(data2);
+
         return buffers;
     }
     else
     {
+        data1 = nullptr;
+        free(data1);
+        data2 = nullptr;
+        free(data2);
+
         return (char *)"Channel para error.";
     }
     
@@ -483,7 +515,7 @@ const char * cIA863_SimBoard::TypeAUsb3RedriverWrite(unsigned char TxData, unsig
     {
         return buffer;
     }
-    //usleep(100000);
+    usleep(100000);
     buffer = IoExpander[1].Setoutput(IoData[1]);
     return buffer;
     
@@ -551,7 +583,7 @@ const char * cIA863_SimBoard::TypeAUsbSwitch(unsigned char Channel, unsigned cha
     {
         return buffer;
     }
-    //usleep(100000);
+    usleep(100000);
     return IoExpander[1].Setoutput(IoData[1]);
 }
 const char * cIA863_SimBoard::TypeAEloadSwitch(unsigned char Channel)
@@ -597,8 +629,13 @@ cIA863_SimBoard::cIA863_SimBoard()
 
 cIA863_SimBoard::~cIA863_SimBoard()
 {
-    [LogInfo release];
-    [VerInfo release];
+    if (LogInfo) {
+        [LogInfo release];
+    }
+    if (VerInfo){
+        [VerInfo release];
+    }
+    
     //[IoData[2] release];
 }
 
@@ -617,14 +654,9 @@ const char * cIA863_SimBoard::BoardInit(char * Items)
 {
     uint8_t i;
     char * ReadData;
-    if(Items != NULL)
-    {
-        ReadData = CoreBoard.Open(Items);
-    }
-    else
-    {
-        ReadData = CoreBoard.Open("/dev/cu.usbmodemVer11");
-    }
+    
+    
+    ReadData = CoreBoard.Open("/dev/cu.usbmodemVer11");
     if(strcmp(ReadData,"Done.") != 0)
     {
         [LogInfo appendString:@"BoardInit() Error.\r\n"];
@@ -672,6 +704,8 @@ const char * cIA863_SimBoard::BoardInit(char * Items)
     }
     [LogInfo appendString:@"BoardInit() Done.\r\n"];
     LogWrite(@"BoardInit() Done.\r\n");
+    ReadData = nullptr;
+    free(ReadData);
     return (char *)"Items Done.";
 }
 const char * cIA863_SimBoard::SelfTest(void)
@@ -777,7 +811,7 @@ const char * cIA863_SimBoard::ResetAll(char * Items)
     {
         for(i=0;i<2;i++)
         {
-            //usleep(100000);
+            usleep(100000);
             IoData[i] = 0;
             buffers = IoExpander[i].Setoutput(IoData[i]);
             if(StrCmp(buffers,gStringOK,4) == 0)
@@ -787,7 +821,7 @@ const char * cIA863_SimBoard::ResetAll(char * Items)
                 LogWrite([NSString stringWithFormat:@"CH:%d Setoutput(0x0000) Error.(%s)\r\n",i,buffers]);
                 return buffers;
             }
-            //usleep(100000);
+            usleep(100000);
             buffers = IoExpander[i].Config(0x0000);
             if(StrCmp(buffers,gStringOK,4) == 0)
             {
@@ -803,7 +837,7 @@ const char * cIA863_SimBoard::ResetAll(char * Items)
         for(i=0;i<4;i++)
         {
             //sbu en
-            //usleep(100000);
+            usleep(100000);
             buffers=PD_Controller[i].SendCommend("GPsh","0F");
             if(StrCmp(buffers,gStringOK,4) == 0)
             {
@@ -816,7 +850,7 @@ const char * cIA863_SimBoard::ResetAll(char * Items)
             {
                 LogWrite([NSString stringWithFormat:@" CH:%d_1",i+1]);
             }
-            //usleep(100000);
+            usleep(100000);
             //cc flip
             buffers=PD_Controller[i].SendCommend("GPsl","00");
             if(StrCmp(buffers,gStringOK,4) == 0)
@@ -829,7 +863,7 @@ const char * cIA863_SimBoard::ResetAll(char * Items)
             {
                 LogWrite([NSString stringWithFormat:@" CH:%d_2",i+1]);
             }
-            //usleep(100000);
+            usleep(100000);
             //usb2.0 flip
             buffers=PD_Controller[i].SendCommend("GPsl","10");
             if(StrCmp(buffers,gStringOK,4) == 0)
@@ -842,7 +876,7 @@ const char * cIA863_SimBoard::ResetAll(char * Items)
             {
                 LogWrite([NSString stringWithFormat:@" CH:%d_3",i+1]);
             }
-            //usleep(100000);
+            usleep(100000);
             //usb2.0 device select
             buffers=PD_Controller[i].SendCommend("GPsl","08");
             if(StrCmp(buffers,gStringOK,4) == 0)
@@ -855,7 +889,7 @@ const char * cIA863_SimBoard::ResetAll(char * Items)
             {
                 LogWrite([NSString stringWithFormat:@" CH:%d_4",i+1]);
             }
-            //usleep(100000);
+            usleep(100000);
             //usb2.0 en
             buffers=PD_Controller[i].SendCommend("GPsh","02");
             if(StrCmp(buffers,gStringOK,4) == 0)
@@ -868,7 +902,7 @@ const char * cIA863_SimBoard::ResetAll(char * Items)
             {
                 LogWrite([NSString stringWithFormat:@" CH:%d_5",i+1]);
             }
-            //usleep(100000);
+            usleep(100000);
             //vbus to pd controller en
             buffers=PD_Controller[i].SendCommend("GPsl","0E");
             if(StrCmp(buffers,gStringOK,4) == 0)
@@ -881,7 +915,7 @@ const char * cIA863_SimBoard::ResetAll(char * Items)
             {
                 LogWrite([NSString stringWithFormat:@" CH:%d_6",i+1]);
             }
-            //usleep(100000);
+            usleep(100000);
             //vbus to charge en
             buffers=PD_Controller[i].SendCommend("GPsl","03");
             if(StrCmp(buffers,gStringOK,4) == 0)
@@ -894,7 +928,7 @@ const char * cIA863_SimBoard::ResetAll(char * Items)
             {
                 LogWrite([NSString stringWithFormat:@" CH:%d_7",i+1]);
             }
-            //usleep(100000);
+            usleep(100000);
             //cc en
             buffers=PD_Controller[i].SendCommend("GPsh","06");
             if(StrCmp(buffers,gStringOK,4) == 0)
@@ -907,7 +941,7 @@ const char * cIA863_SimBoard::ResetAll(char * Items)
             {
                 LogWrite([NSString stringWithFormat:@" CH:%d_8 ",i+1]);
             }
-            // //usleep(100000);
+            // usleep(100000);
             // buffers = (char *)DP_Reset(i+1);
             // if(StrCmp(buffers,gStringOK,4) == 0)
             // {
@@ -945,7 +979,7 @@ const char * cIA863_SimBoard::USBA_Items(unsigned char Channel, const char * Ite
         }
         else
         {
-            //usleep(100000);
+            usleep(100000);
             ReturnData = (char *)TypeAPower(Channel, 1);
             if(StrCmp(ReturnData,gStringOK,4) == 0)
             {
@@ -966,7 +1000,7 @@ const char * cIA863_SimBoard::USBA_Items(unsigned char Channel, const char * Ite
         }
         else
         {
-            //usleep(100000);
+            usleep(100000);
             ReturnData =(char *)TypeAUsb3RedriverWrite(14,1);
             if(StrCmp(ReturnData,gStringOK,4) == 0)
             {
@@ -974,7 +1008,7 @@ const char * cIA863_SimBoard::USBA_Items(unsigned char Channel, const char * Ite
                 LogWrite([NSString stringWithFormat:@"TypeAUsb3RedriverWrite(14,1) Error.\r\n"]);
                 return ReturnData;
             }
-            //usleep(100000);
+            usleep(100000);
             ReturnData= (char *)TypeAUsbSwitch(Channel, 1);
             if(StrCmp(ReturnData,gStringOK,4) == 0)
             {
@@ -982,7 +1016,7 @@ const char * cIA863_SimBoard::USBA_Items(unsigned char Channel, const char * Ite
                 LogWrite([NSString stringWithFormat:@"TypeAUsbSwitch(%d,1) Error.\r\n",Channel]);
                 return ReturnData;
             }
-            //usleep(100000);
+            usleep(100000);
             ReturnData = (char *)TypeAPower(Channel, 1);
             if(StrCmp(ReturnData,gStringOK,4) == 0)
             {
@@ -1006,7 +1040,7 @@ const char * cIA863_SimBoard::USBA_Items(unsigned char Channel, const char * Ite
         {
             for (i=1;i<5;i++)
             {
-                //usleep(100000);
+                usleep(100000);
                 ReturnData = (char *)TypeAEloadSwitch(i);
                 if(StrCmp(ReturnData,gStringOK,4) == 0)
                 {
@@ -1030,7 +1064,7 @@ const char * cIA863_SimBoard::USBA_Items(unsigned char Channel, const char * Ite
         }
         else
         {
-            //usleep(100000);
+            usleep(100000);
             ReturnData = (char *)TypeASdCardSwitch(Statue&0x03);
             if(StrCmp(ReturnData,gStringOK,4) == 0)
             {
@@ -1065,7 +1099,7 @@ const char * cIA863_SimBoard::USBC_Items(unsigned char Channel, const char * Ite
         return buffers;
     }
         
-    //sleep(5);
+    sleep(5);
     if(StrCmp("2.0",Items,3)==3)
     {
         [LogInfo appendString:@"2.0\r\n"];
@@ -1079,7 +1113,7 @@ const char * cIA863_SimBoard::USBC_Items(unsigned char Channel, const char * Ite
             {
                 
                 //cc flip
-                //usleep(100000);
+                usleep(100000);
                 buffers=PD_Controller[Channel-1].SendCommend("GPsl","00");
                 if(StrCmp(buffers,gStringOK,4) == 0)
                 {
@@ -1087,7 +1121,7 @@ const char * cIA863_SimBoard::USBC_Items(unsigned char Channel, const char * Ite
                     LogWrite([NSString stringWithFormat:@"CH:%d SendCommend(\"GPsl\",\"00\") Error.\r\n",Channel]);
                     return buffers;
                 }
-                //usleep(100000);
+                usleep(100000);
                 //usb2.0 flip
                 buffers=PD_Controller[Channel-1].SendCommend("GPsl","10");
                 if(StrCmp(buffers,gStringOK,4) == 0)
@@ -1101,7 +1135,7 @@ const char * cIA863_SimBoard::USBC_Items(unsigned char Channel, const char * Ite
             else if(Statue == 2)
             {
                 //cc flip
-                //usleep(100000);
+                usleep(100000);
                 buffers=PD_Controller[Channel-1].SendCommend("GPsh","00");
                 if(StrCmp(buffers,gStringOK,4) == 0)
                 {
@@ -1109,7 +1143,7 @@ const char * cIA863_SimBoard::USBC_Items(unsigned char Channel, const char * Ite
                     LogWrite([NSString stringWithFormat:@"CH:%d SendCommend(\"GPsl\",\"00\") Error.\r\n",Channel]);
                     return buffers;
                 }
-                //usleep(100000);
+                usleep(100000);
                 //usb2.0 flip
                 buffers=PD_Controller[Channel-1].SendCommend("GPsh","10");
                 if(StrCmp(buffers,gStringOK,4) == 0)
@@ -1119,7 +1153,7 @@ const char * cIA863_SimBoard::USBC_Items(unsigned char Channel, const char * Ite
                     return buffers;
                 }
             }
-            //usleep(100000);
+            usleep(100000);
             //usb2.0 en
             buffers=PD_Controller[Channel-1].SendCommend("GPsl","02");
             if(StrCmp(buffers,gStringOK,4) == 0)
@@ -1128,7 +1162,7 @@ const char * cIA863_SimBoard::USBC_Items(unsigned char Channel, const char * Ite
                 LogWrite([NSString stringWithFormat:@"CH:%d SendCommend(\"GPsh\",\"02\") Error.\r\n",Channel]);
                 return buffers;
             }
-            //usleep(100000);
+            usleep(100000);
             //vbus to pd controller en
             buffers=PD_Controller[Channel-1].SendCommend("GPsh","0E");
             if(StrCmp(buffers,gStringOK,4) == 0)
@@ -1137,7 +1171,7 @@ const char * cIA863_SimBoard::USBC_Items(unsigned char Channel, const char * Ite
                 LogWrite([NSString stringWithFormat:@"CH:%d SendCommend(\"GPsl\",\"0E\") Error.\r\n",Channel]);
                 return buffers;
             }
-            //usleep(100000);
+            usleep(100000);
             //cc en
             buffers=PD_Controller[Channel-1].SendCommend("GPsl","06");
             if(StrCmp(buffers,gStringOK,4) == 0)
@@ -1159,7 +1193,7 @@ const char * cIA863_SimBoard::USBC_Items(unsigned char Channel, const char * Ite
         }
         else
         {
-            //usleep(100000);
+            usleep(100000);
             buffers = (char *)DP_Init(Channel);
             if(StrCmp(buffers,gStringOK,4) == 0)
             {
@@ -1167,7 +1201,7 @@ const char * cIA863_SimBoard::USBC_Items(unsigned char Channel, const char * Ite
                 LogWrite([NSString stringWithFormat:@"DP_Init(%d) Error.\r\n",Channel]);
                 return buffers;
             }
-            //usleep(100000);
+            usleep(100000);
             buffers = (char *)DP_SBU_Switch(Channel,1);
             if(StrCmp(buffers,gStringOK,4) == 0)
             {
@@ -1175,7 +1209,7 @@ const char * cIA863_SimBoard::USBC_Items(unsigned char Channel, const char * Ite
                 LogWrite([NSString stringWithFormat:@"DP_SBU_Switch(%d,1) Error.\r\n",Channel]);
                 return buffers;
             }
-            //usleep(100000);
+            usleep(100000);
             buffers = (char *)CCLogicSwitch(Channel,1);
             if(StrCmp(buffers,gStringOK,4) == 0)
             {
@@ -1195,7 +1229,7 @@ const char * cIA863_SimBoard::USBC_Items(unsigned char Channel, const char * Ite
             buffers = (char *)DP_Status(Channel);
             [LogInfo appendFormat:@"%s",buffers];
             LogWrite([NSString stringWithFormat:@"%s",buffers]);
-            //usleep(100000);
+            usleep(100000);
             buffers = (char *)DP_SendHpd(Channel);
             if(StrCmp(buffers,gStringOK,4) == 0)
             {
@@ -1224,7 +1258,7 @@ const char * cIA863_SimBoard::USBC_Items(unsigned char Channel, const char * Ite
                 {
                     
                     //cc flip
-                    //usleep(100000);
+                    usleep(100000);
                     buffers=PD_Controller[j].SendCommend("GPsl","00");
                     if(StrCmp(buffers,gStringOK,4) == 0)
                     {
@@ -1232,7 +1266,7 @@ const char * cIA863_SimBoard::USBC_Items(unsigned char Channel, const char * Ite
                         LogWrite([NSString stringWithFormat:@"ResetAll() Error.\r\n"@"CH:%d SendCommend(\"GPsl\",\"00\") Error.\r\n",j+1]);
                         return buffers;
                     }
-                    //usleep(100000);
+                    usleep(100000);
                     //usb2.0 flip
                     buffers=PD_Controller[j].SendCommend("GPsl","10");
                     if(StrCmp(buffers,gStringOK,4) == 0)
@@ -1246,7 +1280,7 @@ const char * cIA863_SimBoard::USBC_Items(unsigned char Channel, const char * Ite
                 else if(Statue == 2)
                 {
                     //cc flip
-                    //usleep(100000);
+                    usleep(100000);
                     buffers=PD_Controller[j].SendCommend("GPsh","00");
                     if(StrCmp(buffers,gStringOK,4) == 0)
                     {
@@ -1254,7 +1288,7 @@ const char * cIA863_SimBoard::USBC_Items(unsigned char Channel, const char * Ite
                         LogWrite([NSString stringWithFormat:@"CH:%d SendCommend(\"GPsl\",\"00\") Error.\r\n",j+1]);
                         return buffers;
                     }
-                    //usleep(100000);
+                    usleep(100000);
                     //usb2.0 flip
                     buffers=PD_Controller[j].SendCommend("GPsh","10");
                     if(StrCmp(buffers,gStringOK,4) == 0)
@@ -1264,7 +1298,7 @@ const char * cIA863_SimBoard::USBC_Items(unsigned char Channel, const char * Ite
                         return buffers;
                     }
                 }
-                //usleep(100000);
+                usleep(100000);
                 //usb2.0 en
                 //buffers=PD_Controller[i].SendCommend("GPsl","02");
                 //if(StrCmp(buffers,gStringOK,4) == 0)
@@ -1272,7 +1306,7 @@ const char * cIA863_SimBoard::USBC_Items(unsigned char Channel, const char * Ite
                 //    [LogInfo appendFormat:@"CH:%d SendCommend(\"GPsh\",\"02\") Error.\r\n",i+1];
                 //    return buffers;
                 //}
-                ////usleep(100000);
+                usleep(100000);
                 //vbus to pd controller en
                 buffers=PD_Controller[j].SendCommend("GPsh","03");
                 if(StrCmp(buffers,gStringOK,4) == 0)
@@ -1288,7 +1322,7 @@ const char * cIA863_SimBoard::USBC_Items(unsigned char Channel, const char * Ite
                     LogWrite([NSString stringWithFormat:@"CH:%d SendCommend(\"GPsl\",\"0E\") Error.\r\n",j+1]);
                     return buffers;
                 }
-                //usleep(100000);
+                usleep(100000);
                 //cc en
                 buffers=PD_Controller[j].SendCommend("GPsl","06");
                 if(StrCmp(buffers,gStringOK,4) == 0)
@@ -1313,7 +1347,7 @@ const char * cIA863_SimBoard::USBC_Items(unsigned char Channel, const char * Ite
             if(Statue == 1)
             {
                 //usb2.0 flip
-                //usleep(100000);
+                usleep(100000);
                 buffers=PD_Controller[Channel-1].SendCommend("GPsl","10");
                 if(StrCmp(buffers,gStringOK,4) == 0)
                 {
@@ -1325,7 +1359,7 @@ const char * cIA863_SimBoard::USBC_Items(unsigned char Channel, const char * Ite
             else if(Statue == 2)
             {
                 //usb2.0 flip
-                //usleep(100000);
+                usleep(100000);
                 buffers=PD_Controller[Channel-1].SendCommend("GPsh","10");
                 if(StrCmp(buffers,gStringOK,4) == 0)
                 {
@@ -1334,7 +1368,7 @@ const char * cIA863_SimBoard::USBC_Items(unsigned char Channel, const char * Ite
                     return buffers;
                 }
             }
-            //usleep(100000);
+            usleep(100000);
             //usb2.0 device select
             buffers=PD_Controller[Channel-1].SendCommend("GPsh","08");
             if(StrCmp(buffers,gStringOK,4) == 0)
@@ -1343,7 +1377,7 @@ const char * cIA863_SimBoard::USBC_Items(unsigned char Channel, const char * Ite
                 LogWrite([NSString stringWithFormat:@"CH:%d SendCommend(\"GPsl\",\"08\") Error.\r\n",Channel]);
                 return buffers;
             }
-            //usleep(100000);
+            usleep(100000);
             //usb2.0 en
             buffers=PD_Controller[Channel-1].SendCommend("GPsl","02");
             if(StrCmp(buffers,gStringOK,4) == 0)
@@ -1366,7 +1400,7 @@ const char * cIA863_SimBoard::USBC_Items(unsigned char Channel, const char * Ite
             if(Statue == 1)
             {
                 //usb2.0 flip
-                //usleep(100000);
+                usleep(100000);
                 buffers=PD_Controller[0].SendCommend("GPsl","10");
                 if(StrCmp(buffers,gStringOK,4) == 0)
                 {
@@ -1386,7 +1420,7 @@ const char * cIA863_SimBoard::USBC_Items(unsigned char Channel, const char * Ite
                     return buffers;
                 }
             }
-            //usleep(100000);
+            usleep(100000);
             //usb2.0 device select
             buffers=PD_Controller[0].SendCommend("GPsh","08");
             if(StrCmp(buffers,gStringOK,4) == 0)
@@ -1395,7 +1429,7 @@ const char * cIA863_SimBoard::USBC_Items(unsigned char Channel, const char * Ite
                 LogWrite([NSString stringWithFormat:@"CH:%d SendCommend(\"GPsl\",\"08\") Error.\r\n",1]);
                 return buffers;
             }
-            //usleep(100000);
+            usleep(100000);
             //usb2.0 en
             buffers=PD_Controller[0].SendCommend("GPsl","02");
             if(StrCmp(buffers,gStringOK,4) == 0)
@@ -1419,7 +1453,7 @@ const char * cIA863_SimBoard::USBC_Items(unsigned char Channel, const char * Ite
 }
 const char * cIA863_SimBoard::Help(void)
 {
-    [VerInfo appendString:@"Version: For J137 EVT V1.3\r\n\r\n"];
+    [VerInfo appendString:@"Version: For J137 EVT V1.42\r\n\r\n"];
     
     [VerInfo appendString:@"const char * BoardInit(void)  --Init Type A and Type C Module.\r\n"];
     [VerInfo appendString:@"const char * ResetAll(void) --Reset All Type A and Type C Moldule.\r\n"];
@@ -1505,11 +1539,20 @@ const char * cIA863_SimBoard::Close(void)
 
 const char * cIA863_SimBoard::LogPathSet(const char * Paths)
 {
+    NSString *temp=@"Begin Write To Already Exist Files!";
     LogPath = [NSString stringWithUTF8String:Paths];
     f = [NSFileHandle fileHandleForWritingAtPath:LogPath];
+    
     if (f)
     {
-        return "The files already exist";
+        [f seekToEndOfFile];
+        NSDateFormatter *dateFormatter = [[NSDateFormatter alloc] init];
+        [dateFormatter setDateFormat:@"yyyy/MM/dd HH:mm:ss.SSS"];
+        NSString * strTime = [dateFormatter stringFromDate:[NSDate date]];
+        NSString * strCont = [NSString stringWithFormat:@"\r\n%@ : \t %@",strTime,temp];
+        [f writeData:[strCont dataUsingEncoding:NSASCIIStringEncoding]];
+        [f closeFile];
+        
     }
     else
     {
@@ -1519,7 +1562,7 @@ const char * cIA863_SimBoard::LogPathSet(const char * Paths)
         }
         else
         {
-            NSString *str3 = @"CoreBoard(A1.0) Debug Infomation(Dylib V1.4):\r\n";
+            NSString *str3 = @"CoreBoard(A1.0) Debug Infomation(Dylib V1.42):\r\n";
             [str3 writeToFile:LogPath atomically:YES encoding:NSUTF8StringEncoding error:nil];
             f=[NSFileHandle fileHandleForWritingAtPath:LogPath];
             [f closeFile];

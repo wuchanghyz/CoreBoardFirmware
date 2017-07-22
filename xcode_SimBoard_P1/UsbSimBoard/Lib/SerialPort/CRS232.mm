@@ -370,7 +370,7 @@ int CRS232::WaitDetect(int timeout)
     //    NSLog(@" * * * * * \ndylib Detect :%@ * * * * * \n",m_strStringToDetect);
     NSTimeInterval starttime = [[NSDate date]timeIntervalSince1970];
     double tm = (double)timeout/1000.0;
-    NSLog(@"starting to wait : %@",m_strDetect);
+    //NSLog(@"starting to wait : %@",m_strDetect);
     while (1)
     {
         NSTimeInterval now = [[NSDate date]timeIntervalSince1970];
@@ -397,7 +397,7 @@ int CRS232::WaitDetect(int timeout)
         [NSThread sleepForTimeInterval:0.01];
     }
     
-    NSLog(@"waiting finished : %d",r);
+    //NSLog(@"waiting finished : %d",r);
     return r;  //cancel
 }
 
@@ -475,6 +475,7 @@ char * cSerCoreBoard::I2cInit(I2cChannel_t I2cNum, i2c_clock_divider_t Divede)
     {
         return (char *)"Error I2cNum Out Of Range.";
     }
+    ClearBuffer();
     [I2CSendBuffer[I2cNum] setString:@""];
     [I2CSendBuffer[I2cNum] appendFormat:@"[],I2C,%d,3 1 0 %d,\r\n",(uint8_t)I2cNum, (uint8_t)Divede];
     for(i=0;i<RETRY_TIME;i++)
@@ -489,6 +490,7 @@ char * cSerCoreBoard::I2cInit(I2cChannel_t I2cNum, i2c_clock_divider_t Divede)
             }
             else
             {
+                ClearBuffer();
                 LogWrite(@"I2C WaitDetect Fail");
             }
         }
@@ -510,6 +512,7 @@ char * cSerCoreBoard::I2cWrite(I2cChannel_t I2cNum, uint8_t DeviceAdd, NSString 
     {
         return (char *)"Error I2cNum Out Of Range.";
     }
+    ClearBuffer();
     [I2CSendBuffer[I2cNum] setString:@""];
     [I2CSendBuffer[I2cNum] appendFormat:@"[],I2C,%d,10 %02x 00 %02x ",(uint8_t)I2cNum, Len, DeviceAdd];
     [I2CSendBuffer[I2cNum] appendString:pData];
@@ -775,7 +778,7 @@ int LogWrite(NSString *temp)
         }
         else
         {
-            NSString *str3 = @"CoreBoard(A1.0) Debug Infomation(Dylib V1.4):\r\n";
+            NSString *str3 = @"CoreBoard(A1.0) Debug Infomation(Dylib V1.42):\r\n";
             [str3 writeToFile:LogPath atomically:YES encoding:NSUTF8StringEncoding error:nil];
             f=[NSFileHandle fileHandleForWritingAtPath:LogPath];
             [f seekToEndOfFile];

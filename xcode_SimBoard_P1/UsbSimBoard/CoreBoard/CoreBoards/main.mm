@@ -62,7 +62,7 @@ int main(int argc, const char * argv[]) {
     }
     buffer = (char *)IA863_SimBoard.Help();
     printf(buffer);
-    buffer = (char *)IA863_SimBoard.USBC_Items(1, "ELOAD", 1);
+    buffer = (char *)IA863_SimBoard.USBC_Items(1, "POTASSIUM", 2);
     buffer = (char *)IA863_SimBoard.USBC_Items(2, "2.0", 1);
 
     buffer = (char *)IA863_SimBoard.USBA_Items(1,"ELOAD",1);
