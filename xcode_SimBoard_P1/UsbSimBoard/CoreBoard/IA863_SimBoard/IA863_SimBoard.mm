@@ -1519,7 +1519,7 @@ const char * cIA863_SimBoard::Cat9555_IoControl(unsigned char Channel,uint16_t I
 const char * cIA863_SimBoard::I2cWrite(unsigned char I2cNum, unsigned char DeviceAdd, char *pData, unsigned char Len)
 {
     NSString * str = [NSString stringWithFormat:@"%s", pData];
-    //return CoreBoard.I2cWrite((I2cChannel_t)I2cNum, DeviceAdd, str, Len);
+    return CoreBoard.I2cWrite((I2cChannel_t)I2cNum, DeviceAdd, str, Len);
     return pData;
 }
 const char * cIA863_SimBoard::I2cRead(unsigned char I2cNum, unsigned char DeviceAdd, char *pSendData, unsigned char SendLen, unsigned char RevLen)
