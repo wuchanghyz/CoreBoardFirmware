@@ -21,15 +21,12 @@ public:
     cIA863_SimBoard(void);
     ~cIA863_SimBoard(void);
 public:
-    const char * SelfTest(void);
-    const char * BoardInit(char * Items);
+    const char * SelfTest(char *Dev);
+    const char * BoardInit(char *Dev,char * Items);
     const char * Open(char *Dev);
     const char * Close(void);
-    const char * USBA_Items(unsigned char Channel, const char * Items, unsigned char Statue); //--Channel=1,2,3,4 --Item=2.0,3.0,SD,ELOAD --Statue=0,1
     const char * USBC_Items(unsigned char Channel, const char * Items, unsigned char Statue); //--Channel=1,2,3,4 --Item=2.0,DP,ELOAD --Statue=0,1,2
     const char * ResetAll(char * Items);
-    const char * GetLogInfo(void);
-    const char * ClearLogInfo(void);
     const char * Help(void);
     const char * PD_IoControl(unsigned char Channel,char * Number, char *Statue);
     const char * Cat9555_IoControl(unsigned char Channel,uint16_t IoData);

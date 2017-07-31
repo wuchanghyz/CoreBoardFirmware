@@ -49,17 +49,23 @@ int StrCmps(char *Indata, const char *Strs, int size)
 int main(int argc, const char * argv[]) {
     cIA863_SimBoard IA863_SimBoard;
     char *buffer;
-    char i;
-    int j;
+//    char i;
+ //   int j;
     
     //A-eload
-    buffer = (char *)IA863_SimBoard.BoardInit("BOTH");
+    buffer = (char *)IA863_SimBoard.BoardInit("/dev/cu.usbmodemVer11","BOTH");
+    //buffer = (char *)IA863_SimBoard.SelfTest("/dev/cu.usbmodemVer11");
+    buffer = (char *)IA863_SimBoard.USBC_Items(1, "POTASSIUM", 1);
+    buffer = (char *)IA863_SimBoard.USBC_Items(1, "POTASSIUM", 2);
+
+   // buffer = (char *)IA863_SimBoard.BoardInit("BOTH");
     if(StrCmps(buffer,gStringOK,4) == 0)
     {
-        buffer = (char *)IA863_SimBoard.GetLogInfo();
+       // buffer = (char *)IA863_SimBoard.GetLogInfo();
         printf("%s", buffer);
         return -1;
     }
+    /*
     buffer = (char *)IA863_SimBoard.Help();
     printf(buffer);
     buffer = (char *)IA863_SimBoard.USBC_Items(1, "POTASSIUM", 2);
@@ -68,6 +74,7 @@ int main(int argc, const char * argv[]) {
     buffer = (char *)IA863_SimBoard.USBA_Items(1,"ELOAD",1);
 
     buffer = (char *)IA863_SimBoard.USBA_Items(1,"SD",3);
+  */
    // buffer = (char *)IA863_SimBoard.USBA_Items(1,"SD",0x03);
     //buffer = (char *)IA863_SimBoard.USBC_Items(1,"CHARGE",2);
    // if(StrCmps(buffer,gStringOK,4) == 0)
@@ -86,6 +93,7 @@ int main(int argc, const char * argv[]) {
         //buffer = (char *)IA863_SimBoard.TypeCUsb2Switch(i,0);
     }
  */
+    /*
     for(j=0;j<100;j++)
     {
         buffer = (char *)IA863_SimBoard.USBC_Items(3, "DP", 1);
@@ -100,6 +108,7 @@ int main(int argc, const char * argv[]) {
         {
             return -1;
         }
+    */
    //     for(i=1;i<5;i++)
    //     {
            // buffer = (char *)IA863_SimBoard.USBA_Items(i, "2.0", 1);
@@ -150,9 +159,9 @@ int main(int argc, const char * argv[]) {
             {
                 return -1;
             }
-*/
-        }
 
+        }
+*/
         //buffer = (char *)IA863_SimBoard.TypeASdCardSwitch(1);
         //buffer = (char *)IA863_SimBoard.TypeASdCardSwitch(0);
         //buffer = (char *)IA863_SimBoard.USBC_Items(3,"2.0",1);
@@ -202,7 +211,8 @@ int main(int argc, const char * argv[]) {
  //   buffer = (char *)IA863_SimBoard.TypeC_EloadSwitch(3,1);
     //buffer = (char *)IA863_SimBoard.DP_SendHpd(3);
     //buffer = (char *)IA863_SimBoard.DP_Init(3);
-   while(1)
+/*
+while(1)
     {
         buffer = (char *)IA863_SimBoard.DP_SendHpd(3);
        // buffer = (char *)IA863_SimBoard.DP_SendHpd(3);
@@ -215,5 +225,6 @@ int main(int argc, const char * argv[]) {
     }
     
     while(1);
+*/
     return 0;
 }

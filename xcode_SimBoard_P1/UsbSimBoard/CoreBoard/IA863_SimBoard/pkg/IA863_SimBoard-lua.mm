@@ -1,6 +1,6 @@
 /*
 ** Lua binding: IA863_SimBoard
-** Generated automatically by tolua++-1.0.92 on Wed Jul 19 13:22:08 2017.
+** Generated automatically by tolua++-1.0.92 on Sat Jul 29 11:17:34 2017.
 */
 
 #ifndef __cplusplus
@@ -128,18 +128,20 @@ static int tolua_IA863_SimBoard_cIA863_SimBoard_SelfTest00(lua_State* tolua_S)
  tolua_Error tolua_err;
  if (
      !tolua_isusertype(tolua_S,1,"cIA863_SimBoard",0,&tolua_err) ||
-     !tolua_isnoobj(tolua_S,2,&tolua_err)
+     !tolua_isstring(tolua_S,2,0,&tolua_err) ||
+     !tolua_isnoobj(tolua_S,3,&tolua_err)
  )
   goto tolua_lerror;
  else
 #endif
  {
   cIA863_SimBoard* self = (cIA863_SimBoard*)  tolua_tousertype(tolua_S,1,0);
+  char* Dev = ((char*)  tolua_tostring(tolua_S,2,0));
 #ifndef TOLUA_RELEASE
   if (!self) tolua_error(tolua_S,"invalid 'self' in function 'SelfTest'", NULL);
 #endif
   {
-   const char* tolua_ret = (const char*)  self->SelfTest();
+   const char* tolua_ret = (const char*)  self->SelfTest(Dev);
    tolua_pushstring(tolua_S,(const char*)tolua_ret);
   }
  }
@@ -161,19 +163,21 @@ static int tolua_IA863_SimBoard_cIA863_SimBoard_BoardInit00(lua_State* tolua_S)
  if (
      !tolua_isusertype(tolua_S,1,"cIA863_SimBoard",0,&tolua_err) ||
      !tolua_isstring(tolua_S,2,0,&tolua_err) ||
-     !tolua_isnoobj(tolua_S,3,&tolua_err)
+     !tolua_isstring(tolua_S,3,0,&tolua_err) ||
+     !tolua_isnoobj(tolua_S,4,&tolua_err)
  )
   goto tolua_lerror;
  else
 #endif
  {
   cIA863_SimBoard* self = (cIA863_SimBoard*)  tolua_tousertype(tolua_S,1,0);
-  char* Items = ((char*)  tolua_tostring(tolua_S,2,0));
+  char* Dev = ((char*)  tolua_tostring(tolua_S,2,0));
+  char* Items = ((char*)  tolua_tostring(tolua_S,3,0));
 #ifndef TOLUA_RELEASE
   if (!self) tolua_error(tolua_S,"invalid 'self' in function 'BoardInit'", NULL);
 #endif
   {
-   const char* tolua_ret = (const char*)  self->BoardInit(Items);
+   const char* tolua_ret = (const char*)  self->BoardInit(Dev,Items);
    tolua_pushstring(tolua_S,(const char*)tolua_ret);
   }
  }
@@ -252,44 +256,6 @@ static int tolua_IA863_SimBoard_cIA863_SimBoard_Close00(lua_State* tolua_S)
 }
 #endif //#ifndef TOLUA_DISABLE
 
-/* method: USBA_Items of class  cIA863_SimBoard */
-#ifndef TOLUA_DISABLE_tolua_IA863_SimBoard_cIA863_SimBoard_USBA_Items00
-static int tolua_IA863_SimBoard_cIA863_SimBoard_USBA_Items00(lua_State* tolua_S)
-{
-#ifndef TOLUA_RELEASE
- tolua_Error tolua_err;
- if (
-     !tolua_isusertype(tolua_S,1,"cIA863_SimBoard",0,&tolua_err) ||
-     !tolua_isnumber(tolua_S,2,0,&tolua_err) ||
-     !tolua_isstring(tolua_S,3,0,&tolua_err) ||
-     !tolua_isnumber(tolua_S,4,0,&tolua_err) ||
-     !tolua_isnoobj(tolua_S,5,&tolua_err)
- )
-  goto tolua_lerror;
- else
-#endif
- {
-  cIA863_SimBoard* self = (cIA863_SimBoard*)  tolua_tousertype(tolua_S,1,0);
-  unsigned char Channel = ((unsigned char)  tolua_tonumber(tolua_S,2,0));
-  const char* Items = ((const char*)  tolua_tostring(tolua_S,3,0));
-  unsigned char Statue = ((unsigned char)  tolua_tonumber(tolua_S,4,0));
-#ifndef TOLUA_RELEASE
-  if (!self) tolua_error(tolua_S,"invalid 'self' in function 'USBA_Items'", NULL);
-#endif
-  {
-   const char* tolua_ret = (const char*)  self->USBA_Items(Channel,Items,Statue);
-   tolua_pushstring(tolua_S,(const char*)tolua_ret);
-  }
- }
- return 1;
-#ifndef TOLUA_RELEASE
- tolua_lerror:
- tolua_error(tolua_S,"#ferror in function 'USBA_Items'.",&tolua_err);
- return 0;
-#endif
-}
-#endif //#ifndef TOLUA_DISABLE
-
 /* method: USBC_Items of class  cIA863_SimBoard */
 #ifndef TOLUA_DISABLE_tolua_IA863_SimBoard_cIA863_SimBoard_USBC_Items00
 static int tolua_IA863_SimBoard_cIA863_SimBoard_USBC_Items00(lua_State* tolua_S)
@@ -357,70 +323,6 @@ static int tolua_IA863_SimBoard_cIA863_SimBoard_ResetAll00(lua_State* tolua_S)
 #ifndef TOLUA_RELEASE
  tolua_lerror:
  tolua_error(tolua_S,"#ferror in function 'ResetAll'.",&tolua_err);
- return 0;
-#endif
-}
-#endif //#ifndef TOLUA_DISABLE
-
-/* method: GetLogInfo of class  cIA863_SimBoard */
-#ifndef TOLUA_DISABLE_tolua_IA863_SimBoard_cIA863_SimBoard_GetLogInfo00
-static int tolua_IA863_SimBoard_cIA863_SimBoard_GetLogInfo00(lua_State* tolua_S)
-{
-#ifndef TOLUA_RELEASE
- tolua_Error tolua_err;
- if (
-     !tolua_isusertype(tolua_S,1,"cIA863_SimBoard",0,&tolua_err) ||
-     !tolua_isnoobj(tolua_S,2,&tolua_err)
- )
-  goto tolua_lerror;
- else
-#endif
- {
-  cIA863_SimBoard* self = (cIA863_SimBoard*)  tolua_tousertype(tolua_S,1,0);
-#ifndef TOLUA_RELEASE
-  if (!self) tolua_error(tolua_S,"invalid 'self' in function 'GetLogInfo'", NULL);
-#endif
-  {
-   const char* tolua_ret = (const char*)  self->GetLogInfo();
-   tolua_pushstring(tolua_S,(const char*)tolua_ret);
-  }
- }
- return 1;
-#ifndef TOLUA_RELEASE
- tolua_lerror:
- tolua_error(tolua_S,"#ferror in function 'GetLogInfo'.",&tolua_err);
- return 0;
-#endif
-}
-#endif //#ifndef TOLUA_DISABLE
-
-/* method: ClearLogInfo of class  cIA863_SimBoard */
-#ifndef TOLUA_DISABLE_tolua_IA863_SimBoard_cIA863_SimBoard_ClearLogInfo00
-static int tolua_IA863_SimBoard_cIA863_SimBoard_ClearLogInfo00(lua_State* tolua_S)
-{
-#ifndef TOLUA_RELEASE
- tolua_Error tolua_err;
- if (
-     !tolua_isusertype(tolua_S,1,"cIA863_SimBoard",0,&tolua_err) ||
-     !tolua_isnoobj(tolua_S,2,&tolua_err)
- )
-  goto tolua_lerror;
- else
-#endif
- {
-  cIA863_SimBoard* self = (cIA863_SimBoard*)  tolua_tousertype(tolua_S,1,0);
-#ifndef TOLUA_RELEASE
-  if (!self) tolua_error(tolua_S,"invalid 'self' in function 'ClearLogInfo'", NULL);
-#endif
-  {
-   const char* tolua_ret = (const char*)  self->ClearLogInfo();
-   tolua_pushstring(tolua_S,(const char*)tolua_ret);
-  }
- }
- return 1;
-#ifndef TOLUA_RELEASE
- tolua_lerror:
- tolua_error(tolua_S,"#ferror in function 'ClearLogInfo'.",&tolua_err);
  return 0;
 #endif
 }
@@ -669,11 +571,8 @@ TOLUA_API int tolua_IA863_SimBoard_open (lua_State* tolua_S)
    tolua_function(tolua_S,"BoardInit",tolua_IA863_SimBoard_cIA863_SimBoard_BoardInit00);
    tolua_function(tolua_S,"Open",tolua_IA863_SimBoard_cIA863_SimBoard_Open00);
    tolua_function(tolua_S,"Close",tolua_IA863_SimBoard_cIA863_SimBoard_Close00);
-   tolua_function(tolua_S,"USBA_Items",tolua_IA863_SimBoard_cIA863_SimBoard_USBA_Items00);
    tolua_function(tolua_S,"USBC_Items",tolua_IA863_SimBoard_cIA863_SimBoard_USBC_Items00);
    tolua_function(tolua_S,"ResetAll",tolua_IA863_SimBoard_cIA863_SimBoard_ResetAll00);
-   tolua_function(tolua_S,"GetLogInfo",tolua_IA863_SimBoard_cIA863_SimBoard_GetLogInfo00);
-   tolua_function(tolua_S,"ClearLogInfo",tolua_IA863_SimBoard_cIA863_SimBoard_ClearLogInfo00);
    tolua_function(tolua_S,"Help",tolua_IA863_SimBoard_cIA863_SimBoard_Help00);
    tolua_function(tolua_S,"PD_IoControl",tolua_IA863_SimBoard_cIA863_SimBoard_PD_IoControl00);
    tolua_function(tolua_S,"Cat9555_IoControl",tolua_IA863_SimBoard_cIA863_SimBoard_Cat9555_IoControl00);
