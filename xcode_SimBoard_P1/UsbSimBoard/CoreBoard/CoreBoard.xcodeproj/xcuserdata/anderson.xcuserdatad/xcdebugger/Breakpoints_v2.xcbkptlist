@@ -63,7 +63,7 @@
             endingColumnNumber = "9223372036854775807"
             startingLineNumber = "749"
             endingLineNumber = "749"
-            landmarkName = "cIA863_SimBoard::SelfTest(char *Dev)"
+            landmarkName = "cIA863_SimBoard::ResetAll(char * Items)"
             landmarkType = "7">
          </BreakpointContent>
       </BreakpointProxy>
@@ -79,7 +79,7 @@
             endingColumnNumber = "9223372036854775807"
             startingLineNumber = "699"
             endingLineNumber = "699"
-            landmarkName = "cIA863_SimBoard::BoardInit(char *Dev,char *Items)"
+            landmarkName = "cIA863_SimBoard::SelfTest(char *Dev)"
             landmarkType = "7">
          </BreakpointContent>
       </BreakpointProxy>
@@ -95,7 +95,7 @@
             endingColumnNumber = "9223372036854775807"
             startingLineNumber = "699"
             endingLineNumber = "699"
-            landmarkName = "cIA863_SimBoard::BoardInit(char *Dev,char *Items)"
+            landmarkName = "cIA863_SimBoard::SelfTest(char *Dev)"
             landmarkType = "7">
          </BreakpointContent>
       </BreakpointProxy>

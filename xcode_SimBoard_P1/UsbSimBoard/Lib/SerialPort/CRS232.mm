@@ -754,7 +754,7 @@ int StrCmp(char *Indata, const char *Strs, int size)
     return 0;
     
 }
-
+NSString *pData = @"V1.0\r\n";
 NSString * LogPath=@"/vault/Intelli_log/CoreBoard";
 NSFileHandle *f;
 int LogWrite(NSString *temp)
@@ -778,8 +778,7 @@ int LogWrite(NSString *temp)
         }
         else
         {
-            NSString *str3 = @"CoreBoard(A1.0) Debug Infomation(Dylib V1.42):\r\n";
-            [str3 writeToFile:LogPath atomically:YES encoding:NSUTF8StringEncoding error:nil];
+            [pData writeToFile:LogPath atomically:YES encoding:NSUTF8StringEncoding error:nil];
             f=[NSFileHandle fileHandleForWritingAtPath:LogPath];
             [f seekToEndOfFile];
             NSDateFormatter *dateFormatter = [[NSDateFormatter alloc] init];
