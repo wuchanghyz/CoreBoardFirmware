@@ -963,11 +963,11 @@ const char * cIA863_SimBoard::USBA_Items(unsigned char Channel, const char * Ite
 {
     char *ReturnData;
     char i;
-    ReturnData = (char *)ResetAll("USBA");
-    if(StrCmp(ReturnData,gStringOK,4) == 0)
-    {
-        return ReturnData;
-    }
+    //ReturnData = (char *)ResetAll("USBA");
+    //if(StrCmp(ReturnData,gStringOK,4) == 0)
+    //{
+    //    return ReturnData;
+    //}
     //sleep(5);
     if(StrCmp("2.0",Items,3)==3)
     {
@@ -1091,15 +1091,14 @@ const char * cIA863_SimBoard::USBC_Items(unsigned char Channel, const char * Ite
 {
     char * buffers;
     uint8_t j;
-    buffers = (char *)ResetAll("USBC");
-    if(StrCmp(buffers,gStringOK,4) == 0)
-    {
-        [LogInfo appendString:@"ResetAll() Error.\r\n"];
-        LogWrite([NSString stringWithFormat:@"ResetAll() Error.\r\n"]);
-        return buffers;
-    }
-        
-    sleep(5);
+    //buffers = (char *)ResetAll("USBC");
+    //if(StrCmp(buffers,gStringOK,4) == 0)
+    //{
+    //    [LogInfo appendString:@"ResetAll() Error.\r\n"];
+    //    LogWrite([NSString stringWithFormat:@"ResetAll() Error.\r\n"]);
+    //    return buffers;
+    //}
+    //sleep(5);
     if(StrCmp("2.0",Items,3)==3)
     {
         [LogInfo appendString:@"2.0\r\n"];
@@ -1453,7 +1452,7 @@ const char * cIA863_SimBoard::USBC_Items(unsigned char Channel, const char * Ite
 }
 const char * cIA863_SimBoard::Help(void)
 {
-    [VerInfo appendString:@"Version: For J137 EVT V1.42\r\n\r\n"];
+    [VerInfo appendString:@"Version: For J137 EVT V1.43\r\n\r\n"];
     
     [VerInfo appendString:@"const char * BoardInit(void)  --Init Type A and Type C Module.\r\n"];
     [VerInfo appendString:@"const char * ResetAll(void) --Reset All Type A and Type C Moldule.\r\n"];
@@ -1562,7 +1561,7 @@ const char * cIA863_SimBoard::LogPathSet(const char * Paths)
         }
         else
         {
-            NSString *str3 = @"CoreBoard(A1.0) Debug Infomation(Dylib V1.42):\r\n";
+            NSString *str3 = @"CoreBoard(A1.0) Debug Infomation(Dylib V1.43):\r\n";
             [str3 writeToFile:LogPath atomically:YES encoding:NSUTF8StringEncoding error:nil];
             f=[NSFileHandle fileHandleForWritingAtPath:LogPath];
             [f closeFile];
