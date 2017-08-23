@@ -612,7 +612,7 @@ const char * cIA863_SimBoard::TypeASdCardSwitch(unsigned char Statue)
 {
     if(Statue == 0)
     {
-        IoData[0] &= ~(Statue<<4);
+        IoData[0] &= ~(0x03<<4);
         return IoExpander[0].Setoutput(IoData[0]);
     }
     else
@@ -1644,7 +1644,7 @@ const char * cIA863_SimBoard::USBC_Items(unsigned char Channel, const char * Ite
 }
 const char * cIA863_SimBoard::Help(void)
 {
-    [VerInfo appendString:@"Version: For J137 EVT V1.44\r\n\r\n"];
+    [VerInfo appendString:@"Version: For J137 EVT V1.45\r\n\r\n"];
     
     [VerInfo appendString:@"const char * BoardInit(void)  --Init Type A and Type C Module.\r\n"];
     [VerInfo appendString:@"const char * ResetAll(void) --Reset All Type A and Type C Moldule.\r\n"];
@@ -1753,7 +1753,7 @@ const char * cIA863_SimBoard::LogPathSet(const char * Paths)
         }
         else
         {
-            NSString *str3 = @"CoreBoard(A1.0) Debug Infomation(Dylib V1.44):\r\n";
+            NSString *str3 = @"CoreBoard(A1.0) Debug Infomation(Dylib V1.45):\r\n";
             [str3 writeToFile:LogPath atomically:YES encoding:NSUTF8StringEncoding error:nil];
             f=[NSFileHandle fileHandleForWritingAtPath:LogPath];
             [f closeFile];

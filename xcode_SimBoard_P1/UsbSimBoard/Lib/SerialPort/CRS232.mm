@@ -778,7 +778,7 @@ int LogWrite(NSString *temp)
         }
         else
         {
-            NSString *str3 = @"CoreBoard(A1.0) Debug Infomation(Dylib V1.44):\r\n";
+            NSString *str3 = @"CoreBoard(A1.0) Debug Infomation(Dylib V1.45):\r\n";
             [str3 writeToFile:LogPath atomically:YES encoding:NSUTF8StringEncoding error:nil];
             f=[NSFileHandle fileHandleForWritingAtPath:LogPath];
             [f seekToEndOfFile];
