@@ -519,9 +519,9 @@ char * cSerCoreBoard::I2cWrite(I2cChannel_t I2cNum, uint8_t DeviceAdd, NSString 
     [I2CSendBuffer[I2cNum] appendString:@",\r\n"];
     for(i=0;i<RETRY_TIME;i++)
     {
-        LogWrite([NSString stringWithFormat:@"%@\r\n", I2CSendBuffer[I2cNum]]);
+        //LogWrite([NSString stringWithFormat:@"%@\r\n", I2CSendBuffer[I2cNum]]);
         j = CRS232::WriteString([I2CSendBuffer[I2cNum] UTF8String]);
-        LogWrite([NSString stringWithFormat:@"[%d] ",j]);
+        //LogWrite([NSString stringWithFormat:@"[%d] ",j]);
         if(j >= 0)
         {
             if(CRS232::WaitDetect(READ_TIME_OUT) == 0)

@@ -28,6 +28,8 @@ public:
     const char * I2cWrite(unsigned char I2cNum, unsigned char DeviceAdd, char *pData, unsigned char Len);
     const char * I2cRead(unsigned char I2cNum, unsigned char DeviceAdd, char *pSendData, unsigned char SendLen, unsigned char RevLen);
     const char * LogPathSet(const char * Paths);
+    const char * VersionRead(unsigned char Channel);
+    const char * DumpStatue(unsigned char Channel);
     const char * DP_ReceiverWrite(unsigned char Channel,unsigned char Address, unsigned short InData);
     const char * DP_ReceiverRead(unsigned char Channel,unsigned char Address);
     const char * DP_Reset(unsigned char Channel);

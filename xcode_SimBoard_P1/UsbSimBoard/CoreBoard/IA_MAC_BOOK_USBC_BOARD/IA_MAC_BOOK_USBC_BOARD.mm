@@ -214,7 +214,6 @@ cIA_MAC_BOOK_USBC_BOARD::~cIA_MAC_BOOK_USBC_BOARD()
     
     //[IoData[2] release];
 }
-
 const char * cIA_MAC_BOOK_USBC_BOARD::BoardInit(char *Dev)
 {
     uint8_t i,j;
@@ -839,7 +838,29 @@ const char * cIA_MAC_BOOK_USBC_BOARD::Close(void)
 {
     return CoreBoard.Close();
 }
+const char * cIA_MAC_BOOK_USBC_BOARD::VersionRead(unsigned char Channel)
+{
+    //need debug
+    char * buffers = PD_Controller[Channel-1].GetInput(0x06, 8);
+    
+    return buffers;
+}
+const char * cIA_MAC_BOOK_USBC_BOARD::DumpStatue(unsigned char Channel)
+{
+    //need debug
+    char * buffers = PD_Controller[Channel-1].GetInput(0x03, 4);
+    LogWrite([NSString stringWithFormat:@"CH%d Mode: %s\r\n",Channel,buffers]);
+    buffers = PD_Controller[Channel-1].GetInput(0x34, 6);
+    LogWrite([NSString stringWithFormat:@"CH%d Active PDO: %s\r\n",Channel,buffers]);
+    buffers = PD_Controller[Channel-1].GetInput(0x35, 4);
+    LogWrite([NSString stringWithFormat:@"CH%d Active RDO: %s\r\n",Channel,buffers]);
+    buffers = PD_Controller[Channel-1].GetInput(0x72, 8);
+    LogWrite([NSString stringWithFormat:@"CH%d GPIO Statue: %s\r\n",Channel,buffers]);
+    buffers = PD_Controller[Channel-1].GetInput(0x69, 4);
+    LogWrite([NSString stringWithFormat:@"CH%d CC Statue: %s\r\n",Channel,buffers]);
 
+    return "Done";
+}
 const char * cIA_MAC_BOOK_USBC_BOARD::LogPathSet(const char * Paths)
 {
     LogPath = [NSString stringWithUTF8String:Paths];

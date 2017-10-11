@@ -30,11 +30,10 @@ char * cPD_Controller::Setoutput(uint8_t Address, uint16_t InData)
     NSString *Buffer = [NSString stringWithFormat:@"%02x %02x %02x",Address,(uint8_t)((InData>>8)&0x00ff),(uint8_t)InData&0x00ff];
     return pSerialPort->I2cWrite(I2cNumber, DeviceAddress, Buffer, 3);
 }
-char * cPD_Controller::GetInput(uint8_t Address)
+char * cPD_Controller::GetInput(uint8_t Address,uint8_t Len)
 {
     NSString *Buffer = [NSString stringWithFormat:@"%02x",Address];
-    return pSerialPort->I2cRead(I2cNumber, DeviceAddress, Buffer, 1, 2);
-    return (char *)"ok";
+    return pSerialPort->I2cRead(I2cNumber, DeviceAddress, Buffer, 1, Len);
 }
 char * cPD_Controller::SendCommend(char * pCmd, char * pData)
 {

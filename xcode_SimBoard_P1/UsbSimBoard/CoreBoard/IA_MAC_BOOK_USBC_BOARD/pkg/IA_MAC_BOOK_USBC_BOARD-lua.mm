@@ -1,6 +1,6 @@
 /*
 ** Lua binding: IA_MAC_BOOK_USBC_BOARD
-** Generated automatically by tolua++-1.0.92 on Sat Aug  5 14:22:32 2017.
+** Generated automatically by tolua++-1.0.92 on Wed Oct 11 15:32:01 2017.
 */
 
 #ifndef __cplusplus
@@ -373,6 +373,74 @@ static int tolua_IA_MAC_BOOK_USBC_BOARD_cIA_MAC_BOOK_USBC_BOARD_LogPathSet00(lua
 }
 #endif //#ifndef TOLUA_DISABLE
 
+/* method: VersionRead of class  cIA_MAC_BOOK_USBC_BOARD */
+#ifndef TOLUA_DISABLE_tolua_IA_MAC_BOOK_USBC_BOARD_cIA_MAC_BOOK_USBC_BOARD_VersionRead00
+static int tolua_IA_MAC_BOOK_USBC_BOARD_cIA_MAC_BOOK_USBC_BOARD_VersionRead00(lua_State* tolua_S)
+{
+#ifndef TOLUA_RELEASE
+ tolua_Error tolua_err;
+ if (
+     !tolua_isusertype(tolua_S,1,"cIA_MAC_BOOK_USBC_BOARD",0,&tolua_err) ||
+     !tolua_isnumber(tolua_S,2,0,&tolua_err) ||
+     !tolua_isnoobj(tolua_S,3,&tolua_err)
+ )
+  goto tolua_lerror;
+ else
+#endif
+ {
+  cIA_MAC_BOOK_USBC_BOARD* self = (cIA_MAC_BOOK_USBC_BOARD*)  tolua_tousertype(tolua_S,1,0);
+  unsigned char Channel = ((unsigned char)  tolua_tonumber(tolua_S,2,0));
+#ifndef TOLUA_RELEASE
+  if (!self) tolua_error(tolua_S,"invalid 'self' in function 'VersionRead'", NULL);
+#endif
+  {
+   const char* tolua_ret = (const char*)  self->VersionRead(Channel);
+   tolua_pushstring(tolua_S,(const char*)tolua_ret);
+  }
+ }
+ return 1;
+#ifndef TOLUA_RELEASE
+ tolua_lerror:
+ tolua_error(tolua_S,"#ferror in function 'VersionRead'.",&tolua_err);
+ return 0;
+#endif
+}
+#endif //#ifndef TOLUA_DISABLE
+
+/* method: DumpStatue of class  cIA_MAC_BOOK_USBC_BOARD */
+#ifndef TOLUA_DISABLE_tolua_IA_MAC_BOOK_USBC_BOARD_cIA_MAC_BOOK_USBC_BOARD_DumpStatue00
+static int tolua_IA_MAC_BOOK_USBC_BOARD_cIA_MAC_BOOK_USBC_BOARD_DumpStatue00(lua_State* tolua_S)
+{
+#ifndef TOLUA_RELEASE
+ tolua_Error tolua_err;
+ if (
+     !tolua_isusertype(tolua_S,1,"cIA_MAC_BOOK_USBC_BOARD",0,&tolua_err) ||
+     !tolua_isnumber(tolua_S,2,0,&tolua_err) ||
+     !tolua_isnoobj(tolua_S,3,&tolua_err)
+ )
+  goto tolua_lerror;
+ else
+#endif
+ {
+  cIA_MAC_BOOK_USBC_BOARD* self = (cIA_MAC_BOOK_USBC_BOARD*)  tolua_tousertype(tolua_S,1,0);
+  unsigned char Channel = ((unsigned char)  tolua_tonumber(tolua_S,2,0));
+#ifndef TOLUA_RELEASE
+  if (!self) tolua_error(tolua_S,"invalid 'self' in function 'DumpStatue'", NULL);
+#endif
+  {
+   const char* tolua_ret = (const char*)  self->DumpStatue(Channel);
+   tolua_pushstring(tolua_S,(const char*)tolua_ret);
+  }
+ }
+ return 1;
+#ifndef TOLUA_RELEASE
+ tolua_lerror:
+ tolua_error(tolua_S,"#ferror in function 'DumpStatue'.",&tolua_err);
+ return 0;
+#endif
+}
+#endif //#ifndef TOLUA_DISABLE
+
 /* method: DP_ReceiverWrite of class  cIA_MAC_BOOK_USBC_BOARD */
 #ifndef TOLUA_DISABLE_tolua_IA_MAC_BOOK_USBC_BOARD_cIA_MAC_BOOK_USBC_BOARD_DP_ReceiverWrite00
 static int tolua_IA_MAC_BOOK_USBC_BOARD_cIA_MAC_BOOK_USBC_BOARD_DP_ReceiverWrite00(lua_State* tolua_S)
@@ -607,6 +675,8 @@ TOLUA_API int tolua_IA_MAC_BOOK_USBC_BOARD_open (lua_State* tolua_S)
    tolua_function(tolua_S,"I2cWrite",tolua_IA_MAC_BOOK_USBC_BOARD_cIA_MAC_BOOK_USBC_BOARD_I2cWrite00);
    tolua_function(tolua_S,"I2cRead",tolua_IA_MAC_BOOK_USBC_BOARD_cIA_MAC_BOOK_USBC_BOARD_I2cRead00);
    tolua_function(tolua_S,"LogPathSet",tolua_IA_MAC_BOOK_USBC_BOARD_cIA_MAC_BOOK_USBC_BOARD_LogPathSet00);
+   tolua_function(tolua_S,"VersionRead",tolua_IA_MAC_BOOK_USBC_BOARD_cIA_MAC_BOOK_USBC_BOARD_VersionRead00);
+   tolua_function(tolua_S,"DumpStatue",tolua_IA_MAC_BOOK_USBC_BOARD_cIA_MAC_BOOK_USBC_BOARD_DumpStatue00);
    tolua_function(tolua_S,"DP_ReceiverWrite",tolua_IA_MAC_BOOK_USBC_BOARD_cIA_MAC_BOOK_USBC_BOARD_DP_ReceiverWrite00);
    tolua_function(tolua_S,"DP_ReceiverRead",tolua_IA_MAC_BOOK_USBC_BOARD_cIA_MAC_BOOK_USBC_BOARD_DP_ReceiverRead00);
    tolua_function(tolua_S,"DP_Reset",tolua_IA_MAC_BOOK_USBC_BOARD_cIA_MAC_BOOK_USBC_BOARD_DP_Reset00);

@@ -26,7 +26,7 @@ public:
     char * Setoutput(uint8_t Address, uint16_t InData);
     
     //get input
-    char * GetInput(uint8_t Address);
+    char * GetInput(uint8_t Address, uint8_t Len);
     
     char * SendCommend(char * Cmd, char * Data);
     char * ReadStatue(void);
