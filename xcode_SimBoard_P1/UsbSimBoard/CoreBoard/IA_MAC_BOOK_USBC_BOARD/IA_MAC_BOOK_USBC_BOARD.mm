@@ -8,6 +8,7 @@
 
 #import "IA_MAC_BOOK_USBC_BOARD.h"
 #import "string.h"
+#import "PD_String.h"
 
 
 
@@ -21,7 +22,7 @@
  }
  */
 
-uint8_t atox(char * String)
+static uint8_t atox(char * String)
 {
     uint8_t i;
     if(strlen(String) == 2)
@@ -253,19 +254,19 @@ const char * cIA_MAC_BOOK_USBC_BOARD::BoardInit(char *Dev)
     i=0;
     for(j=0;j<4;j++)
     {
-    /*    ReadData=PD_Controller[j].SendCommend("GPsl","0F");
+        ReadData=PD_Controller[j].SendCommend("GPsl","0F");
         if(StrCmp((char *)ReadData,gStringOK,4) == 0)
         {
             i++;
             LogWrite([NSString stringWithFormat:@"USBC CH%d PD Connect fail, please check connection\r\n",j+1]);
         }
-        ReadData=DP_Init(j+1);
-        if(StrCmp((char *)ReadData,gStringOK,4) == 0)
-        {
-            i++;
-            LogWrite([NSString stringWithFormat:@"USBC CH%d DP Connect fail, please check connection\r\n",j+1]);
-        }
-*/
+       // ReadData=DP_Init(j+1);
+       // if(StrCmp((char *)ReadData,gStringOK,4) == 0)
+        //{
+        //    i++;
+        //    LogWrite([NSString stringWithFormat:@"USBC CH%d DP Connect fail, please check connection\r\n",j+1]);
+       // }
+
     
     }
     LogWrite([NSString stringWithFormat:@"Self Test Complete! Fail Count %d\r\n", i]);
@@ -841,24 +842,24 @@ const char * cIA_MAC_BOOK_USBC_BOARD::Close(void)
 const char * cIA_MAC_BOOK_USBC_BOARD::VersionRead(unsigned char Channel)
 {
     //need debug
-    char * buffers = PD_Controller[Channel-1].GetInput(0x06, 8);
-    
-    return buffers;
+    char * buffers = PD_Controller[Channel-1].GetInput(0x06, 9);
+    return PD_Version(buffers,Channel);
 }
 const char * cIA_MAC_BOOK_USBC_BOARD::DumpStatue(unsigned char Channel)
 {
     //need debug
-    char * buffers = PD_Controller[Channel-1].GetInput(0x03, 4);
+    char * buffers = PD_Controller[Channel-1].GetInput(0x06, 9);
+    PD_Version(buffers, Channel);
+    buffers = PD_Controller[Channel-1].GetInput(0x03, 5);
     LogWrite([NSString stringWithFormat:@"CH%d Mode: %s\r\n",Channel,buffers]);
-    buffers = PD_Controller[Channel-1].GetInput(0x34, 6);
+    buffers = PD_Controller[Channel-1].GetInput(0x34, 7);
     LogWrite([NSString stringWithFormat:@"CH%d Active PDO: %s\r\n",Channel,buffers]);
-    buffers = PD_Controller[Channel-1].GetInput(0x35, 4);
+    buffers = PD_Controller[Channel-1].GetInput(0x35, 5);
     LogWrite([NSString stringWithFormat:@"CH%d Active RDO: %s\r\n",Channel,buffers]);
-    buffers = PD_Controller[Channel-1].GetInput(0x72, 8);
+    buffers = PD_Controller[Channel-1].GetInput(0x72, 9);
     LogWrite([NSString stringWithFormat:@"CH%d GPIO Statue: %s\r\n",Channel,buffers]);
-    buffers = PD_Controller[Channel-1].GetInput(0x69, 4);
-    LogWrite([NSString stringWithFormat:@"CH%d CC Statue: %s\r\n",Channel,buffers]);
-
+    buffers = PD_Controller[Channel-1].GetInput(0x69, 5);
+    CC_State(buffers, Channel);
     return "Done";
 }
 const char * cIA_MAC_BOOK_USBC_BOARD::LogPathSet(const char * Paths)

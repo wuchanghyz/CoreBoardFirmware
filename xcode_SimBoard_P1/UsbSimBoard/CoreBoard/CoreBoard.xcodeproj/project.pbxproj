@@ -25,6 +25,11 @@
 		717216181E2B5CBE00F63959 /* STDP4020.mm in Sources */ = {isa = PBXBuildFile; fileRef = 71D18D8A1E23594F0064D67E /* STDP4020.mm */; };
 		717F8DE31E25FA0300AC091C /* RE_MUX.mm in Sources */ = {isa = PBXBuildFile; fileRef = 717F8DDC1E25E41700AC091C /* RE_MUX.mm */; };
 		7182D2F01E62267B0008E87C /* PD_Controller.mm in Sources */ = {isa = PBXBuildFile; fileRef = 71F6D7BE1E590C84009CC2DA /* PD_Controller.mm */; };
+		71B29ED21F90451E009C4775 /* PD_String.mm in Sources */ = {isa = PBXBuildFile; fileRef = 71B29ED01F90451E009C4775 /* PD_String.mm */; };
+		71B29ED31F90451E009C4775 /* PD_String.h in Headers */ = {isa = PBXBuildFile; fileRef = 71B29ED11F90451E009C4775 /* PD_String.h */; };
+		71B29EDB1F90BDCD009C4775 /* main.mm in Sources */ = {isa = PBXBuildFile; fileRef = 71B29EDA1F90BDCD009C4775 /* main.mm */; };
+		71B29EDF1F90BE6A009C4775 /* PD_String.mm in Sources */ = {isa = PBXBuildFile; fileRef = 71B29ED01F90451E009C4775 /* PD_String.mm */; };
+		71B29EE01F90BE6A009C4775 /* PD_String.h in Sources */ = {isa = PBXBuildFile; fileRef = 71B29ED11F90451E009C4775 /* PD_String.h */; };
 		71B2E3C91F363A4900181ABC /* IA_MAC_BOOK_USBC_BOARD.h in Headers */ = {isa = PBXBuildFile; fileRef = 71B2E3C81F363A4900181ABC /* IA_MAC_BOOK_USBC_BOARD.h */; };
 		71B2E3DC1F363D9800181ABC /* IA_MAC_BOOK_USBC_BOARD-lua.mm in Sources */ = {isa = PBXBuildFile; fileRef = 71B2E3D71F363D9800181ABC /* IA_MAC_BOOK_USBC_BOARD-lua.mm */; };
 		71B2E3DD1F363D9800181ABC /* IA_MAC_BOOK_USBC_BOARDInterface.h in Headers */ = {isa = PBXBuildFile; fileRef = 71B2E3D91F363D9800181ABC /* IA_MAC_BOOK_USBC_BOARDInterface.h */; };
@@ -132,6 +137,15 @@
 			);
 			runOnlyForDeploymentPostprocessing = 1;
 		};
+		71B29ED61F90BDCD009C4775 /* CopyFiles */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = /usr/share/man/man1/;
+			dstSubfolderSpec = 0;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 1;
+		};
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
@@ -161,6 +175,10 @@
 		7142CFFB1E24A67300BAF0AA /* IA863_SimBoard-lua.mm */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.objcpp; name = "IA863_SimBoard-lua.mm"; path = "pkg/IA863_SimBoard-lua.mm"; sourceTree = "<group>"; };
 		717F8DDB1E25E41700AC091C /* RE_MUX.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RE_MUX.h; sourceTree = "<group>"; };
 		717F8DDC1E25E41700AC091C /* RE_MUX.mm */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.objcpp; path = RE_MUX.mm; sourceTree = "<group>"; };
+		71B29ED01F90451E009C4775 /* PD_String.mm */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.objcpp; path = PD_String.mm; sourceTree = "<group>"; };
+		71B29ED11F90451E009C4775 /* PD_String.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PD_String.h; sourceTree = "<group>"; };
+		71B29ED81F90BDCD009C4775 /* MAC_MAIN */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.executable"; includeInIndex = 0; path = MAC_MAIN; sourceTree = BUILT_PRODUCTS_DIR; };
+		71B29EDA1F90BDCD009C4775 /* main.mm */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.objcpp; path = main.mm; sourceTree = "<group>"; };
 		71B2E3C61F363A4800181ABC /* libIA_MAC_BOOK_USBC_BOARD.dylib */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.dylib"; includeInIndex = 0; path = libIA_MAC_BOOK_USBC_BOARD.dylib; sourceTree = BUILT_PRODUCTS_DIR; };
 		71B2E3C81F363A4900181ABC /* IA_MAC_BOOK_USBC_BOARD.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = IA_MAC_BOOK_USBC_BOARD.h; sourceTree = "<group>"; };
 		71B2E3CC1F363A4900181ABC /* IA_MAC_BOOK_USBC_BOARD.mm */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.objcpp; path = IA_MAC_BOOK_USBC_BOARD.mm; sourceTree = "<group>"; };
@@ -205,6 +223,13 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
+		71B29ED51F90BDCD009C4775 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		71B2E3C31F363A4800181ABC /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
@@ -235,6 +260,7 @@
 				426739831D2F797B005BDA6B /* CoreBoard */,
 				71D18D431E22528E0064D67E /* IA863_SimBoard */,
 				71B2E3C71F363A4800181ABC /* IA_MAC_BOOK_USBC_BOARD */,
+				71B29ED91F90BDCD009C4775 /* MAC_MAIN */,
 				426739821D2F797B005BDA6B /* Products */,
 			);
 			sourceTree = "<group>";
@@ -246,6 +272,7 @@
 				42AAD17D1D2F85A10083E141 /* PwrDbgBrd */,
 				71D18D421E22528E0064D67E /* libIA863_SimBoard.dylib */,
 				71B2E3C61F363A4800181ABC /* libIA_MAC_BOOK_USBC_BOARD.dylib */,
+				71B29ED81F90BDCD009C4775 /* MAC_MAIN */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -342,12 +369,22 @@
 			name = ICs;
 			sourceTree = "<group>";
 		};
+		71B29ED91F90BDCD009C4775 /* MAC_MAIN */ = {
+			isa = PBXGroup;
+			children = (
+				71B29EDA1F90BDCD009C4775 /* main.mm */,
+			);
+			path = MAC_MAIN;
+			sourceTree = "<group>";
+		};
 		71B2E3C71F363A4800181ABC /* IA_MAC_BOOK_USBC_BOARD */ = {
 			isa = PBXGroup;
 			children = (
 				71B2E3D61F363D8A00181ABC /* pkg */,
 				71B2E3C81F363A4900181ABC /* IA_MAC_BOOK_USBC_BOARD.h */,
 				71B2E3CC1F363A4900181ABC /* IA_MAC_BOOK_USBC_BOARD.mm */,
+				71B29ED01F90451E009C4775 /* PD_String.mm */,
+				71B29ED11F90451E009C4775 /* PD_String.h */,
 			);
 			path = IA_MAC_BOOK_USBC_BOARD;
 			sourceTree = "<group>";
@@ -400,6 +437,7 @@
 			isa = PBXHeadersBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				71B29ED31F90451E009C4775 /* PD_String.h in Headers */,
 				71B2E3C91F363A4900181ABC /* IA_MAC_BOOK_USBC_BOARD.h in Headers */,
 				71B2E3DD1F363D9800181ABC /* IA_MAC_BOOK_USBC_BOARDInterface.h in Headers */,
 			);
@@ -451,6 +489,23 @@
 			productReference = 42AAD17D1D2F85A10083E141 /* PwrDbgBrd */;
 			productType = "com.apple.product-type.tool";
 		};
+		71B29ED71F90BDCD009C4775 /* MAC_MAIN */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 71B29EDC1F90BDCD009C4775 /* Build configuration list for PBXNativeTarget "MAC_MAIN" */;
+			buildPhases = (
+				71B29ED41F90BDCD009C4775 /* Sources */,
+				71B29ED51F90BDCD009C4775 /* Frameworks */,
+				71B29ED61F90BDCD009C4775 /* CopyFiles */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = MAC_MAIN;
+			productName = MAC_MAIN;
+			productReference = 71B29ED81F90BDCD009C4775 /* MAC_MAIN */;
+			productType = "com.apple.product-type.tool";
+		};
 		71B2E3C51F363A4800181ABC /* IA_MAC_BOOK_USBC_BOARD */ = {
 			isa = PBXNativeTarget;
 			buildConfigurationList = 71B2E3D51F363A4900181ABC /* Build configuration list for PBXNativeTarget "IA_MAC_BOOK_USBC_BOARD" */;
@@ -500,6 +555,10 @@
 					42AAD17C1D2F85A10083E141 = {
 						CreatedOnToolsVersion = 7.3.1;
 					};
+					71B29ED71F90BDCD009C4775 = {
+						CreatedOnToolsVersion = 8.1;
+						ProvisioningStyle = Automatic;
+					};
 					71B2E3C51F363A4800181ABC = {
 						CreatedOnToolsVersion = 8.1;
 						ProvisioningStyle = Automatic;
@@ -540,6 +599,7 @@
 				42AAD17C1D2F85A10083E141 /* PwrDbgBrd */,
 				71D18D411E22528E0064D67E /* IA863_SimBoard */,
 				71B2E3C51F363A4800181ABC /* IA_MAC_BOOK_USBC_BOARD */,
+				71B29ED71F90BDCD009C4775 /* MAC_MAIN */,
 			);
 		};
 /* End PBXProject section */
@@ -617,12 +677,23 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
+		71B29ED41F90BDCD009C4775 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				71B29EDF1F90BE6A009C4775 /* PD_String.mm in Sources */,
+				71B29EE01F90BE6A009C4775 /* PD_String.h in Sources */,
+				71B29EDB1F90BDCD009C4775 /* main.mm in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		71B2E3C21F363A4800181ABC /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
 				71B2E3EC1F366E6C00181ABC /* STDP4020.mm in Sources */,
 				71B2E3E91F366DAE00181ABC /* Publisher.cpp in Sources */,
+				71B29ED21F90451E009C4775 /* PD_String.mm in Sources */,
 				71B2E3EA1F366DAE00181ABC /* Replier.cpp in Sources */,
 				71B2E3EB1F366DAE00181ABC /* Requester.cpp in Sources */,
 				71B2E3E51F366C8900181ABC /* IA_MAC_BOOK_USBC_BOARD.mm in Sources */,
@@ -781,6 +852,28 @@
 			};
 			name = Release;
 		};
+		71B29EDD1F90BDCD009C4775 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_SUSPICIOUS_MOVES = YES;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Debug;
+		};
+		71B29EDE1F90BDCD009C4775 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_SUSPICIOUS_MOVES = YES;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Release;
+		};
 		71B2E3CE1F363A4900181ABC /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
@@ -877,6 +970,15 @@
 			buildConfigurations = (
 				42AAD1821D2F85A10083E141 /* Debug */,
 				42AAD1831D2F85A10083E141 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		71B29EDC1F90BDCD009C4775 /* Build configuration list for PBXNativeTarget "MAC_MAIN" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				71B29EDD1F90BDCD009C4775 /* Debug */,
+				71B29EDE1F90BDCD009C4775 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
