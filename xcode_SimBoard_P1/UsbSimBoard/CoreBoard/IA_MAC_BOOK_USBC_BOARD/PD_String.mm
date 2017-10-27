@@ -84,7 +84,7 @@ static uint8_t atox(char * String)
 char * PD_Version(char * Inputdata, unsigned char Channel)
 {
     std::string Input=Inputdata;
-    char temp[11];
+    static char temp[11];
     
     temp[3] = atox((char *)Input.substr(12,2).c_str());
     temp[2] = atox((char *)Input.substr(15,2).c_str());
